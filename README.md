@@ -51,6 +51,9 @@ Plastid
 + Aligned to the Norway spruce plastid (124 kbp) using [BWA-MEM][bwamem]
 + All 117 annotated genes are covered, 114 full and 3 partial
 
+The plastid genome was annotated using [DOGMA][dogma] with default
+parameters (shown in supplementary material).
+
 Mitochondrion
 -------------
 
@@ -83,6 +86,16 @@ Identity to Norway spruce       |99.2%           |98.3%
 Coverage of Norway spruce       |98.8%           |59.6%
 
 † Permitting gaps less than 500 bp
+
+Plastid
+-------
+
+The plastid genome contains 136 genes, including 41
+transfer RNA (tRNA) genes, shown in figure 1.
+
+![Figure 1: Plastid genes](plastid-annotation.png)
+
+**Figure 1**: The annotated plastid genome, plotted using [OGDRAW][ogdraw].
 
 Conclusion
 ==========
@@ -126,3 +139,22 @@ References
 [pinaceae]: http://gbe.oxfordjournals.org/content/2/504
 [dogma]: http://bioinformatics.oxfordjournals.org/content/20/17/3252
 [ogdraw]: http://nar.oxfordjournals.org/content/41/W1/W575
+
+Supplementary material
+======================
+
+DOGMA parameters
+----------------
+
+The following parameters were used for the annotation of the plastid
+using [DOGMA][dogma].
+
+Parameter                                        | Value
+-------------------------------------------------|-------------
+Genome type                                      | Chloroplast
+Gapped alignment?                                | Yes
+Genetic Code for Blastx                          | 11 Plant plastid
+Percent identity cutoff for protein coding genes | 60
+Percent identity cutoff for RNAs                 | 80
+E-value                                          | 1e-5
+Number of blast hits to return                   | 5
