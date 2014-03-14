@@ -63,6 +63,12 @@ Mitochondrion
 + Scaffolded with mate-pair reads
 + Aligned to the Norway spruce putative mitochondrion (5.5 Mbp) using [BWA-MEM][bwamem]
 
+The mitochondrial genome was annotated using [MAKER][maker]
+(parameters shown in supplementary material). The Cycas taitungensis
+mitochondrion (NC_010303.1) was used for protein homology evidence,
+aligned using [BLAST][blast]. The tRNA genes were discovered using
+[tRNAscan][trnascan].
+
 Results
 =======
 
@@ -97,6 +103,16 @@ transfer RNA (tRNA) genes, shown in figure 1.
 
 **Figure 1**: The annotated plastid genome, plotted using [OGDRAW][ogdraw].
 
+Mitochondrion
+-------------
+
+The mitochondrial genome contains 60 protein coding genes and 27
+transfer RNA (tRNA) genes, shown in figure 2.
+
+![Figure 2: Mitochondrial genes](mt-annotation.png)
+
+**Figure 2**: The annotated mitochondrial genome, plotted using [OGDRAW][ogdraw].
+
 Conclusion
 ==========
 
@@ -127,6 +143,9 @@ References
 + [Comparative chloroplast genomics reveals the evolution of *Pinaceae* genera and subfamilies][pinaceae]
 + [Automatic annotation of organellar genomes with DOGMA][dogma]
 + [OrganellarGenomeDRAW (OGDRAW): a tool for the easy generation of high-quality custom graphical maps of plastid and mitochondrial genomes][ogdraw]
++ [MAKER-P: a tool-kit for the rapid creation, management, and quality control of plant genome annotations][maker]
++ [Basic Local Alignment Search Tool][blast]
++ [tRNAscan-SE: A Program for Improved Detection of Transfer RNA Genes in Genomic Sequence][trnascan]
 
 [abyss]: http://genome.cshlp.org/content/19/6/1117
 [bwamem]: http://arxiv.org/pdf/1303.3997.pdf
@@ -139,6 +158,9 @@ References
 [pinaceae]: http://gbe.oxfordjournals.org/content/2/504
 [dogma]: http://bioinformatics.oxfordjournals.org/content/20/17/3252
 [ogdraw]: http://nar.oxfordjournals.org/content/41/W1/W575
+[maker]: http://www.plantphysiol.org/content/early/2013/12/06/pp.113.230144
+[blast]: http://www.sciencedirect.com/science/article/pii/S0022283605803602
+[trnascan]: http://nar.oxfordjournals.org/content/25/5/0955
 
 Supplementary material
 ======================
@@ -158,3 +180,16 @@ Percent identity cutoff for protein coding genes | 60
 Percent identity cutoff for RNAs                 | 80
 E-value                                          | 1e-5
 Number of blast hits to return                   | 5
+
+Mitochondrion MAKER parameters
+------------------------------
+
+```
+genome=pg29mt-concat.fa
+organism_type=prokaryotic
+protein=NC_010303.faa
+protein2genome=1
+trna=1
+est_forward=1
+single_exon=1
+```
