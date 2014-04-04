@@ -67,7 +67,8 @@ The mitochondrial genome was annotated using [MAKER][maker]
 (parameters shown in supplementary material). The Cycas taitungensis
 mitochondrion (NC_010303.1) was used for protein homology evidence,
 aligned using [BLAST][blast]. The tRNA genes were discovered using
-[tRNAscan][trnascan].
+[tRNAscan][trnascan]. Repeats were identified using
+[RepeatMasker][repeatmasker].
 
 Results
 =======
@@ -113,6 +114,13 @@ transfer RNA (tRNA) genes, shown in figure 2.
 
 **Figure 2**: The annotated mitochondrial genome, plotted using [OGDRAW][ogdraw].
 
+Simple repeats and the LTR Copia and Gypsy are the most common
+repeats found in the mitochondrial genome, shown in figure 3.
+
+![Figure 3: Mitochondrial repeats](mt-repeats.png)
+
+**Figure 3**: Repetitive sequence of the mitochondrial genome
+
 Conclusion
 ==========
 
@@ -146,6 +154,7 @@ References
 + [MAKER-P: a tool-kit for the rapid creation, management, and quality control of plant genome annotations][maker]
 + [Basic Local Alignment Search Tool][blast]
 + [tRNAscan-SE: A Program for Improved Detection of Transfer RNA Genes in Genomic Sequence][trnascan]
++ [Smit, AFA, Hubley, R & Green, P. RepeatMasker Open-3.0. 1996-2010 http://www.repeatmasker.org][repeatmasker]
 
 [abyss]: http://genome.cshlp.org/content/19/6/1117
 [bwamem]: http://arxiv.org/pdf/1303.3997.pdf
@@ -161,6 +170,7 @@ References
 [maker]: http://www.plantphysiol.org/content/early/2013/12/06/pp.113.230144
 [blast]: http://www.sciencedirect.com/science/article/pii/S0022283605803602
 [trnascan]: http://nar.oxfordjournals.org/content/25/5/0955
+[repeatmasker]: http://www.repeatmasker.org/
 
 Supplementary material
 ======================
@@ -186,8 +196,11 @@ Mitochondrion MAKER parameters
 
 ```
 genome=pg29mt-concat.fa
-organism_type=prokaryotic
+organism_type=eukaryotic
 protein=NC_010303.faa
+model_org=all
+rmlib=PICEAGLAUCA_rpt2.0.fa
+repeat_protein=/usr/local/Cellar/maker/2.31/libexec/data/te_proteins.fasta
 protein2genome=1
 trna=1
 est_forward=1
