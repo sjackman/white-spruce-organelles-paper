@@ -1,5 +1,5 @@
-Organellar Genomes of White Spruce (*Picea glauca*)
-===================================================
+Organellar Genomes of White Spruce (*Picea glauca*): Assembly and Annotation
+============================================================================
 
 Shaun D Jackman, Anthony Raymond, Ben Vandervalk, Hamid Mohamadi,
 René Warren, Stephen Pleasance, Robin Coope, Macaire MS Yuen,
@@ -12,10 +12,17 @@ Abstract
 
 The genome sequences of the plastid and mitochondrion of white spruce
 (*Picea glauca*) are assembled from whole genome Illumina sequencing
-data using ABySS and aligned to the Norway spruce (*Picea abies*)
-using BWA-MEM. The putative mitochondrial sequences are classified
-using *k*-means clustering in R. The plastid genome is 120 kbp, and
-the putative mitochondrial genome is 6 Mbp.
+data using ABySS. Whole genome sequencing data contains reads from
+both the nuclear and organellar genomes. Reads of the organellar
+genomes are abundant, because each cell contains hundreds of
+mitochondria and plastids. One lane of MiSeq data assembles the 124
+kbp plastid genome in a single scaffold, and one lane of HiSeq data
+assembles a putative 6 Mbp mitochondrial genome. The raw assembly is
+expected to be composed of organellar sequence as well as nuclear
+repeat elements. The organellar sequences are separated from the
+assembly by classifying the sequences using their length, depth of
+coverage and GC content. The genes and repeats of the plastid and
+mitochondrial genomes are annotated using MAKER-P.
 
 Introduction
 ============
