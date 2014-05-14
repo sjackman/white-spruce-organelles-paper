@@ -51,15 +51,32 @@ Methods
 Plastid
 -------
 
-+ Merged the overlapping paired-end reads (ABySS-mergepairs)
-+ Assembled with [ABySS][abyss] 1.3.7
-+ Separated putative plastid by length and depth of coverage
-+ Scaffolded with mate-pair reads
-+ Aligned to the Norway spruce plastid (124 kbp) using [BWA-MEM][bwamem]
-+ All 117 annotated genes are covered, 114 full and 3 partial
+### Assembly
 
-The plastid genome was annotated using [DOGMA][dogma] with default
-parameters (shown in supplementary material).
+The overlapping paired-end reads were merged using ABySS-mergepairs
+(distributed with ABySS). These merged reads were assembled using
+[ABySS][abyss] 1.3.7. Contigs that are putatively derived from the
+plastid were separated by length and depth of coverage using
+thresholds chosen by inspection (see supplementary figure 1). These
+putative plastid contigs were scaffolded using ABySS-scaffold
+(distributed with ABySS).
+
+### Annotation
+
+The assembled plastid genome was annotated using [DOGMA][dogma] with
+default parameters (shown in supplementary material).
+
+### Comparative genomics
+
+The assembled plastid genome was aligned to the
+[Norway spruce][norwayspruce] complete plastid genome ([NC_021456][])
+using [BWA-MEM][bwamem]. Coverage and identity of these alignments
+were calculated using the script `bam-identity` (see supplementary
+materials). The two genomes were compared using [QUAST][quast] to
+confirm the presence of the annotated genes of the Norway spruce
+plastid in the white spruce plastid.
+
+[NC_021456]: http://www.ncbi.nlm.nih.gov/nuccore/NC_021456
 
 Mitochondrion
 -------------
@@ -141,8 +158,8 @@ Conclusion
   GC content
 + These white spruce sequences are aligned to the
   [Norway spruce (*Picea abies*)][norwayspruce] complete plastid
-  genome (NC_021456) and putative mitochondrial sequences with 99.2%
-  and 98.3% identity, respectively.
+  genome ([NC_021456][]) and putative mitochondrial sequences with
+  99.2% and 98.3% identity, respectively.
 
 References
 ==========
@@ -162,6 +179,7 @@ References
 + [Basic Local Alignment Search Tool][blast]
 + [tRNAscan-SE: A Program for Improved Detection of Transfer RNA Genes in Genomic Sequence][trnascan]
 + [Smit, AFA, Hubley, R & Green, P. RepeatMasker Open-3.0. 1996-2010 http://www.repeatmasker.org][repeatmasker]
++ [QUAST: quality assessment tool for genome assemblies][quast]
 
 [abyss]: http://genome.cshlp.org/content/19/6/1117
 [bwamem]: http://arxiv.org/pdf/1303.3997.pdf
@@ -178,6 +196,7 @@ References
 [blast]: http://www.sciencedirect.com/science/article/pii/S0022283605803602
 [trnascan]: http://nar.oxfordjournals.org/content/25/5/0955
 [repeatmasker]: http://www.repeatmasker.org/
+[quast]: http://bioinformatics.oxfordjournals.org/content/29/8/1072
 
 Supplementary material
 ======================
