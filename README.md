@@ -271,6 +271,7 @@ References
 + [Comparative chloroplast genomics reveals the evolution of *Pinaceae* genera and subfamilies][pinaceae]
 + [QUAST: quality assessment tool for genome assemblies][quast]
 + [Smit, AFA, Hubley, R & Green, P. RepeatMasker Open-3.0. 1996-2010 http://www.repeatmasker.org][repeatmasker]
++ [The Sequence Alignment/Map format and SAMtools][samtools]
 + [tRNAscan-SE: A Program for Improved Detection of Transfer RNA Genes in Genomic Sequence][trnascan]
 + [Assembling the 20Gb white spruce (*Picea glauca*) genome from whole-genome shotgun sequencing data][whitespruce]
 
@@ -291,6 +292,7 @@ References
 [pinaceae]: http://gbe.oxfordjournals.org/content/2/504
 [quast]: http://bioinformatics.oxfordjournals.org/content/29/8/1072
 [repeatmasker]: http://www.repeatmasker.org/
+[samtools]: http://bioinformatics.oxfordjournals.org/content/25/16/2078
 [trnascan]: http://nar.oxfordjournals.org/content/25/5/0955
 [whitespruce]: http://bioinformatics.oxfordjournals.org/content/29/12/1492
 
@@ -338,6 +340,7 @@ RMBlast       | 2.2.28  | NA
 RepeatMasker  | 4.0.5   | NA
 RepeatModeler | 1.0.7   | NA
 RepeatScout   | 1.0.5   | [10.1093/bioinformatics/bti1018][]
+SAMtools      | 0.1.19  | [10.1093/bioinformatics/btp352][]
 TRF           | 4.07b   | [10.1093/nar/27.2.573][]
 tRNAscan-SE   | 1.23    | [10.1093/nar/25.5.0955][]
 
@@ -345,6 +348,7 @@ tRNAscan-SE   | 1.23    | [10.1093/nar/25.5.0955][]
 [10.1093/bioinformatics/bth352]: http://dx.doi.org/10.1093/bioinformatics/bth352
 [10.1093/bioinformatics/bti1018]: http://dx.doi.org/10.1093/bioinformatics/bti1018
 [10.1093/bioinformatics/btp324]: http://dx.doi.org/10.1093/bioinformatics/btp324
+[10.1093/bioinformatics/btp352]: http://dx.doi.org/10.1093/bioinformatics/btp352
 [10.1093/bioinformatics/btt086]: http://dx.doi.org/10.1093/bioinformatics/btt086
 [10.1093/nar/25.5.0955]: http://dx.doi.org/10.1093/nar/25.5.0955
 [10.1093/nar/27.2.573]: http://dx.doi.org/10.1093/nar/27.2.573
