@@ -97,7 +97,10 @@ aligned using [BLAST][blast]. The tRNA genes were discovered using
 Results
 =======
 
-Sequencing/assembly metrics     |Plastid         |Mitochondrion
+**Table 1**: Sequencing, assembly and alignment metrics of the white
+spruce organellar genomes
+
+Metric                          |Plastid         |Mitochondrion
 ------------------------------- |--------------- |-------------
 Number of lanes                 |1 MiSeq lane    |1 HiSeq lane
 Number of read pairs            |4.7 million     |133 million
@@ -121,12 +124,27 @@ Coverage of Norway spruce       |98.8%           |59.6%
 Plastid
 -------
 
-The plastid genome contains 136 genes, including 41
-transfer RNA (tRNA) genes, shown in figure 1.
+### Assembly
+
+The plastid genome was assembled into a single circular scaffold with
+seven gaps. The assembly metrics are shown in table 1.
+
+### Annotation
+
+The plastid genome has 92 protein coding (mRNA) genes, 41 transfer RNA
+(tRNA) genes and 4 ribosomal RNA (rRNA) genes, shown in figure 1.
 
 ![Figure 1: Plastid genes](plastid-annotation.png)
 
-**Figure 1**: The annotated plastid genome, plotted using [OGDRAW][ogdraw].
+**Figure 1**: The annotated plastid genome, which was annotated using
+[DOGMA][dogma] and plotted using [OGDRAW][ogdraw].
+
+### Comparative genomics
+
+The genomes of the white spruce plastid and Norway spruce plastid show
+perfect synteny with no structural rearrangements. All 117 genes (114
+in full and 3 partial) of the Norway spruce plastid genome
+([NC_021456][]) are present in the white spruce plastid genome.
 
 Mitochondrion
 -------------
