@@ -61,7 +61,7 @@ The overlapping paired-end reads were merged using ABySS-mergepairs.
 These merged reads were assembled using [ABySS][abyss]. Contigs that
 are putatively derived from the plastid were separated by length and
 depth of coverage using thresholds chosen by inspection (see
-supplementary figure S1). These putative plastid contigs were
+supplementary [figure S1][]). These putative plastid contigs were
 scaffolded using ABySS-scaffold.
 
 ### Annotation
@@ -91,7 +91,7 @@ of a single lane of Illumina HiSeq sequencing of a paired-end library.
 These connected paired-end reads were assembled using [ABySS][abyss].
 Putative mitochondrial sequences were separated from the assembly by
 their length, depth of coverage and GC content using k-means
-clustering in R (see supplementary figure S2). These putative
+clustering in R (see supplementary [figure S2][]). These putative
 mitochondrial contigs were then scaffolded using ABySS-scaffold with a
 single lane of Illumina HiSeq sequencing of a mate-pair library.
 
@@ -164,7 +164,10 @@ The plastid genome was assembled into a single circular scaffold of
 
 The plastid genome contains 90 protein coding (mRNA) genes, 41
 transfer RNA (tRNA) genes and 4 ribosomal RNA (rRNA) genes, shown in
-figure 1.
+[figure 1][].
+
+<a name="figure-1"></a>
+[figure 1]: #figure-1
 
 ![Figure 1: Plastid genes](plastid-annotation.png)
 
@@ -192,7 +195,10 @@ metrics are shown in [table 1][].
 
 The mitochondrial genome contains 54 protein coding (mRNA) genes, 27
 transfer RNA (tRNA) genes and 4 ribosomal RNA (rRNA) genes, shown in
-figure 2.
+[figure 2][].
+
+<a name="figure-2"></a>
+[figure 2]: #figure-2
 
 ![Figure 2: Mitochondrial genes](mt-annotation.png)
 
@@ -201,7 +207,10 @@ using [MAKER-P][maker] and plotted using [OGDRAW][ogdraw].
 
 Repeats compose 391 kbp (6.5%) of the mitochondrial genome. Simple
 repeats, the LINE Jockey and the LTR Copia and Gypsy are the most
-common repeats, shown in figure 3.
+common repeats, shown in [figure 3][].
+
+<a name="figure-3"></a>
+[figure 3]: #figure-3
 
 ![Figure 3: Mitochondrial repeats](mt-repeats.png)
 
@@ -281,6 +290,26 @@ References
 
 Supplementary material
 ======================
+
+Figure S1: Classify plastid sequences
+-------------------------------------
+
+[figure S1]: #figure-s1-classify-plastid-sequences
+
+![Figure S1](plastid-classify.png)
+
+**Figure S1**: Six plastid sequences were separated by length and
+depth of coverage using thresholds chosen by inspection
+
+Figure S2: Classify mitochondrial sequences
+-------------------------------------------
+
+[figure S2]: #figure-s2-classify-mitochondrial-sequences
+
+![Figure S2](mt-classify.png)
+
+**Figure S2**: Mitochondrial sequences were separated by length, depth
+of coverage and GC content using k-means clustering in R
 
 Table S1: Software
 ------------------
