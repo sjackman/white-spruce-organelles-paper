@@ -156,7 +156,7 @@ seven gaps. The assembly metrics are shown in table 1.
 
 ### Annotation
 
-The plastid genome has 92 protein coding (mRNA) genes, 41 transfer RNA
+The plastid genome has 90 protein coding (mRNA) genes, 41 transfer RNA
 (tRNA) genes and 4 ribosomal RNA (rRNA) genes, shown in figure 1.
 
 ![Figure 1: Plastid genes](plastid-annotation.png)
