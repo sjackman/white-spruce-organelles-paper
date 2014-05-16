@@ -203,42 +203,42 @@ References
 ==========
 
 + [ABySS: a parallel assembler for short read sequence data][abyss]
-+ [Aligning sequence reads, clone sequences and assembly contigs with BWA-MEM][bwamem]
-+ [Assembling the 20Gb white spruce (*Picea glauca*) genome from whole-genome shotgun sequencing data][whitespruce]
-+ [The Norway spruce genome sequence and conifer genome evolution][norwayspruce]
-+ [CGAP: a new comprehensive platform for the comparative analysis of chloroplast genomes][cgap]
-+ [Genomic Clues to the Ancestral Flowering Plant][amborellaperspective]
-+ [The Amborella Genome and the Evolution of Flowering Plants][amborellanuc]
 + [Horizontal Transfer of Entire Genomes via Mitochondrial Fusion in the Angiosperm Amborella][amborellamt]
-+ [Comparative chloroplast genomics reveals the evolution of *Pinaceae* genera and subfamilies][pinaceae]
-+ [Automatic annotation of organellar genomes with DOGMA][dogma]
-+ [OrganellarGenomeDRAW (OGDRAW): a tool for the easy generation of high-quality custom graphical maps of plastid and mitochondrial genomes][ogdraw]
-+ [MAKER-P: a tool-kit for the rapid creation, management, and quality control of plant genome annotations][maker]
-+ [Basic Local Alignment Search Tool][blast]
-+ [tRNAscan-SE: A Program for Improved Detection of Transfer RNA Genes in Genomic Sequence][trnascan]
-+ [Smit, AFA, Hubley, R & Green, P. RepeatMasker Open-3.0. 1996-2010 http://www.repeatmasker.org][repeatmasker]
-+ [QUAST: quality assessment tool for genome assemblies][quast]
-+ [The Mitochondrial Genome of the Gymnosperm Cycas taitungensis Contains a Novel Family of Short Interspersed Elements, Bpu Sequences, and Abundant RNA Editing Sites][ctaitungensis]
++ [The Amborella Genome and the Evolution of Flowering Plants][amborellanuc]
++ [Genomic Clues to the Ancestral Flowering Plant][amborellaperspective]
 + [barrnap 0.4.2 - rapid ribosomal RNA prediction][barrnap]
++ [Basic Local Alignment Search Tool][blast]
++ [Aligning sequence reads, clone sequences and assembly contigs with BWA-MEM][bwamem]
++ [CGAP: a new comprehensive platform for the comparative analysis of chloroplast genomes][cgap]
++ [The Mitochondrial Genome of the Gymnosperm Cycas taitungensis Contains a Novel Family of Short Interspersed Elements, Bpu Sequences, and Abundant RNA Editing Sites][ctaitungensis]
++ [Automatic annotation of organellar genomes with DOGMA][dogma]
++ [MAKER-P: a tool-kit for the rapid creation, management, and quality control of plant genome annotations][maker]
++ [The Norway spruce genome sequence and conifer genome evolution][norwayspruce]
++ [OrganellarGenomeDRAW (OGDRAW): a tool for the easy generation of high-quality custom graphical maps of plastid and mitochondrial genomes][ogdraw]
++ [Comparative chloroplast genomics reveals the evolution of *Pinaceae* genera and subfamilies][pinaceae]
++ [QUAST: quality assessment tool for genome assemblies][quast]
++ [Smit, AFA, Hubley, R & Green, P. RepeatMasker Open-3.0. 1996-2010 http://www.repeatmasker.org][repeatmasker]
++ [tRNAscan-SE: A Program for Improved Detection of Transfer RNA Genes in Genomic Sequence][trnascan]
++ [Assembling the 20Gb white spruce (*Picea glauca*) genome from whole-genome shotgun sequencing data][whitespruce]
 
 [abyss]: http://genome.cshlp.org/content/19/6/1117
-[bwamem]: http://arxiv.org/pdf/1303.3997.pdf
-[whitespruce]: http://bioinformatics.oxfordjournals.org/content/29/12/1492
-[norwayspruce]: http://www.nature.com/nature/journal/vaop/ncurrent/full/nature12211.html
-[cgap]: http://www.biomedcentral.com/1471-2105/14/95/abstract
-[amborellaperspective]: http://www.sciencemag.org/content/342/6165/1456
-[amborellanuc]: http://www.sciencemag.org/content/342/6165/1241089
 [amborellamt]: http://www.sciencemag.org/content/342/6165/1468
-[pinaceae]: http://gbe.oxfordjournals.org/content/2/504
-[dogma]: http://bioinformatics.oxfordjournals.org/content/20/17/3252
-[ogdraw]: http://nar.oxfordjournals.org/content/41/W1/W575
-[maker]: http://www.plantphysiol.org/content/early/2013/12/06/pp.113.230144
-[blast]: http://www.sciencedirect.com/science/article/pii/S0022283605803602
-[trnascan]: http://nar.oxfordjournals.org/content/25/5/0955
-[repeatmasker]: http://www.repeatmasker.org/
-[quast]: http://bioinformatics.oxfordjournals.org/content/29/8/1072
-[ctaitungensis]: http://mbe.oxfordjournals.org/content/25/3/603.short
+[amborellanuc]: http://www.sciencemag.org/content/342/6165/1241089
+[amborellaperspective]: http://www.sciencemag.org/content/342/6165/1456
 [barrnap]: http://www.vicbioinformatics.com/software.barrnap.shtml
+[blast]: http://www.sciencedirect.com/science/article/pii/S0022283605803602
+[bwamem]: http://arxiv.org/pdf/1303.3997.pdf
+[cgap]: http://www.biomedcentral.com/1471-2105/14/95/abstract
+[ctaitungensis]: http://mbe.oxfordjournals.org/content/25/3/603.short
+[dogma]: http://bioinformatics.oxfordjournals.org/content/20/17/3252
+[maker]: http://www.plantphysiol.org/content/early/2013/12/06/pp.113.230144
+[norwayspruce]: http://www.nature.com/nature/journal/vaop/ncurrent/full/nature12211.html
+[ogdraw]: http://nar.oxfordjournals.org/content/41/W1/W575
+[pinaceae]: http://gbe.oxfordjournals.org/content/2/504
+[quast]: http://bioinformatics.oxfordjournals.org/content/29/8/1072
+[repeatmasker]: http://www.repeatmasker.org/
+[trnascan]: http://nar.oxfordjournals.org/content/25/5/0955
+[whitespruce]: http://bioinformatics.oxfordjournals.org/content/29/12/1492
 
 Supplementary material
 ======================
