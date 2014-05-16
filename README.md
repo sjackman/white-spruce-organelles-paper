@@ -48,6 +48,10 @@ of [Norway spruce (*Picea abies*)][norwayspruce].
 Methods
 =======
 
+The software used in this analysis, their versions and the digital
+object identifiers (DOI) of their respective publications are listed
+in supplementary [table S1][].
+
 Plastid
 -------
 
@@ -57,13 +61,13 @@ The overlapping paired-end reads were merged using ABySS-mergepairs.
 These merged reads were assembled using [ABySS][abyss]. Contigs that
 are putatively derived from the plastid were separated by length and
 depth of coverage using thresholds chosen by inspection (see
-supplementary figure 1). These putative plastid contigs were
+supplementary figure S1). These putative plastid contigs were
 scaffolded using ABySS-scaffold.
 
 ### Annotation
 
 The assembled plastid genome was annotated using [DOGMA][dogma] with
-default parameters (shown in supplementary material).
+default parameters (shown in supplementary [table S2][]).
 
 ### Comparative genomics
 
@@ -87,14 +91,14 @@ of a single lane of Illumina HiSeq sequencing of a paired-end library.
 These connected paired-end reads were assembled using [ABySS][abyss].
 Putative mitochondrial sequences were separated from the assembly by
 their length, depth of coverage and GC content using k-means
-clustering in R. These putative mitochondrial contigs were then
-scaffolded using ABySS-scaffold with a single lane of Illumina HiSeq
-sequencing of a mate-pair library.
+clustering in R (see supplementary figure S2). These putative
+mitochondrial contigs were then scaffolded using ABySS-scaffold with a
+single lane of Illumina HiSeq sequencing of a mate-pair library.
 
 ### Annotation
 
 The mitochondrial genome was annotated using [MAKER-P][maker]
-(parameters shown in supplementary material). The proteins of all
+(parameters shown in supplementary [table S3][]). The proteins of all
 green plants (viridiplantae) with complete mitochondrial genome
 sequences in NCBI GenBank, 51 species, were used for protein homology
 evidence and aligned using [BLAST][blast] and [Exonerate][exonerate].
@@ -252,8 +256,10 @@ References
 Supplementary material
 ======================
 
-Software
---------
+Table S1: Software
+------------------
+
+[table S1]: #table-s1-software
 
 Software      | Version | DOI
 --------------|---------|--------------------------
@@ -287,8 +293,10 @@ tRNAscan-SE   | 1.23    | [10.1093/nar/25.5.0955][]
 [10.1186/1471-2105-6-31]: http://dx.doi.org/10.1186/1471-2105-6-31
 [10.1371/journal.pcbi.1002195]: http://dx.doi.org/10.1371/journal.pcbi.1002195
 
-DOGMA parameters
-----------------
+Table S2: DOGMA parameters
+--------------------------
+
+[table S2]: #table-s2-dogma-parameters
 
 The following parameters were used for the annotation of the plastid
 using [DOGMA][dogma].
@@ -303,8 +311,10 @@ Percent identity cutoff for RNAs                 | 80
 E-value                                          | 1e-5
 Number of blast hits to return                   | 5
 
-Mitochondrion MAKER parameters
-------------------------------
+Table S3: MAKER parameters
+--------------------------
+
+[table S3]: #table-s3-maker-parameters
 
 ```
 genome=pg29mt-concat.fa
