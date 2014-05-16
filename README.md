@@ -190,8 +190,8 @@ Mitochondrion
 ### Assembly
 
 The mitochondrial genome was assembled into 78 scaffolds (223 contigs,
-permitting gaps less than 500 bp) with a scaffold N50 of 519 kbp
-(contig N50 of 157 kbp). The largest scaffold is 519 kbp. The assembly
+permitting gaps less than 500 bp) with a scaffold N50 of 157 kbp
+(contig N50 of 39 kbp). The largest scaffold is 519 kbp. The assembly
 metrics are shown in [table 1][].
 
 ### Annotation
