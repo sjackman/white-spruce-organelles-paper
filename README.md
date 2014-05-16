@@ -87,7 +87,7 @@ Mitochondrion
 ### Assembly
 
 ABySS-connector was used to fill the gap between the paired-end reads
-of a single lane of Illumina HiSeq sequencing of a paired-end library.
+of a single lane of Illumina MiSeq sequencing of a paired-end library.
 These connected paired-end reads were assembled using [ABySS][abyss].
 Putative mitochondrial sequences were separated from the assembly by
 their length, depth of coverage and GC content using k-means
@@ -113,7 +113,7 @@ were identified using [RepeatMasker][repeatmasker] and RepeatModeler.
 
 ### Comparative genomics
 
-The putative mitochondrial sequences of the white spruce were aligned
+The putative mitochondrial sequences of white spruce were aligned
 to the putative mitochondrial sequences of the
 [Norway spruce][norwayspruce] using [BWA-MEM][bwamem]. Coverage and
 identity of these alignments were calculated using the script
@@ -177,8 +177,8 @@ transfer RNA (tRNA) genes and 4 ribosomal RNA (rRNA) genes, shown in
 ### Comparative genomics
 
 The genomes of the white spruce plastid and Norway spruce plastid show
-perfect synteny with no structural rearrangements. All 117 genes (114
-in full and 3 partial) of the Norway spruce plastid genome
+perfect gene synteny with no structural rearrangements. All 117 genes
+(114 in full and 3 partial) of the Norway spruce plastid genome
 ([NC_021456][]) are present in the white spruce plastid genome.
 
 Mitochondrion
@@ -224,32 +224,43 @@ common repeats, shown in [figure 3][].
 
 ### Comparative genomics
 
-The putative mitochondrial sequences of the white spruce and Norway
-spruce show high sequence similarity, over 98% nucleotide identity,
-but only 60% of the Norway spruce putative mitochondrial sequences are
-covered by alignments of the white spruce sequences.
+The putative mitochondrial sequences of white spruce and Norway spruce
+show high sequence similarity, over 98% nucleotide identity, but only
+60% of the Norway spruce putative mitochondrial sequences are covered
+by alignments of the white spruce sequences.
 
 Conclusion
 ==========
 
-+ One lane of MiSeq data assembles the 124 kbp plastid genome
-+ One lane of HiSeq data assembles the putative 6 Mbp mitochondrial
-  genome
-+ The assembly is composed of organellar sequences as well as nuclear
-  repeat elements
-+ The organellar sequences are separated from the nuclear sequences by
-  classifying the sequences using their length, depth of coverage and
-  GC content
-+ These white spruce sequences are aligned to the
-  [Norway spruce (*Picea abies*)][norwayspruce] complete plastid
-  genome ([NC_021456][]) and putative mitochondrial sequences with
-  99.2% and 98.3% identity, respectively.
+One lane of MiSeq sequencing of whole genome DNA is sufficient to
+assemble the 125 kbp complete plastid genome, and one lane of HiSeq
+sequencing of whole genome DNA is sufficient to assemble a draft 6 Mbp
+mitochondrial genome of white spruce. Scaffold contiguity can be
+improved with additional mate-pair library sequencing if available.
+The resulting assembly of whole genome sequencing data is composed of
+organellar sequences as well as high-copy-number nuclear repeat
+elements. The organellar sequences can be separated using a k-means
+classifier based on their length, depth of coverage and GC content of
+the sequences.
+
+The white spruce plastid genome shows no structural rearrangements
+when compared with Norway spruce. The mitochondrial genome in contrast
+shows much structural rearrangement, though more work is needed to
+determine what is due to the draft nature of these mitochondrial
+assemblies and what is true structural rearrangement.
+
+The mitochondrial genome is quite gene sparse in comparison to the
+plastid genome. 7% of the mitochondrial genome is composed of repeats,
+and 1% is composed of genes. A large portion of the content of the
+mitochondrial genome is yet unexplained.
 
 Acknowledgements
 ================
 
-The authors would like to thank Carson Holt for being exceedingly
-responsive and helpful in tweaking MAKER.
+Shaun Jackman would like to thank his supervisors Inanc Birol and
+Joerg Bohlmann for their guidance in the preparation of this
+manuscript, and Carson Holt for being exceedingly responsive and
+helpful in tweaking MAKER.
 
 References
 ==========
