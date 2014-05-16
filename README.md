@@ -148,6 +148,9 @@ Scaffold N50                    |125 kbp         |157 kbp
 Largest scaffold                |125 kbp         |519 kbp
 Identity to Norway spruce       |99.2%           |98.3%
 Coverage of Norway spruce       |98.8%           |59.6%
+Protein coding genes (mRNA)     |90              |54
+Transfer RNA genes (tRNA)       |41              |27
+Ribosomal RNA genes (rRNA)      |4               |4
 
 † Permitting gaps less than 500 bp
 
@@ -233,7 +236,7 @@ Conclusion
 ==========
 
 One lane of MiSeq sequencing of whole genome DNA is sufficient to
-assemble the 125 kbp complete plastid genome, and one lane of HiSeq
+assemble the 124 kbp complete plastid genome, and one lane of HiSeq
 sequencing of whole genome DNA is sufficient to assemble a draft 6 Mbp
 mitochondrial genome of white spruce. Scaffold contiguity can be
 improved with additional mate-pair library sequencing if available.
@@ -249,10 +252,12 @@ shows much structural rearrangement, though more work is needed to
 determine what is due to the draft nature of these mitochondrial
 assemblies and what is true structural rearrangement.
 
-The mitochondrial genome is quite gene sparse in comparison to the
-plastid genome. 7% of the mitochondrial genome is composed of repeats,
-and 1% is composed of genes. A large portion of the content of the
-mitochondrial genome is yet unexplained.
+The protein coding gene content of the mitochondrial genome is quite
+sparse, with 54 protein coding genes in 6 Mbp, in comparison to the
+plastid genome, with 90 protein coding genes in 124 kbp. 7% of the
+mitochondrial genome is composed of repeats, and 1% is composed of
+genes. A significant portion, over 90%, of the unusually large size of
+the white spruce mitochondrial genome is yet unexplained.
 
 Acknowledgements
 ================
