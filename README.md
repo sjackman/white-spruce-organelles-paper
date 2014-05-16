@@ -81,18 +81,39 @@ plastid in the white spruce plastid.
 Mitochondrion
 -------------
 
-+ Filled the gap between the paired-end reads using a Bloom filter de Bruijn Graph (ABySS-connectpairs)
-+ Assembled with [ABySS][abyss] 1.3.7
-+ Separated putative mitochondrial sequence by length, depth of coverage and GC content
-+ Scaffolded with mate-pair reads
-+ Aligned to the Norway spruce putative mitochondrion (5.5 Mbp) using [BWA-MEM][bwamem]
+### Assembly
 
-The mitochondrial genome was annotated using [MAKER][maker]
-(parameters shown in supplementary material). The Cycas taitungensis
-mitochondrion (NC_010303.1) was used for protein homology evidence,
-aligned using [BLAST][blast]. The tRNA genes were discovered using
-[tRNAscan][trnascan]. Repeats were identified using
-[RepeatMasker][repeatmasker].
+ABySS-connector was used to fill the gap between the paired-end reads
+of a single lane of Illumina HiSeq sequencing of a paired-end library.
+These connected paired-end reads were assembled using [ABySS][abyss].
+Putative mitochondrial sequences were separated from the assembly by
+their length, depth of coverage and GC content using k-means
+clustering in R. These putative mitochondrial contigs were then
+scaffolded using ABySS-scaffold with a single lane of Illumina HiSeq
+sequencing of a mate-pair library.
+
+### Annotation
+
+The mitochondrial genome was annotated using [MAKER-P][maker]
+(parameters shown in supplementary material). All green plants
+(viridiplantae) with complete mitochondrial genome sequences in NCBI
+GenBank were used for protein homology evidence. The [prince sago palm
+(Cycas taitungensis) mitochondrion](ctaitungensis) ([NC_010303][]) is
+the closest related species, being the only gymnosperm with a complete
+mitochondrial genome. Transfer RNA (tRNA) were annotated using
+[tRNAscan][trnascan]. Ribosomal RNA (rRNA) were annotated using
+[Barrnap][barrnap]. Repeats were identified using
+[RepeatMasker][repeatmasker] and RepeatModeler.
+
+[NC_010303]: http://www.ncbi.nlm.nih.gov/nuccore/NC_010303
+
+### Comparative genomics
+
+The putative mitochondrial sequences of the white spruce were aligned
+to the putative mitochondrial sequences of the
+[Norway spruce][norwayspruce] using [BWA-MEM][bwamem]. Coverage and
+identity of these alignments were calculated using the script
+`bam-identity` (see supplementary materials).
 
 Results
 =======
@@ -198,6 +219,8 @@ References
 + [tRNAscan-SE: A Program for Improved Detection of Transfer RNA Genes in Genomic Sequence][trnascan]
 + [Smit, AFA, Hubley, R & Green, P. RepeatMasker Open-3.0. 1996-2010 http://www.repeatmasker.org][repeatmasker]
 + [QUAST: quality assessment tool for genome assemblies][quast]
++ [The Mitochondrial Genome of the Gymnosperm Cycas taitungensis Contains a Novel Family of Short Interspersed Elements, Bpu Sequences, and Abundant RNA Editing Sites][ctaitungensis]
++ [barrnap 0.4.2 - rapid ribosomal RNA prediction][barrnap]
 
 [abyss]: http://genome.cshlp.org/content/19/6/1117
 [bwamem]: http://arxiv.org/pdf/1303.3997.pdf
@@ -215,6 +238,8 @@ References
 [trnascan]: http://nar.oxfordjournals.org/content/25/5/0955
 [repeatmasker]: http://www.repeatmasker.org/
 [quast]: http://bioinformatics.oxfordjournals.org/content/29/8/1072
+[ctaitungensis]: http://mbe.oxfordjournals.org/content/25/3/603.short
+[barrnap]: http://www.vicbioinformatics.com/software.barrnap.shtml
 
 Supplementary material
 ======================
@@ -241,12 +266,13 @@ Mitochondrion MAKER parameters
 ```
 genome=pg29mt-concat.fa
 organism_type=eukaryotic
-protein=NC_010303.faa
-model_org=all
-rmlib=PICEAGLAUCA_rpt2.0.fa
-repeat_protein=/usr/local/Cellar/maker/2.31/libexec/data/te_proteins.fasta
+protein=cds_aa.fa
+model_org=picea
+rmlib=rmlib.fa
+repeat_protein=/usr/local/opt/maker/libexec/data/te_proteins.fasta
 protein2genome=1
 trna=1
+other_gff=pg29mt-concat.rrna.gff
 est_forward=1
 single_exon=1
 ```
