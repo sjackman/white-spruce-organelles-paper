@@ -122,6 +122,11 @@ identity of these alignments were calculated using the script
 Results
 =======
 
+Table 1
+-------
+
+[table 1]: #table-1
+
 **Table 1**: Sequencing, assembly and alignment metrics of the white
 spruce organellar genomes
 
@@ -151,13 +156,15 @@ Plastid
 
 ### Assembly
 
-The plastid genome was assembled into a single circular scaffold with
-seven gaps. The assembly metrics are shown in table 1.
+The plastid genome was assembled into a single circular scaffold of
+125 kbp with seven gaps. The assembly metrics are shown in
+[table 1][].
 
 ### Annotation
 
-The plastid genome has 90 protein coding (mRNA) genes, 41 transfer RNA
-(tRNA) genes and 4 ribosomal RNA (rRNA) genes, shown in figure 1.
+The plastid genome contains 90 protein coding (mRNA) genes, 41
+transfer RNA (tRNA) genes and 4 ribosomal RNA (rRNA) genes, shown in
+figure 1.
 
 ![Figure 1: Plastid genes](plastid-annotation.png)
 
@@ -174,20 +181,38 @@ in full and 3 partial) of the Norway spruce plastid genome
 Mitochondrion
 -------------
 
-The mitochondrial genome contains 60 protein coding genes and 27
-transfer RNA (tRNA) genes, shown in figure 2.
+### Assembly
+
+The mitochondrial genome was assembled into 78 scaffolds (223 contigs,
+permitting gaps less than 500 bp) with a scaffold N50 of 519 kbp
+(contig N50 of 157 kbp). The largest scaffold is 519 kbp. The assembly
+metrics are shown in [table 1][].
+
+### Annotation
+
+The mitochondrial genome contains 54 protein coding (mRNA) genes, 27
+transfer RNA (tRNA) genes and 4 ribosomal RNA (rRNA) genes, shown in
+figure 2.
 
 ![Figure 2: Mitochondrial genes](mt-annotation.png)
 
 **Figure 2**: The annotated mitochondrial genome, which was annotated
 using [MAKER-P][maker] and plotted using [OGDRAW][ogdraw].
 
-Simple repeats and the LTR Copia and Gypsy are the most common
-repeats found in the mitochondrial genome, shown in figure 3.
+Repeats compose 391 kbp (6.5%) of the mitochondrial genome. Simple
+repeats, the LINE Jockey and the LTR Copia and Gypsy are the most
+common repeats, shown in figure 3.
 
 ![Figure 3: Mitochondrial repeats](mt-repeats.png)
 
 **Figure 3**: Repetitive sequence of the mitochondrial genome
+
+### Comparative genomics
+
+The putative mitochondrial sequences of the white spruce and Norway
+spruce show high sequence similarity, over 98% nucleotide identity,
+but only 60% of the Norway spruce putative mitochondrial sequences are
+covered by alignments of the white spruce sequences.
 
 Conclusion
 ==========
