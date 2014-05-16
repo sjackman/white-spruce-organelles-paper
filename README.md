@@ -94,15 +94,16 @@ sequencing of a mate-pair library.
 ### Annotation
 
 The mitochondrial genome was annotated using [MAKER-P][maker]
-(parameters shown in supplementary material). All green plants
-(viridiplantae) with complete mitochondrial genome sequences in NCBI
-GenBank were used for protein homology evidence. The [prince sago palm
-(Cycas taitungensis) mitochondrion](ctaitungensis) ([NC_010303][]) is
-the closest related species, being the only gymnosperm with a complete
-mitochondrial genome. Transfer RNA (tRNA) were annotated using
-[tRNAscan][trnascan]. Ribosomal RNA (rRNA) were annotated using
-[Barrnap][barrnap]. Repeats were identified using
-[RepeatMasker][repeatmasker] and RepeatModeler.
+(parameters shown in supplementary material). The proteins of all
+green plants (viridiplantae) with complete mitochondrial genome
+sequences in NCBI GenBank, 51 species, were used for protein homology
+evidence and aligned using [BLAST][blast] and [Exonerate][exonerate].
+The [prince sago palm (Cycas taitungensis)
+mitochondrion](ctaitungensis) ([NC_010303][]) is the closest related
+species, being the only gymnosperm with a complete mitochondrial
+genome. Transfer RNA (tRNA) were annotated using [tRNAscan][trnascan].
+Ribosomal RNA (rRNA) were annotated using [Barrnap][barrnap]. Repeats
+were identified using [RepeatMasker][repeatmasker] and RepeatModeler.
 
 [NC_010303]: http://www.ncbi.nlm.nih.gov/nuccore/NC_010303
 
@@ -218,6 +219,7 @@ References
 + [CGAP: a new comprehensive platform for the comparative analysis of chloroplast genomes][cgap]
 + [The Mitochondrial Genome of the Gymnosperm Cycas taitungensis Contains a Novel Family of Short Interspersed Elements, Bpu Sequences, and Abundant RNA Editing Sites][ctaitungensis]
 + [Automatic annotation of organellar genomes with DOGMA][dogma]
++ [Automated generation of heuristics for biological sequence comparison][exonerate]
 + [MAKER-P: a tool-kit for the rapid creation, management, and quality control of plant genome annotations][maker]
 + [The Norway spruce genome sequence and conifer genome evolution][norwayspruce]
 + [OrganellarGenomeDRAW (OGDRAW): a tool for the easy generation of high-quality custom graphical maps of plastid and mitochondrial genomes][ogdraw]
@@ -237,6 +239,7 @@ References
 [cgap]: http://www.biomedcentral.com/1471-2105/14/95/abstract
 [ctaitungensis]: http://mbe.oxfordjournals.org/content/25/3/603.short
 [dogma]: http://bioinformatics.oxfordjournals.org/content/20/17/3252
+[exonerate]: http://www.biomedcentral.com/1471-2105/6/31
 [maker]: http://www.plantphysiol.org/content/early/2013/12/06/pp.113.230144
 [norwayspruce]: http://www.nature.com/nature/journal/vaop/ncurrent/full/nature12211.html
 [ogdraw]: http://nar.oxfordjournals.org/content/41/W1/W575
