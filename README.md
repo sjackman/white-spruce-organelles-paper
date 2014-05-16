@@ -200,10 +200,16 @@ transfer RNA (tRNA) genes and 4 ribosomal RNA (rRNA) genes, shown in
 <a name="figure-2"></a>
 [figure 2]: #figure-2
 
-![Figure 2: Mitochondrial genes](mt-annotation.png)
+![Figure 2a: Mitochondrial genes](mt-annotation.png)
 
-**Figure 2**: The annotated mitochondrial genome, which was annotated
+**Figure 2a**: The annotated mitochondrial genome, which was annotated
 using [MAKER-P][maker] and plotted using [OGDRAW][ogdraw].
+
+![Figure 2b: Mitochondrial genes](mt-genes.png)
+
+**Figure 2b**: The sizes of the mitochondrial genes, grouped by family
+
+### Repeats
 
 Repeats compose 391 kbp (6.5%) of the mitochondrial genome. Simple
 repeats, the LINE Jockey and the LTR Copia and Gypsy are the most
