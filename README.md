@@ -179,7 +179,8 @@ transfer RNA (tRNA) genes, shown in figure 2.
 
 ![Figure 2: Mitochondrial genes](mt-annotation.png)
 
-**Figure 2**: The annotated mitochondrial genome, plotted using [OGDRAW][ogdraw].
+**Figure 2**: The annotated mitochondrial genome, which was annotated
+using [MAKER-P][maker] and plotted using [OGDRAW][ogdraw].
 
 Simple repeats and the LTR Copia and Gypsy are the most common
 repeats found in the mitochondrial genome, shown in figure 3.
