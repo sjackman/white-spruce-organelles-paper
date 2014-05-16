@@ -199,6 +199,12 @@ Conclusion
   genome ([NC_021456][]) and putative mitochondrial sequences with
   99.2% and 98.3% identity, respectively.
 
+Acknowledgements
+================
+
+The authors would like to thank Carson Holt for being exceedingly
+responsive and helpful in tweaking MAKER.
+
 References
 ==========
 
