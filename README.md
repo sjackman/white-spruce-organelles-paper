@@ -53,13 +53,12 @@ Plastid
 
 ### Assembly
 
-The overlapping paired-end reads were merged using ABySS-mergepairs
-(distributed with ABySS). These merged reads were assembled using
-[ABySS][abyss] 1.3.7. Contigs that are putatively derived from the
-plastid were separated by length and depth of coverage using
-thresholds chosen by inspection (see supplementary figure 1). These
-putative plastid contigs were scaffolded using ABySS-scaffold
-(distributed with ABySS).
+The overlapping paired-end reads were merged using ABySS-mergepairs.
+These merged reads were assembled using [ABySS][abyss]. Contigs that
+are putatively derived from the plastid were separated by length and
+depth of coverage using thresholds chosen by inspection (see
+supplementary figure 1). These putative plastid contigs were
+scaffolded using ABySS-scaffold.
 
 ### Annotation
 
