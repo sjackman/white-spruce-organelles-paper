@@ -63,7 +63,7 @@ These merged reads were assembled using [ABySS][abyss]. Contigs that
 are putatively derived from the plastid were separated by length and
 depth of coverage using thresholds chosen by inspection (see
 supplementary [figure S1][]). These putative plastid contigs were
-scaffolded using ABySS-scaffold.
+assembled into scaffolds using ABySS-scaffold.
 
 ### Annotation
 
@@ -87,14 +87,15 @@ Mitochondrion
 
 ### Assembly
 
-ABySS-connector was used to fill the gap between the paired-end reads
-of a single lane of Illumina MiSeq sequencing of a paired-end library.
+ABySS-konnector was used to fill the gap between the paired-end reads
+of a single lane of Illumina HiSeq sequencing of a paired-end library.
 These connected paired-end reads were assembled using [ABySS][abyss].
 Putative mitochondrial sequences were separated from the assembly by
 their length, depth of coverage and GC content using k-means
 clustering in R (see supplementary [figure S2][]). These putative
-mitochondrial contigs were then scaffolded using ABySS-scaffold with a
-single lane of Illumina HiSeq sequencing of a mate-pair library.
+mitochondrial contigs were then assembled into scaffolds using
+ABySS-scaffold with a single lane of Illumina HiSeq sequencing of a
+mate-pair library.
 
 ### Annotation
 
@@ -239,13 +240,12 @@ Conclusion
 One lane of MiSeq sequencing of whole genome DNA is sufficient to
 assemble the 124 kbp complete plastid genome, and one lane of HiSeq
 sequencing of whole genome DNA is sufficient to assemble a draft 6 Mbp
-mitochondrial genome of white spruce. Scaffold contiguity can be
-improved with additional mate-pair library sequencing if available.
-The resulting assembly of whole genome sequencing data is composed of
-organellar sequences as well as high-copy-number nuclear repeat
-elements. The organellar sequences can be separated using a k-means
-classifier based on their length, depth of coverage and GC content of
-the sequences.
+mitochondrial genome of white spruce. Scaffold contiguity is improved
+with additional mate-pair library sequencing. The resulting assembly
+of whole genome sequencing data is composed of organellar sequences as
+well as high-copy-number nuclear repeat elements. The mitochondrial
+sequences are separated using a k-means classifier based on their
+length, depth of coverage and GC content of the sequences.
 
 The white spruce plastid genome shows no structural rearrangements
 when compared with Norway spruce. The mitochondrial genome in contrast
@@ -312,6 +312,8 @@ References
 [samtools]: http://bioinformatics.oxfordjournals.org/content/25/16/2078
 [trnascan]: http://nar.oxfordjournals.org/content/25/5/0955
 [whitespruce]: http://bioinformatics.oxfordjournals.org/content/29/12/1492
+
+--------------------------------------------------------------------------------
 
 Supplementary material
 ======================
