@@ -94,7 +94,7 @@ green plants (viridiplantae) with complete mitochondrial genome
 sequences in NCBI GenBank, 51 species, were used for protein homology
 evidence and aligned using [BLAST][blast] and [Exonerate][exonerate].
 The [prince sago palm (Cycas taitungensis)
-mitochondrion](ctaitungensis) ([NC_010303][]) is the closest related
+mitochondrion][ctaitungensis] ([NC_010303][]) is the closest related
 species, being the only gymnosperm with a complete mitochondrial
 genome. Transfer RNA (tRNA) were annotated using [tRNAscan][trnascan].
 Ribosomal RNA (rRNA) were annotated using [Barrnap][barrnap]. Repeats
@@ -162,7 +162,7 @@ perfect gene synteny with no structural rearrangements. All 117 genes
 
 [Figure 1]: #figure-1
 
-![Figure 1: Plastid genes](plastid-annotation.png)
+![Figure 1: Plastid genes](figure/plastid-annotation.png)
 
 **Figure 1**: The annotated plastid genome, which was annotated using
 [DOGMA][dogma] and plotted using [OGDRAW][ogdraw].
@@ -192,12 +192,12 @@ common repeats, shown in [Figure 3][].
 
 [Figure 2]: #figure-2
 
-![Figure 2a: Mitochondrial genes](mt-annotation.png)
+![Figure 2a: Mitochondrial genes](figure/mt-annotation.png)
 
 **Figure 2a**: The annotated mitochondrial genome, which was annotated
 using [MAKER-P][maker] and plotted using [OGDRAW][ogdraw].
 
-![Figure 2b: Mitochondrial genes](mt-genes.png)
+![Figure 2b: Mitochondrial genes](figure/mt-genes.png)
 
 **Figure 2b**: The sizes of the mitochondrial genes, grouped by family
 
@@ -205,7 +205,7 @@ using [MAKER-P][maker] and plotted using [OGDRAW][ogdraw].
 
 [Figure 3]: #figure-3
 
-![Figure 3: Mitochondrial repeats](mt-repeats.png)
+![Figure 3: Mitochondrial repeats](figure/mt-repeats.png)
 
 **Figure 3**: Repetitive sequence of the mitochondrial genome
 
@@ -298,7 +298,7 @@ Figure S1: Classify plastid sequences
 
 [Figure S1]: #figure-s1-classify-plastid-sequences
 
-![Figure S1](plastid-classify.png)
+![Figure S1](figure/plastid-classify.png)
 
 **Figure S1**: Six plastid sequences were separated by length and
 depth of coverage using thresholds chosen by inspection
@@ -308,7 +308,7 @@ Figure S2: Classify mitochondrial sequences
 
 [Figure S2]: #figure-s2-classify-mitochondrial-sequences
 
-![Figure S2](mt-classify.png)
+![Figure S2](figure/mt-classify.png)
 
 **Figure S2**: Mitochondrial sequences were separated by length, depth
 of coverage and GC content using k-means clustering in R
