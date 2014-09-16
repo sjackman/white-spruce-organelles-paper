@@ -1,5 +1,6 @@
-Organellar Genomes of White Spruce (*Picea glauca*): Assembly and Annotation
-============================================================================
+---
+title: 'Organellar Genomes of White Spruce (*Picea glauca*): Assembly and Annotation'
+---
 
 Shaun D Jackman, Anthony Raymond, Ben Vandervalk, Hamid Mohamadi,
 René Warren, Stephen Pleasance, Robin Coope, Macaire MS Yuen,
