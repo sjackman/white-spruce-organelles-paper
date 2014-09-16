@@ -9,7 +9,7 @@ Kermit Ritland, John MacKay, Steven JM Jones, Joerg C Bohlmann,
 İnanç Birol
 
 Abstract
-========
+================================================================================
 
 The genome sequences of the plastid and mitochondrion of white spruce
 (*Picea glauca*) are assembled from whole genome Illumina sequencing
@@ -26,7 +26,7 @@ coverage and GC content. The genes and repeats of the plastid and
 mitochondrial genomes are annotated using MAKER-P.
 
 Introduction
-============
+================================================================================
 
 The SMarTForests project published the draft genome sequence of the
 20 gigabase [white spruce (*Picea glauca*) genome][whitespruce], seven
@@ -47,14 +47,14 @@ content. The organellar genomes of white spruce are compared to those
 of [Norway spruce (*Picea abies*)][norwayspruce].
 
 Methods
-=======
+================================================================================
 
 The software used in this analysis, their versions and the digital
 object identifiers (DOI) of their respective publications are listed
 in supplementary [table S1][].
 
 Plastid
--------
+------------------------------------------------------------
 
 The overlapping paired-end reads were merged using ABySS-mergepairs.
 These merged reads were assembled using [ABySS][abyss]. Contigs that
@@ -76,7 +76,7 @@ plastid in the white spruce plastid.
 [NC_021456]: http://www.ncbi.nlm.nih.gov/nuccore/NC_021456
 
 Mitochondrion
--------------
+------------------------------------------------------------
 
 ABySS-konnector was used to fill the gap between the paired-end reads
 of a single lane of Illumina HiSeq sequencing of a paired-end library.
@@ -109,7 +109,7 @@ identity of these alignments were calculated using the script
 `bam-identity` (see supplementary materials).
 
 Results
-=======
+================================================================================
 
 <a name="table-1"></a>
 
@@ -144,7 +144,7 @@ Ribosomal RNA genes (rRNA)      |4               |4
 † Permitting gaps less than 500 bp
 
 Plastid
--------
+------------------------------------------------------------
 
 The plastid genome was assembled into a single circular contig of 123
 kbp. The assembly metrics are shown in [table 1][]. The plastid genome
@@ -166,7 +166,7 @@ perfect gene synteny with no structural rearrangements. All 117 genes
 [DOGMA][dogma] and plotted using [OGDRAW][ogdraw].
 
 Mitochondrion
--------------
+------------------------------------------------------------
 
 The mitochondrial genome was assembled into 61 scaffolds (223 contigs,
 permitting gaps less than 500 bp) with a scaffold N50 of 287 kbp
@@ -208,7 +208,7 @@ using [MAKER-P][maker] and plotted using [OGDRAW][ogdraw].
 **Figure 3**: Repetitive sequence of the mitochondrial genome
 
 Conclusion
-==========
+================================================================================
 
 One lane of MiSeq sequencing of whole genome DNA is sufficient to
 assemble the 123 kbp complete plastid genome, and one lane of HiSeq
@@ -234,7 +234,7 @@ coding genes. A significant portion, over 90%, of the unusually large
 size of the white spruce mitochondrial genome is yet unexplained.
 
 Acknowledgements
-================
+================================================================================
 
 Shaun Jackman would like to thank his supervisors Inanc Birol and
 Joerg Bohlmann for their guidance in the preparation of this
@@ -242,7 +242,7 @@ manuscript, and Carson Holt for being exceedingly responsive and
 helpful in tweaking MAKER.
 
 References
-==========
+================================================================================
 
 + [ABySS: a parallel assembler for short read sequence data][abyss]
 + [Horizontal Transfer of Entire Genomes via Mitochondrial Fusion in the Angiosperm Amborella][amborellamt]
@@ -289,10 +289,10 @@ References
 --------------------------------------------------------------------------------
 
 Supplementary material
-======================
+================================================================================
 
 Figure S1: Classify plastid sequences
--------------------------------------
+------------------------------------------------------------
 
 [figure S1]: #figure-s1-classify-plastid-sequences
 
@@ -302,7 +302,7 @@ Figure S1: Classify plastid sequences
 depth of coverage using thresholds chosen by inspection
 
 Figure S2: Classify mitochondrial sequences
--------------------------------------------
+------------------------------------------------------------
 
 [figure S2]: #figure-s2-classify-mitochondrial-sequences
 
@@ -312,7 +312,7 @@ Figure S2: Classify mitochondrial sequences
 of coverage and GC content using k-means clustering in R
 
 Table S1: Software
-------------------
+------------------------------------------------------------
 
 [table S1]: #table-s1-software
 
@@ -351,7 +351,7 @@ tRNAscan-SE   | 1.23    | [10.1093/nar/25.5.0955][]
 [10.1371/journal.pcbi.1002195]: http://dx.doi.org/10.1371/journal.pcbi.1002195
 
 Table S2: DOGMA parameters
---------------------------
+------------------------------------------------------------
 
 [table S2]: #table-s2-dogma-parameters
 
@@ -369,7 +369,7 @@ E-value                                          | 1e-5
 Number of blast hits to return                   | 5
 
 Table S3: MAKER parameters
---------------------------
+------------------------------------------------------------
 
 [table S3]: #table-s3-maker-parameters
 
