@@ -56,21 +56,14 @@ in supplementary [table S1][].
 Plastid
 -------
 
-### Assembly
-
 The overlapping paired-end reads were merged using ABySS-mergepairs.
 These merged reads were assembled using [ABySS][abyss]. Contigs that
 are putatively derived from the plastid were separated by length and
 depth of coverage using thresholds chosen by inspection (see
 supplementary [figure S1][]). These putative plastid contigs were
-assembled into scaffolds using ABySS-scaffold.
-
-### Annotation
-
-The assembled plastid genome was annotated using [DOGMA][dogma] with
-default parameters (shown in supplementary [table S2][]).
-
-### Comparative genomics
+assembled into scaffolds using ABySS-scaffold. The assembled plastid
+genome was annotated using [DOGMA][dogma] with default parameters
+(shown in supplementary [table S2][]).
 
 The assembled plastid genome was aligned to the
 [Norway spruce][norwayspruce] complete plastid genome ([NC_021456][])
@@ -85,8 +78,6 @@ plastid in the white spruce plastid.
 Mitochondrion
 -------------
 
-### Assembly
-
 ABySS-konnector was used to fill the gap between the paired-end reads
 of a single lane of Illumina HiSeq sequencing of a paired-end library.
 These connected paired-end reads were assembled using [ABySS][abyss].
@@ -96,8 +87,6 @@ clustering in R (see supplementary [figure S2][]). These putative
 mitochondrial contigs were then assembled into scaffolds using
 ABySS-scaffold with a single lane of Illumina HiSeq sequencing of a
 mate-pair library.
-
-### Annotation
 
 The mitochondrial genome was annotated using [MAKER-P][maker]
 (parameters shown in supplementary [table S3][]). The proteins of all
@@ -113,8 +102,6 @@ were identified using [RepeatMasker][repeatmasker] and RepeatModeler.
 
 [NC_010303]: http://www.ncbi.nlm.nih.gov/nuccore/NC_010303
 
-### Comparative genomics
-
 The putative mitochondrial sequences of white spruce were aligned
 to the putative mitochondrial sequences of the
 [Norway spruce][norwayspruce] using [BWA-MEM][bwamem]. Coverage and
@@ -124,8 +111,7 @@ identity of these alignments were calculated using the script
 Results
 =======
 
-Table 1
--------
+<a name="table-1"></a>
 
 [table 1]: #table-1
 
@@ -154,23 +140,24 @@ Protein coding genes (mRNA)     |74              |54
 Transfer RNA genes (tRNA)       |36              |23
 Ribosomal RNA genes (rRNA)      |4               |4
 
+
 † Permitting gaps less than 500 bp
 
 Plastid
 -------
 
-### Assembly
+The plastid genome was assembled into a single circular contig of 123
+kbp. The assembly metrics are shown in [table 1][]. The plastid genome
+contains 74 protein coding (mRNA) genes, 36 transfer RNA (tRNA) genes
+and 4 ribosomal RNA (rRNA) genes, shown in [figure 1][].
 
-The plastid genome was assembled into a single circular contig of
-123 kbp. The assembly metrics are shown in [table 1][].
-
-### Annotation
-
-The plastid genome contains 74 protein coding (mRNA) genes,
-36 transfer RNA (tRNA) genes and 4 ribosomal RNA (rRNA) genes, shown
-in [figure 1][].
+The genomes of the white spruce plastid and Norway spruce plastid show
+perfect gene synteny with no structural rearrangements. All 117 genes
+(116 in full and 1 partial) of the Norway spruce plastid genome
+([NC_021456][]) are present in the white spruce plastid genome.
 
 <a name="figure-1"></a>
+
 [figure 1]: #figure-1
 
 ![Figure 1: Plastid genes](plastid-annotation.png)
@@ -178,30 +165,29 @@ in [figure 1][].
 **Figure 1**: The annotated plastid genome, which was annotated using
 [DOGMA][dogma] and plotted using [OGDRAW][ogdraw].
 
-### Comparative genomics
-
-The genomes of the white spruce plastid and Norway spruce plastid show
-perfect gene synteny with no structural rearrangements. All 117 genes
-(116 in full and 1 partial) of the Norway spruce plastid genome
-([NC_021456][]) are present in the white spruce plastid genome.
-
 Mitochondrion
 -------------
-
-### Assembly
 
 The mitochondrial genome was assembled into 61 scaffolds (223 contigs,
 permitting gaps less than 500 bp) with a scaffold N50 of 287 kbp
 (contig N50 of 39 kbp). The largest scaffold is 598 kbp. The assembly
 metrics are shown in [table 1][].
 
-### Annotation
-
 The mitochondrial genome contains 54 protein coding (mRNA) genes, 23
 transfer RNA (tRNA) genes and 4 ribosomal RNA (rRNA) genes, shown in
 [figure 2][]. The coding genes compose 50 kbp (<1%) of the genome.
 
+The putative mitochondrial sequences of white spruce and Norway spruce
+show high sequence similarity, over 98% nucleotide identity, but only
+60% of the Norway spruce putative mitochondrial sequences are covered
+by alignments of the white spruce sequences.
+
+Repeats compose 400 kbp (~7%) of the mitochondrial genome. Simple
+repeats, the LINE Jockey and the LTR Copia and Gypsy are the most
+common repeats, shown in [figure 3][].
+
 <a name="figure-2"></a>
+
 [figure 2]: #figure-2
 
 ![Figure 2a: Mitochondrial genes](mt-annotation.png)
@@ -213,25 +199,13 @@ using [MAKER-P][maker] and plotted using [OGDRAW][ogdraw].
 
 **Figure 2b**: The sizes of the mitochondrial genes, grouped by family
 
-### Repeats
-
-Repeats compose 400 kbp (~7%) of the mitochondrial genome. Simple
-repeats, the LINE Jockey and the LTR Copia and Gypsy are the most
-common repeats, shown in [figure 3][].
-
 <a name="figure-3"></a>
+
 [figure 3]: #figure-3
 
 ![Figure 3: Mitochondrial repeats](mt-repeats.png)
 
 **Figure 3**: Repetitive sequence of the mitochondrial genome
-
-### Comparative genomics
-
-The putative mitochondrial sequences of white spruce and Norway spruce
-show high sequence similarity, over 98% nucleotide identity, but only
-60% of the Norway spruce putative mitochondrial sequences are covered
-by alignments of the white spruce sequences.
 
 Conclusion
 ==========
