@@ -51,7 +51,7 @@ Methods
 
 The software used in this analysis, their versions and the digital
 object identifiers (DOI) of their respective publications are listed
-in supplementary [table S1][].
+in supplementary [Table S1][].
 
 Plastid
 ------------------------------------------------------------
@@ -60,10 +60,10 @@ The overlapping paired-end reads were merged using ABySS-mergepairs.
 These merged reads were assembled using [ABySS][abyss]. Contigs that
 are putatively derived from the plastid were separated by length and
 depth of coverage using thresholds chosen by inspection (see
-supplementary [figure S1][]). These putative plastid contigs were
+supplementary [Figure S1][]). These putative plastid contigs were
 assembled into scaffolds using ABySS-scaffold. The assembled plastid
 genome was annotated using [DOGMA][dogma] with default parameters
-(shown in supplementary [table S2][]).
+(shown in supplementary [Table S2][]).
 
 The assembled plastid genome was aligned to the
 [Norway spruce][norwayspruce] complete plastid genome ([NC_021456][])
@@ -83,13 +83,13 @@ of a single lane of Illumina HiSeq sequencing of a paired-end library.
 These connected paired-end reads were assembled using [ABySS][abyss].
 Putative mitochondrial sequences were separated from the assembly by
 their length, depth of coverage and GC content using k-means
-clustering in R (see supplementary [figure S2][]). These putative
+clustering in R (see supplementary [Figure S2][]). These putative
 mitochondrial contigs were then assembled into scaffolds using
 ABySS-scaffold with a single lane of Illumina HiSeq sequencing of a
 mate-pair library.
 
 The mitochondrial genome was annotated using [MAKER-P][maker]
-(parameters shown in supplementary [table S3][]). The proteins of all
+(parameters shown in supplementary [Table S3][]). The proteins of all
 green plants (viridiplantae) with complete mitochondrial genome
 sequences in NCBI GenBank, 51 species, were used for protein homology
 evidence and aligned using [BLAST][blast] and [Exonerate][exonerate].
@@ -111,9 +111,11 @@ identity of these alignments were calculated using the script
 Results
 ================================================================================
 
+The assembly and annotation metrics are summarized in [Table 1][].
+
 <a name="table-1"></a>
 
-[table 1]: #table-1
+[Table 1]: #table-1
 
 **Table 1**: Sequencing, assembly and alignment metrics of the white
 spruce organellar genomes
@@ -147,9 +149,9 @@ Plastid
 ------------------------------------------------------------
 
 The plastid genome was assembled into a single circular contig of 123
-kbp. The assembly metrics are shown in [table 1][]. The plastid genome
+kbp. The assembly metrics are shown in [Table 1][]. The plastid genome
 contains 74 protein coding (mRNA) genes, 36 transfer RNA (tRNA) genes
-and 4 ribosomal RNA (rRNA) genes, shown in [figure 1][].
+and 4 ribosomal RNA (rRNA) genes, shown in [Figure 1][].
 
 The genomes of the white spruce plastid and Norway spruce plastid show
 perfect gene synteny with no structural rearrangements. All 117 genes
@@ -158,7 +160,7 @@ perfect gene synteny with no structural rearrangements. All 117 genes
 
 <a name="figure-1"></a>
 
-[figure 1]: #figure-1
+[Figure 1]: #figure-1
 
 ![Figure 1: Plastid genes](plastid-annotation.png)
 
@@ -171,11 +173,11 @@ Mitochondrion
 The mitochondrial genome was assembled into 61 scaffolds (223 contigs,
 permitting gaps less than 500 bp) with a scaffold N50 of 287 kbp
 (contig N50 of 39 kbp). The largest scaffold is 598 kbp. The assembly
-metrics are shown in [table 1][].
+metrics are shown in [Table 1][].
 
 The mitochondrial genome contains 54 protein coding (mRNA) genes, 23
 transfer RNA (tRNA) genes and 4 ribosomal RNA (rRNA) genes, shown in
-[figure 2][]. The coding genes compose 50 kbp (<1%) of the genome.
+[Figure 2][]. The coding genes compose 50 kbp (<1%) of the genome.
 
 The putative mitochondrial sequences of white spruce and Norway spruce
 show high sequence similarity, over 98% nucleotide identity, but only
@@ -184,11 +186,11 @@ by alignments of the white spruce sequences.
 
 Repeats compose 400 kbp (~7%) of the mitochondrial genome. Simple
 repeats, the LINE Jockey and the LTR Copia and Gypsy are the most
-common repeats, shown in [figure 3][].
+common repeats, shown in [Figure 3][].
 
 <a name="figure-2"></a>
 
-[figure 2]: #figure-2
+[Figure 2]: #figure-2
 
 ![Figure 2a: Mitochondrial genes](mt-annotation.png)
 
@@ -201,7 +203,7 @@ using [MAKER-P][maker] and plotted using [OGDRAW][ogdraw].
 
 <a name="figure-3"></a>
 
-[figure 3]: #figure-3
+[Figure 3]: #figure-3
 
 ![Figure 3: Mitochondrial repeats](mt-repeats.png)
 
@@ -294,7 +296,7 @@ Supplementary material
 Figure S1: Classify plastid sequences
 ------------------------------------------------------------
 
-[figure S1]: #figure-s1-classify-plastid-sequences
+[Figure S1]: #figure-s1-classify-plastid-sequences
 
 ![Figure S1](plastid-classify.png)
 
@@ -304,7 +306,7 @@ depth of coverage using thresholds chosen by inspection
 Figure S2: Classify mitochondrial sequences
 ------------------------------------------------------------
 
-[figure S2]: #figure-s2-classify-mitochondrial-sequences
+[Figure S2]: #figure-s2-classify-mitochondrial-sequences
 
 ![Figure S2](mt-classify.png)
 
@@ -314,7 +316,7 @@ of coverage and GC content using k-means clustering in R
 Table S1: Software
 ------------------------------------------------------------
 
-[table S1]: #table-s1-software
+[Table S1]: #table-s1-software
 
 Software      | Version | DOI
 --------------|---------|--------------------------
@@ -353,7 +355,7 @@ tRNAscan-SE   | 1.23    | [10.1093/nar/25.5.0955][]
 Table S2: DOGMA parameters
 ------------------------------------------------------------
 
-[table S2]: #table-s2-dogma-parameters
+[Table S2]: #table-s2-dogma-parameters
 
 The following parameters were used for the annotation of the plastid
 using [DOGMA][dogma].
@@ -371,7 +373,7 @@ Number of blast hits to return                   | 5
 Table S3: MAKER parameters
 ------------------------------------------------------------
 
-[table S3]: #table-s3-maker-parameters
+[Table S3]: #table-s3-maker-parameters
 
 ```
 genome=pg29mt-concat.fa
