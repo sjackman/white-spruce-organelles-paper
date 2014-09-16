@@ -1,11 +1,14 @@
-all: README.html
+all: white-spruce-organelles.html white-spruce-organelles.pdf
 
 clean:
-	rm -f README.html
+	rm -f white-spruce-organelles.html white-spruce-organelles.pdf
 
 .PHONY: all clean
 .DELETE_ON_ERROR:
 .SECONDARY:
 
-%.html: %.md
-	grip --export $<
+white-spruce-organelles.html: README.md
+	pandoc -s -o $@ $<
+
+white-spruce-organelles.pdf: README.md
+	pandoc -o $@ $<
