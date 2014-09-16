@@ -177,7 +177,8 @@ metrics are shown in [Table 1][].
 
 The mitochondrial genome contains 54 protein coding (mRNA) genes, 23
 transfer RNA (tRNA) genes and 4 ribosomal RNA (rRNA) genes, shown in
-[Figure 2][]. The coding genes compose 50 kbp (<1%) of the genome.
+[Figure 2][]. The coding genes compose 50 kbp (<1%) of the genome,
+shown in [Figure 3][].
 
 The putative mitochondrial sequences of white spruce and Norway spruce
 show high sequence similarity, over 98% nucleotide identity, but only
@@ -186,28 +187,32 @@ by alignments of the white spruce sequences.
 
 Repeats compose 400 kbp (~7%) of the mitochondrial genome. Simple
 repeats, the LINE Jockey and the LTR Copia and Gypsy are the most
-common repeats, shown in [Figure 3][].
+common repeats, shown in [Figure 4][].
 
 <a name="figure-2"></a>
 
 [Figure 2]: #figure-2
 
-![Figure 2a: Mitochondrial genes](figure/mt-annotation.png)
+![Figure 2: Mitochondrial genes](figure/mt-annotation.png)
 
-**Figure 2a**: The annotated mitochondrial genome, which was annotated
+**Figure 2**: The annotated mitochondrial genome, which was annotated
 using [MAKER-P][maker] and plotted using [OGDRAW][ogdraw].
-
-![Figure 2b: Mitochondrial genes](figure/mt-genes.png)
-
-**Figure 2b**: The sizes of the mitochondrial genes, grouped by family
 
 <a name="figure-3"></a>
 
 [Figure 3]: #figure-3
 
-![Figure 3: Mitochondrial repeats](figure/mt-repeats.png)
+![Figure 3: Mitochondrial genes](figure/mt-genes.png)
 
-**Figure 3**: Repetitive sequence of the mitochondrial genome
+**Figure 3**: The sizes of the mitochondrial genes, grouped by family
+
+<a name="figure-4"></a>
+
+[Figure 4]: #figure-4
+
+![Figure 4: Mitochondrial repeats](figure/mt-repeats.png)
+
+**Figure 4**: Repetitive sequence of the mitochondrial genome
 
 Conclusion
 ================================================================================
