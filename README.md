@@ -16,8 +16,8 @@ The genome sequences of the plastid and mitochondrion of white spruce
 data using ABySS. Whole genome sequencing data contains reads from
 both the nuclear and organellar genomes. Reads of the organellar
 genomes are abundant, because each cell contains hundreds of
-mitochondria and plastids. One lane of MiSeq data assembles the 124
-kbp plastid genome in a single scaffold, and one lane of HiSeq data
+mitochondria and plastids. One lane of MiSeq data assembles the 123
+kbp plastid genome in a single contig, and one lane of HiSeq data
 assembles a putative 6 Mbp mitochondrial genome. The raw assembly is
 expected to be composed of organellar sequence as well as nuclear
 repeat elements. The organellar sequences are separated from the
@@ -142,16 +142,16 @@ Median merged read length       |492 bp          |465 bp
 Number of assembled reads       |21 thousand     |377 thousand
 Proportion of organellar reads  |1/140 or 0.7%   |1/350 or 0.3%
 Depth of coverage               |80x             |30x
-Assembled genome size           |125 kbp         |6.0 Mbp
-Number of contigs†              |6 contigs       |223 contigs
-Contig N50†                     |70 kbp          |39 kbp
+Assembled genome size           |123 kbp         |6.0 Mbp
+Number of contigs               |1 contig        |223 contigs †
+Contig N50                      |123 kbp         |39 kbp †
 Number of scaffolds             |1 scaffold      |78 scaffolds
-Scaffold N50                    |125 kbp         |157 kbp
-Largest scaffold                |125 kbp         |519 kbp
+Scaffold N50                    |123 kbp         |157 kbp
+Largest scaffold                |123 kbp         |519 kbp
 Identity to Norway spruce       |99.2%           |98.3%
-Coverage of Norway spruce       |98.8%           |59.6%
-Protein coding genes (mRNA)     |90              |54
-Transfer RNA genes (tRNA)       |41              |27
+Coverage of Norway spruce       |99.7%           |59.6%
+Protein coding genes (mRNA)     |74              |54
+Transfer RNA genes (tRNA)       |36              |27
 Ribosomal RNA genes (rRNA)      |4               |4
 
 † Permitting gaps less than 500 bp
@@ -161,15 +161,14 @@ Plastid
 
 ### Assembly
 
-The plastid genome was assembled into a single circular scaffold of
-125 kbp with seven gaps. The assembly metrics are shown in
-[table 1][].
+The plastid genome was assembled into a single circular contig of
+123 kbp. The assembly metrics are shown in [table 1][].
 
 ### Annotation
 
-The plastid genome contains 90 protein coding (mRNA) genes, 41
-transfer RNA (tRNA) genes and 4 ribosomal RNA (rRNA) genes, shown in
-[figure 1][].
+The plastid genome contains 74 protein coding (mRNA) genes,
+36 transfer RNA (tRNA) genes and 4 ribosomal RNA (rRNA) genes, shown
+in [figure 1][].
 
 <a name="figure-1"></a>
 [figure 1]: #figure-1
@@ -183,7 +182,7 @@ transfer RNA (tRNA) genes and 4 ribosomal RNA (rRNA) genes, shown in
 
 The genomes of the white spruce plastid and Norway spruce plastid show
 perfect gene synteny with no structural rearrangements. All 117 genes
-(114 in full and 3 partial) of the Norway spruce plastid genome
+(116 in full and 1 partial) of the Norway spruce plastid genome
 ([NC_021456][]) are present in the white spruce plastid genome.
 
 Mitochondrion
@@ -238,7 +237,7 @@ Conclusion
 ==========
 
 One lane of MiSeq sequencing of whole genome DNA is sufficient to
-assemble the 124 kbp complete plastid genome, and one lane of HiSeq
+assemble the 123 kbp complete plastid genome, and one lane of HiSeq
 sequencing of whole genome DNA is sufficient to assemble a draft 6 Mbp
 mitochondrial genome of white spruce. Scaffold contiguity is improved
 with additional mate-pair library sequencing. The resulting assembly
@@ -255,7 +254,7 @@ assemblies and what is true structural rearrangement.
 
 The protein coding gene content of the mitochondrial genome is quite
 sparse, with 54 protein coding genes in 6 Mbp, in comparison to the
-plastid genome, with 90 protein coding genes in 124 kbp. 7% of the
+plastid genome, with 74 protein coding genes in 123 kbp. 7% of the
 mitochondrial genome is composed of repeats, and 1% is composed of
 genes. A significant portion, over 90%, of the unusually large size of
 the white spruce mitochondrial genome is yet unexplained.
