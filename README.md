@@ -18,7 +18,7 @@ both the nuclear and organellar genomes. Reads of the organellar
 genomes are abundant, because each cell contains hundreds of
 mitochondria and plastids. One lane of MiSeq data assembles the 123
 kbp plastid genome in a single contig, and one lane of HiSeq data
-assembles a putative 6 Mbp mitochondrial genome. The raw assembly is
+assembles a putative 5.9 Mbp mitochondrial genome. The raw assembly is
 expected to be composed of organellar sequence as well as nuclear
 repeat elements. The organellar sequences are separated from the
 assembly by classifying the sequences using their length, depth of
@@ -142,16 +142,16 @@ Median merged read length       |492 bp          |465 bp
 Number of assembled reads       |21 thousand     |377 thousand
 Proportion of organellar reads  |1/140 or 0.7%   |1/350 or 0.3%
 Depth of coverage               |80x             |30x
-Assembled genome size           |123 kbp         |6.0 Mbp
+Assembled genome size           |123 kbp         |5.92 Mbp
 Number of contigs               |1 contig        |223 contigs †
 Contig N50                      |123 kbp         |39 kbp †
-Number of scaffolds             |1 scaffold      |78 scaffolds
-Scaffold N50                    |123 kbp         |157 kbp
-Largest scaffold                |123 kbp         |519 kbp
+Number of scaffolds             |1 scaffold      |61 scaffolds
+Scaffold N50                    |123 kbp         |287 kbp
+Largest scaffold                |123 kbp         |598 kbp
 Identity to Norway spruce       |99.2%           |98.3%
 Coverage of Norway spruce       |99.7%           |59.6%
 Protein coding genes (mRNA)     |74              |54
-Transfer RNA genes (tRNA)       |36              |27
+Transfer RNA genes (tRNA)       |36              |23
 Ribosomal RNA genes (rRNA)      |4               |4
 
 † Permitting gaps less than 500 bp
@@ -190,16 +190,16 @@ Mitochondrion
 
 ### Assembly
 
-The mitochondrial genome was assembled into 78 scaffolds (223 contigs,
-permitting gaps less than 500 bp) with a scaffold N50 of 157 kbp
-(contig N50 of 39 kbp). The largest scaffold is 519 kbp. The assembly
+The mitochondrial genome was assembled into 61 scaffolds (223 contigs,
+permitting gaps less than 500 bp) with a scaffold N50 of 287 kbp
+(contig N50 of 39 kbp). The largest scaffold is 598 kbp. The assembly
 metrics are shown in [table 1][].
 
 ### Annotation
 
-The mitochondrial genome contains 54 protein coding (mRNA) genes, 27
+The mitochondrial genome contains 54 protein coding (mRNA) genes, 23
 transfer RNA (tRNA) genes and 4 ribosomal RNA (rRNA) genes, shown in
-[figure 2][].
+[figure 2][]. The coding genes compose 50 kbp (<1%) of the genome.
 
 <a name="figure-2"></a>
 [figure 2]: #figure-2
@@ -215,7 +215,7 @@ using [MAKER-P][maker] and plotted using [OGDRAW][ogdraw].
 
 ### Repeats
 
-Repeats compose 391 kbp (6.5%) of the mitochondrial genome. Simple
+Repeats compose 400 kbp (~7%) of the mitochondrial genome. Simple
 repeats, the LINE Jockey and the LTR Copia and Gypsy are the most
 common repeats, shown in [figure 3][].
 
@@ -238,7 +238,7 @@ Conclusion
 
 One lane of MiSeq sequencing of whole genome DNA is sufficient to
 assemble the 123 kbp complete plastid genome, and one lane of HiSeq
-sequencing of whole genome DNA is sufficient to assemble a draft 6 Mbp
+sequencing of whole genome DNA is sufficient to assemble a draft 5.9 Mbp
 mitochondrial genome of white spruce. Scaffold contiguity is improved
 with additional mate-pair library sequencing. The resulting assembly
 of whole genome sequencing data is composed of organellar sequences as
@@ -253,11 +253,11 @@ determine what is due to the draft nature of these mitochondrial
 assemblies and what is true structural rearrangement.
 
 The protein coding gene content of the mitochondrial genome is quite
-sparse, with 54 protein coding genes in 6 Mbp, in comparison to the
+sparse, with 54 protein coding genes in 5.9 Mbp, in comparison to the
 plastid genome, with 74 protein coding genes in 123 kbp. 7% of the
-mitochondrial genome is composed of repeats, and 1% is composed of
-genes. A significant portion, over 90%, of the unusually large size of
-the white spruce mitochondrial genome is yet unexplained.
+mitochondrial genome is composed of repeats, and <1% is composed of
+coding genes. A significant portion, over 90%, of the unusually large
+size of the white spruce mitochondrial genome is yet unexplained.
 
 Acknowledgements
 ================
