@@ -162,10 +162,9 @@ perfect gene synteny with no structural rearrangements. All 117 genes
 
 [Figure 1]: #figure-1
 
-![Figure 1: Plastid genes](figure/plastid-annotation.png)
-
-**Figure 1**: The annotated plastid genome, which was annotated using
+![The annotated plastid genome, which was annotated using
 [DOGMA][dogma] and plotted using [OGDRAW][ogdraw].
+](figure/plastid-annotation.png)
 
 Mitochondrion
 ------------------------------------------------------------
@@ -193,26 +192,23 @@ common repeats, shown in [Figure 4][].
 
 [Figure 2]: #figure-2
 
-![Figure 2: Mitochondrial genes](figure/mt-annotation.png)
-
-**Figure 2**: The annotated mitochondrial genome, which was annotated
-using [MAKER-P][maker] and plotted using [OGDRAW][ogdraw].
+![The annotated mitochondrial genome, which was annotated using
+[MAKER-P][maker] and plotted using [OGDRAW][ogdraw].
+](figure/mt-annotation.png)
 
 <a name="figure-3"></a>
 
 [Figure 3]: #figure-3
 
-![Figure 3: Mitochondrial genes](figure/mt-genes.png)
-
-**Figure 3**: The sizes of the mitochondrial genes, grouped by family
+![The sizes of the mitochondrial genes, grouped by family.
+](figure/mt-genes.png)
 
 <a name="figure-4"></a>
 
 [Figure 4]: #figure-4
 
-![Figure 4: Mitochondrial repeats](figure/mt-repeats.png)
-
-**Figure 4**: Repetitive sequence of the mitochondrial genome
+![Repetitive sequence of the mitochondrial genome.
+](figure/mt-repeats.png)
 
 Conclusion
 ================================================================================
