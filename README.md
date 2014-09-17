@@ -140,13 +140,13 @@ Contig N50                      |123 kbp         |39 kbp †
 Number of scaffolds             |1 scaffold      |61 scaffolds
 Scaffold N50                    |123 kbp         |287 kbp
 Largest scaffold                |123 kbp         |598 kbp
-Identity to Norway spruce       |99.2%           |98.3%
-Coverage of Norway spruce       |99.7%           |59.6%
 Protein coding genes (mRNA)     |74              |54
 Transfer RNA genes (tRNA)       |36              |23
 Ribosomal RNA genes (rRNA)      |4               |4
 Coding genes containing introns |4               |11
 Introns in coding genes         |5               |15
+Identity to Norway spruce       |99.2%           |98.3%
+Coverage of Norway spruce       |99.7%           |59.6%
 
 † Permitting gaps less than 500 bp
 
