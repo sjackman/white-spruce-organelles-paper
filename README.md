@@ -62,11 +62,15 @@ are putatively derived from the plastid were separated by length and
 depth of coverage using thresholds chosen by inspection (see
 supplementary [Figure S1][]). These putative plastid contigs were
 assembled into scaffolds using ABySS-scaffold. The assembled plastid
-genome was annotated using [DOGMA][dogma] with default parameters
-(shown in supplementary [Table S2][]).
+genome was initially annotated using [DOGMA][dogma], but DOGMA is an
+interactive web application, which is not convenient for an automated
+pipeline. We instead used [MAKER-P][maker] for annotation, which is
+intended for automated pipelines, and used the [Norway
+spruce][norwayspruce] complete plastid genome ([NC_021456][]) for
+both protein-coding and non-coding gene homology evidence. The
+parameters of MAKER are show in supplementary [Table S2][].
 
-The assembled plastid genome was aligned to the
-[Norway spruce][norwayspruce] complete plastid genome ([NC_021456][])
+The assembled plastid genome was aligned to the Norway spruce plastid
 using [BWA-MEM][bwamem]. Coverage and identity of these alignments
 were calculated using the script `bam-identity` (see supplementary
 materials). The two genomes were compared using [QUAST][quast] to
@@ -130,7 +134,7 @@ Median merged read length       |492 bp          |465 bp
 Number of assembled reads       |21 thousand     |377 thousand
 Proportion of organellar reads  |1/140 or 0.7%   |1/350 or 0.3%
 Depth of coverage               |80x             |30x
-Assembled genome size           |123 kbp         |5.92 Mbp
+Assembled genome size           |123,266 bp      |5.92 Mbp
 Number of contigs               |1 contig        |223 contigs †
 Contig N50                      |123 kbp         |39 kbp †
 Number of scaffolds             |1 scaffold      |61 scaffolds
@@ -141,21 +145,26 @@ Coverage of Norway spruce       |99.7%           |59.6%
 Protein coding genes (mRNA)     |74              |54
 Transfer RNA genes (tRNA)       |36              |23
 Ribosomal RNA genes (rRNA)      |4               |4
-
+Coding genes containing introns |4               |11
+Introns in coding genes         |5               |15
 
 † Permitting gaps less than 500 bp
 
 Plastid
 ------------------------------------------------------------
 
-The plastid genome was assembled into a single circular contig of 123
-kbp. The assembly metrics are shown in [Table 1][]. The plastid genome
-contains 74 protein coding (mRNA) genes, 36 transfer RNA (tRNA) genes
-and 4 ribosomal RNA (rRNA) genes, shown in [Figure 1][].
+The plastid genome was assembled into a single circular contig of
+123,266 bp. The assembly metrics are shown in [Table 1][]. The plastid
+genome contains 114 genes: 74 protein coding (mRNA) genes, 36 transfer RNA
+(tRNA) genes and 4 ribosomal RNA (rRNA) genes, shown in [Figure 1][]. The genes
+*atpF*, *rpl2* and *rpoC1* each contain one intron, and *ycf2* contains two
+introns. All coding genes are single copy, except *psbI* and *ycf12*, which
+occur twice. All tRNA genes are single copy, except *trnH-GUG*, *trnI-CAU*,
+*trnS-GCU* and *trnT-GGU*, which occur twice. All rRNA genes are single copy.
 
 The genomes of the white spruce plastid and Norway spruce plastid show
-perfect gene synteny with no structural rearrangements. All 117 genes
-(116 in full and 1 partial) of the Norway spruce plastid genome
+perfect gene synteny with no structural rearrangements. All 114 genes
+(113 in full and 1 partial) of the Norway spruce plastid genome
 ([NC_021456][]) are present in the white spruce plastid genome.
 
 <a name="figure-1"></a>
@@ -353,30 +362,42 @@ tRNAscan-SE   | 1.23    | [10.1093/nar/25.5.0955][]
 [10.1186/1471-2105-6-31]: http://dx.doi.org/10.1186/1471-2105-6-31
 [10.1371/journal.pcbi.1002195]: http://dx.doi.org/10.1371/journal.pcbi.1002195
 
-Table S2: DOGMA parameters
+Table S2: Plastid MAKER parameters
 ------------------------------------------------------------
 
-[Table S2]: #table-s2-dogma-parameters
+[Table S2]: #table-s2-plastid-maker-parameters
 
-The following parameters were used for the annotation of the plastid
-using [DOGMA][dogma].
+```bash
+#-----Genome (these are always required)
+genome=pg29-plastid.fa #genome sequence (fasta file or fasta embeded in GFF3 file)
+organism_type=eukaryotic #eukaryotic or prokaryotic. Default is eukaryotic
 
-Parameter                                        | Value
--------------------------------------------------|-------------
-Genome type                                      | Chloroplast
-Gapped alignment?                                | Yes
-Genetic Code for Blastx                          | 11 Plant plastid
-Percent identity cutoff for protein coding genes | 60
-Percent identity cutoff for RNAs                 | 80
-E-value                                          | 1e-5
-Number of blast hits to return                   | 5
+#-----EST Evidence (for best results provide a file for at least one)
+est=NC_021456.frn #set of ESTs or assembled mRNA-seq in fasta format
 
-Table S3: MAKER parameters
-------------------------------------------------------------
+#-----Protein Homology Evidence (for best results provide a file for at least one)
+protein=cds_aa.fa #protein sequence file in fasta format (i.e. from mutiple oransisms)
 
-[Table S3]: #table-s3-maker-parameters
+#-----Repeat Masking (leave values blank to skip repeat masking)
+model_org=
+repeat_protein=
 
+#-----Gene Prediction
+est2genome=1 #infer gene predictions directly from ESTs, 1 = yes, 0 = no
+protein2genome=1 #infer predictions from protein homology, 1 = yes, 0 = no
+
+#-----MAKER Behavior Options
+est_forward=1 #map names and attributes forward from EST evidence, 1 = yes, 0 = no
+single_exon=1 #consider single exon EST evidence when generating annotations, 1 = yes, 0 = no
+single_length=50 #min length required for single exon ESTs if 'single_exon is enabled'
 ```
+
+Table S3: Mitochondrion MAKER parameters
+------------------------------------------------------------
+
+[Table S3]: #table-s3-mitochondrion-maker-parameters
+
+```bash
 genome=pg29mt-concat.fa
 organism_type=eukaryotic
 protein=cds_aa.fa
