@@ -163,10 +163,10 @@ introns. All coding genes are single copy, except *psbI* and *ycf12*, which
 occur twice. All tRNA genes are single copy, except *trnH-GUG*, *trnI-CAU*,
 *trnS-GCU* and *trnT-GGU*, which occur twice. All rRNA genes are single copy.
 
-The genomes of the white spruce plastid and Norway spruce plastid show
-perfect gene synteny with no structural rearrangements. All 114 genes
-(113 in full and 1 partial) of the Norway spruce plastid genome
-([NC_021456][]) are present in the white spruce plastid genome.
+All 114 genes of the Norway spruce plastid genome ([NC_021456][]) are present
+in the white spruce plastid genome. The genomes of the white spruce plastid and
+Norway spruce plastid show perfect gene synteny with no structural
+rearrangements.
 
 <a name="figure-1"></a>
 
