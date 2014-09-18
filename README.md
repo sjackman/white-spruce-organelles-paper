@@ -173,7 +173,7 @@ rearrangements.
 [Figure 1]: #figure-1
 
 ![The annotated plastid genome, which was annotated using
-[DOGMA][dogma] and plotted using [OGDRAW][ogdraw].
+[MAKER-P][maker] and plotted using [OGDRAW][ogdraw].
 ](figure/plastid-annotation.png)
 
 Mitochondrion
