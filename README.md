@@ -68,7 +68,9 @@ pipeline. We instead used [MAKER-P][maker] for annotation, which is
 intended for automated pipelines, and used the [Norway
 spruce][norwayspruce] complete plastid genome ([NC_021456][]) for
 both protein-coding and non-coding gene homology evidence. The
-parameters of MAKER are show in supplementary [Table S2][].
+parameters of MAKER are show in supplementary [Table S2][]. The
+inverted repeat was identified using [MUMmer][], shown in
+supplementary [Figure S3][].
 
 The assembled plastid genome was aligned to the Norway spruce plastid
 using [BWA-MEM][bwamem]. Coverage and identity of these alignments
@@ -162,6 +164,11 @@ genome contains 114 genes: 74 protein coding (mRNA) genes, 36 transfer RNA
 introns. All coding genes are single copy, except *psbI* and *ycf12*, which
 occur twice. All tRNA genes are single copy, except *trnH-GUG*, *trnI-CAU*,
 *trnS-GCU* and *trnT-GGU*, which occur twice. All rRNA genes are single copy.
+
+Each copy of the inverted repeat (IR) is 445 bp in size, much smaller than most
+plants, but typical of *Pinaceae* ([Lin, 2010][]). The two copies of the IR are
+identical except for a single mismatching base. The IR contains a single gene,
+the tRNA *trnI-CAU*.
 
 All 114 genes of the Norway spruce plastid genome ([NC_021456][]) are present
 in the white spruce plastid genome. The genomes of the white spruce plastid and
@@ -278,6 +285,14 @@ References
 + [tRNAscan-SE: A Program for Improved Detection of Transfer RNA Genes in Genomic Sequence][trnascan]
 + [Assembling the 20Gb white spruce (*Picea glauca*) genome from whole-genome shotgun sequencing data][whitespruce]
 
+[Kurtz, S., Phillippy, A., Delcher, A. L., Smoot, M., Shumway, M., Antonescu, C., & Salzberg, S. L. (2004)][MUMmer]
+Versatile and open software for comparing large genomes.
+*Genome biology*, 5(2), R12.
+
+[Lin, C. P., Huang, J. P., Wu, C. S., Hsu, C. Y., & Chaw, S. M. (2010)][Lin, 2010]
+Comparative chloroplast genomics reveals the evolution of Pinaceae genera and subfamilies.
+*Genome biology and evolution*, 2, 504-517.
+
 [abyss]: http://genome.cshlp.org/content/19/6/1117
 [amborellamt]: http://www.sciencemag.org/content/342/6165/1468
 [amborellanuc]: http://www.sciencemag.org/content/342/6165/1241089
@@ -289,7 +304,9 @@ References
 [ctaitungensis]: http://mbe.oxfordjournals.org/content/25/3/603.short
 [dogma]: http://bioinformatics.oxfordjournals.org/content/20/17/3252
 [exonerate]: http://www.biomedcentral.com/1471-2105/6/31
+[Lin, 2010]: http://gbe.oxfordjournals.org/content/2/504
 [maker]: http://www.plantphysiol.org/content/early/2013/12/06/pp.113.230144
+[MUMmer]: http://genomebiology.com/content/5/2/R12
 [norwayspruce]: http://www.nature.com/nature/journal/vaop/ncurrent/full/nature12211.html
 [ogdraw]: http://nar.oxfordjournals.org/content/41/W1/W575
 [pinaceae]: http://gbe.oxfordjournals.org/content/2/504
@@ -324,6 +341,15 @@ Figure S2: Classify mitochondrial sequences
 **Figure S2**: Mitochondrial sequences were separated by length, depth
 of coverage and GC content using k-means clustering in R
 
+Figure S3: MUMmer alignment of the plastid
+------------------------------------------------------------
+
+[Figure S3]: #figure-s3-mummer-alignment-of-the-plastid
+
+![Figure S3](figure/plastid-mummer.png)
+
+**Figure S3**: MUMmer was used to identify the inverted repeat of the plastid
+
 Table S1: Software
 ------------------------------------------------------------
 
@@ -339,6 +365,7 @@ DOGMA         | NA      | [10.1093/bioinformatics/bth352][]
 Exonerate     | 2.2.0   | [10.1186/1471-2105-6-31][]
 HMMER         | 3.1b1   | [10.1371/journal.pcbi.1002195][]
 MAKER-P       | 2.31.4  | [10.1104/pp.113.230144][]
+MUMmer        | 3.23    | [10.1186/gb-2004-5-2-r12][]
 QUAST         | 2.3     | [10.1093/bioinformatics/btt086][]
 RECON         | 1.0.7   | [10.1101/gr.88502][]
 RMBlast       | 2.2.28  | NA
@@ -361,6 +388,7 @@ tRNAscan-SE   | 1.23    | [10.1093/nar/25.5.0955][]
 [10.1101/gr.88502]: http://dx.doi.org/10.1101/gr.88502
 [10.1104/pp.113.230144]: http://dx.doi.org/10.1104/pp.113.230144
 [10.1186/1471-2105-6-31]: http://dx.doi.org/10.1186/1471-2105-6-31
+[10.1186/gb-2004-5-2-r12]: http://dx.doi.org/10.1186/gb-2004-5-2-r12
 [10.1371/journal.pcbi.1002195]: http://dx.doi.org/10.1371/journal.pcbi.1002195
 
 Table S2: Plastid MAKER parameters
