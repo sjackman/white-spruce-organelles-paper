@@ -148,6 +148,7 @@ Transfer RNA genes (tRNA)       |36              |23
 Ribosomal RNA genes (rRNA)      |4               |4
 Coding genes containing introns |4               |11
 Introns in coding genes         |5               |15
+tRNA genes containing introns   |5               |0
 Identity to Norway spruce       |99.2%           |98.3%
 Coverage of Norway spruce       |99.7%           |59.6%
 
@@ -159,11 +160,18 @@ Plastid
 The plastid genome was assembled into a single circular contig of
 123,266 bp. The assembly metrics are shown in [Table 1][]. The plastid
 genome contains 114 genes: 74 protein coding (mRNA) genes, 36 transfer RNA
-(tRNA) genes and 4 ribosomal RNA (rRNA) genes, shown in [Figure 1][]. The genes
-*atpF*, *rpl2* and *rpoC1* each contain one intron, and *ycf2* contains two
-introns. All coding genes are single copy, except *psbI* and *ycf12*, which
-occur twice. All tRNA genes are single copy, except *trnH-GUG*, *trnI-CAU*,
-*trnS-GCU* and *trnT-GGU*, which occur twice. All rRNA genes are single copy.
+(tRNA) genes and 4 ribosomal RNA (rRNA) genes, shown in [Figure 1][].
+
+All protein-coding genes are single copy, except *psbI* and *ycf12*, which have
+two copies each. All tRNA genes are single copy, except *trnH-GUG*, *trnI-CAU*,
+*trnS-GCU* and *trnT-GGU*, which have two copies each. All rRNA genes are
+single copy.
+
+The protein-coding genes
+*atpF*, *rpl2* and *rpoC1*
+each contain one intron, and *ycf3* contains two introns. The tRNA genes
+*trnA-UGC*, *trnI-GAU*, *trnK-UUU*, *trnL-UAA* and *trnV-UAC*
+each contain one intron.
 
 Each copy of the inverted repeat (IR) is 445 bp in size, much smaller than most
 plants, but typical of *Pinaceae* ([Lin, 2010][]). The two copies of the IR are
@@ -195,6 +203,12 @@ The mitochondrial genome contains 54 protein coding (mRNA) genes, 23
 transfer RNA (tRNA) genes and 4 ribosomal RNA (rRNA) genes, shown in
 [Figure 2][]. The coding genes compose 50 kbp (<1%) of the genome,
 shown in [Figure 3][].
+
+The protein-coding genes
+*atp8*, *cox1*, *matR*, *nad7*, *rpl10*, *rps1* and *rps4*
+each contain one intron, and
+*ccmFn*, *nad4*, *nad5* and *rps3-2*
+each contain two introns.
 
 The putative mitochondrial sequences of white spruce and Norway spruce
 show high sequence similarity, over 98% nucleotide identity, but only
@@ -285,6 +299,10 @@ References
 + [tRNAscan-SE: A Program for Improved Detection of Transfer RNA Genes in Genomic Sequence][trnascan]
 + [Assembling the 20Gb white spruce (*Picea glauca*) genome from whole-genome shotgun sequencing data][whitespruce]
 
+[Gremme, G., Steinbiss, S., & Kurtz, S. (2013)][GenomeTools]
+GenomeTools: a comprehensive software library for efficient processing of structured genome annotations.
+*IEEE/ACM Transactions on Computational Biology and Bioinformatics*, 10(3), 645-656.
+
 [Kurtz, S., Phillippy, A., Delcher, A. L., Smoot, M., Shumway, M., Antonescu, C., & Salzberg, S. L. (2004)][MUMmer]
 Versatile and open software for comparing large genomes.
 *Genome biology*, 5(2), R12.
@@ -304,6 +322,7 @@ Comparative chloroplast genomics reveals the evolution of Pinaceae genera and su
 [ctaitungensis]: http://mbe.oxfordjournals.org/content/25/3/603.short
 [dogma]: http://bioinformatics.oxfordjournals.org/content/20/17/3252
 [exonerate]: http://www.biomedcentral.com/1471-2105/6/31
+[GenomeTools]: http://www.computer.org/csdl/trans/tb/2013/03/ttb2013030645-abs.html
 [Lin, 2010]: http://gbe.oxfordjournals.org/content/2/504
 [maker]: http://www.plantphysiol.org/content/early/2013/12/06/pp.113.230144
 [MUMmer]: http://genomebiology.com/content/5/2/R12
@@ -363,6 +382,7 @@ BWA           | 0.7.8   | [10.1093/bioinformatics/btp324][]
 Barrnap       | 0.4.2   | NA
 DOGMA         | NA      | [10.1093/bioinformatics/bth352][]
 Exonerate     | 2.2.0   | [10.1186/1471-2105-6-31][]
+GenomeTools   | 1.5.3   | [10.1109/TCBB.2013.68][]
 HMMER         | 3.1b1   | [10.1371/journal.pcbi.1002195][]
 MAKER-P       | 2.31.4  | [10.1104/pp.113.230144][]
 MUMmer        | 3.23    | [10.1186/gb-2004-5-2-r12][]
@@ -387,6 +407,7 @@ tRNAscan-SE   | 1.23    | [10.1093/nar/25.5.0955][]
 [10.1101/gr.089532.108]: http://dx.doi.org/10.1101/gr.089532.108
 [10.1101/gr.88502]: http://dx.doi.org/10.1101/gr.88502
 [10.1104/pp.113.230144]: http://dx.doi.org/10.1104/pp.113.230144
+[10.1109/TCBB.2013.68]: http://dx.doi.org/10.1109/TCBB.2013.68
 [10.1186/1471-2105-6-31]: http://dx.doi.org/10.1186/1471-2105-6-31
 [10.1186/gb-2004-5-2-r12]: http://dx.doi.org/10.1186/gb-2004-5-2-r12
 [10.1371/journal.pcbi.1002195]: http://dx.doi.org/10.1371/journal.pcbi.1002195
