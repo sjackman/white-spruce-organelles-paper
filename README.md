@@ -173,6 +173,16 @@ each contain one intron, and *ycf3* contains two introns. The tRNA genes
 *trnA-UGC*, *trnI-GAU*, *trnK-UUU*, *trnL-UAA* and *trnV-UAC*
 each contain one intron.
 
+The genes *petB*, *petD* and *rpl16* of the Norway spruce each contain one
+intron, and the first and smallest exons of these genes are 6, 8 and 9 bp
+respectively. These genes likely belong to [polycistronic transcripts][] of
+their respective protein complexes, but the short size of their initial exons
+make them difficult to annotate all the same. The gene *rps12* of a plastid
+genome is typically [trans-spliced][], which makes it difficult to annotate
+using [MAKER][], and required manually editing the gene annotation to
+incorporate trans-splicing in the gene model. The trans-spliced exon of *rps12*
+is 26 bp.
+
 Each copy of the inverted repeat (IR) is 445 bp in size, much smaller than most
 plants, but typical of *Pinaceae* ([Lin, 2010][]). The two copies of the IR are
 identical except for a single mismatching base. The IR contains a single gene,
@@ -311,6 +321,14 @@ Versatile and open software for comparing large genomes.
 Comparative chloroplast genomics reveals the evolution of Pinaceae genera and subfamilies.
 *Genome biology and evolution*, 2, 504-517.
 
+[Barkan, A. (1988).][polycistronic transcripts]
+Proteins encoded by a complex chloroplast transcription unit are each translated from both monocistronic and polycistronic mRNAs.
+*The EMBO journal*, 7(9), 2637.
+
+[Hildebrand, M., Hallick, R. B., Passavant, C. W., & Bourque, D. P. (1988)][trans-splicing]
+Trans-splicing in chloroplasts: the rps 12 loci of Nicotiana tabacum.
+*Proceedings of the National Academy of Sciences*, 85(2), 372-376.
+
 [abyss]: http://genome.cshlp.org/content/19/6/1117
 [amborellamt]: http://www.sciencemag.org/content/342/6165/1468
 [amborellanuc]: http://www.sciencemag.org/content/342/6165/1241089
@@ -329,9 +347,11 @@ Comparative chloroplast genomics reveals the evolution of Pinaceae genera and su
 [norwayspruce]: http://www.nature.com/nature/journal/vaop/ncurrent/full/nature12211.html
 [ogdraw]: http://nar.oxfordjournals.org/content/41/W1/W575
 [pinaceae]: http://gbe.oxfordjournals.org/content/2/504
+[polycistronic transcripts]: http://www.ncbi.nlm.nih.gov/pmc/articles/PMC457051/
 [quast]: http://bioinformatics.oxfordjournals.org/content/29/8/1072
 [repeatmasker]: http://www.repeatmasker.org/
 [samtools]: http://bioinformatics.oxfordjournals.org/content/25/16/2078
+[trans-spliced]: http://www.pnas.org/content/85/2/372.short
 [trnascan]: http://nar.oxfordjournals.org/content/25/5/0955
 [whitespruce]: http://bioinformatics.oxfordjournals.org/content/29/12/1492
 
