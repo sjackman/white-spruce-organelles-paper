@@ -168,25 +168,28 @@ two copies each. All tRNA genes are single copy, except *trnH-GUG*, *trnI-CAU*,
 single copy.
 
 The protein-coding genes
-*atpF*, *rpl2* and *rpoC1*
-each contain one intron, and *ycf3* contains two introns. The tRNA genes
-*trnA-UGC*, *trnI-GAU*, *trnK-UUU*, *trnL-UAA* and *trnV-UAC*
+*atpF*, *petB*, *petD*, *rpl2*, *rpl16*, *rpoC1* and *rps12*
+each contain one intron, and *ycf3* contains two introns.
+The tRNA genes
+*trnA-UGC*, *trnG-GCC*, *trnI-GAU*, *trnK-UUU*, *trnL-UAA* and *trnV-UAC*
 each contain one intron.
+The rRNA genes are not spliced.
 
-The genes *petB*, *petD* and *rpl16* of the Norway spruce each contain one
-intron, and the first and smallest exons of these genes are 6, 8 and 9 bp
-respectively. These genes likely belong to [polycistronic transcripts][] of
-their respective protein complexes, but the short size of their initial exons
-make them difficult to annotate all the same. The gene *rps12* of a plastid
-genome is typically [trans-spliced][], which makes it difficult to annotate
-using [MAKER][], and required manually editing the gene annotation to
-incorporate trans-splicing in the gene model. The trans-spliced exon of *rps12*
-is 26 bp.
+The first and smallest exons of the genes *petB*, *petD* and *rpl16* are 6, 8
+and 9 bp respectively. These genes likely belong to
+[polycistronic transcripts][] of their respective protein complexes, but the
+short size of their initial exons make them difficult to annotate all the same.
+The initial exons of these genes were added to their annotations manually.
+
+The gene *rps12* of a plastid genome is typically [trans-spliced][], which makes
+it difficult to annotate using [MAKER][]. It is composed of three exons and one
+cis-spliced intron. It required manually editing the gene annotation to
+incorporate trans-splicing in the gene model.
 
 Each copy of the inverted repeat (IR) is 445 bp in size, much smaller than most
-plants, but typical of *Pinaceae* ([Lin, 2010][]). The two copies of the IR are
-identical except for a single mismatching base. The IR contains a single gene,
-the tRNA *trnI-CAU*.
+plants, but typical of *Pinaceae* ([Lin, 2010][]). Unlike most inverted repeats,
+which are typically identical, the two copies differ by a single base. The IR
+contains a single gene, the tRNA *trnI-CAU*.
 
 All 114 genes of the Norway spruce plastid genome ([NC_021456][]) are present
 in the white spruce plastid genome. The genomes of the white spruce plastid and
