@@ -1,7 +1,7 @@
-all: white-spruce-organelles.html white-spruce-organelles.pdf
+all: index.html README.md white-spruce-organelles.pdf
 
 clean:
-	rm -f white-spruce-organelles.html white-spruce-organelles.pdf
+	rm -f index.html README.md white-spruce-organelles.pdf
 
 .PHONY: all clean
 .DELETE_ON_ERROR:
@@ -20,8 +20,11 @@ white-spruce-organelles.pdf: \
 
 # Rules
 
-white-spruce-organelles.html: README.md
+index.html: white-spruce-organelles.md
 	pandoc -s -o $@ $<
 
-white-spruce-organelles.pdf: README.md
+README.md: white-spruce-organelles.md
+	pandoc -t markdown_strict -o $@ $<
+
+white-spruce-organelles.pdf: %.pdf: %.md
 	pandoc -o $@ $<
