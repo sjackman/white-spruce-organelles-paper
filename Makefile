@@ -1,7 +1,7 @@
 all: index.html README.md white-spruce-organelles.pdf
 
 clean:
-	rm -f index.html README.md white-spruce-organelles.pdf
+	rm -f index.html README.md white-spruce-organelles.pdf white-spruce-organelles.tex
 
 .PHONY: all clean
 .DELETE_ON_ERROR:
@@ -26,5 +26,8 @@ index.html: white-spruce-organelles.md
 README.md: white-spruce-organelles.md
 	pandoc -t markdown_strict -o $@ $<
 
-white-spruce-organelles.pdf: %.pdf: %.md
-	pandoc -o $@ $<
+%.tex: %.md
+	pandoc -s -o $@ $<
+
+%.pdf: %.tex
+	pdflatex $<
