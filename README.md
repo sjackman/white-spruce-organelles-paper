@@ -1,10 +1,11 @@
-Shaun D Jackman, Anthony Raymond, Ben Vandervalk, Hamid Mohamadi, René
+# Organellar Genomes of White Spruce (*Picea glauca*): Assembly and Annotation
+
+Shaun D Jackman, Anthony Raymond, Ben Vandervalk, Hamid Mohamadi, Rene
 Warren, Stephen Pleasance, Robin Coope, Macaire MS Yuen, Christopher
 Keeling, Carol Ritland, Jean Bousquet, Alvin Yanchuk, Kermit Ritland,
-John MacKay, Steven JM Jones, Joerg C Bohlmann, İnanç Birol
+John MacKay, Steven JM Jones, Joerg C Bohlmann, Inanc Birol
 
-Abstract
-========
+# Abstract
 
 The genome sequences of the plastid and mitochondrion of white spruce
 (*Picea glauca*) are assembled from whole genome Illumina sequencing
@@ -196,12 +197,12 @@ spruce organellar genomes
 <tr class="even">
 <td align="left">Number of contigs</td>
 <td align="left">1 contig</td>
-<td align="left">223 contigs †</td>
+<td align="left">223 contigs x</td>
 </tr>
 <tr class="odd">
 <td align="left">Contig N50</td>
 <td align="left">123 kbp</td>
-<td align="left">39 kbp †</td>
+<td align="left">39 kbp x</td>
 </tr>
 <tr class="even">
 <td align="left">Number of scaffolds</td>
@@ -263,10 +264,12 @@ spruce organellar genomes
 <td align="left">99.7%</td>
 <td align="left">59.6%</td>
 </tr>
+<tr class="even">
+<td align="left">x Permitting gaps less than 500 bp</td>
+<td align="left"></td>
+</tr>
 </tbody>
 </table>
-
-† Permitting gaps less than 500 bp
 
 Plastid
 -------
@@ -402,84 +405,74 @@ MAKER.
 References
 ==========
 
--   [ABySS: a parallel assembler for short read sequence
-    data](http://genome.cshlp.org/content/19/6/1117)
--   [Horizontal Transfer of Entire Genomes via Mitochondrial Fusion in
-    the Angiosperm
-    Amborella](http://www.sciencemag.org/content/342/6165/1468)
--   [The Amborella Genome and the Evolution of Flowering
-    Plants](http://www.sciencemag.org/content/342/6165/1241089)
--   [Genomic Clues to the Ancestral Flowering
-    Plant](http://www.sciencemag.org/content/342/6165/1456)
--   [barrnap 0.4.2 - rapid ribosomal RNA
-    prediction](http://www.vicbioinformatics.com/software.barrnap.shtml)
--   [Basic Local Alignment Search
-    Tool](http://www.sciencedirect.com/science/article/pii/S0022283605803602)
--   [Aligning sequence reads, clone sequences and assembly contigs with
-    BWA-MEM](http://arxiv.org/pdf/1303.3997.pdf)
--   [CGAP: a new comprehensive platform for the comparative analysis of
-    chloroplast
-    genomes](http://www.biomedcentral.com/1471-2105/14/95/abstract)
--   [The Mitochondrial Genome of the Gymnosperm Cycas taitungensis
-    Contains a Novel Family of Short Interspersed Elements, Bpu
-    Sequences, and Abundant RNA Editing
-    Sites](http://mbe.oxfordjournals.org/content/25/3/603.short)
--   [Automatic annotation of organellar genomes with
-    DOGMA](http://bioinformatics.oxfordjournals.org/content/20/17/3252)
--   [Automated generation of heuristics for biological sequence
-    comparison](http://www.biomedcentral.com/1471-2105/6/31)
--   [MAKER-P: a tool-kit for the rapid creation, management, and quality
-    control of plant genome
-    annotations](http://www.plantphysiol.org/content/early/2013/12/06/pp.113.230144)
--   [The Norway spruce genome sequence and conifer genome
-    evolution](http://www.nature.com/nature/journal/vaop/ncurrent/full/nature12211.html)
--   [OrganellarGenomeDRAW (OGDRAW): a tool for the easy generation of
-    high-quality custom graphical maps of plastid and mitochondrial
-    genomes](http://nar.oxfordjournals.org/content/41/W1/W575)
--   [Comparative chloroplast genomics reveals the evolution of
-    *Pinaceae* genera and
-    subfamilies](http://gbe.oxfordjournals.org/content/2/504)
--   [QUAST: quality assessment tool for genome
-    assemblies](http://bioinformatics.oxfordjournals.org/content/29/8/1072)
--   [Smit, AFA, Hubley, R & Green, P. RepeatMasker Open-3.0. 1996-2010
-    http://www.repeatmasker.org](http://www.repeatmasker.org/)
--   [The Sequence Alignment/Map format and
-    SAMtools](http://bioinformatics.oxfordjournals.org/content/25/16/2078)
--   [tRNAscan-SE: A Program for Improved Detection of Transfer RNA Genes
-    in Genomic
-    Sequence](http://nar.oxfordjournals.org/content/25/5/0955)
--   [Assembling the 20Gb white spruce (*Picea glauca*) genome from
-    whole-genome shotgun sequencing
-    data](http://bioinformatics.oxfordjournals.org/content/29/12/1492)
-
+[ABySS: a parallel assembler for short read sequence
+data](http://genome.cshlp.org/content/19/6/1117)  
+[Horizontal Transfer of Entire Genomes via Mitochondrial Fusion in the
+Angiosperm Amborella](http://www.sciencemag.org/content/342/6165/1468)  
+[The Amborella Genome and the Evolution of Flowering
+Plants](http://www.sciencemag.org/content/342/6165/1241089)  
+[Genomic Clues to the Ancestral Flowering
+Plant](http://www.sciencemag.org/content/342/6165/1456)  
+[barrnap 0.4.2 - rapid ribosomal RNA
+prediction](http://www.vicbioinformatics.com/software.barrnap.shtml)  
+[Basic Local Alignment Search
+Tool](http://www.sciencedirect.com/science/article/pii/S0022283605803602)  
+[Aligning sequence reads, clone sequences and assembly contigs with
+BWA-MEM](http://arxiv.org/pdf/1303.3997.pdf)  
+[CGAP: a new comprehensive platform for the comparative analysis of
+chloroplast
+genomes](http://www.biomedcentral.com/1471-2105/14/95/abstract)  
+[The Mitochondrial Genome of the Gymnosperm Cycas taitungensis Contains
+a Novel Family of Short Interspersed Elements, Bpu Sequences, and
+Abundant RNA Editing
+Sites](http://mbe.oxfordjournals.org/content/25/3/603.short)  
+[Automatic annotation of organellar genomes with
+DOGMA](http://bioinformatics.oxfordjournals.org/content/20/17/3252)  
+[Automated generation of heuristics for biological sequence
+comparison](http://www.biomedcentral.com/1471-2105/6/31)  
+[MAKER-P: a tool-kit for the rapid creation, management, and quality
+control of plant genome
+annotations](http://www.plantphysiol.org/content/early/2013/12/06/pp.113.230144)  
+[The Norway spruce genome sequence and conifer genome
+evolution](http://www.nature.com/nature/journal/vaop/ncurrent/full/nature12211.html)  
+[OrganellarGenomeDRAW (OGDRAW): a tool for the easy generation of
+high-quality custom graphical maps of plastid and mitochondrial
+genomes](http://nar.oxfordjournals.org/content/41/W1/W575)  
+[Comparative chloroplast genomics reveals the evolution of *Pinaceae*
+genera and subfamilies](http://gbe.oxfordjournals.org/content/2/504)  
+[QUAST: quality assessment tool for genome
+assemblies](http://bioinformatics.oxfordjournals.org/content/29/8/1072)  
+[Smit, AFA, Hubley, R & Green, P. RepeatMasker Open-3.0. 1996-2010
+http://www.repeatmasker.org](http://www.repeatmasker.org/)  
+[The Sequence Alignment/Map format and
+SAMtools](http://bioinformatics.oxfordjournals.org/content/25/16/2078)  
+[tRNAscan-SE: A Program for Improved Detection of Transfer RNA Genes in
+Genomic Sequence](http://nar.oxfordjournals.org/content/25/5/0955)  
+[Assembling the 20Gb white spruce (*Picea glauca*) genome from
+whole-genome shotgun sequencing
+data](http://bioinformatics.oxfordjournals.org/content/29/12/1492)  
 [Gremme, G., Steinbiss, S., & Kurtz, S.
 (2013)](http://www.computer.org/csdl/trans/tb/2013/03/ttb2013030645-abs.html)
 GenomeTools: a comprehensive software library for efficient processing
 of structured genome annotations. *IEEE/ACM Transactions on
-Computational Biology and Bioinformatics*, 10(3), 645-656.
-
+Computational Biology and Bioinformatics*, 10(3), 645-656.  
 [Kurtz, S., Phillippy, A., Delcher, A. L., Smoot, M., Shumway, M.,
 Antonescu, C., & Salzberg, S. L.
 (2004)](http://genomebiology.com/content/5/2/R12) Versatile and open
-software for comparing large genomes. *Genome biology*, 5(2), R12.
-
+software for comparing large genomes. *Genome biology*, 5(2), R12.  
 [Lin, C. P., Huang, J. P., Wu, C. S., Hsu, C. Y., & Chaw, S. M.
 (2010)](http://gbe.oxfordjournals.org/content/2/504) Comparative
 chloroplast genomics reveals the evolution of Pinaceae genera and
-subfamilies. *Genome biology and evolution*, 2, 504-517.
-
+subfamilies. *Genome biology and evolution*, 2, 504-517.  
 [Barkan, A.
 (1988).](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC457051/) Proteins
 encoded by a complex chloroplast transcription unit are each translated
 from both monocistronic and polycistronic mRNAs. *The EMBO journal*,
-7(9), 2637.
-
+7(9), 2637.  
 [Hildebrand, M., Hallick, R. B., Passavant, C. W., & Bourque, D. P.
-(1988)][trans-splicing] Trans-splicing in chloroplasts: the rps 12 loci
-of Nicotiana tabacum. *Proceedings of the National Academy of Sciences*,
-85(2), 372-376.
-
-------------------------------------------------------------------------
+(1988)](http://www.pnas.org/content/85/2/372.short) Trans-splicing in
+chloroplasts: the rps 12 loci of Nicotiana tabacum. *Proceedings of the
+National Academy of Sciences*, 85(2), 372-376.
 
 Supplementary material
 ======================
