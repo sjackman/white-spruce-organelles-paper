@@ -51,7 +51,7 @@ Methods
 
 The software used in this analysis, their versions and the digital
 object identifiers (DOI) of their respective publications are listed
-in supplementary [Table S1][].
+in supplementary Table S1.
 
 Plastid
 ------------------------------------------------------------
@@ -60,7 +60,7 @@ The overlapping paired-end reads were merged using ABySS-mergepairs.
 These merged reads were assembled using [ABySS][abyss]. Contigs that
 are putatively derived from the plastid were separated by length and
 depth of coverage using thresholds chosen by inspection (see
-supplementary [Figure S1][]). These putative plastid contigs were
+supplementary Figure S1). These putative plastid contigs were
 assembled into scaffolds using ABySS-scaffold. The assembled plastid
 genome was initially annotated using [DOGMA][dogma], but DOGMA is an
 interactive web application, which is not convenient for an automated
@@ -68,9 +68,9 @@ pipeline. We instead used [MAKER-P][maker] for annotation, which is
 intended for automated pipelines, and used the [Norway
 spruce][norwayspruce] complete plastid genome ([NC_021456][]) for
 both protein-coding and non-coding gene homology evidence. The
-parameters of MAKER are show in supplementary [Table S2][]. The
+parameters of MAKER are show in supplementary Table S2. The
 inverted repeat was identified using [MUMmer][], shown in
-supplementary [Figure S3][].
+supplementary Figure S3.
 
 The assembled plastid genome was aligned to the Norway spruce plastid
 using [BWA-MEM][bwamem]. Coverage and identity of these alignments
@@ -89,13 +89,13 @@ of a single lane of Illumina HiSeq sequencing of a paired-end library.
 These connected paired-end reads were assembled using [ABySS][abyss].
 Putative mitochondrial sequences were separated from the assembly by
 their length, depth of coverage and GC content using k-means
-clustering in R (see supplementary [Figure S2][]). These putative
+clustering in R (see supplementary Figure S2). These putative
 mitochondrial contigs were then assembled into scaffolds using
 ABySS-scaffold with a single lane of Illumina HiSeq sequencing of a
 mate-pair library.
 
 The mitochondrial genome was annotated using [MAKER-P][maker]
-(parameters shown in supplementary [Table S3][]). The proteins of all
+(parameters shown in supplementary Table S3). The proteins of all
 green plants (viridiplantae) with complete mitochondrial genome
 sequences in NCBI GenBank, 51 species, were used for protein homology
 evidence and aligned using [BLAST][blast] and [Exonerate][exonerate].
