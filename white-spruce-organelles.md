@@ -151,8 +151,7 @@ Introns in coding genes         |5               |15
 tRNA genes containing introns   |5               |0
 Identity to Norway spruce       |99.2%           |98.3%
 Coverage of Norway spruce       |99.7%           |59.6%
-
-x Permitting gaps less than 500 bp
+x Permitting gaps less than 500 bp | |
 
 Plastid
 ------------------------------------------------------------
