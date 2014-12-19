@@ -1,15 +1,17 @@
 all: index.html \
 	README.md \
 	white-spruce-organelles.pdf \
+	white-spruce-organelles-supp.html \
 	white-spruce-organelles-supp.pdf
 
 clean:
 	rm -f \
 		   index.html \
 		   README.md \
-		   white-spruce-organelles.pdf
-		   white-spruce-organelles.tex
-		   white-spruce-organelles-supp.pdf
+		   white-spruce-organelles.pdf \
+		   white-spruce-organelles.tex \
+		   white-spruce-organelles-supp.html \
+		   white-spruce-organelles-supp.pdf \
 		   white-spruce-organelles-supp.tex
 
 .PHONY: all clean
@@ -51,7 +53,11 @@ README.md: white-spruce-organelles.md readme.markdown_strict
 white-spruce-organelles.pdf: %.pdf: %.tex gbe/gbe.cls
 	TEXINPUTS=.:gbe: pdflatex -interaction=batchmode $<
 
-# Render the supplementary material Tex
+# Render the supplementary material HTML
+white-spruce-organelles-supp.html: %.html: %.md
+	pandoc -s -o $@ $<
+
+# Render the supplementary material TeX
 white-spruce-organelles-supp.tex: %.tex: %.md
 	pandoc -s -o $@ $<
 
