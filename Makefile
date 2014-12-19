@@ -1,7 +1,16 @@
-all: index.html README.md white-spruce-organelles.pdf
+all: index.html \
+	README.md \
+	white-spruce-organelles.pdf \
+	white-spruce-organelles-supp.pdf
 
 clean:
-	rm -f index.html README.md white-spruce-organelles.pdf white-spruce-organelles.tex
+	rm -f \
+		   index.html \
+		   README.md \
+		   white-spruce-organelles.pdf
+		   white-spruce-organelles.tex
+		   white-spruce-organelles-supp.pdf
+		   white-spruce-organelles-supp.tex
 
 .PHONY: all clean
 .DELETE_ON_ERROR:
@@ -38,9 +47,17 @@ README.md: white-spruce-organelles.md readme.markdown_strict
 		-e 's/\\end{longtable}/\\end{tabular}\\end{table}/' \
 		-e 's/\\endhead//' $< >$@
 
-# Render the PDF from the TeX
-%.pdf: %.tex gbe/gbe.cls
+# Render the manuscript PDF
+white-spruce-organelles.pdf: %.pdf: %.tex gbe/gbe.cls
 	TEXINPUTS=.:gbe: pdflatex -interaction=batchmode $<
+
+# Render the supplementary material Tex
+white-spruce-organelles-supp.tex: %.tex: %.md
+	pandoc -s -o $@ $<
+
+# Render the supplementary material PDF
+white-spruce-organelles-supp.pdf: %.pdf: %.tex
+	pdflatex -interaction=batchmode $<
 
 # Download the Genome Biology and Evolution LaTeX template
 gbe_tex_template.zip:
