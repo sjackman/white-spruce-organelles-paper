@@ -290,46 +290,41 @@ helpful in tweaking MAKER.
 References
 ================================================================================
 
-+ [ABySS: a parallel assembler for short read sequence data][abyss]
-+ [Horizontal Transfer of Entire Genomes via Mitochondrial Fusion in the Angiosperm Amborella][amborellamt]
-+ [The Amborella Genome and the Evolution of Flowering Plants][amborellanuc]
-+ [Genomic Clues to the Ancestral Flowering Plant][amborellaperspective]
-+ [barrnap 0.4.2 - rapid ribosomal RNA prediction][barrnap]
-+ [Basic Local Alignment Search Tool][blast]
-+ [Aligning sequence reads, clone sequences and assembly contigs with BWA-MEM][bwamem]
-+ [CGAP: a new comprehensive platform for the comparative analysis of chloroplast genomes][cgap]
-+ [The Mitochondrial Genome of the Gymnosperm Cycas taitungensis Contains a Novel Family of Short Interspersed Elements, Bpu Sequences, and Abundant RNA Editing Sites][ctaitungensis]
-+ [Automatic annotation of organellar genomes with DOGMA][dogma]
-+ [Automated generation of heuristics for biological sequence comparison][exonerate]
-+ [MAKER-P: a tool-kit for the rapid creation, management, and quality control of plant genome annotations][maker]
-+ [The Norway spruce genome sequence and conifer genome evolution][norwayspruce]
-+ [OrganellarGenomeDRAW (OGDRAW): a tool for the easy generation of high-quality custom graphical maps of plastid and mitochondrial genomes][ogdraw]
-+ [Comparative chloroplast genomics reveals the evolution of *Pinaceae* genera and subfamilies][pinaceae]
-+ [QUAST: quality assessment tool for genome assemblies][quast]
-+ [Smit, AFA, Hubley, R & Green, P. RepeatMasker Open-3.0. 1996-2010 http://www.repeatmasker.org][repeatmasker]
-+ [The Sequence Alignment/Map format and SAMtools][samtools]
-+ [tRNAscan-SE: A Program for Improved Detection of Transfer RNA Genes in Genomic Sequence][trnascan]
-+ [Assembling the 20Gb white spruce (*Picea glauca*) genome from whole-genome shotgun sequencing data][whitespruce]
-
-[Gremme, G., Steinbiss, S., & Kurtz, S. (2013)][GenomeTools]
-GenomeTools: a comprehensive software library for efficient processing of structured genome annotations.
-*IEEE/ACM Transactions on Computational Biology and Bioinformatics*, 10(3), 645-656.
-
-[Kurtz, S., Phillippy, A., Delcher, A. L., Smoot, M., Shumway, M., Antonescu, C., & Salzberg, S. L. (2004)][MUMmer]
-Versatile and open software for comparing large genomes.
-*Genome biology*, 5(2), R12.
-
-[Lin, C. P., Huang, J. P., Wu, C. S., Hsu, C. Y., & Chaw, S. M. (2010)][Lin, 2010]
-Comparative chloroplast genomics reveals the evolution of Pinaceae genera and subfamilies.
-*Genome biology and evolution*, 2, 504-517.
-
-[Barkan, A. (1988).][polycistronic transcripts]
-Proteins encoded by a complex chloroplast transcription unit are each translated from both monocistronic and polycistronic mRNAs.
-*The EMBO journal*, 7(9), 2637.
-
-[Hildebrand, M., Hallick, R. B., Passavant, C. W., & Bourque, D. P. (1988)][trans-splicing]
-Trans-splicing in chloroplasts: the rps 12 loci of Nicotiana tabacum.
-*Proceedings of the National Academy of Sciences*, 85(2), 372-376.
+| [ABySS: a parallel assembler for short read sequence data][abyss]
+| [Horizontal Transfer of Entire Genomes via Mitochondrial Fusion in the Angiosperm Amborella][amborellamt]
+| [The Amborella Genome and the Evolution of Flowering Plants][amborellanuc]
+| [Genomic Clues to the Ancestral Flowering Plant][amborellaperspective]
+| [barrnap 0.4.2 - rapid ribosomal RNA prediction][barrnap]
+| [Basic Local Alignment Search Tool][blast]
+| [Aligning sequence reads, clone sequences and assembly contigs with BWA-MEM][bwamem]
+| [CGAP: a new comprehensive platform for the comparative analysis of chloroplast genomes][cgap]
+| [The Mitochondrial Genome of the Gymnosperm Cycas taitungensis Contains a Novel Family of Short Interspersed Elements, Bpu Sequences, and Abundant RNA Editing Sites][ctaitungensis]
+| [Automatic annotation of organellar genomes with DOGMA][dogma]
+| [Automated generation of heuristics for biological sequence comparison][exonerate]
+| [MAKER-P: a tool-kit for the rapid creation, management, and quality control of plant genome annotations][maker]
+| [The Norway spruce genome sequence and conifer genome evolution][norwayspruce]
+| [OrganellarGenomeDRAW (OGDRAW): a tool for the easy generation of high-quality custom graphical maps of plastid and mitochondrial genomes][ogdraw]
+| [Comparative chloroplast genomics reveals the evolution of *Pinaceae* genera and subfamilies][pinaceae]
+| [QUAST: quality assessment tool for genome assemblies][quast]
+| [Smit, AFA, Hubley, R & Green, P. RepeatMasker Open-3.0. 1996-2010 http://www.repeatmasker.org][repeatmasker]
+| [The Sequence Alignment/Map format and SAMtools][samtools]
+| [tRNAscan-SE: A Program for Improved Detection of Transfer RNA Genes in Genomic Sequence][trnascan]
+| [Assembling the 20Gb white spruce (*Picea glauca*) genome from whole-genome shotgun sequencing data][whitespruce]
+| [Gremme, G., Steinbiss, S., & Kurtz, S. (2013)][GenomeTools]
+  GenomeTools: a comprehensive software library for efficient processing of structured genome annotations.
+  *IEEE/ACM Transactions on Computational Biology and Bioinformatics*, 10(3), 645-656.
+| [Kurtz, S., Phillippy, A., Delcher, A. L., Smoot, M., Shumway, M., Antonescu, C., & Salzberg, S. L. (2004)][MUMmer]
+  Versatile and open software for comparing large genomes.
+  *Genome biology*, 5(2), R12.
+| [Lin, C. P., Huang, J. P., Wu, C. S., Hsu, C. Y., & Chaw, S. M. (2010)][Lin, 2010]
+  Comparative chloroplast genomics reveals the evolution of Pinaceae genera and subfamilies.
+  *Genome biology and evolution*, 2, 504-517.
+| [Barkan, A. (1988).][polycistronic transcripts]
+  Proteins encoded by a complex chloroplast transcription unit are each translated from both monocistronic and polycistronic mRNAs.
+  *The EMBO journal*, 7(9), 2637.
+| [Hildebrand, M., Hallick, R. B., Passavant, C. W., & Bourque, D. P. (1988)][trans-spliced]
+  Trans-splicing in chloroplasts: the rps 12 loci of Nicotiana tabacum.
+  *Proceedings of the National Academy of Sciences*, 85(2), 372-376.
 
 [abyss]: http://genome.cshlp.org/content/19/6/1117
 [amborellamt]: http://www.sciencemag.org/content/342/6165/1468
@@ -357,7 +352,7 @@ Trans-splicing in chloroplasts: the rps 12 loci of Nicotiana tabacum.
 [trnascan]: http://nar.oxfordjournals.org/content/25/5/0955
 [whitespruce]: http://bioinformatics.oxfordjournals.org/content/29/12/1492
 
---------------------------------------------------------------------------------
+\pagebreak
 
 Supplementary material
 ================================================================================
