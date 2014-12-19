@@ -3,10 +3,10 @@ title: 'Organellar Genomes of White Spruce (*Picea glauca*): Assembly and Annota
 ---
 
 Shaun D Jackman, Anthony Raymond, Ben Vandervalk, Hamid Mohamadi,
-René Warren, Stephen Pleasance, Robin Coope, Macaire MS Yuen,
+Rene Warren, Stephen Pleasance, Robin Coope, Macaire MS Yuen,
 Christopher Keeling, Carol Ritland, Jean Bousquet, Alvin Yanchuk,
 Kermit Ritland, John MacKay, Steven JM Jones, Joerg C Bohlmann,
-İnanç Birol
+Inanc Birol
 
 Abstract
 ================================================================================
@@ -137,8 +137,8 @@ Number of assembled reads       |21 thousand     |377 thousand
 Proportion of organellar reads  |1/140 or 0.7%   |1/350 or 0.3%
 Depth of coverage               |80x             |30x
 Assembled genome size           |123,266 bp      |5.92 Mbp
-Number of contigs               |1 contig        |223 contigs †
-Contig N50                      |123 kbp         |39 kbp †
+Number of contigs               |1 contig        |223 contigs x
+Contig N50                      |123 kbp         |39 kbp x
 Number of scaffolds             |1 scaffold      |61 scaffolds
 Scaffold N50                    |123 kbp         |287 kbp
 Largest scaffold                |123 kbp         |598 kbp
@@ -152,7 +152,7 @@ tRNA genes containing introns   |5               |0
 Identity to Norway spruce       |99.2%           |98.3%
 Coverage of Norway spruce       |99.7%           |59.6%
 
-† Permitting gaps less than 500 bp
+x Permitting gaps less than 500 bp
 
 Plastid
 ------------------------------------------------------------
