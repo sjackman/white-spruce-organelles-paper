@@ -1,4 +1,5 @@
-# Organellar Genomes of White Spruce (*Picea glauca*): Assembly and Annotation
+# Organellar Genomes of White Spruce (*Picea glauca*): Assembly and
+Annotation
 
 Shaun D Jackman, Anthony Raymond, Ben Vandervalk, Hamid Mohamadi, Rene
 Warren, Stephen Pleasance, Robin Coope, Macaire MS Yuen, Christopher
@@ -49,7 +50,7 @@ Methods
 
 The software used in this analysis, their versions and the digital
 object identifiers (DOI) of their respective publications are listed in
-supplementary [Table S1](#table-s1-software).
+supplementary Table S1.
 
 Plastid
 -------
@@ -59,9 +60,9 @@ These merged reads were assembled using
 [ABySS](http://genome.cshlp.org/content/19/6/1117). Contigs that are
 putatively derived from the plastid were separated by length and depth
 of coverage using thresholds chosen by inspection (see supplementary
-[Figure S1](#figure-s1-classify-plastid-sequences)). These putative
-plastid contigs were assembled into scaffolds using ABySS-scaffold. The
-assembled plastid genome was initially annotated using
+Figure S1). These putative plastid contigs were assembled into scaffolds
+using ABySS-scaffold. The assembled plastid genome was initially
+annotated using
 [DOGMA](http://bioinformatics.oxfordjournals.org/content/20/17/3252),
 but DOGMA is an interactive web application, which is not convenient for
 an automated pipeline. We instead used
@@ -72,11 +73,9 @@ spruce](http://www.nature.com/nature/journal/vaop/ncurrent/full/nature12211.html
 complete plastid genome
 ([NC\_021456](http://www.ncbi.nlm.nih.gov/nuccore/NC_021456)) for both
 protein-coding and non-coding gene homology evidence. The parameters of
-MAKER are show in supplementary [Table
-S2](#table-s2-plastid-maker-parameters). The inverted repeat was
+MAKER are show in supplementary Table S2. The inverted repeat was
 identified using [MUMmer](http://genomebiology.com/content/5/2/R12),
-shown in supplementary [Figure
-S3](#figure-s3-mummer-alignment-of-the-plastid).
+shown in supplementary Figure S3.
 
 The assembled plastid genome was aligned to the Norway spruce plastid
 using [BWA-MEM](http://arxiv.org/pdf/1303.3997.pdf). Coverage and
@@ -96,19 +95,16 @@ These connected paired-end reads were assembled using
 [ABySS](http://genome.cshlp.org/content/19/6/1117). Putative
 mitochondrial sequences were separated from the assembly by their
 length, depth of coverage and GC content using k-means clustering in R
-(see supplementary [Figure
-S2](#figure-s2-classify-mitochondrial-sequences)). These putative
-mitochondrial contigs were then assembled into scaffolds using
-ABySS-scaffold with a single lane of Illumina HiSeq sequencing of a
-mate-pair library.
+(see supplementary Figure S2). These putative mitochondrial contigs were
+then assembled into scaffolds using ABySS-scaffold with a single lane of
+Illumina HiSeq sequencing of a mate-pair library.
 
 The mitochondrial genome was annotated using
 [MAKER-P](http://www.plantphysiol.org/content/early/2013/12/06/pp.113.230144)
-(parameters shown in supplementary [Table
-S3](#table-s3-mitochondrion-maker-parameters)). The proteins of all
-green plants (viridiplantae) with complete mitochondrial genome
-sequences in NCBI GenBank, 51 species, were used for protein homology
-evidence and aligned using
+(parameters shown in supplementary Table S3). The proteins of all green
+plants (viridiplantae) with complete mitochondrial genome sequences in
+NCBI GenBank, 51 species, were used for protein homology evidence and
+aligned using
 [BLAST](http://www.sciencedirect.com/science/article/pii/S0022283605803602)
 and [Exonerate](http://www.biomedcentral.com/1471-2105/6/31). The
 [prince sago palm (Cycas taitungensis)
@@ -473,181 +469,3 @@ from both monocistronic and polycistronic mRNAs. *The EMBO journal*,
 (1988)](http://www.pnas.org/content/85/2/372.short) Trans-splicing in
 chloroplasts: the rps 12 loci of Nicotiana tabacum. *Proceedings of the
 National Academy of Sciences*, 85(2), 372-376.
-
-Supplementary material
-======================
-
-Figure S1: Classify plastid sequences
--------------------------------------
-
-![Figure S1](figure/plastid-classify.png)
-
-**Figure S1**: Six plastid sequences were separated by length and depth
-of coverage using thresholds chosen by inspection
-
-Figure S2: Classify mitochondrial sequences
--------------------------------------------
-
-![Figure S2](figure/mt-classify.png)
-
-**Figure S2**: Mitochondrial sequences were separated by length, depth
-of coverage and GC content using k-means clustering in R
-
-Figure S3: MUMmer alignment of the plastid
-------------------------------------------
-
-![Figure S3](figure/plastid-mummer.png)
-
-**Figure S3**: MUMmer was used to identify the inverted repeat of the
-plastid
-
-Table S1: Software
-------------------
-
-<table>
-<thead>
-<tr class="header">
-<th align="left">Software</th>
-<th align="left">Version</th>
-<th align="left">DOI</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">ABySS</td>
-<td align="left">1.3.7</td>
-<td align="left"><a href="http://dx.doi.org/10.1101/gr.089532.108">10.1101/gr.089532.108</a></td>
-</tr>
-<tr class="even">
-<td align="left">BLAST</td>
-<td align="left">2.2.29</td>
-<td align="left"><a href="http://dx.doi.org/10.1016/S0022-2836(05)80360-2">10.1016/S0022-2836(05)80360-2</a></td>
-</tr>
-<tr class="odd">
-<td align="left">BWA</td>
-<td align="left">0.7.8</td>
-<td align="left"><a href="http://dx.doi.org/10.1093/bioinformatics/btp324">10.1093/bioinformatics/btp324</a></td>
-</tr>
-<tr class="even">
-<td align="left">Barrnap</td>
-<td align="left">0.4.2</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">DOGMA</td>
-<td align="left">NA</td>
-<td align="left"><a href="http://dx.doi.org/10.1093/bioinformatics/bth352">10.1093/bioinformatics/bth352</a></td>
-</tr>
-<tr class="even">
-<td align="left">Exonerate</td>
-<td align="left">2.2.0</td>
-<td align="left"><a href="http://dx.doi.org/10.1186/1471-2105-6-31">10.1186/1471-2105-6-31</a></td>
-</tr>
-<tr class="odd">
-<td align="left">GenomeTools</td>
-<td align="left">1.5.3</td>
-<td align="left"><a href="http://dx.doi.org/10.1109/TCBB.2013.68">10.1109/TCBB.2013.68</a></td>
-</tr>
-<tr class="even">
-<td align="left">HMMER</td>
-<td align="left">3.1b1</td>
-<td align="left"><a href="http://dx.doi.org/10.1371/journal.pcbi.1002195">10.1371/journal.pcbi.1002195</a></td>
-</tr>
-<tr class="odd">
-<td align="left">MAKER-P</td>
-<td align="left">2.31.4</td>
-<td align="left"><a href="http://dx.doi.org/10.1104/pp.113.230144">10.1104/pp.113.230144</a></td>
-</tr>
-<tr class="even">
-<td align="left">MUMmer</td>
-<td align="left">3.23</td>
-<td align="left"><a href="http://dx.doi.org/10.1186/gb-2004-5-2-r12">10.1186/gb-2004-5-2-r12</a></td>
-</tr>
-<tr class="odd">
-<td align="left">QUAST</td>
-<td align="left">2.3</td>
-<td align="left"><a href="http://dx.doi.org/10.1093/bioinformatics/btt086">10.1093/bioinformatics/btt086</a></td>
-</tr>
-<tr class="even">
-<td align="left">RECON</td>
-<td align="left">1.0.7</td>
-<td align="left"><a href="http://dx.doi.org/10.1101/gr.88502">10.1101/gr.88502</a></td>
-</tr>
-<tr class="odd">
-<td align="left">RMBlast</td>
-<td align="left">2.2.28</td>
-<td align="left">NA</td>
-</tr>
-<tr class="even">
-<td align="left">RepeatMasker</td>
-<td align="left">4.0.5</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">RepeatModeler</td>
-<td align="left">1.0.7</td>
-<td align="left">NA</td>
-</tr>
-<tr class="even">
-<td align="left">RepeatScout</td>
-<td align="left">1.0.5</td>
-<td align="left"><a href="http://dx.doi.org/10.1093/bioinformatics/bti1018">10.1093/bioinformatics/bti1018</a></td>
-</tr>
-<tr class="odd">
-<td align="left">SAMtools</td>
-<td align="left">0.1.19</td>
-<td align="left"><a href="http://dx.doi.org/10.1093/bioinformatics/btp352">10.1093/bioinformatics/btp352</a></td>
-</tr>
-<tr class="even">
-<td align="left">TRF</td>
-<td align="left">4.07b</td>
-<td align="left"><a href="http://dx.doi.org/10.1093/nar/27.2.573">10.1093/nar/27.2.573</a></td>
-</tr>
-<tr class="odd">
-<td align="left">tRNAscan-SE</td>
-<td align="left">1.23</td>
-<td align="left"><a href="http://dx.doi.org/10.1093/nar/25.5.0955">10.1093/nar/25.5.0955</a></td>
-</tr>
-</tbody>
-</table>
-
-Table S2: Plastid MAKER parameters
-----------------------------------
-
-    #-----Genome (these are always required)
-    genome=pg29-plastid.fa #genome sequence (fasta file or fasta embeded in GFF3 file)
-    organism_type=eukaryotic #eukaryotic or prokaryotic. Default is eukaryotic
-
-    #-----EST Evidence (for best results provide a file for at least one)
-    est=NC_021456.frn #set of ESTs or assembled mRNA-seq in fasta format
-
-    #-----Protein Homology Evidence (for best results provide a file for at least one)
-    protein=cds_aa.fa #protein sequence file in fasta format (i.e. from mutiple oransisms)
-
-    #-----Repeat Masking (leave values blank to skip repeat masking)
-    model_org=
-    repeat_protein=
-
-    #-----Gene Prediction
-    est2genome=1 #infer gene predictions directly from ESTs, 1 = yes, 0 = no
-    protein2genome=1 #infer predictions from protein homology, 1 = yes, 0 = no
-
-    #-----MAKER Behavior Options
-    est_forward=1 #map names and attributes forward from EST evidence, 1 = yes, 0 = no
-    single_exon=1 #consider single exon EST evidence when generating annotations, 1 = yes, 0 = no
-    single_length=50 #min length required for single exon ESTs if 'single_exon is enabled'
-
-Table S3: Mitochondrion MAKER parameters
-----------------------------------------
-
-    genome=pg29mt-concat.fa
-    organism_type=eukaryotic
-    protein=cds_aa.fa
-    model_org=picea
-    rmlib=rmlib.fa
-    repeat_protein=/usr/local/opt/maker/libexec/data/te_proteins.fasta
-    protein2genome=1
-    trna=1
-    other_gff=pg29mt-concat.rrna.gff
-    est_forward=1
-    single_exon=1
