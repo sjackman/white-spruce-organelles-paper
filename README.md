@@ -25,6 +25,34 @@ MAKER-P.
 Introduction
 ============
 
+Plant cells contain two organelles located in the cytoplasm that harbour
+their own genomes, the mitochondrion and the plastid (chloroplast). It
+can be difficult to infer phylogenetic trees from nuclear genes of
+polyploid species "with large genomes and complex gene families, such as
+gymnosperms" (@yang2012three). Non-coding regions of plastid DNA (cpDNA)
+have secondary RNA structures with regions that are highly variable in
+gymnosperm that make it suitable for phylogenetic inference
+(@hao2010sequence).
+
+Mitochondrial genomes are inherited maternally from seeds in *Pinaceae*,
+and plastid genomes are inherited paternally from pollen
+(@whittle2002male). These contrasting inheritance schemes can be useful
+in phylogenetic comparisons of species expanding their range. In the
+case of two previously allopatric species now found in sympatry, the
+mitochondrial DNA (mtDNA) is contributed by the resident species,
+whereas introgression of the plastid genome into the expanding species
+is limited, since pollen is more readily dispersed than seeds
+(@du2011direction). Differential gene flow of cpDNA and mtDNA due to
+different methods of inheritance and dispersion results in new
+assemblages of organellar genomes and an increase of genetic diversity
+after expansion from a refugium (@gerardi2010glacial).
+
+Analysis of cpDNA is useful reconstructing phylogenetic trees of diverse
+plant species (@wu2007chloroplast), in determining the origin of an
+expanding population (@aizawa2012phylogeography) and determining when
+distinct lineages of a species resulted from multiple colonization
+events (@jardon2011phylogeography).
+
 The SMarTForests project published the draft genome sequence of the 20
 gigabase [white spruce (*Picea glauca*)
 genome](http://bioinformatics.oxfordjournals.org/content/29/12/1492),
