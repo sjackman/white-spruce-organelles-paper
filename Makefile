@@ -39,6 +39,10 @@ index.html: white-spruce-organelles.md
 README.md: white-spruce-organelles.md readme.markdown_strict
 	pandoc --template=readme -t markdown_strict -o $@ $<
 
+# Render docx from Markdown
+%.docx: %.md %.bib
+	pandoc --bibliography=$*.bib -o $@ $<
+
 # Render the TeX from the Markdown
 %.orig.tex: %.md %.bib gbe.latex
 	pandoc --template=gbe --bibliography=$*.bib -o $@ $<
