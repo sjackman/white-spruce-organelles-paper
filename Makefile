@@ -40,8 +40,8 @@ README.md: white-spruce-organelles.md readme.markdown_strict
 	pandoc --template=readme -t markdown_strict -o $@ $<
 
 # Render the TeX from the Markdown
-%.orig.tex: %.md gbe.latex
-	pandoc --template=gbe -o $@ $<
+%.orig.tex: %.md %.bib gbe.latex
+	pandoc --template=gbe --bibliography=$*.bib -o $@ $<
 
 # Munge the TeX
 %.tex: %.orig.tex
