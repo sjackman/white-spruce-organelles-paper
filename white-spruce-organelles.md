@@ -34,6 +34,8 @@ Mitochondrial genomes are inherited maternally from seeds in *Pinaceae*, and pla
 
 Analysis of cpDNA is useful reconstructing phylogenetic trees of diverse plant species (@wu2007chloroplast), in determining the origin of an expanding population (@aizawa2012phylogeography) and determining when distinct lineages of a species resulted from multiple colonization events (@jardon2011phylogeography).
 
+The complete plastid genomes of *Podocarpus lambertii*, *Taxus chinensis* var. *mairei* and four *Juniperus* species were submitted to NCBI GenBank in 2014 (@do2014complete, @zhang2014complete, @guo2014predominant). These projects used a variety of strategies for isolating cpDNA either in the lab or computationally, sequencing and assembly. The *P. lambertii* genome assembly isolated the cpDNA using the protocol of @do2014improved, Illumina MiSeq sequencing and Newbler to assemble the reads. The *Juniperus bermudiana* genome assembly used long-range PCR to amplify the plastid DNA, a combination of Illumina GAII and Sanger sequencing, and Geneious to assemble the reads using *C. japonica* as a reference genome. The other three *Juniperus* genome assemblies used Illumina MiSeq sequencing and Velvet to assemble the reads. The *T. chinensis* genome assembly used whole-genome Illumina HiSeq 2000 sequencing, BLAT to isolate the cpDNA reads and SOAPdenovo to assemble the isolated cpDNA reads. All of these projects used DOGMA (@wyman2004automatic) to annotate the assembly.
+
 The SMarTForests project published the draft genome sequence of the
 20 gigabase [white spruce (*Picea glauca*) genome][whitespruce], seven
 times the size of the human genome, sequenced using the Illumina HiSeq
