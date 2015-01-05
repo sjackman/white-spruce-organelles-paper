@@ -36,16 +36,16 @@ index.html: white-spruce-organelles.md
 	pandoc -s -o $@ $<
 
 # Render strict Markdown from Pandoc Markdown
-README.md: white-spruce-organelles.md white-spruce-organelles.bib readme.markdown_strict
-	pandoc --template=readme --bibliography=white-spruce-organelles.bib -t markdown_strict --columns=80 -o $@ $<
+README.md: white-spruce-organelles.md white-spruce-organelles.bib gbe.csl readme.markdown_strict
+	pandoc --template=readme --bibliography=white-spruce-organelles.bib --csl=gbe.csl -t markdown_strict --columns=80 -o $@ $<
 
 # Render docx from Markdown
-%.docx: %.md %.bib
-	pandoc --bibliography=$*.bib -o $@ $<
+%.docx: %.md %.bib gbe.csl
+	pandoc --bibliography=$*.bib --csl=gbe.csl -o $@ $<
 
 # Render the TeX from the Markdown
-%.orig.tex: %.md %.bib gbe.latex
-	pandoc --template=gbe --bibliography=$*.bib -o $@ $<
+%.orig.tex: %.md %.bib gbe.csl gbe.latex
+	pandoc --template=gbe --bibliography=$*.bib --csl=gbe.csl -o $@ $<
 
 # Munge the TeX
 %.tex: %.orig.tex
@@ -80,3 +80,7 @@ gbe/gbe.cls: gbe_tex_template.zip
 	rm -rf gbe gbe_tex_template
 	mv gbe_sample gbe
 	touch $@
+
+# Download the GBE citation style language (CSL)
+gbe.csl:
+	curl -o $@ https://raw.githubusercontent.com/citation-style-language/styles/master/genome-biology-and-evolution.csl
