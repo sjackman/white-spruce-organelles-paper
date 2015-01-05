@@ -36,8 +36,8 @@ index.html: white-spruce-organelles.md
 	pandoc -s -o $@ $<
 
 # Render strict Markdown from Pandoc Markdown
-README.md: white-spruce-organelles.md readme.markdown_strict
-	pandoc --template=readme -t markdown_strict -o $@ $<
+README.md: white-spruce-organelles.md white-spruce-organelles.bib readme.markdown_strict
+	pandoc --template=readme --bibliography=white-spruce-organelles.bib -t markdown_strict --columns=80 -o $@ $<
 
 # Render docx from Markdown
 %.docx: %.md %.bib
