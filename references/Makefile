@@ -1,7 +1,12 @@
 # Fetch relevant literature using Entrez Direct
 # Written by Shaun Jackman http://sjackman.ca
 
-all: gymnosperm-cp.organism.tsv spermatophyta-mt.2014.organism.tsv
+all: \
+	gymnosperm-cp.2014.doi.tsv \
+	gymnosperm-cp.2014.organism.tsv \
+	spermatophyta-mt.2014.doi.tsv \
+	spermatophyta-mt.2014.organism.tsv \
+	viridiplantae-mt.organism.tsv
 
 .PHONY: all clean
 .DELETE_ON_ERROR:
