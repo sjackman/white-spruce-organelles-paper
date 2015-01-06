@@ -183,16 +183,16 @@
 
 %%%%%%%%%%%%%%%%%%%%trim size setting
 
-\textwidth497.9232pt%
+%xxx sdj \textwidth497.9232pt%
 %\textheight626.1454pt
-\textheight646.1454pt
+%xxx sdj \textheight646.1454pt
 \columnwidth238pt
 \columnsep22.7622pt
-\oddsidemargin81pt%
-\evensidemargin78pt%5mm
-\topmargin42pt%
-\headheight10pt
-\headsep75.4pt%
+%xxx sdj \oddsidemargin81pt%
+%xxx sdj \evensidemargin78pt%5mm
+%xxx sdj \topmargin42pt%
+%xxx sdj \headheight10pt
+\headsep 36pt %xxx sdj \headsep75.4pt%
 \parindent11pt
 \footskip 44pt%
 \setlength{\fboxsep}{0pt}
@@ -220,8 +220,10 @@
      \hskip-0pt\textcolor{sectioncolor}{\rule{\textwidth}{.3pt}} \end{tabular*}}%
 
 
-\def\@oddfoot{\gridpl\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lr@{}}\\[-40pt]
-{\copyfont{$\gbecopyright$} The Author(s) 2010. Published by Oxford University
+%xxx sdj \def\@oddfoot{\gridpl\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lr@{}}\\[-40pt]
+%xxx sdj {\copyfont{$\gbecopyright$} The Author(s) 2010. Published by Oxford University
+\def\@oddfoot{\gridpl\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lr@{}}\\
+{\copyfont{\copyright} The Author(s) 2010. Published by Oxford University
 Press on behalf of the \textit{Society for Molecular Biology and Evolution.}}\\[-2.7pt]
 {\copyfont This\hspace*{0.5pt} is\hspace*{0.5pt} an\hspace*{0.5pt} Open\hspace*{0.3pt} Access\hspace*{0.5pt} article\hspace*{0.5pt} distributed\hspace*{0.5pt} under\hspace*{0.3pt} the\hspace*{0.5pt} terms\hspace*{0.5pt} of\hspace*{0.5pt}
 the\hspace*{0.5pt} Creative\hspace*{0.5pt} Commons\hspace*{0.5pt} Attribution\hspace*{0.3pt} Non-Commercial\hspace*{0.5pt} License\hspace*{0.5pt} (http://creativecommons.org/licenses/by-nc/}\\[-2.7pt]
@@ -1255,8 +1257,11 @@ and reproduction in any medium, provided the original work is properly cited.}\h
 \usepackage{amsmath,color,stfloats,multirow,booktabs,bm}%,modnatbib}
 \usepackage{cuted,frutiger,rotating}
 \usepackage[switch]{tnqlineno}
-\usepackage{tnqcuted,tnqcolor,pifont}
+%xxx sdj pifont requires the font msyr
+%xxx sdj \usepackage{tnqcuted,tnqcolor,pifont}
+\usepackage{tnqcuted,tnqcolor}
 \usepackage{ulem,color}
+\usepackage{hyperref} %xxx sdj for href
 \definecolor{pscolor1}{cmyk}{.93,.56,.12,.22}
 \definecolor{pscolor2}{cmyk}{.60,.80,0,.19}
 \definecolor{pscolor3}{cmyk}{.60,.80,0,.19}
