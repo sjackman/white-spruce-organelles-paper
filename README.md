@@ -48,21 +48,40 @@ species (Wu et al. 2007), in determining the origin of an expanding population
 resulted from multiple colonization events (Jard<span>ó</span>n-Barbolla et al.
 2011).
 
-The complete plastid genomes of *Podocarpus lambertii*, *Taxus chinensis* var.
-*mairei* and four *Juniperus* species were submitted to NCBI GenBank in 2014
-(Nascimento Vieira, Faoro, Rogalski, et al. 2014; Zhang et al. 2014; Guo et al.
-2014). These projects used a variety of strategies for isolating cpDNA either in
-the lab or computationally, sequencing and assembly. The *P. lambertii* genome
-assembly isolated the cpDNA using the protocol of Nascimento Vieira, Faoro,
-Freitas Fraga, et al. (2014), Illumina MiSeq sequencing and Newbler to assemble
-the reads. The *Juniperus bermudiana* genome assembly used long-range PCR to
-amplify the plastid DNA, a combination of Illumina GAII and Sanger sequencing,
-and Geneious to assemble the reads using *C. japonica* as a reference genome.
-The other three *Juniperus* genome assemblies used Illumina MiSeq sequencing and
-Velvet to assemble the reads. The *T. chinensis* genome assembly used
-whole-genome Illumina HiSeq 2000 sequencing, BLAT to isolate the cpDNA reads and
-SOAPdenovo to assemble the isolated cpDNA reads. All of these projects used
-DOGMA (Wyman et al. 2004) to annotate the assembly.
+The complete plastid genomes of the gymnosperms *Podocarpus lambertii*, *Taxus
+chinensis* var. *mairei* and four *Juniperus* species were submitted to NCBI
+GenBank in 2014 (Nascimento Vieira, Faoro, Rogalski, et al. 2014; Zhang et al.
+2014; Guo et al. 2014). These projects used a variety of strategies for
+isolating cpDNA either in the lab or computationally, sequencing and assembly.
+The *P. lambertii* genome assembly isolated the cpDNA using the protocol of
+Nascimento Vieira, Faoro, Freitas Fraga, et al. (2014), Illumina MiSeq
+sequencing and Newbler to assemble the reads. The *Juniperus bermudiana* genome
+assembly used long-range PCR to amplify the plastid DNA, a combination of
+Illumina GAII and Sanger sequencing, and Geneious to assemble the reads using
+*C. japonica* as a reference genome. The other three *Juniperus* genome
+assemblies used Illumina MiSeq sequencing and Velvet (Zerbino & Birney 2008) to
+assemble the reads. The *T. chinensis* genome assembly used whole-genome
+Illumina HiSeq 2000 sequencing, BLAT (Kent 2002) to isolate the cpDNA reads and
+SOAPdenovo (Luo et al. 2012) to assemble the isolated cpDNA reads. All of these
+projects used DOGMA (Wyman et al. 2004) to annotate the assembly.
+
+Only one complete mitochondrial genome of a gymnosperm has been published,
+*Cycas taitungensis* (Chaw et al. 2008). In 2014 the complete mitochondrial
+genomes of the spermatophytes *Brassica maritima*, *Brassica oleracea*,
+*Capsicum annuum*, *Eruca sativa*, *Helianthus tuberosus*, *Raphanus sativus*,
+*Rhazya stricta* and *Vaccinium macrocarpon* were submitted to NCBI Genbank
+(Grewe et al. 2014; Jo et al. 2014; Wang et al. 2014; Bock et al. 2014; Jeong et
+al. 2014; Park et al. 2014; Fajardo et al. 2014). Six of these projects gave
+details of the sample preparation, sequencing, assembly and annotation strategy.
+Three projects enriched for organelle DNA using varying laboratory methods
+(Keren et al. 2009; Kim et al. 2007; Chen et al. 2011), and the remainder used
+total genomic DNA. Three projects used Illumina HiSeq 2000 sequencing and Velvet
+for assembly, and three projects used Roche 454 GS-FLX sequencing and Newbler
+for assembly. Most projects used an aligner such as BLAST (Altschul et al. 1990)
+to isolate sequences with similarity to known mitochondrial sequence, either
+before or after assembly. Two projects used Mitofy (Alverson et al. 2010) to
+annotate the genome, and the remainder used a collection of tools such as BLAST,
+tRNAscan-SE (Lowe & Eddy 1997) and ORF Finder to annotate genes.
 
 The SMarTForests project published the draft genome sequence of the 20 gigabase
 [white spruce (*Picea glauca*)
@@ -495,14 +514,41 @@ Aizawa M, Kim Z-S, Yoshimaru H. 2012. Phylogeography of the korean pine (pinus
 koraiensis) in northeast asia: Inferences from organelle gene sequences. Journal
 of plant research. 125:713–723.
 
+Altschul SF, Gish W, Miller W, Myers EW, Lipman DJ. 1990. Basic local alignment
+search tool. Journal of molecular biology. 215:403–410.
+
+Alverson AJ et al. 2010. Insights into the evolution of mitochondrial genome
+size from complete sequences of citrullus lanatus and cucurbita pepo
+(cucurbitaceae). Molecular biology and evolution. 27:1436–1448.
+
+Bock DG, Kane NC, Ebert DP, Rieseberg LH. 2014. Genome skimming reveals the
+origin of the jerusalem artichoke tuber crop species: Neither from jerusalem nor
+an artichoke. New Phytologist. 201:1021–1030.
+
+Chaw S-M et al. 2008. The mitochondrial genome of the gymnosperm cycas
+taitungensis contains a novel family of short interspersed elements, bpu
+sequences, and abundant rNA editing sites. Molecular biology and evolution.
+25:603–615.
+
+Chen J et al. 2011. Substoichiometrically different mitotypes coexist in
+mitochondrial genomes of brassica napus l. PLoS One. 6:e17662.
+
 Du FK et al. 2011. Direction and extent of organelle dNA introgression between
 two spruce species in the qinghai-tibetan plateau. New Phytologist.
 192:1024–1033.
+
+Fajardo D et al. 2014. The american cranberry mitochondrial genome reveals the
+presence of selenocysteine (tRNA-sec and sECIS) insertion machinery in land
+plants. Gene. 536:336–343.
 
 Gerardi S, JARAMILLO-CORREA JP, Beaulieu J, Bousquet J. 2010. From glacial
 refugia to modern populations: New assemblages of organelle genomes generated by
 differential cytoplasmic gene flow in transcontinental black spruce. Molecular
 ecology. 19:5265–5280.
+
+Grewe F et al. 2014. Comparative analysis of 11 brassicales mitochondrial
+genomes and the mitochondrial transcriptome of\< i\> brassica oleracea\</i\>.
+Mitochondrion.
 
 Guo W et al. 2014. Predominant and substoichiometric isomers of the plastid
 genome coexist within juniperus plants and have shifted multiple times during
@@ -517,12 +563,41 @@ V<span>á</span>zquez-Lobo A, Pi<span>ñ</span>ero D. 2011. Phylogeography of
 pinus subsection australes in the caribbean basin. Annals of botany.
 107:229–241.
 
+Jeong Y-M et al. 2014. The complete mitochondrial genome of cultivated radish
+wK10039 (raphanus sativus l.). Mitochondrial DNA. 1–2.
+
+Jo YD, Choi Y, Kim D-H, Kim B-D, Kang B-C. 2014. Extensive structural variations
+between mitochondrial genomes of cMS and normal peppers (capsicum annuum l.)
+revealed by complete nucleotide sequencing. BMC genomics. 15:561.
+
+Kent WJ. 2002. BLAT—the bLAST-like alignment tool. Genome research. 12:656–664.
+
+Keren I et al. 2009. AtnMat2, a nuclear-encoded maturase required for splicing
+of group-iI introns in arabidopsis mitochondria. Rna. 15:2299–2311.
+
+Kim DH, Kang JG, Kim B-D. 2007. Isolation and characterization of the
+cytoplasmic male sterility-associated orf456 gene of chili pepper (capsicum
+annuum l.). Plant molecular biology. 63:519–532.
+
+Lowe TM, Eddy SR. 1997. TRNAscan-sE: A program for improved detection of
+transfer rNA genes in genomic sequence. Nucleic acids research. 25:0955–964.
+
+Luo R et al. 2012. SOAPdenovo2: An empirically improved memory-efficient
+short-read de novo assembler. Gigascience. 1:18.
+
 Nascimento Vieira L do et al. 2014. An improved protocol for intact chloroplasts
 and cpDNA isolation in conifers. PloS one. 9:e84792.
 
 Nascimento Vieira L do et al. 2014. The complete chloroplast genome sequence of
 podocarpus lambertii: Genome structure, evolutionary aspects, gene content and
 sSR detection. PloS one. 9:e90618.
+
+Park S et al. 2014. Complete sequences of organelle genomes from the medicinal
+plant rhazya stricta (apocynaceae) and contrasting patterns of mitochondrial
+genome evolution across asterids. BMC genomics. 15:405.
+
+Wang Y et al. 2014. Complete mitochondrial genome of eruca sativa mill.(Garden
+rocket). PloS one. 9:e105748.
 
 Whittle C-A, Johnston MO. 2002. Male-driven evolution of mitochondrial and
 chloroplastidial dNA sequences in plants. Molecular biology and evolution.
@@ -539,6 +614,9 @@ with dOGMA. Bioinformatics. 20:3252–3255.
 Yang Z-Y, Ran J-H, Wang X-Q. 2012. Three genome-based phylogeny of cupressaceae
 s.l.: Further evidence for the evolution of gymnosperms and southern hemisphere
 biogeography. Molecular phylogenetics and evolution. 64:452–470.
+
+Zerbino DR, Birney E. 2008. Velvet: Algorithms for de novo short read assembly
+using de bruijn graphs. Genome research. 18:821–829.
 
 Zhang Y et al. 2014. The complete chloroplast genome sequence of taxus chinensis
 var. mairei (taxaceae): Loss of an inverted repeat region and comparative
