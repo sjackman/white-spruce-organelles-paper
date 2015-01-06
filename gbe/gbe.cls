@@ -5,16 +5,16 @@
 %% The original source files were:
 %%
 %% classes.dtx  (with options: `article')
-%% 
+%%
 %% This is a generated file.
-%% 
+%%
 %% Copyright 1993 1994 1995 1996 1997 1998 1999 2000 2001
 %% The LaTeX3 Project and any individual authors listed elsewhere
 %% in this file.
-%% 
+%%
 %% This file was generated from file(s) of the LaTeX base system.
 %% --------------------------------------------------------------
-%% 
+%%
 %% It may be distributed and/or modified under the
 %% conditions of the LaTeX Project Public License, either version 1.2
 %% of this license or (at your option) any later version.
@@ -22,15 +22,15 @@
 %%    http://www.latex-project.org/lppl.txt
 %% and version 1.2 or later is part of all distributions of LaTeX
 %% version 1999/12/01 or later.
-%% 
+%%
 %% This file may only be distributed together with a copy of the LaTeX
 %% base system. You may however distribute the LaTeX base system without
 %% such generated files.
-%% 
+%%
 %% The list of all files belonging to the LaTeX base distribution is
 %% given in the file `manifest.txt'. See also `legal.txt' for additional
 %% information.
-%% 
+%%
 %% \CharacterTable
 %%  {Upper-case    \A\B\C\D\E\F\G\H\I\J\K\L\M\N\O\P\Q\R\S\T\U\V\W\X\Y\Z
 %%   Lower-case    \a\b\c\d\e\f\g\h\i\j\k\l\m\n\o\p\q\r\s\t\u\v\w\x\y\z
@@ -236,17 +236,17 @@ and reproduction in any medium, provided the original work is properly cited.}\h
      \def\@oddhead{\CROPMARKSA\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lr@{}}\\[3pt]
 \hfill  \lrjfont \textcolor{runheadcolor}{GBE}\\[-1.5pt]
 \hskip-0pt\textcolor{sectioncolor}{\rule{\textwidth}{.3pt}} \end{tabular*}}%
-    
+
       \else
       \ifx N\@pg
-      
+
 
      \def\@oddhead{\CROPMARKSA\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lr@{}}\\[3pt]
      \hfill  \lrjfont \textcolor{runheadcolor}{GBE}\\[-1.5pt]
      \hskip-0pt\textcolor{sectioncolor}{\rule{\textwidth}{.3pt}} \end{tabular*}}%
 
       \else
- 
+
      \def\@oddhead{\CROPMARKSA\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lr@{}}\\[3pt]
 \hfill  \lrjfont \textcolor{runheadcolor}{GBE}\\[-1.5pt]
 \hskip-0pt\textcolor{sectioncolor}{\rule{\textwidth}{.3pt}} \end{tabular*}}%
@@ -286,11 +286,11 @@ and reproduction in any medium, provided the original work is properly cited.}\h
 
 \def\gridod{\setlength{\unitlength}{1pc}\begin{picture}(0,0)
 \put(0,-58.9){\framebox(41.5,53.55)}%-46.458
-\end{picture}}  
+\end{picture}}
 
 %\def\gridod{\setlength{\unitlength}{1pc}\begin{picture}(0,0)
 %\put(0,-61.95){\framebox(41.5,63.2)}%-46.458
-%\end{picture}}  
+%\end{picture}}
 
 
 \def\gridev{\setlength{\unitlength}{1pc}\begin{picture}(0,0)
@@ -368,7 +368,7 @@ and reproduction in any medium, provided the original work is properly cited.}\h
       \def\@evenfoot{\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}l@{}}\\[-45pt]
       \multicolumn{1}{@{}c@{}}{\textcolor{sectioncolor}{\rule{\textwidth}{0.3pt}}}\\[4pt]
       \thepage\hspace*{25pt}\catchfont{\textit{Genome Biol. Evol.}}\hspace*{2.04pt} \@vol:\fpage--\lpage.\quad\@rundoi\quad\@advance\hfill
-\firstfont     
+\firstfont
       \end{tabular*}}
       \def\@evenhead{\CROPMARKS\gridev\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll@{}}\\[3pt]
       {\lrafont\@lrh}\hfill \lrjfont \textcolor{runheadcolor}{GBE} \\[-1.5pt]
@@ -541,11 +541,11 @@ and reproduction in any medium, provided the original work is properly cited.}\h
 
 
 \@secpenalty = -300
- 
- 
+
+
 \newif\if@noskipsec \@noskipsectrue
 
- 
+
 \def\@startsection#1#2#3#4#5#6{\if@noskipsec \leavevmode \fi
    \par \@tempskipa #4\relax
    \@afterindentfalse
@@ -553,7 +553,7 @@ and reproduction in any medium, provided the original work is properly cited.}\h
    \if@nobreak \everypar{}\else
      \addpenalty{\@secpenalty}\addvspace{\@tempskipa}\fi \@ifstar
      {\@ssect{#3}{#4}{#5}{#6}}{\@dblarg{\@sect{#1}{#2}{#3}{#4}{#5}{#6}}}}
- 
+
 \def\@substartsection#1#2#3#4#5#6{\if@noskipsec \leavevmode \fi
    \par \@tempskipa #4\relax
    \@afterindentfalse%\vspace*{-5pt}
@@ -569,14 +569,14 @@ and reproduction in any medium, provided the original work is properly cited.}\h
    \if@nobreak \everypar{}\else
      \addpenalty{\@secpenalty}\addvspace{\@tempskipa}\fi \@ifstar
      {\@ssect{#3}{#4}{#5}{#6}}{\@dblarg{\@subsubsect{#1}{#2}{#3}{#4}{#5}{#6}}}}
-     
+
 \def\@parastartsection#1#2#3#4#5#6{\if@noskipsec \leavevmode \fi
    \par \@tempskipa #4\relax
    \@afterindentfalse
    \ifdim \@tempskipa <\z@ \@tempskipa -\@tempskipa \@afterindentfalse\fi
    \if@nobreak \everypar{}\else
      \addpenalty{\@secpenalty}\addvspace{\@tempskipa}\fi \@ifstar
-     {\@ssect{#3}{#4}{#5}{#6}}{\@dblarg{\@subsubsect{#1}{#2}{#3}{#4}{#5}{#6}}}} 
+     {\@ssect{#3}{#4}{#5}{#6}}{\@dblarg{\@subsubsect{#1}{#2}{#3}{#4}{#5}{#6}}}}
 
 \def\@parasect#1#2#3#4#5#6[#7]#8{\ifnum #2>\c@secnumdepth
      \let\@svsec\@empty\else
@@ -596,8 +596,8 @@ and reproduction in any medium, provided the original work is properly cited.}\h
                            {toc}{#1}{\ifnum #2>\c@secnumdepth \else
                              \protect\numberline{\csname the#1\endcsname}\fi
                        #7}}\fi
-     \@xsect{#5}}    
-     
+     \@xsect{#5}}
+
 
 \def\@subsubsect#1#2#3#4#5#6[#7]#8{\ifnum #2>\c@secnumdepth
      \let\@svsec\@empty\else
@@ -605,7 +605,7 @@ and reproduction in any medium, provided the original work is properly cited.}\h
      \@tempskipa #5\relax
       \ifdim \@tempskipa>\z@
         \begingroup #6\relax
-          \@hangfrom{\hskip #3\relax\@svsec}{\interlinepenalty \@M   
+          \@hangfrom{\hskip #3\relax\@svsec}{\interlinepenalty \@M
           \subsubsectionfont \textcolor{\seccolor}{#8}}%
         \endgroup
        \csname #1mark\endcsname{#7}\addcontentsline
@@ -644,7 +644,7 @@ and reproduction in any medium, provided the original work is properly cited.}\h
                        #7}}\fi
      \@xsect{#5}}
 
- 
+
 \def\@sect#1#2#3#4#5#6[#7]#8{\ifnum #2>\c@secnumdepth
      \let\@svsec\@empty\else
      \refstepcounter{#1}\edef\@svsec{\csname the#1\endcsname.\hskip .5em}\fi
@@ -664,8 +664,8 @@ and reproduction in any medium, provided the original work is properly cited.}\h
                              \protect\numberline{\csname the#1\endcsname}\fi
                        #7}}\fi
      \@xsect{#5}}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%     
- 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \def\@xsect#1{\@tempskipa #1\relax
       \ifdim \@tempskipa>\z@
        \par \nobreak
@@ -678,15 +678,15 @@ and reproduction in any medium, provided the original work is properly cited.}\h
                    \hskip -#1\relax  % relax added 14 Jan 91
                   \else \clubpenalty \@clubpenalty
                     \everypar{}\fi}\fi\ignorespaces}
- 
+
 \def\@ssect#1#2#3#4#5{\@tempskipa #3\relax
    \ifdim \@tempskipa>\z@
      \begingroup #4\@hangfrom{\hskip #1}{\interlinepenalty \@M #5\par}\endgroup
    \else \def\@svsechd{#4\hskip #1\relax #5}\fi
     \@xsect{#3}}
- 
+
 \newif\if@afterindent \@afterindenttrue
- 
+
 \def\@afterheading{\global\@nobreaktrue
       \everypar{\if@nobreak
                    \global\@nobreakfalse
@@ -694,8 +694,8 @@ and reproduction in any medium, provided the original work is properly cited.}\h
                    \if@afterindent \else {\setbox\z@\lastbox}\fi
                  \else \clubpenalty \@clubpenalty
                     \everypar{}\fi}}
- 
- 
+
+
 %
 \def\@hangfrom#1{\setbox\@tempboxa\hbox{#1}%
       \hangindent \wd\@tempboxa\noindent\box\@tempboxa}
@@ -743,23 +743,23 @@ and reproduction in any medium, provided the original work is properly cited.}\h
    \else \def\@svsechd{#4\hskip #1\relax #5}\fi
     \@xsect{#3}}
 
-\edef\seccolor{black}     
+\edef\seccolor{black}
 \edef\sseccolor{pscolor2}
 \edef\ssseccolor{pscolor3}
 
 \newcommand\section{\@startsection{section}{1}{0pt}{10pt plus 2pt minus 2pt}{3.4pt}
-    {\edef\seccolor{pscolor1}\sectionfont}}           
+    {\edef\seccolor{pscolor1}\sectionfont}}
 
 
 \newcommand\subsection{\@substartsection{subsection}{2}{0pt}{10pt plus 2pt minus 2pt}{-4.4pt}
-    {\edef\seccolor{pscolor2}\subsectionfont}}                      
+    {\edef\seccolor{pscolor2}\subsectionfont}}
 
 
 \newcommand\subsubsection{\@subsubstartsection{subsubsection}{3}{0pt}{12pt plus 2pt minus 2pt}{-5pt}
-    {\edef\seccolor{pscolor1}\subsubsectionfont}}                      
+    {\edef\seccolor{pscolor1}\subsubsectionfont}}
 
 \newcommand\paragraph{\@parastartsection{paragraph}{3}{0pt}{10pt plus 2pt minus 2pt}{-5pt}
-{\edef\seccolor{pscolor4}\paragraphfont}}                      
+{\edef\seccolor{pscolor4}\paragraphfont}}
 
 \newcommand\subparagraph{\@startsection{subparagraph}{5}{\parindent}%
            {3.25ex \@plus1ex \@minus .2ex}%
@@ -834,7 +834,7 @@ and reproduction in any medium, provided the original work is properly cited.}\h
       \fi \hskip 4pt
     \begin{minipage}{36pc} %
             \vspace*{4pt}\fontsize{9}{10}\selectfont #1\\[10pt]\keyname#2}
-            {\end{minipage}\vskip 1.5em}    
+            {\end{minipage}\vskip 1.5em}
 \fi
 \if@titlepage
   \newenvironment{msc}{%
@@ -886,7 +886,7 @@ and reproduction in any medium, provided the original work is properly cited.}\h
                         \advance\leftmargin 0em}%1.5em}%
                 \item\relax}
                {\endlist}
-               
+
 \newenvironment{quotation}
                {\list{}{\listparindent 1.5em%
                         \itemindent    \listparindent
@@ -1059,7 +1059,7 @@ and reproduction in any medium, provided the original work is properly cited.}\h
       \sloppy\clubpenalty4000\widowpenalty4000%
       \sfcode`\.\@m%can be changed to 1000 instead of \@m for equal spacing
       %allover
-         
+
           }
      {\def\@noitemerr
        {\@latex@warning{Empty `thebibliography' environment}}%
@@ -1143,7 +1143,7 @@ and reproduction in any medium, provided the original work is properly cited.}\h
                {\end@dblfloat}
 \newlength\abovecaptionskip
 \newlength\belowcaptionskip
-\setlength\abovecaptionskip{7pt} 
+\setlength\abovecaptionskip{7pt}
 \setlength\belowcaptionskip{4\p@}
 \long\def\@makecaption#1#2{%
   \vskip\abovecaptionskip
@@ -1176,8 +1176,8 @@ and reproduction in any medium, provided the original work is properly cited.}\h
 \sbox{\tabbox}{#2}
 \settowidth{\tablen}{\usebox{\tabbox}}
 \addtolength{\tablen}{-18pt}
-\refstepcounter{tblcap} 
-\noindent\parbox[c]{\tablen}{\fontsize{7.8}{9}\selectfont 
+\refstepcounter{tblcap}
+\noindent\parbox[c]{\tablen}{\fontsize{7.8}{9}\selectfont
 \noindent\mbox{\textcolor{tabcolor}{\tabcapheadfont Table \thetblcap.}}
 \fontsize{7.8}{9}\selectfont{\tabcapfont #1}.}\\
 \noindent \fontsize{7.8}{9}\selectfont \mbox{\tbhf #2}\\[6pt]
@@ -1191,8 +1191,8 @@ and reproduction in any medium, provided the original work is properly cited.}\h
 \sbox{\tabbox}{#2}
 \settowidth{\tablen}{\usebox{\tabbox}}
 \addtolength{\tablen}{-18pt}
-\refstepcounter{tblcap} 
-\noindent\parbox[c]{\tablen}{\fontsize{7.8}{9}\selectfont 
+\refstepcounter{tblcap}
+\noindent\parbox[c]{\tablen}{\fontsize{7.8}{9}\selectfont
 \noindent\mbox{\textcolor{tabcolor}{\tabcapheadfont Table} \textcolor{tabcolor}{\tabcapheadfont
 \thetblcap}}\\[7pt]
 \fontsize{7.8}{9}\selectfont{\tabcapfont #1}}\\[-.9pt]
@@ -1205,7 +1205,7 @@ and reproduction in any medium, provided the original work is properly cited.}\h
 \sbox{\tabbox}{#2}
 \settowidth{\tablen}{\usebox{\tabbox}}
 \addtolength{\tablen}{-18pt}
-\vskip5pt\refstepcounter{tblcap} 
+\vskip5pt\refstepcounter{tblcap}
 \noindent\parbox[c]{40pc}{\fontsize{7.8}{9}\selectfont
 \noindent\mbox{\textcolor{tabcolor}{\tabcapheadfont Table} \textcolor{tabcolor}{\tabcapheadfont
 \thetblcap}} \\[7pt]
@@ -1219,8 +1219,8 @@ and reproduction in any medium, provided the original work is properly cited.}\h
 \sbox{\tabbox}{#2}
 \settowidth{\tablen}{\usebox{\tabbox}}
 \addtolength{\tablen}{-18pt}
-\refstepcounter{tblcap} 
-\noindent\parbox[c]{\tablen}{\fontsize{7.8}{9}\selectfont 
+\refstepcounter{tblcap}
+\noindent\parbox[c]{\tablen}{\fontsize{7.8}{9}\selectfont
 \noindent\mbox{\textcolor{tabcolor}{\tabcapheadfont Table} \textcolor{tabcolor}{\tabcapheadfont
 \thetblcap}}\\[7pt]
 \fontsize{7.8}{1}\selectfont{\tabcapfont #1}}\\[-.9pt]
@@ -1233,7 +1233,7 @@ and reproduction in any medium, provided the original work is properly cited.}\h
 
 
 
-\long\def\firstline#1#2{\\[-8pt]\multicolumn{#2}{@{\hspace*{-6pt}}c@{}}{\rule{#1}{1pt}} \\[2.6pt]}  %[-8pt]}     
+\long\def\firstline#1#2{\\[-8pt]\multicolumn{#2}{@{\hspace*{-6pt}}c@{}}{\rule{#1}{1pt}} \\[2.6pt]}  %[-8pt]}
 \long\def\midline{\\[1.5pt]\hline\\[-.6pt]}
 
 
@@ -1330,18 +1330,18 @@ and reproduction in any medium, provided the original work is properly cited.}\h
 \let\l@table\l@figure
 \newdimen\bibindent
 \setlength\bibindent{17pt}
-%       
-%       
+%
+%
 \newenvironment{thebibliography}[1]
      %
      {\vskip23pt\vbox{\centering{\sc References}\vrule depth 9pt width 0pt
      height 0pt}
-                  % 
+                  %
       \list{}%
               {%
            \topsep0pt%3.5
-            \fontsize{7.8}{10.5}\selectfont  
-            \parsep0pt        
+            \fontsize{7.8}{10.5}\selectfont
+            \parsep0pt
             \leftmargin18pt
             \listparindent -18pt%
                          \leftmargin 18pt
@@ -1358,7 +1358,7 @@ and reproduction in any medium, provided the original work is properly cited.}\h
       \endlist
      }
 
-       
+
 \newcommand\newblock{\hskip .11em\@plus.33em\@minus.07em}
 \let\@openbib@code\@empty
 \newenvironment{theindex}
@@ -1384,7 +1384,7 @@ and reproduction in any medium, provided the original work is properly cited.}\h
   }
 \newcommand\@makefntext[1]{
     \parindent 6pt%
-    \noindent   
+    \noindent
 \hb@xt@6pt{\hss\@makefnmark\hskip2pt}\fontsize{8}{9.5}\selectfont #1}%
 %
 \setlength{\skip\footins}{15pt}%{15.9pt}%
@@ -1449,7 +1449,7 @@ and reproduction in any medium, provided the original work is properly cited.}\h
 \leftmarginodd=52truept%73truept%%25mm%
 \leftmargineven=48pt%54truept%24mm
 
-\leftmarginodda=52truept%73truept%25mm%34mm %%% 
+\leftmarginodda=52truept%73truept%25mm%34mm %%%
 \leftmarginevena=50truept%24mm%29mm %%even page left margin
 \rhsinka=27pt%20pt%20pt%58pt%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1572,7 +1572,7 @@ and reproduction in any medium, provided the original work is properly cited.}\h
 
 \newenvironment{reference}
                { \vskip12pt\centering{\smlc References\vspace*{-5.5pt}}
-                          \fontsize{9}{11}\selectfont\list{}{  
+                          \fontsize{9}{11}\selectfont\list{}{
                          \topsep-18pt
                          \listparindent -18pt%
                          \leftmargin 18pt
@@ -1590,7 +1590,7 @@ and reproduction in any medium, provided the original work is properly cited.}\h
 \usepackage{fancyhdr}
 \setlength{\bibhang}{13pt}
 \setlength{\bibsep}{0pt}
-%\renewcommand\bibfont{9}{10}\selectfont  
+%\renewcommand\bibfont{9}{10}\selectfont
 \renewenvironment{thebibliography}[1]{%
 \vskip-2pt
  \bibsection\parindent \z@\bibpreamble\fontsize{7.8}{10.5}\selectfont\list
@@ -1723,7 +1723,7 @@ $^{\rm #1}$\hspace*{3.7pt}}
 
 
 
-\def\previewa{% 
+\def\previewa{%
     \vbox to 0pt{\vss\noindent
     \definecolor{ticolor}{cmyk}{0,0,0,1}
 {\noindent\begin{picture}(0,0)
@@ -1732,7 +1732,7 @@ $^{\rm #1}$\hspace*{3.7pt}}
 }
 }
 
-\def\reviewa{% 
+\def\reviewa{%
     \vbox to 0pt{\vss\noindent
     \definecolor{ticolor}{cmyk}{.24,.90,.72,.14}
 {\noindent\begin{picture}(0,0)
@@ -1745,14 +1745,14 @@ $^{\rm #1}$\hspace*{3.7pt}}
 
 %\def\boxrule#1{\rule{228pt}{.5pt}#1}
 
- 
+
 %\long\def\secondpage{%
 %\textwidth498pt% Use actual second page trim width
 %\textheight695pt% Use actual second page trim height
 %\relax
 %}
 
- 
+
 \long\def\firstpage{%
 \break\newpage\noindent\relax
 }
@@ -1777,10 +1777,3 @@ $^{\rm #1}$\hspace*{3.7pt}}
 
 \endinput
 %%
-
-
-
-
-
-
-
