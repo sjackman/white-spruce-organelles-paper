@@ -55,7 +55,7 @@ README.md: white-spruce-organelles.md white-spruce-organelles.bib gbe.csl readme
 
 # Render the manuscript PDF
 white-spruce-organelles.pdf: %.pdf: %.tex gbe/gbe.cls
-	TEXINPUTS=.:gbe: pdflatex -interaction=batchmode $<
+	TEXINPUTS=gbe: pdflatex -interaction=batchmode $<
 
 # Render the supplementary material HTML
 white-spruce-organelles-supp.html: %.html: %.md
