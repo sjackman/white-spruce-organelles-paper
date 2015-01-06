@@ -25,44 +25,44 @@ Introduction
 Plant cells contain two organelles located in the cytoplasm that harbour their
 own genomes, the mitochondrion and the plastid (chloroplast). It can be
 difficult to infer phylogenetic trees from nuclear genes of polyploid species
-"with large genomes and complex gene families, such as gymnosperms" (Yang, Ran,
-and Wang (2012)). Non-coding regions of plastid DNA (cpDNA) have secondary RNA
-structures with regions that are highly variable in gymnosperm that make it
-suitable for phylogenetic inference (Hao, Chen, and Xiao (2010)).
+"with large genomes and complex gene families, such as gymnosperms" (Yang et al.
+2012). Non-coding regions of plastid DNA (cpDNA) have secondary RNA structures
+with regions that are highly variable in gymnosperm that make it suitable for
+phylogenetic inference (Hao et al. 2010).
 
 Mitochondrial genomes are inherited maternally from seeds in *Pinaceae*, and
-plastid genomes are inherited paternally from pollen (Whittle and Johnston
-(2002)). These contrasting inheritance schemes can be useful in phylogenetic
-comparisons of species expanding their range. In the case of two previously
-allopatric species now found in sympatry, the mitochondrial DNA (mtDNA) is
-contributed by the resident species, whereas introgression of the plastid genome
-into the expanding species is limited, since pollen is more readily dispersed
-than seeds (Du et al. (2011)). Differential gene flow of cpDNA and mtDNA due to
-different methods of inheritance and dispersion results in new assemblages of
-organellar genomes and an increase of genetic diversity after expansion from a
-refugium (Gerardi et al. (2010)).
+plastid genomes are inherited paternally from pollen (Whittle & Johnston 2002).
+These contrasting inheritance schemes can be useful in phylogenetic comparisons
+of species expanding their range. In the case of two previously allopatric
+species now found in sympatry, the mitochondrial DNA (mtDNA) is contributed by
+the resident species, whereas introgression of the plastid genome into the
+expanding species is limited, since pollen is more readily dispersed than seeds
+(Du et al. 2011). Differential gene flow of cpDNA and mtDNA due to different
+methods of inheritance and dispersion results in new assemblages of organellar
+genomes and an increase of genetic diversity after expansion from a refugium
+(Gerardi et al. 2010).
 
 Analysis of cpDNA is useful reconstructing phylogenetic trees of diverse plant
-species (Wu et al. (2007)), in determining the origin of an expanding population
-(Aizawa, Kim, and Yoshimaru (2012)) and determining when distinct lineages of a
-species resulted from multiple colonization events (Jard<span>ó</span>n-Barbolla
-et al. (2011)).
+species (Wu et al. 2007), in determining the origin of an expanding population
+(Aizawa et al. 2012) and determining when distinct lineages of a species
+resulted from multiple colonization events (Jard<span>ó</span>n-Barbolla et al.
+2011).
 
 The complete plastid genomes of *Podocarpus lambertii*, *Taxus chinensis* var.
 *mairei* and four *Juniperus* species were submitted to NCBI GenBank in 2014
-(Nascimento Vieira, Faoro, Rogalski, et al. (2014), Zhang et al. (2014), Guo et
-al. (2014)). These projects used a variety of strategies for isolating cpDNA
-either in the lab or computationally, sequencing and assembly. The *P.
-lambertii* genome assembly isolated the cpDNA using the protocol of Nascimento
-Vieira, Faoro, Freitas Fraga, et al. (2014), Illumina MiSeq sequencing and
-Newbler to assemble the reads. The *Juniperus bermudiana* genome assembly used
-long-range PCR to amplify the plastid DNA, a combination of Illumina GAII and
-Sanger sequencing, and Geneious to assemble the reads using *C. japonica* as a
-reference genome. The other three *Juniperus* genome assemblies used Illumina
-MiSeq sequencing and Velvet to assemble the reads. The *T. chinensis* genome
-assembly used whole-genome Illumina HiSeq 2000 sequencing, BLAT to isolate the
-cpDNA reads and SOAPdenovo to assemble the isolated cpDNA reads. All of these
-projects used DOGMA (Wyman, Jansen, and Boore (2004)) to annotate the assembly.
+(Nascimento Vieira, Faoro, Rogalski, et al. 2014; Zhang et al. 2014; Guo et al.
+2014). These projects used a variety of strategies for isolating cpDNA either in
+the lab or computationally, sequencing and assembly. The *P. lambertii* genome
+assembly isolated the cpDNA using the protocol of Nascimento Vieira, Faoro,
+Freitas Fraga, et al. (2014), Illumina MiSeq sequencing and Newbler to assemble
+the reads. The *Juniperus bermudiana* genome assembly used long-range PCR to
+amplify the plastid DNA, a combination of Illumina GAII and Sanger sequencing,
+and Geneious to assemble the reads using *C. japonica* as a reference genome.
+The other three *Juniperus* genome assemblies used Illumina MiSeq sequencing and
+Velvet to assemble the reads. The *T. chinensis* genome assembly used
+whole-genome Illumina HiSeq 2000 sequencing, BLAT to isolate the cpDNA reads and
+SOAPdenovo to assemble the isolated cpDNA reads. All of these projects used
+DOGMA (Wyman et al. 2004) to annotate the assembly.
 
 The SMarTForests project published the draft genome sequence of the 20 gigabase
 [white spruce (*Picea glauca*)
@@ -491,67 +491,55 @@ from both monocistronic and polycistronic mRNAs. *The EMBO journal*, 7(9),
 chloroplasts: the rps 12 loci of Nicotiana tabacum. *Proceedings of the National
 Academy of Sciences*, 85(2), 372-376.
 
-Aizawa, Mineaki, Zin-Suh Kim, and Hiroshi Yoshimaru. 2012. “Phylogeography of
-the Korean Pine (Pinus Koraiensis) in Northeast Asia: Inferences from Organelle
-Gene Sequences.” *Journal of Plant Research* 125 (6). Springer: 713–23.
+Aizawa M, Kim Z-S, Yoshimaru H. 2012. Phylogeography of the korean pine (pinus
+koraiensis) in northeast asia: Inferences from organelle gene sequences. Journal
+of plant research. 125:713–723.
 
-Du, Fang K, Xiao Li Peng, Jian Quan Liu, Martin Lascoux, Feng Sheng Hu, and
-R<span>é</span>my J Petit. 2011. “Direction and Extent of Organelle DNA
-Introgression Between Two Spruce Species in the Qinghai-Tibetan Plateau.” *New
-Phytologist* 192 (4). Wiley Online Library: 1024–33.
+Du FK et al. 2011. Direction and extent of organelle dNA introgression between
+two spruce species in the qinghai-tibetan plateau. New Phytologist.
+192:1024–1033.
 
-Gerardi, Sebastien, JUAN P JARAMILLO-CORREA, Jean Beaulieu, and Jean Bousquet.
-2010. “From Glacial Refugia to Modern Populations: New Assemblages of Organelle
-Genomes Generated by Differential Cytoplasmic Gene Flow in Transcontinental
-Black Spruce.” *Molecular Ecology* 19 (23). Wiley Online Library: 5265–80.
+Gerardi S, JARAMILLO-CORREA JP, Beaulieu J, Bousquet J. 2010. From glacial
+refugia to modern populations: New assemblages of organelle genomes generated by
+differential cytoplasmic gene flow in transcontinental black spruce. Molecular
+ecology. 19:5265–5280.
 
-Guo, Wenhu, Felix Grewe, Amie Cobo-Clark, Weishu Fan, Zelin Duan, Robert P
-Adams, Andrea E Schwarzbach, and Jeffrey P Mower. 2014. “Predominant and
-Substoichiometric Isomers of the Plastid Genome Coexist Within Juniperus Plants
-and Have Shifted Multiple Times During Cupressophyte Evolution.” *Genome Biology
-and Evolution* 6 (3). Oxford University Press: 580–90.
+Guo W et al. 2014. Predominant and substoichiometric isomers of the plastid
+genome coexist within juniperus plants and have shifted multiple times during
+cupressophyte evolution. Genome biology and evolution. 6:580–590.
 
-Hao, DC, SL Chen, and PG Xiao. 2010. “Sequence Characteristics and Divergent
-Evolution of the ChloroplastpsbA-TrnH Noncoding Region in Gymnosperms.” *Journal
-of Applied Genetics* 51 (3). Springer: 259–73.
+Hao D, Chen S, Xiao P. 2010. Sequence characteristics and divergent evolution of
+the chloroplastpsbA-trnH noncoding region in gymnosperms. Journal of applied
+genetics. 51:259–273.
 
-Jard<span>ó</span>n-Barbolla, Lev, Patricia Delgado-Valerio, Gretel
-Geada-L<span>ó</span>pez, Alejandra V<span>á</span>zquez-Lobo, and Daniel
-Pi<span>ñ</span>ero. 2011. “Phylogeography of Pinus Subsection Australes in the
-Caribbean Basin.” *Annals of Botany* 107 (2). Annals Botany Co: 229–41.
+Jard<span>ó</span>n-Barbolla L, Delgado-Valerio P, Geada-L<span>ó</span>pez G,
+V<span>á</span>zquez-Lobo A, Pi<span>ñ</span>ero D. 2011. Phylogeography of
+pinus subsection australes in the caribbean basin. Annals of botany.
+107:229–241.
 
-Nascimento Vieira, Leila do, Helisson Faoro, Hugo Pacheco de Freitas Fraga,
-Marcelo Rogalski, Emanuel Maltempi de Souza, F<span>á</span>bio de Oliveira
-Pedrosa, Rubens Onofre Nodari, and Miguel Pedro Guerra. 2014. “An Improved
-Protocol for Intact Chloroplasts and CpDNA Isolation in Conifers.” *PloS One* 9
-(1). Public Library of Science: e84792.
+Nascimento Vieira L do et al. 2014. An improved protocol for intact chloroplasts
+and cpDNA isolation in conifers. PloS one. 9:e84792.
 
-Nascimento Vieira, Leila do, Helisson Faoro, Marcelo Rogalski, Hugo Pacheco de
-Freitas Fraga, Rodrigo Luis Alves Cardoso, Emanuel Maltempi de Souza,
-F<span>á</span>bio de Oliveira Pedrosa, Rubens Onofre Nodari, and Miguel Pedro
-Guerra. 2014. “The Complete Chloroplast Genome Sequence of Podocarpus Lambertii:
-Genome Structure, Evolutionary Aspects, Gene Content and SSR Detection.” *PloS
-One* 9 (3). Public Library of Science: e90618.
+Nascimento Vieira L do et al. 2014. The complete chloroplast genome sequence of
+podocarpus lambertii: Genome structure, evolutionary aspects, gene content and
+sSR detection. PloS one. 9:e90618.
 
-Whittle, Carrie-Ann, and Mark O Johnston. 2002. “Male-Driven Evolution of
-Mitochondrial and Chloroplastidial DNA Sequences in Plants.” *Molecular Biology
-and Evolution* 19 (6). SMBE: 938–49.
+Whittle C-A, Johnston MO. 2002. Male-driven evolution of mitochondrial and
+chloroplastidial dNA sequences in plants. Molecular biology and evolution.
+19:938–949.
 
-Wu, Chung-Shien, Ya-Nan Wang, Shu-Mei Liu, and Shu-Miaw Chaw. 2007. “Chloroplast
-Genome (CpDNA) of Cycas Taitungensis and 56 Cp Protein-Coding Genes of Gnetum
-Parvifolium: Insights into CpDNA Evolution and Phylogeny of Extant Seed Plants.”
-*Molecular Biology and Evolution* 24 (6). SMBE: 1366–79.
+Wu C-S, Wang Y-N, Liu S-M, Chaw S-M. 2007. Chloroplast genome (cpDNA) of cycas
+taitungensis and 56 cp protein-coding genes of gnetum parvifolium: Insights into
+cpDNA evolution and phylogeny of extant seed plants. Molecular biology and
+evolution. 24:1366–1379.
 
-Wyman, Stacia K, Robert K Jansen, and Jeffrey L Boore. 2004. “Automatic
-Annotation of Organellar Genomes with DOGMA.” *Bioinformatics* 20 (17). Oxford
-Univ Press: 3252–55.
+Wyman SK, Jansen RK, Boore JL. 2004. Automatic annotation of organellar genomes
+with dOGMA. Bioinformatics. 20:3252–3255.
 
-Yang, Zu-Yu, Jin-Hua Ran, and Xiao-Quan Wang. 2012. “Three Genome-Based
-Phylogeny of Cupressaceae S.l.: Further Evidence for the Evolution of
-Gymnosperms and Southern Hemisphere Biogeography.” *Molecular Phylogenetics and
-Evolution* 64 (3). Elsevier: 452–70.
+Yang Z-Y, Ran J-H, Wang X-Q. 2012. Three genome-based phylogeny of cupressaceae
+s.l.: Further evidence for the evolution of gymnosperms and southern hemisphere
+biogeography. Molecular phylogenetics and evolution. 64:452–470.
 
-Zhang, Yanzhen, Ji Ma, Bingxian Yang, Ruyi Li, Wei Zhu, Lianli Sun, Jingkui
-Tian, and Lin Zhang. 2014. “The Complete Chloroplast Genome Sequence of Taxus
-Chinensis Var. Mairei (Taxaceae): Loss of an Inverted Repeat Region and
-Comparative Analysis with Related Species.” *Gene* 540 (2). Elsevier: 201–9.
+Zhang Y et al. 2014. The complete chloroplast genome sequence of taxus chinensis
+var. mairei (taxaceae): Loss of an inverted repeat region and comparative
+analysis with related species. Gene. 540:201–209.
