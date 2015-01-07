@@ -40,23 +40,9 @@ Only one complete mitochondrial genome of a gymnosperm has been published, *Cyca
 
 Three further spcecies are of note for the large size of their mitochondrial genomes. The mitochondrial genome of *Amborella trichopoda* is 3.9 Mbp, and additionally "it is the single sister species to all other extant angiosperms" [@rice2013horizontal]. The mitochondrial genomes of *Silene noctiflora* and *Silene conica* are 6.7 Mbp and 11.3 Mbp respecitvely [@sloan2012rapid].
 
-The SMarTForests project published the draft genome sequence of the
-20 gigabase [white spruce (*Picea glauca*) genome][whitespruce], seven
-times the size of the human genome, sequenced using the Illumina HiSeq
-and MiSeq sequencing platforms. Whole genome sequencing data contains
-reads originating from both the nuclear and organellar genomes.
-Whereas one copy of the diploid nuclear genome is found in each cell,
-hundreds of organelles are present, and thus hundreds of copies of the
-organellar genomes. This abundance results in an overrepresentation of
-the organellar genomes in whole genome sequencing data.
+The SMarTForests project published the draft genome sequence of the 20 gigabase white spruce (*Picea glauca*) genome [@birol2013assembling], seven times the size of the human genome, sequenced using the Illumina HiSeq and MiSeq sequencing platforms. Whole genome sequencing data contains reads originating from both the nuclear and organellar genomes. Whereas one copy of the diploid nuclear genome is found in each cell, hundreds of organelles are present, and thus hundreds of copies of the organellar genomes. This abundance results in an overrepresentation of the organellar genomes in whole genome sequencing data.
 
-Assembling a single lane of whole genome sequencing data using
-[ABySS][abyss] yields an assembly composed of organellar sequences and
-nuclear repeat elements. The assembled sequences that originate from
-the organellar genomes are separated from those of nuclear origin by
-classifying the sequences using their length, depth of coverage and GC
-content. The organellar genomes of white spruce are compared to those
-of [Norway spruce (*Picea abies*)][norwayspruce].
+Assembling a single lane of whole genome sequencing data using ABySS [@simpson2009abyss] yields an assembly composed of organellar sequences and nuclear repeat elements. The assembled sequences that originate from the organellar genomes are separated from those of nuclear origin by classifying the sequences using their length, depth of coverage and GC content. The organellar genomes of white spruce are compared to those of Norway spruce (*Picea abies*) [@nystedt2013norway].
 
 Methods
 ================================================================================
@@ -321,7 +307,7 @@ References
 | [Smit, AFA, Hubley, R & Green, P. RepeatMasker Open-3.0. 1996-2010 http://www.repeatmasker.org][repeatmasker]
 | [The Sequence Alignment/Map format and SAMtools][samtools]
 | [tRNAscan-SE: A Program for Improved Detection of Transfer RNA Genes in Genomic Sequence][trnascan]
-| [Assembling the 20Gb white spruce (*Picea glauca*) genome from whole-genome shotgun sequencing data][whitespruce]
+| [Assembling the 20 Gb white spruce (*Picea glauca*) genome from whole-genome shotgun sequencing data][whitespruce]
 | [Gremme, G., Steinbiss, S., & Kurtz, S. (2013)][GenomeTools]
   GenomeTools: a comprehensive software library for efficient processing of structured genome annotations.
   *IEEE/ACM Transactions on Computational Biology and Bioinformatics*, 10(3), 645-656.
