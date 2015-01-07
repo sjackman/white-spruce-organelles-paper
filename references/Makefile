@@ -4,8 +4,10 @@
 all: \
 	gymnosperm-cp.2014.doi.tsv \
 	gymnosperm-cp.2014.organism.tsv \
+	gymnosperm-cp.2014.taxid.tree \
 	spermatophyta-mt.2014.doi.tsv \
 	spermatophyta-mt.2014.organism.tsv \
+	spermatophyta-mt.2014.taxid.tree \
 	viridiplantae-mt.organism.tsv
 
 .PHONY: all clean
@@ -39,6 +41,14 @@ all: \
 %.doi.tsv: %.xml
 	 xtract -pattern Seq-entry -element DOI <$< |sort -u >$@
 
+# Fetch a taxonomy tree from a list of TaxID
+%.taxid.xml: %.taxid.tsv
+	epost -db taxonomy <$< |efetch -format xml >$@
+
+# Convert NCBI XML taxonomy to Newick
+%.taxid.tree: %.taxid.xml
+	xsltproc bin/taxon2newick.xsl $< >$@
+
 # Convert a list of species names to phylogenetic tree
 # Web app: http://phylot.biobyte.de/
 %.organism.tree: %.organism.tsv
@@ -48,3 +58,7 @@ all: \
 #%.organism.tree.svg: %.organism.tree:
 # brew cask install figtree
 # open -a FigTree
+
+# Download taxon2newick.xsl
+bin/taxon2newick.xsl:
+	curl -o $@ https://raw.githubusercontent.com/lindenb/xslt-sandbox/master/stylesheets/bio/ncbi/taxon2newick.xsl
