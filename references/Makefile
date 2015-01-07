@@ -16,7 +16,7 @@ all: \
 	esearch -db nuccore -query "`<$<`" >$@
 
 %.2014.query.xml: %.query.xml
-	efilter -datetype CreateDate -mindate 2014 -maxdate 2015 <$< >$@
+	efilter -datetype CreateDate -mindate 2014 -maxdate 2014 <$< >$@
 
 %.docsum.xml: %.query.xml
 	efetch -format docsum <$< >$@
