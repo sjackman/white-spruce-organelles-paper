@@ -40,8 +40,9 @@ all: \
 	 xtract -pattern Seq-entry -element DOI <$< |sort -u >$@
 
 # Convert a list of species names to phylogenetic tree
-#%.organism.tree: %.organism.tsv
-# open http://phylot.biobyte.de/
+# Web app: http://phylot.biobyte.de/
+%.organism.tree: %.organism.tsv
+	bin/bp_taxonomy2tree.pl -e $< >$@
 
 # Render a phylogenetic tree
 #%.organism.tree.svg: %.organism.tree:
