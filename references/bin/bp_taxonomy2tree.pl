@@ -15,6 +15,7 @@ on screen.
 
   bp_taxonomy2tree.pl -s Orangutan -s Gorilla -s Chimpanzee -s Human
   bp_taxonomy2tree.pl -s Orangutan -s Gorilla -s Chimpanzee -s "Homo Sapiens"
+  bp_taxonomy2tree.pl <species.txt
 
 Can also provide -d to specify the directory to store index files in, -o to
 specify the location of your NCBI nodes file, and -a for the NCBI names file.
@@ -57,6 +58,8 @@ GetOptions( 's|species=s'   => \@species,
             'a|namesfile:s' => \$namesfile,
             'e|entrez'      => \$use_entrez,
             'h|help'        => sub { system('perldoc', $0); exit }, );
+
+push @species, <> if @species == 0;
 
 my $db = Bio::DB::Taxonomy->new( -source    => $use_entrez ? 'entrez' : 'flatfile',
                                  -directory => $index_dir,
