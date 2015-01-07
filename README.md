@@ -83,24 +83,27 @@ before or after assembly. Two projects used Mitofy (Alverson et al. 2010) to
 annotate the genome, and the remainder used a collection of tools such as BLAST,
 tRNAscan-SE (Lowe & Eddy 1997) and ORF Finder to annotate genes.
 
+Three further spcecies are of note for the large size of their mitochondrial
+genomes. The mitochondrial genome of *Amborella trichopoda* is 3.9 Mbp, and
+additionally "it is the single sister species to all other extant angiosperms"
+(Rice et al. 2013). The mitochondrial genomes of *Silene noctiflora* and *Silene
+conica* are 6.7 Mbp and 11.3 Mbp respecitvely (Sloan et al. 2012).
+
 The SMarTForests project published the draft genome sequence of the 20 gigabase
-[white spruce (*Picea glauca*)
-genome](http://bioinformatics.oxfordjournals.org/content/29/12/1492), seven
-times the size of the human genome, sequenced using the Illumina HiSeq and MiSeq
-sequencing platforms. Whole genome sequencing data contains reads originating
-from both the nuclear and organellar genomes. Whereas one copy of the diploid
-nuclear genome is found in each cell, hundreds of organelles are present, and
-thus hundreds of copies of the organellar genomes. This abundance results in an
+white spruce (*Picea glauca*) genome (Birol et al. 2013), seven times the size
+of the human genome, sequenced using the Illumina HiSeq and MiSeq sequencing
+platforms. Whole genome sequencing data contains reads originating from both the
+nuclear and organellar genomes. Whereas one copy of the diploid nuclear genome
+is found in each cell, hundreds of organelles are present, and thus hundreds of
+copies of the organellar genomes. This abundance results in an
 overrepresentation of the organellar genomes in whole genome sequencing data.
 
-Assembling a single lane of whole genome sequencing data using
-[ABySS](http://genome.cshlp.org/content/19/6/1117) yields an assembly composed
-of organellar sequences and nuclear repeat elements. The assembled sequences
-that originate from the organellar genomes are separated from those of nuclear
-origin by classifying the sequences using their length, depth of coverage and GC
-content. The organellar genomes of white spruce are compared to those of [Norway
-spruce (*Picea
-abies*)](http://www.nature.com/nature/journal/vaop/ncurrent/full/nature12211.html).
+Assembling a single lane of whole genome sequencing data using ABySS (Simpson et
+al. 2009) yields an assembly composed of organellar sequences and nuclear repeat
+elements. The assembled sequences that originate from the organellar genomes are
+separated from those of nuclear origin by classifying the sequences using their
+length, depth of coverage and GC content. The organellar genomes of white spruce
+are compared to those of Norway spruce (*Picea abies*) (Nystedt et al. 2013).
 
 Methods
 =======
@@ -485,7 +488,7 @@ http://www.repeatmasker.org](http://www.repeatmasker.org/)
 SAMtools](http://bioinformatics.oxfordjournals.org/content/25/16/2078)  
 [tRNAscan-SE: A Program for Improved Detection of Transfer RNA Genes in Genomic
 Sequence](http://nar.oxfordjournals.org/content/25/5/0955)  
-[Assembling the 20Gb white spruce (*Picea glauca*) genome from whole-genome
+[Assembling the 20 Gb white spruce (*Picea glauca*) genome from whole-genome
 shotgun sequencing
 data](http://bioinformatics.oxfordjournals.org/content/29/12/1492)  
 [Gremme, G., Steinbiss, S., & Kurtz, S.
@@ -520,6 +523,9 @@ search tool. Journal of molecular biology. 215:403–410.
 Alverson AJ et al. 2010. Insights into the evolution of mitochondrial genome
 size from complete sequences of citrullus lanatus and cucurbita pepo
 (cucurbitaceae). Molecular biology and evolution. 27:1436–1448.
+
+Birol I et al. 2013. Assembling the 20 gb white spruce (picea glauca) genome
+from whole-genome shotgun sequencing data. Bioinformatics. btt178.
 
 Bock DG, Kane NC, Ebert DP, Rieseberg LH. 2014. Genome skimming reveals the
 origin of the jerusalem artichoke tuber crop species: Neither from jerusalem nor
@@ -592,9 +598,22 @@ Nascimento Vieira L do et al. 2014. The complete chloroplast genome sequence of
 podocarpus lambertii: Genome structure, evolutionary aspects, gene content and
 sSR detection. PloS one. 9:e90618.
 
+Nystedt B et al. 2013. The norway spruce genome sequence and conifer genome
+evolution. Nature. 497:579–584.
+
 Park S et al. 2014. Complete sequences of organelle genomes from the medicinal
 plant rhazya stricta (apocynaceae) and contrasting patterns of mitochondrial
 genome evolution across asterids. BMC genomics. 15:405.
+
+Rice DW et al. 2013. Horizontal transfer of entire genomes via mitochondrial
+fusion in the angiosperm amborella. Science. 342:1468–1473.
+
+Simpson JT et al. 2009. ABySS: A parallel assembler for short read sequence
+data. Genome research. 19:1117–1123.
+
+Sloan DB et al. 2012. Rapid evolution of enormous, multichromosomal genomes in
+flowering plant mitochondria with exceptionally high mutation rates. PLoS
+biology. 10:e1001241.
 
 Wang Y et al. 2014. Complete mitochondrial genome of eruca sativa mill.(Garden
 rocket). PloS one. 9:e105748.
