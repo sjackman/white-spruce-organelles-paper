@@ -30,19 +30,19 @@ install-deps:
 	efetch -format xml <$< >$@
 
 %.organism.orig.tsv: %.docsum.xml
-	 xtract -pattern DocumentSummary -element Organism <$< |sort -u >$@
+	xtract -pattern DocumentSummary -element Organism <$< |sort -u >$@
 
 %.organism.tsv: %.organism.orig.tsv
 	sed 's/ subsp.*//' $< |uniq >$@
 
 %.taxid.tsv: %.docsum.xml
-	 xtract -pattern DocumentSummary -element TaxId <$< |sort -nu >$@
+	xtract -pattern DocumentSummary -element TaxId <$< |sort -nu >$@
 
 %.title.tsv: %.docsum.xml
-	 xtract -pattern DocumentSummary -element Title <$< |sort -u >$@
+	xtract -pattern DocumentSummary -element Title <$< |sort -u >$@
 
 %.doi.tsv: %.xml
-	 xtract -pattern Seq-entry -element DOI <$< |sort -u >$@
+	xtract -pattern Seq-entry -element DOI <$< |sort -u >$@
 
 # Fetch a taxonomy tree from a list of TaxID
 %.taxid.xml: %.taxid.tsv
