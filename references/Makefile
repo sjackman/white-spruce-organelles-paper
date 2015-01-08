@@ -4,13 +4,16 @@
 all: \
 	gymnosperm-cp.2014.doi.tsv \
 	gymnosperm-cp.2014.organism.tsv \
-	gymnosperm-cp.2014.taxid.tree \
+	gymnosperm-cp.2014.taxid.tree.svg \
 	spermatophyta-mt.2014.doi.tsv \
 	spermatophyta-mt.2014.organism.tsv \
-	spermatophyta-mt.2014.taxid.tree \
+	spermatophyta-mt.2014.taxid.tree.svg \
 	viridiplantae-mt.organism.tsv
 
-.PHONY: all clean
+install-deps:
+	brew install edirect newick-utils
+
+.PHONY: all clean install-deps
 .DELETE_ON_ERROR:
 .SECONDARY:
 
@@ -55,9 +58,9 @@ all: \
 	bin/bp_taxonomy2tree.pl -e $< >$@
 
 # Render a phylogenetic tree
-#%.organism.tree.svg: %.organism.tree:
-# brew cask install figtree
-# open -a FigTree
+# FigTree is a nice GUI. brew cask install figtree
+%.tree.svg: %.tree
+	nw_clade $< Spermatophyta |nw_display -s -w 1500 - >$@
 
 # Download taxon2newick.xsl
 bin/taxon2newick.xsl:
