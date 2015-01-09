@@ -1,6 +1,8 @@
 ---
 title: 'Supplementary Material of Organellar Genomes of White Spruce (*Picea glauca*): Assembly and Annotation'
 author: Shaun D Jackman
+bibliography: white-spruce-organelles.bib
+csl: gbe.csl
 ---
 
 Figure S1: Classify plastid sequences
@@ -75,6 +77,17 @@ tRNAscan-SE   | 1.23    | [10.1093/nar/25.5.0955][]
 [10.1186/gb-2004-5-2-r12]: http://dx.doi.org/10.1186/gb-2004-5-2-r12
 [10.1371/journal.pcbi.1002195]: http://dx.doi.org/10.1371/journal.pcbi.1002195
 
+Table S1b: Data
+================================================================================
+
+Identifier    | Citation               | Name
+--------------|------------------------|--------------------
+[NC_010303][] | @chaw2008mitochondrial | Cycas taitungensis mitochondrion, complete genome
+[NC_021456][] | @nystedt2013norway     | Picea abies chloroplast complete genome
+
+[NC_010303]: http://www.ncbi.nlm.nih.gov/nuccore/NC_010303
+[NC_021456]: http://www.ncbi.nlm.nih.gov/nuccore/NC_021456
+
 Table S2: Plastid MAKER parameters
 ================================================================================
 
@@ -123,3 +136,6 @@ other_gff=pg29mt-concat.rrna.gff
 est_forward=1
 single_exon=1
 ```
+
+References
+================================================================================
