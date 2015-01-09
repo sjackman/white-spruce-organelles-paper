@@ -33,7 +33,7 @@ white-spruce-organelles.pdf: \
 
 # Render HTML from Markdown
 index.html: white-spruce-organelles.md
-	pandoc -s -o $@ $<
+	pandoc -s --bibliography=white-spruce-organelles.bib --csl=gbe.csl -o $@ $<
 
 # Render strict Markdown from Pandoc Markdown
 README.md: white-spruce-organelles.md white-spruce-organelles.bib gbe.csl readme.markdown_strict
