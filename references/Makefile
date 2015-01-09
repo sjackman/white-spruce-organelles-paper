@@ -4,10 +4,10 @@
 all: \
 	gymnosperm-cp.2014.doi.tsv \
 	gymnosperm-cp.2014.organism.tsv \
-	gymnosperm-cp.2014.taxid.tree.svg \
+	gymnosperm-cp.2014.taxid.tree.png \
 	spermatophyta-mt.2014.doi.tsv \
 	spermatophyta-mt.2014.organism.tsv \
-	spermatophyta-mt.2014.taxid.tree.svg \
+	spermatophyta-mt.2014.taxid.tree.png \
 	viridiplantae-mt.organism.tsv
 
 install-deps:
@@ -58,7 +58,10 @@ install-deps:
 	bin/bp_taxonomy2tree.pl -e $< >$@
 
 # Render a phylogenetic tree
-# FigTree is a nice GUI. brew cask install figtree
+%.tree.png: %.tree
+	bin/draw-tree $< $@
+
+# Render a phylogenetic tree
 %.tree.svg: %.tree
 	nw_clade $< Spermatophyta |nw_display -s -w 1500 - >$@
 

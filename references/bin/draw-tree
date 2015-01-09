@@ -1,0 +1,7 @@
+#!/usr/bin/env Rscript
+args <- commandArgs(trailingOnly = TRUE)
+stopifnot(length(args) == 2)
+tree <- rncl::read_newick_phylo(args[1])
+png(args[2])
+plot(tree, show.node.label = TRUE)
+invisible(dev.off())
