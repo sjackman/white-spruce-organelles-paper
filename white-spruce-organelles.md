@@ -1,28 +1,9 @@
 ---
 title: 'Organellar Genomes of White Spruce (*Picea glauca*): Assembly and Annotation'
-author:
-  Shaun D Jackman, Anthony Raymond, Ben Vandervalk, Hamid Mohamadi,
-  Rene Warren, Stephen Pleasance, Robin Coope, Macaire MS Yuen,
-  Christopher Keeling, Carol Ritland, Jean Bousquet, Alvin Yanchuk,
-  Kermit Ritland, John MacKay, Steven JM Jones, Joerg C Bohlmann,
-  Inanc Birol
+author: Shaun D Jackman, Anthony Raymond, Ben Vandervalk, Hamid Mohamadi, Rene Warren, Stephen Pleasance, Robin Coope, Macaire MS Yuen, Christopher Keeling, Carol Ritland, Jean Bousquet, Alvin Yanchuk, Kermit Ritland, John MacKay, Steven JM Jones, Joerg C Bohlmann, Inanc Birol
 leftrunninghead: Jackman et al.
-keywords: organelle, genome, genome sequencing, genome sequence assembly,
-  white spruce, Picea glauca
-abstract:
-  The genome sequences of the plastid and mitochondrion of white spruce
-  (*Picea glauca*) are assembled from whole genome Illumina sequencing
-  data using ABySS. Whole genome sequencing data contains reads from
-  both the nuclear and organellar genomes. Reads of the organellar
-  genomes are abundant, because each cell contains hundreds of
-  mitochondria and plastids. One lane of MiSeq data assembles the 123
-  kbp plastid genome in a single contig, and one lane of HiSeq data
-  assembles a putative 5.9 Mbp mitochondrial genome. The raw assembly is
-  expected to be composed of organellar sequence as well as nuclear
-  repeat elements. The organellar sequences are separated from the
-  assembly by classifying the sequences using their length, depth of
-  coverage and GC content. The genes and repeats of the plastid and
-  mitochondrial genomes are annotated using MAKER-P.
+keywords: organelle, genome, genome sequencing, genome sequence assembly, white spruce, Picea glauca
+abstract: The genome sequences of the plastid and mitochondrion of white spruce (*Picea glauca*) are assembled from whole genome Illumina sequencing data using ABySS. Whole genome sequencing data contains reads from both the nuclear and organellar genomes. Reads of the organellar genomes are abundant, because each cell contains hundreds of mitochondria and plastids. One lane of MiSeq data assembles the 123 kbp plastid genome in a single contig, and one lane of HiSeq data assembles a putative 5.9 Mbp mitochondrial genome. The raw assembly is expected to be composed of organellar sequence as well as nuclear repeat elements. The organellar sequences are separated from the assembly by classifying the sequences using their length, depth of coverage and GC content. The genes and repeats of the plastid and mitochondrial genomes are annotated using MAKER-P.
 ---
 
 Introduction
@@ -47,70 +28,27 @@ Assembling a single lane of whole genome sequencing data using ABySS [@simpson20
 Methods
 ================================================================================
 
-The software used in this analysis, their versions and the digital
-object identifiers (DOI) of their respective publications are listed
-in supplementary Table S1.
+The software used in this analysis, their versions and the digital object identifiers (DOI) of their respective publications are listed in supplementary Table S1.
 
 Plastid
 ------------------------------------------------------------
 
-The overlapping paired-end reads were merged using ABySS-mergepairs.
-These merged reads were assembled using [ABySS][abyss]. Contigs that
-are putatively derived from the plastid were separated by length and
-depth of coverage using thresholds chosen by inspection (see
-supplementary Figure S1). These putative plastid contigs were
-assembled into scaffolds using ABySS-scaffold. The assembled plastid
-genome was initially annotated using [DOGMA][dogma], but DOGMA is an
-interactive web application, which is not convenient for an automated
-pipeline. We instead used [MAKER-P][maker] for annotation, which is
-intended for automated pipelines, and used the [Norway
-spruce][norwayspruce] complete plastid genome ([NC_021456][]) for
-both protein-coding and non-coding gene homology evidence. The
-parameters of MAKER are show in supplementary Table S2. The
-inverted repeat was identified using [MUMmer][], shown in
-supplementary Figure S3.
+The overlapping paired-end reads were merged using ABySS-mergepairs. These merged reads were assembled using [ABySS][abyss]. Contigs that are putatively derived from the plastid were separated by length and depth of coverage using thresholds chosen by inspection (see supplementary Figure S1). These putative plastid contigs were assembled into scaffolds using ABySS-scaffold. The assembled plastid genome was initially annotated using [DOGMA][dogma], but DOGMA is an interactive web application, which is not convenient for an automated pipeline. We instead used [MAKER-P][maker] for annotation, which is intended for automated pipelines, and used the [Norway spruce][norwayspruce] complete plastid genome ([NC_021456][]) for both protein-coding and non-coding gene homology evidence. The parameters of MAKER are show in supplementary Table S2. The inverted repeat was identified using [MUMmer][], shown in supplementary Figure S3.
 
-The assembled plastid genome was aligned to the Norway spruce plastid
-using [BWA-MEM][bwamem]. Coverage and identity of these alignments
-were calculated using the script `bam-identity` (see supplementary
-materials). The two genomes were compared using [QUAST][quast] to
-confirm the presence of the annotated genes of the Norway spruce
-plastid in the white spruce plastid.
+The assembled plastid genome was aligned to the Norway spruce plastid using [BWA-MEM][bwamem]. Coverage and identity of these alignments were calculated using the script `bam-identity` (see supplementary materials). The two genomes were compared using [QUAST][quast] to confirm the presence of the annotated genes of the Norway spruce plastid in the white spruce plastid.
 
 [NC_021456]: http://www.ncbi.nlm.nih.gov/nuccore/NC_021456
 
 Mitochondrion
 ------------------------------------------------------------
 
-ABySS-konnector was used to fill the gap between the paired-end reads
-of a single lane of Illumina HiSeq sequencing of a paired-end library.
-These connected paired-end reads were assembled using [ABySS][abyss].
-Putative mitochondrial sequences were separated from the assembly by
-their length, depth of coverage and GC content using k-means
-clustering in R (see supplementary Figure S2). These putative
-mitochondrial contigs were then assembled into scaffolds using
-ABySS-scaffold with a single lane of Illumina HiSeq sequencing of a
-mate-pair library.
+ABySS-konnector was used to fill the gap between the paired-end reads of a single lane of Illumina HiSeq sequencing of a paired-end library. These connected paired-end reads were assembled using [ABySS][abyss]. Putative mitochondrial sequences were separated from the assembly by their length, depth of coverage and GC content using k-means clustering in R (see supplementary Figure S2). These putative mitochondrial contigs were then assembled into scaffolds using ABySS-scaffold with a single lane of Illumina HiSeq sequencing of a mate-pair library.
 
-The mitochondrial genome was annotated using [MAKER-P][maker]
-(parameters shown in supplementary Table S3). The proteins of all
-green plants (viridiplantae) with complete mitochondrial genome
-sequences in NCBI GenBank, 51 species, were used for protein homology
-evidence and aligned using [BLAST][blast] and [Exonerate][exonerate].
-The [prince sago palm (Cycas taitungensis)
-mitochondrion][ctaitungensis] ([NC_010303][]) is the closest related
-species, being the only gymnosperm with a complete mitochondrial
-genome. Transfer RNA (tRNA) were annotated using [tRNAscan][trnascan].
-Ribosomal RNA (rRNA) were annotated using [Barrnap][barrnap]. Repeats
-were identified using [RepeatMasker][repeatmasker] and RepeatModeler.
+The mitochondrial genome was annotated using [MAKER-P][maker] (parameters shown in supplementary Table S3). The proteins of all green plants (viridiplantae) with complete mitochondrial genome sequences in NCBI GenBank, 51 species, were used for protein homology evidence and aligned using [BLAST][blast] and [Exonerate][exonerate]. The [prince sago palm (Cycas taitungensis) mitochondrion][ctaitungensis] ([NC_010303][]) is the closest related species, being the only gymnosperm with a complete mitochondrial genome. Transfer RNA (tRNA) were annotated using [tRNAscan][trnascan]. Ribosomal RNA (rRNA) were annotated using [Barrnap][barrnap]. Repeats were identified using [RepeatMasker][repeatmasker] and RepeatModeler.
 
 [NC_010303]: http://www.ncbi.nlm.nih.gov/nuccore/NC_010303
 
-The putative mitochondrial sequences of white spruce were aligned
-to the putative mitochondrial sequences of the
-[Norway spruce][norwayspruce] using [BWA-MEM][bwamem]. Coverage and
-identity of these alignments were calculated using the script
-`bam-identity` (see supplementary materials).
+The putative mitochondrial sequences of white spruce were aligned to the putative mitochondrial sequences of the [Norway spruce][norwayspruce] using [BWA-MEM][bwamem]. Coverage and identity of these alignments were calculated using the script `bam-identity` (see supplementary materials).
 
 Results
 ================================================================================
@@ -121,8 +59,7 @@ The assembly and annotation metrics are summarized in [Table 1][].
 
 [Table 1]: #table-1
 
-**Table 1**: Sequencing, assembly and alignment metrics of the white
-spruce organellar genomes
+**Table 1**: Sequencing, assembly and alignment metrics of the white spruce organellar genomes
 
 Metric                          |Plastid         |Mitochondrion
 ------------------------------- |--------------- |-------------
@@ -154,15 +91,9 @@ x Permitting gaps less than 500 bp | |
 Plastid
 ------------------------------------------------------------
 
-The plastid genome was assembled into a single circular contig of
-123,266 bp. The assembly metrics are shown in [Table 1][]. The plastid
-genome contains 114 genes: 74 protein coding (mRNA) genes, 36 transfer RNA
-(tRNA) genes and 4 ribosomal RNA (rRNA) genes, shown in [Figure 1][].
+The plastid genome was assembled into a single circular contig of 123,266 bp. The assembly metrics are shown in [Table 1][]. The plastid genome contains 114 genes: 74 protein coding (mRNA) genes, 36 transfer RNA (tRNA) genes and 4 ribosomal RNA (rRNA) genes, shown in [Figure 1][].
 
-All protein-coding genes are single copy, except *psbI* and *ycf12*, which have
-two copies each. All tRNA genes are single copy, except *trnH-GUG*, *trnI-CAU*,
-*trnS-GCU* and *trnT-GGU*, which have two copies each. All rRNA genes are
-single copy.
+All protein-coding genes are single copy, except *psbI* and *ycf12*, which have two copies each. All tRNA genes are single copy, except *trnH-GUG*, *trnI-CAU*, *trnS-GCU* and *trnT-GGU*, which have two copies each. All rRNA genes are single copy.
 
 The protein-coding genes
 *atpF*, *petB*, *petD*, *rpl2*, *rpl16*, *rpoC1* and *rps12*
@@ -172,26 +103,13 @@ The tRNA genes
 each contain one intron.
 The rRNA genes are not spliced.
 
-The first and smallest exons of the genes *petB*, *petD* and *rpl16* are 6, 8
-and 9 bp respectively. These genes likely belong to
-[polycistronic transcripts][] of their respective protein complexes, but the
-short size of their initial exons make them difficult to annotate all the same.
-The initial exons of these genes were added to their annotations manually.
+The first and smallest exons of the genes *petB*, *petD* and *rpl16* are 6, 8 and 9 bp respectively. These genes likely belong to [polycistronic transcripts][] of their respective protein complexes, but the short size of their initial exons make them difficult to annotate all the same. The initial exons of these genes were added to their annotations manually.
 
-The gene *rps12* of a plastid genome is typically [trans-spliced][], which makes
-it difficult to annotate using [MAKER][]. It is composed of three exons and one
-cis-spliced intron. It required manually editing the gene annotation to
-incorporate trans-splicing in the gene model.
+The gene *rps12* of a plastid genome is typically [trans-spliced][], which makes it difficult to annotate using [MAKER][]. It is composed of three exons and one cis-spliced intron. It required manually editing the gene annotation to incorporate trans-splicing in the gene model.
 
-Each copy of the inverted repeat (IR) is 445 bp in size, much smaller than most
-plants, but typical of *Pinaceae* ([Lin, 2010][]). Unlike most inverted repeats,
-which are typically identical, the two copies differ by a single base. The IR
-contains a single gene, the tRNA *trnI-CAU*.
+Each copy of the inverted repeat (IR) is 445 bp in size, much smaller than most plants, but typical of *Pinaceae* ([Lin, 2010][]). Unlike most inverted repeats, which are typically identical, the two copies differ by a single base. The IR contains a single gene, the tRNA *trnI-CAU*.
 
-All 114 genes of the Norway spruce plastid genome ([NC_021456][]) are present
-in the white spruce plastid genome. The genomes of the white spruce plastid and
-Norway spruce plastid show perfect gene synteny with no structural
-rearrangements.
+All 114 genes of the Norway spruce plastid genome ([NC_021456][]) are present in the white spruce plastid genome. The genomes of the white spruce plastid and Norway spruce plastid show perfect gene synteny with no structural rearrangements.
 
 <a name="figure-1"></a>
 
@@ -204,15 +122,9 @@ rearrangements.
 Mitochondrion
 ------------------------------------------------------------
 
-The mitochondrial genome was assembled into 61 scaffolds (223 contigs,
-permitting gaps less than 500 bp) with a scaffold N50 of 287 kbp
-(contig N50 of 39 kbp). The largest scaffold is 598 kbp. The assembly
-metrics are shown in [Table 1][].
+The mitochondrial genome was assembled into 61 scaffolds (223 contigs, permitting gaps less than 500 bp) with a scaffold N50 of 287 kbp (contig N50 of 39 kbp). The largest scaffold is 598 kbp. The assembly metrics are shown in [Table 1][].
 
-The mitochondrial genome contains 54 protein coding (mRNA) genes, 23
-transfer RNA (tRNA) genes and 4 ribosomal RNA (rRNA) genes, shown in
-[Figure 2][]. The coding genes compose 50 kbp (<1%) of the genome,
-shown in [Figure 3][].
+The mitochondrial genome contains 54 protein coding (mRNA) genes, 23 transfer RNA (tRNA) genes and 4 ribosomal RNA (rRNA) genes, shown in [Figure 2][]. The coding genes compose 50 kbp (<1%) of the genome, shown in [Figure 3][].
 
 The protein-coding genes
 *atp8*, *cox1*, *matR*, *nad7*, *rpl10*, *rps1* and *rps4*
@@ -220,70 +132,41 @@ each contain one intron, and
 *ccmFn*, *nad4*, *nad5* and *rps3-2*
 each contain two introns.
 
-The putative mitochondrial sequences of white spruce and Norway spruce
-show high sequence similarity, over 98% nucleotide identity, but only
-60% of the Norway spruce putative mitochondrial sequences are covered
-by alignments of the white spruce sequences.
+The putative mitochondrial sequences of white spruce and Norway spruce show high sequence similarity, over 98% nucleotide identity, but only 60% of the Norway spruce putative mitochondrial sequences are covered by alignments of the white spruce sequences.
 
-Repeats compose 400 kbp (~7%) of the mitochondrial genome. Simple
-repeats, the LINE Jockey and the LTR Copia and Gypsy are the most
-common repeats, shown in [Figure 4][].
+Repeats compose 400 kbp (~7%) of the mitochondrial genome. Simple repeats, the LINE Jockey and the LTR Copia and Gypsy are the most common repeats, shown in [Figure 4][].
 
 <a name="figure-2"></a>
 
 [Figure 2]: #figure-2
 
-![The annotated mitochondrial genome, which was annotated using
-[MAKER-P][maker] and plotted using [OGDRAW][ogdraw].
-](figure/mt-annotation.png)
+![The annotated mitochondrial genome, which was annotated using [MAKER-P][maker] and plotted using [OGDRAW][ogdraw].](figure/mt-annotation.png)
 
 <a name="figure-3"></a>
 
 [Figure 3]: #figure-3
 
-![The sizes of the mitochondrial genes, grouped by family.
-](figure/mt-genes.png)
+![The sizes of the mitochondrial genes, grouped by family.](figure/mt-genes.png)
 
 <a name="figure-4"></a>
 
 [Figure 4]: #figure-4
 
-![Repetitive sequence of the mitochondrial genome.
-](figure/mt-repeats.png)
+![Repetitive sequence of the mitochondrial genome.](figure/mt-repeats.png)
 
 Conclusion
 ================================================================================
 
-One lane of MiSeq sequencing of whole genome DNA is sufficient to
-assemble the 123 kbp complete plastid genome, and one lane of HiSeq
-sequencing of whole genome DNA is sufficient to assemble a draft 5.9 Mbp
-mitochondrial genome of white spruce. Scaffold contiguity is improved
-with additional mate-pair library sequencing. The resulting assembly
-of whole genome sequencing data is composed of organellar sequences as
-well as high-copy-number nuclear repeat elements. The mitochondrial
-sequences are separated using a k-means classifier based on their
-length, depth of coverage and GC content of the sequences.
+One lane of MiSeq sequencing of whole genome DNA is sufficient to assemble the 123 kbp complete plastid genome, and one lane of HiSeq sequencing of whole genome DNA is sufficient to assemble a draft 5.9 Mbp mitochondrial genome of white spruce. Scaffold contiguity is improved with additional mate-pair library sequencing. The resulting assembly of whole genome sequencing data is composed of organellar sequences as well as high-copy-number nuclear repeat elements. The mitochondrial sequences are separated using a k-means classifier based on their length, depth of coverage and GC content of the sequences.
 
-The white spruce plastid genome shows no structural rearrangements
-when compared with Norway spruce. The mitochondrial genome in contrast
-shows much structural rearrangement, though more work is needed to
-determine what is due to the draft nature of these mitochondrial
-assemblies and what is true structural rearrangement.
+The white spruce plastid genome shows no structural rearrangements when compared with Norway spruce. The mitochondrial genome in contrast shows much structural rearrangement, though more work is needed to determine what is due to the draft nature of these mitochondrial assemblies and what is true structural rearrangement.
 
-The protein coding gene content of the mitochondrial genome is quite
-sparse, with 54 protein coding genes in 5.9 Mbp, in comparison to the
-plastid genome, with 74 protein coding genes in 123 kbp. 7% of the
-mitochondrial genome is composed of repeats, and <1% is composed of
-coding genes. A significant portion, over 90%, of the unusually large
-size of the white spruce mitochondrial genome is yet unexplained.
+The protein coding gene content of the mitochondrial genome is quite sparse, with 54 protein coding genes in 5.9 Mbp, in comparison to the plastid genome, with 74 protein coding genes in 123 kbp. 7% of the mitochondrial genome is composed of repeats, and <1% is composed of coding genes. A significant portion, over 90%, of the unusually large size of the white spruce mitochondrial genome is yet unexplained.
 
 Acknowledgements
 ================================================================================
 
-Shaun Jackman would like to thank his supervisors Inanc Birol and
-Joerg Bohlmann for their guidance in the preparation of this
-manuscript, and Carson Holt for being exceedingly responsive and
-helpful in tweaking MAKER.
+Shaun Jackman would like to thank his supervisors Inanc Birol and Joerg Bohlmann for their guidance in the preparation of this manuscript, and Carson Holt for being exceedingly responsive and helpful in tweaking MAKER.
 
 References
 ================================================================================
