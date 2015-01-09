@@ -6,13 +6,13 @@ all: index.html \
 
 clean:
 	rm -f \
-		   index.html \
-		   README.md \
-		   white-spruce-organelles.pdf \
-		   white-spruce-organelles.tex \
-		   white-spruce-organelles-supp.html \
-		   white-spruce-organelles-supp.pdf \
-		   white-spruce-organelles-supp.tex
+		index.html \
+		README.md \
+		white-spruce-organelles.pdf \
+		white-spruce-organelles.tex \
+		white-spruce-organelles-supp.html \
+		white-spruce-organelles-supp.pdf \
+		white-spruce-organelles-supp.tex
 
 .PHONY: all clean
 .DELETE_ON_ERROR:
