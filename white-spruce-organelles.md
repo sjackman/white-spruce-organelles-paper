@@ -4,6 +4,8 @@ author: Shaun D Jackman, Anthony Raymond, Ben Vandervalk, Hamid Mohamadi, Rene W
 leftrunninghead: Jackman et al.
 keywords: organelle, genome, genome sequencing, genome sequence assembly, white spruce, Picea glauca
 abstract: The genome sequences of the plastid and mitochondrion of white spruce (*Picea glauca*) are assembled from whole genome Illumina sequencing data using ABySS. Whole genome sequencing data contains reads from both the nuclear and organellar genomes. Reads of the organellar genomes are abundant, because each cell contains hundreds of mitochondria and plastids. One lane of MiSeq data assembles the 123 kbp plastid genome in a single contig, and one lane of HiSeq data assembles a putative 5.9 Mbp mitochondrial genome. The raw assembly is expected to be composed of organellar sequence as well as nuclear repeat elements. The organellar sequences are separated from the assembly by classifying the sequences using their length, depth of coverage and GC content. The genes and repeats of the plastid and mitochondrial genomes are annotated using MAKER-P.
+bibliography: white-spruce-organelles.bib
+csl: gbe.csl
 ---
 
 Introduction

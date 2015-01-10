@@ -33,19 +33,19 @@ white-spruce-organelles.pdf: \
 
 # Render HTML from Markdown
 index.html: white-spruce-organelles.md
-	pandoc -s --bibliography=white-spruce-organelles.bib --csl=gbe.csl -o $@ $<
+	pandoc -s --filter=pandoc-citeproc -o $@ $<
 
 # Render strict Markdown from Pandoc Markdown
-README.md: white-spruce-organelles.md white-spruce-organelles.bib gbe.csl readme.markdown_strict
-	pandoc --template=readme --bibliography=white-spruce-organelles.bib --csl=gbe.csl -t markdown_strict --columns=80 -o $@ $<
+README.md: white-spruce-organelles.md readme.markdown_strict
+	pandoc --template=readme -t markdown_strict --columns=80 --filter=pandoc-citeproc -o $@ $<
 
 # Render docx from Markdown
-%.docx: %.md %.bib gbe.csl
-	pandoc --bibliography=$*.bib --csl=gbe.csl -o $@ $<
+%.docx: %.md
+	pandoc --filter=pandoc-citeproc -o $@ $<
 
 # Render the TeX from the Markdown
-%.orig.tex: %.md %.bib gbe.csl gbe.latex
-	pandoc --template=gbe --bibliography=$*.bib --csl=gbe.csl -o $@ $<
+%.orig.tex: %.md gbe.latex
+	pandoc --template=gbe --filter=pandoc-citeproc -o $@ $<
 
 # Munge the TeX
 %.tex: %.orig.tex
