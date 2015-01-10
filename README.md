@@ -116,69 +116,52 @@ Plastid
 -------
 
 The overlapping paired-end reads were merged using ABySS-mergepairs. These
-merged reads were assembled using
-[ABySS](http://genome.cshlp.org/content/19/6/1117). Contigs that are putatively
-derived from the plastid were separated by length and depth of coverage using
-thresholds chosen by inspection (see supplementary Figure S1). These putative
-plastid contigs were assembled into scaffolds using ABySS-scaffold. The
-assembled plastid genome was initially annotated using
-[DOGMA](http://bioinformatics.oxfordjournals.org/content/20/17/3252), but DOGMA
-is an interactive web application, which is not convenient for an automated
-pipeline. We instead used
-[MAKER-P](http://www.plantphysiol.org/content/early/2013/12/06/pp.113.230144)
-for annotation, which is intended for automated pipelines, and used the [Norway
-spruce](http://www.nature.com/nature/journal/vaop/ncurrent/full/nature12211.html)
-complete plastid genome
-([NC\_021456](http://www.ncbi.nlm.nih.gov/nuccore/NC_021456)) for both
-protein-coding and non-coding gene homology evidence. The parameters of MAKER
-are show in supplementary Table S2. The inverted repeat was identified using
-[MUMmer](http://genomebiology.com/content/5/2/R12), shown in supplementary
-Figure S3.
+merged reads were assembled using ABySS. Contigs that are putatively derived
+from the plastid were separated by length and depth of coverage using thresholds
+chosen by inspection (see supplementary Figure S1). These putative plastid
+contigs were assembled into scaffolds using ABySS-scaffold. The assembled
+plastid genome was initially annotated using DOGMA, but DOGMA is an interactive
+web application, which is not convenient for an automated pipeline. We instead
+used MAKER (Campbell et al. 2014) for annotation, which is intended for
+automated pipelines, and used the Norway spruce complete plastid genome
+(NC\_021456 Nystedt et al. 2013) for both protein-coding and non-coding gene
+homology evidence. The parameters of MAKER are show in supplementary Table S2.
+The inverted repeat was identified using MUMmer (Kurtz et al. 2004), shown in
+supplementary Figure S3.
 
 The assembled plastid genome was aligned to the Norway spruce plastid using
-[BWA-MEM](http://arxiv.org/pdf/1303.3997.pdf). Coverage and identity of these
-alignments were calculated using the script `bam-identity` (see supplementary
-materials). The two genomes were compared using
-[QUAST](http://bioinformatics.oxfordjournals.org/content/29/8/1072) to confirm
-the presence of the annotated genes of the Norway spruce plastid in the white
-spruce plastid.
+BWA-MEM (Li 2013). Coverage and identity of these alignments were calculated
+using the script `bam-identity` (see supplementary materials). The two genomes
+were compared using QUAST (Gurevich et al. 2013) to confirm the presence of the
+annotated genes of the Norway spruce plastid in the white spruce plastid.
 
 Mitochondrion
 -------------
 
 ABySS-konnector was used to fill the gap between the paired-end reads of a
 single lane of Illumina HiSeq sequencing of a paired-end library. These
-connected paired-end reads were assembled using
-[ABySS](http://genome.cshlp.org/content/19/6/1117). Putative mitochondrial
+connected paired-end reads were assembled using ABySS. Putative mitochondrial
 sequences were separated from the assembly by their length, depth of coverage
 and GC content using k-means clustering in R (see supplementary Figure S2).
 These putative mitochondrial contigs were then assembled into scaffolds using
 ABySS-scaffold with a single lane of Illumina HiSeq sequencing of a mate-pair
 library.
 
-The mitochondrial genome was annotated using
-[MAKER-P](http://www.plantphysiol.org/content/early/2013/12/06/pp.113.230144)
-(parameters shown in supplementary Table S3). The proteins of all green plants
-(viridiplantae) with complete mitochondrial genome sequences in NCBI GenBank, 51
-species, were used for protein homology evidence and aligned using
-[BLAST](http://www.sciencedirect.com/science/article/pii/S0022283605803602) and
-[Exonerate](http://www.biomedcentral.com/1471-2105/6/31). The [prince sago palm
-(Cycas taitungensis)
-mitochondrion](http://mbe.oxfordjournals.org/content/25/3/603.short)
-([NC\_010303](http://www.ncbi.nlm.nih.gov/nuccore/NC_010303)) is the closest
-related species, being the only gymnosperm with a complete mitochondrial genome.
-Transfer RNA (tRNA) were annotated using
-[tRNAscan](http://nar.oxfordjournals.org/content/25/5/0955). Ribosomal RNA
-(rRNA) were annotated using
-[Barrnap](http://www.vicbioinformatics.com/software.barrnap.shtml). Repeats were
-identified using [RepeatMasker](http://www.repeatmasker.org/) and RepeatModeler.
+The mitochondrial genome was annotated using MAKER (parameters shown in
+supplementary Table S3). The proteins of all green plants (viridiplantae) with
+complete mitochondrial genome sequences in NCBI GenBank, 51 species, were used
+for protein homology evidence and aligned using BLAST and Exonerate (Slater &
+Birney 2005). The prince sago palm (*Cycas taitungensis*) mitochondrion
+(NC\_010303 Chaw et al. 2008) is the closest related species, being the only
+gymnosperm with a complete mitochondrial genome. Transfer RNA (tRNA) were
+annotated using tRNAscan-SE. Ribosomal RNA (rRNA) were annotated using Barrnap
+(Seemann 2014). Repeats were identified using RepeatMasker (Smit et al. 1996)
+and RepeatModeler.
 
 The putative mitochondrial sequences of white spruce were aligned to the
-putative mitochondrial sequences of the [Norway
-spruce](http://www.nature.com/nature/journal/vaop/ncurrent/full/nature12211.html)
-using [BWA-MEM](http://arxiv.org/pdf/1303.3997.pdf). Coverage and identity of
-these alignments were calculated using the script `bam-identity` (see
-supplementary materials).
+putative mitochondrial sequences of the Norway spruce using BWA-MEM. Coverage
+and identity of these alignments were calculated using the script `bam-identity`
+(see supplementary materials).
 
 Results
 =======
@@ -327,7 +310,8 @@ Plastid
 The plastid genome was assembled into a single circular contig of 123,266 bp.
 The assembly metrics are shown in [Table 1](#table-1). The plastid genome
 contains 114 genes: 74 protein coding (mRNA) genes, 36 transfer RNA (tRNA) genes
-and 4 ribosomal RNA (rRNA) genes, shown in [Figure 1](#figure-1).
+and 4 ribosomal RNA (rRNA) genes, shown in [Figure 1](#figure-1), which is
+rendered using OGDRAW (Lohse et al. 2007) and Circos (Krzywinski et al. 2009).
 
 All protein-coding genes are single copy, except *psbI* and *ycf12*, which have
 two copies each. All tRNA genes are single copy, except *trnH-GUG*, *trnI-CAU*,
@@ -340,36 +324,29 @@ The protein-coding genes *atpF*, *petB*, *petD*, *rpl2*, *rpl16*, *rpoC1* and
 contain one intron. The rRNA genes are not spliced.
 
 The first and smallest exons of the genes *petB*, *petD* and *rpl16* are 6, 8
-and 9 bp respectively. These genes likely belong to [polycistronic
-transcripts](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC457051/) of their
-respective protein complexes, but the short size of their initial exons make
-them difficult to annotate all the same. The initial exons of these genes were
-added to their annotations manually.
+and 9 bp respectively. These genes likely belong to polycistronic transcripts
+(Barkan 1988) of their respective protein complexes, but the short size of their
+initial exons make them difficult to annotate all the same. The initial exons of
+these genes were added to their annotations manually.
 
-The gene *rps12* of a plastid genome is typically
-[trans-spliced](http://www.pnas.org/content/85/2/372.short), which makes it
-difficult to annotate using
-[MAKER](http://www.plantphysiol.org/content/early/2013/12/06/pp.113.230144). It
-is composed of three exons and one cis-spliced intron. It required manually
-editing the gene annotation to incorporate trans-splicing in the gene model.
+The gene *rps12* of a plastid genome is typically trans-spliced (Hildebrand et
+al. 1988), which makes it difficult to annotate using MAKER. It is composed of
+three exons and one cis-spliced intron. It required manually editing the gene
+annotation to incorporate trans-splicing in the gene model.
 
 Each copy of the inverted repeat (IR) is 445 bp in size, much smaller than most
-plants, but typical of *Pinaceae* ([Lin,
-2010](http://gbe.oxfordjournals.org/content/2/504)). Unlike most inverted
+plants, but typical of *Pinaceae* (Lin et al. 2010). Unlike most inverted
 repeats, which are typically identical, the two copies differ by a single base.
 The IR contains a single gene, the tRNA *trnI-CAU*.
 
-All 114 genes of the Norway spruce plastid genome
-([NC\_021456](http://www.ncbi.nlm.nih.gov/nuccore/NC_021456)) are present in the
-white spruce plastid genome. The genomes of the white spruce plastid and Norway
-spruce plastid show perfect gene synteny with no structural rearrangements.
+All 114 genes of the Norway spruce plastid genome are present in the white
+spruce plastid genome. The genomes of the white spruce plastid and Norway spruce
+plastid show perfect gene synteny with no structural rearrangements.
 
 <a name="figure-1"></a>
 
-![The annotated plastid genome, which was annotated using
-[MAKER-P](http://www.plantphysiol.org/content/early/2013/12/06/pp.113.230144)
-and plotted using
-[OGDRAW](http://nar.oxfordjournals.org/content/41/W1/W575).](figure/plastid-annotation.png)
+![The annotated plastid genome, which was annotated using MAKER and plotted
+using OGDRAW.](figure/plastid-annotation.png)
 
 Mitochondrion
 -------------
@@ -399,10 +376,8 @@ LINE Jockey and the LTR Copia and Gypsy are the most common repeats, shown in
 
 <a name="figure-2"></a>
 
-![The annotated mitochondrial genome, which was annotated using
-[MAKER-P](http://www.plantphysiol.org/content/early/2013/12/06/pp.113.230144)
-and plotted using
-[OGDRAW](http://nar.oxfordjournals.org/content/41/W1/W575).](figure/mt-annotation.png)
+![The annotated mitochondrial genome, which was annotated using MAKER and
+plotted using OGDRAW.](figure/mt-annotation.png)
 
 <a name="figure-3"></a>
 
@@ -447,72 +422,6 @@ being exceedingly responsive and helpful in tweaking MAKER.
 References
 ==========
 
-[ABySS: a parallel assembler for short read sequence
-data](http://genome.cshlp.org/content/19/6/1117)  
-[Horizontal Transfer of Entire Genomes via Mitochondrial Fusion in the
-Angiosperm Amborella](http://www.sciencemag.org/content/342/6165/1468)  
-[The Amborella Genome and the Evolution of Flowering
-Plants](http://www.sciencemag.org/content/342/6165/1241089)  
-[Genomic Clues to the Ancestral Flowering
-Plant](http://www.sciencemag.org/content/342/6165/1456)  
-[barrnap 0.4.2 - rapid ribosomal RNA
-prediction](http://www.vicbioinformatics.com/software.barrnap.shtml)  
-[Basic Local Alignment Search
-Tool](http://www.sciencedirect.com/science/article/pii/S0022283605803602)  
-[Aligning sequence reads, clone sequences and assembly contigs with
-BWA-MEM](http://arxiv.org/pdf/1303.3997.pdf)  
-[CGAP: a new comprehensive platform for the comparative analysis of chloroplast
-genomes](http://www.biomedcentral.com/1471-2105/14/95/abstract)  
-[The Mitochondrial Genome of the Gymnosperm Cycas taitungensis Contains a Novel
-Family of Short Interspersed Elements, Bpu Sequences, and Abundant RNA Editing
-Sites](http://mbe.oxfordjournals.org/content/25/3/603.short)  
-[Automatic annotation of organellar genomes with
-DOGMA](http://bioinformatics.oxfordjournals.org/content/20/17/3252)  
-[Automated generation of heuristics for biological sequence
-comparison](http://www.biomedcentral.com/1471-2105/6/31)  
-[MAKER-P: a tool-kit for the rapid creation, management, and quality control of
-plant genome
-annotations](http://www.plantphysiol.org/content/early/2013/12/06/pp.113.230144)  
-[The Norway spruce genome sequence and conifer genome
-evolution](http://www.nature.com/nature/journal/vaop/ncurrent/full/nature12211.html)  
-[OrganellarGenomeDRAW (OGDRAW): a tool for the easy generation of high-quality
-custom graphical maps of plastid and mitochondrial
-genomes](http://nar.oxfordjournals.org/content/41/W1/W575)  
-[Comparative chloroplast genomics reveals the evolution of *Pinaceae* genera and
-subfamilies](http://gbe.oxfordjournals.org/content/2/504)  
-[QUAST: quality assessment tool for genome
-assemblies](http://bioinformatics.oxfordjournals.org/content/29/8/1072)  
-[Smit, AFA, Hubley, R & Green, P. RepeatMasker Open-3.0. 1996-2010
-http://www.repeatmasker.org](http://www.repeatmasker.org/)  
-[The Sequence Alignment/Map format and
-SAMtools](http://bioinformatics.oxfordjournals.org/content/25/16/2078)  
-[tRNAscan-SE: A Program for Improved Detection of Transfer RNA Genes in Genomic
-Sequence](http://nar.oxfordjournals.org/content/25/5/0955)  
-[Assembling the 20 Gb white spruce (*Picea glauca*) genome from whole-genome
-shotgun sequencing
-data](http://bioinformatics.oxfordjournals.org/content/29/12/1492)  
-[Gremme, G., Steinbiss, S., & Kurtz, S.
-(2013)](http://www.computer.org/csdl/trans/tb/2013/03/ttb2013030645-abs.html)
-GenomeTools: a comprehensive software library for efficient processing of
-structured genome annotations. *IEEE/ACM Transactions on Computational Biology
-and Bioinformatics*, 10(3), 645-656.  
-[Kurtz, S., Phillippy, A., Delcher, A. L., Smoot, M., Shumway, M., Antonescu,
-C., & Salzberg, S. L. (2004)](http://genomebiology.com/content/5/2/R12)
-Versatile and open software for comparing large genomes. *Genome biology*, 5(2),
-R12.  
-[Lin, C. P., Huang, J. P., Wu, C. S., Hsu, C. Y., & Chaw, S. M.
-(2010)](http://gbe.oxfordjournals.org/content/2/504) Comparative chloroplast
-genomics reveals the evolution of Pinaceae genera and subfamilies. *Genome
-biology and evolution*, 2, 504-517.  
-[Barkan, A. (1988).](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC457051/)
-Proteins encoded by a complex chloroplast transcription unit are each translated
-from both monocistronic and polycistronic mRNAs. *The EMBO journal*, 7(9),
-2637.  
-[Hildebrand, M., Hallick, R. B., Passavant, C. W., & Bourque, D. P.
-(1988)](http://www.pnas.org/content/85/2/372.short) Trans-splicing in
-chloroplasts: the rps 12 loci of Nicotiana tabacum. *Proceedings of the National
-Academy of Sciences*, 85(2), 372-376.
-
 Aizawa M, Kim Z-S, Yoshimaru H. 2012. Phylogeography of the korean pine (pinus
 koraiensis) in northeast asia: Inferences from organelle gene sequences. Journal
 of plant research. 125:713–723.
@@ -524,12 +433,19 @@ Alverson AJ et al. 2010. Insights into the evolution of mitochondrial genome
 size from complete sequences of citrullus lanatus and cucurbita pepo
 (cucurbitaceae). Molecular biology and evolution. 27:1436–1448.
 
+Barkan A. 1988. Proteins encoded by a complex chloroplast transcription unit are
+each translated from both monocistronic and polycistronic mRNAs. The EMBO
+journal. 7:2637.
+
 Birol I et al. 2013. Assembling the 20 gb white spruce (picea glauca) genome
 from whole-genome shotgun sequencing data. Bioinformatics. btt178.
 
 Bock DG, Kane NC, Ebert DP, Rieseberg LH. 2014. Genome skimming reveals the
 origin of the jerusalem artichoke tuber crop species: Neither from jerusalem nor
 an artichoke. New Phytologist. 201:1021–1030.
+
+Campbell MS et al. 2014. MAKER-p: A tool kit for the rapid creation, management,
+and quality control of plant genome annotations. Plant physiology. 164:513–524.
 
 Chaw S-M et al. 2008. The mitochondrial genome of the gymnosperm cycas
 taitungensis contains a novel family of short interspersed elements, bpu
@@ -560,9 +476,16 @@ Guo W et al. 2014. Predominant and substoichiometric isomers of the plastid
 genome coexist within juniperus plants and have shifted multiple times during
 cupressophyte evolution. Genome biology and evolution. 6:580–590.
 
+Gurevich A, Saveliev V, Vyahhi N, Tesler G. 2013. QUAST: Quality assessment tool
+for genome assemblies. Bioinformatics. 29:1072–1075.
+
 Hao D, Chen S, Xiao P. 2010. Sequence characteristics and divergent evolution of
 the chloroplastpsbA-trnH noncoding region in gymnosperms. Journal of applied
 genetics. 51:259–273.
+
+Hildebrand M, Hallick RB, Passavant CW, Bourque DP. 1988. Trans-splicing in
+chloroplasts: The rps 12 loci of nicotiana tabacum. Proceedings of the National
+Academy of Sciences. 85:372–376.
 
 Jard<span>ó</span>n-Barbolla L, Delgado-Valerio P, Geada-L<span>ó</span>pez G,
 V<span>á</span>zquez-Lobo A, Pi<span>ñ</span>ero D. 2011. Phylogeography of
@@ -584,6 +507,23 @@ of group-iI introns in arabidopsis mitochondria. Rna. 15:2299–2311.
 Kim DH, Kang JG, Kim B-D. 2007. Isolation and characterization of the
 cytoplasmic male sterility-associated orf456 gene of chili pepper (capsicum
 annuum l.). Plant molecular biology. 63:519–532.
+
+Krzywinski M et al. 2009. Circos: An information aesthetic for comparative
+genomics. Genome research. 19:1639–1645.
+
+Kurtz S et al. 2004. Versatile and open software for comparing large genomes.
+Genome biology. 5:R12.
+
+Li H. 2013. Aligning sequence reads, clone sequences and assembly contigs with
+bWA-mEM. arXiv preprint arXiv:1303.3997.
+
+Lin C-P, Huang J-P, Wu C-S, Hsu C-Y, Chaw S-M. 2010. Comparative chloroplast
+genomics reveals the evolution of pinaceae genera and subfamilies. Genome
+biology and evolution. 2:504–517.
+
+Lohse M, Drechsel O, Bock R. 2007. OrganellarGenomeDRAW (oGDRAW): A tool for the
+easy generation of high-quality custom graphical maps of plastid and
+mitochondrial genomes. Current genetics. 52:267–274.
 
 Lowe TM, Eddy SR. 1997. TRNAscan-sE: A program for improved detection of
 transfer rNA genes in genomic sequence. Nucleic acids research. 25:0955–964.
@@ -608,12 +548,21 @@ genome evolution across asterids. BMC genomics. 15:405.
 Rice DW et al. 2013. Horizontal transfer of entire genomes via mitochondrial
 fusion in the angiosperm amborella. Science. 342:1468–1473.
 
+Seemann T. 2014. Prokka: Rapid prokaryotic genome annotation. Bioinformatics.
+btu153.
+
 Simpson JT et al. 2009. ABySS: A parallel assembler for short read sequence
 data. Genome research. 19:1117–1123.
+
+Slater GS, Birney E. 2005. Automated generation of heuristics for biological
+sequence comparison. BMC bioinformatics. 6:31.
 
 Sloan DB et al. 2012. Rapid evolution of enormous, multichromosomal genomes in
 flowering plant mitochondria with exceptionally high mutation rates. PLoS
 biology. 10:e1001241.
+
+Smit A, Hubley R, Green P. 1996. RepeatMasker open-3.0.
+<http://www.repeatmasker.org>.
 
 Wang Y et al. 2014. Complete mitochondrial genome of eruca sativa mill.(Garden
 rocket). PloS one. 9:e105748.
