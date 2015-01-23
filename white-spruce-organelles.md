@@ -80,9 +80,9 @@ Number of genes                 |114             |81
 Protein coding genes (mRNA)     |74              |54
 Transfer RNA genes (tRNA)       |36              |23
 Ribosomal RNA genes (rRNA)      |4               |4
-Coding genes containing introns |4               |11
-Introns in coding genes         |5               |15
-tRNA genes containing introns   |5               |0
+Coding genes containing introns |8               |11
+Introns in coding genes         |9               |15
+tRNA genes containing introns   |6               |0
 Identity to Norway spruce       |99.2%           |98.3%
 Coverage of Norway spruce       |99.7%           |59.6%
 x Permitting gaps less than 500 bp | |
