@@ -76,6 +76,7 @@ Number of scaffolds             |1 scaffold      |61 scaffolds
 Scaffold N50                    |123 kbp         |287 kbp
 Largest scaffold                |123 kbp         |598 kbp
 GC content                      |38.8%           |44.7%
+Number of genes                 |114             |81
 Protein coding genes (mRNA)     |74              |54
 Transfer RNA genes (tRNA)       |36              |23
 Ribosomal RNA genes (rRNA)      |4               |4
