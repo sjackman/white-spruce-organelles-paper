@@ -42,6 +42,7 @@ Table S1: Software
 Software      | Version | DOI
 --------------|---------|--------------------------
 ABySS         | 1.3.7   | [10.1101/gr.089532.108][]
+ARAGORN       | 1.2.36  | [10.1093/nar/gkh152][]
 BLAST         | 2.2.29  | [10.1016/S0022-2836(05)80360-2][]
 BWA           | 0.7.8   | [10.1093/bioinformatics/btp324][]
 Barrnap       | 0.4.2   | NA
@@ -57,6 +58,7 @@ RMBlast       | 2.2.28  | NA
 RepeatMasker  | 4.0.5   | NA
 RepeatModeler | 1.0.7   | NA
 RepeatScout   | 1.0.5   | [10.1093/bioinformatics/bti1018][]
+RNAmmer       | 1.2     | [10.1093/nar/gkm160][]
 SAMtools      | 0.1.19  | [10.1093/bioinformatics/btp352][]
 TRF           | 4.07b   | [10.1093/nar/27.2.573][]
 tRNAscan-SE   | 1.23    | [10.1093/nar/25.5.0955][]
@@ -69,6 +71,8 @@ tRNAscan-SE   | 1.23    | [10.1093/nar/25.5.0955][]
 [10.1093/bioinformatics/btt086]: http://dx.doi.org/10.1093/bioinformatics/btt086
 [10.1093/nar/25.5.0955]: http://dx.doi.org/10.1093/nar/25.5.0955
 [10.1093/nar/27.2.573]: http://dx.doi.org/10.1093/nar/27.2.573
+[10.1093/nar/gkh152]: htpp://dx.doi.org/10.1093/nar/gkh152
+[10.1093/nar/gkm160]: http://dx.doi.org/10.1093/nar/gkm160
 [10.1101/gr.089532.108]: http://dx.doi.org/10.1101/gr.089532.108
 [10.1101/gr.88502]: http://dx.doi.org/10.1101/gr.88502
 [10.1104/pp.113.230144]: http://dx.doi.org/10.1104/pp.113.230144
@@ -124,15 +128,13 @@ Table S3: Mitochondrion MAKER parameters
 [Table S3]: #table-s3-mitochondrion-maker-parameters
 
 ```bash
-genome=pg29mt-concat.fa
+genome=pg29mt-scaffolds.fa
 organism_type=eukaryotic
 protein=cds_aa.fa
 model_org=picea
 rmlib=rmlib.fa
 repeat_protein=/usr/local/opt/maker/libexec/data/te_proteins.fasta
 protein2genome=1
-trna=1
-other_gff=pg29mt-concat.rrna.gff
 est_forward=1
 single_exon=1
 ```

@@ -44,7 +44,7 @@ Mitochondrion
 
 ABySS-konnector was used to fill the gap between the paired-end reads of a single lane of Illumina HiSeq sequencing of a paired-end library. These connected paired-end reads were assembled using ABySS. Putative mitochondrial sequences were separated from the assembly by their length, depth of coverage and GC content using k-means clustering in R (see supplementary Figure S2). These putative mitochondrial contigs were then assembled into scaffolds using ABySS-scaffold with a single lane of Illumina HiSeq sequencing of a mate-pair library.
 
-The mitochondrial genome was annotated using MAKER (parameters shown in supplementary Table S3). The proteins of all green plants (viridiplantae) with complete mitochondrial genome sequences in NCBI GenBank, 51 species, were used for protein homology evidence and aligned using BLAST and Exonerate [@slater2005automated]. The prince sago palm (*Cycas taitungensis*) mitochondrion [NC_010303 @chaw2008mitochondrial] is the closest related species, being the only gymnosperm with a complete mitochondrial genome. Transfer RNA (tRNA) were annotated using tRNAscan-SE. Ribosomal RNA (rRNA) were annotated using Barrnap [@seemann2014prokka]. Repeats were identified using RepeatMasker [@smit1996repeatmasker] and RepeatModeler.
+The mitochondrial genome was annotated using MAKER (parameters shown in supplementary Table S3). The proteins of all green plants (viridiplantae) with complete mitochondrial genome sequences in NCBI GenBank, 51 species, were used for protein homology evidence and aligned using BLAST and Exonerate [@slater2005automated]. The prince sago palm (*Cycas taitungensis*) mitochondrion [NC_010303 @chaw2008mitochondrial] is the closest related species, being the only gymnosperm with a complete mitochondrial genome. Transfer RNA (tRNA) were annotated using ARAGORN [@laslett2004aragorn]. Ribosomal RNA (rRNA) were annotated using RNAmmer [@lagesen2007rnammer]. Repeats were identified using RepeatMasker [@smit1996repeatmasker] and RepeatModeler.
 
 The putative mitochondrial sequences of white spruce were aligned to the putative mitochondrial sequences of the Norway spruce using BWA-MEM. Coverage and identity of these alignments were calculated using the script `bam-identity` (see supplementary materials).
 
@@ -69,23 +69,23 @@ Median merged read length       |492 bp          |465 bp
 Number of assembled reads       |21 thousand     |377 thousand
 Proportion of organellar reads  |1/140 or 0.7%   |1/350 or 0.3%
 Depth of coverage               |80x             |30x
-Assembled genome size           |123,266 bp      |5.92 Mbp
-Number of contigs               |1 contig        |223 contigs x
-Contig N50                      |123 kbp         |39 kbp x
-Number of scaffolds             |1 scaffold      |61 scaffolds
-Scaffold N50                    |123 kbp         |287 kbp
-Largest scaffold                |123 kbp         |598 kbp
+Assembled genome size           |123,266 bp      |5.94 Mbp
+Number of contigs               |1 contig        |132 contigs
+Contig N50                      |123 kbp         |102 kbp
+Number of scaffolds             |1 scaffold      |38 scaffolds
+Scaffold N50                    |123 kbp         |369 kbp
+Largest scaffold                |123 kbp         |1222 kbp
 GC content                      |38.8%           |44.7%
-Number of genes                 |114             |81
-Protein coding genes (mRNA)     |74              |54
-Transfer RNA genes (tRNA)       |36              |23
-Ribosomal RNA genes (rRNA)      |4               |4
-Coding genes containing introns |8               |11
-Introns in coding genes         |9               |15
-tRNA genes containing introns   |6               |0
+Number of genes                 |114             |157
+Protein coding genes (mRNA)     |74              |103
+Open reading frames (ORF)       |NA              |5702
+Transfer RNA genes (tRNA)       |36              |46
+Ribosomal RNA genes (rRNA)      |4               |8
+Coding genes containing introns |8               |13
+Introns in coding genes         |9               |17
+tRNA genes containing introns   |6               |16
 Identity to Norway spruce       |99.2%           |98.3%
 Coverage of Norway spruce       |99.7%           |59.6%
-x Permitting gaps less than 500 bp | |
 
 Plastid
 ------------------------------------------------------------
@@ -119,19 +119,19 @@ All 114 genes of the Norway spruce plastid genome are present in the white spruc
 Mitochondrion
 ------------------------------------------------------------
 
-The mitochondrial genome was assembled into 61 scaffolds (223 contigs, permitting gaps less than 500 bp) with a scaffold N50 of 287 kbp (contig N50 of 39 kbp). The largest scaffold is 598 kbp. The assembly metrics are shown in [Table 1][].
+The mitochondrial genome was assembled into 38 scaffolds (132 contigs) with a scaffold N50 of 369 kbp (contig N50 of 102 kbp). The largest scaffold is 1222 kbp. The assembly metrics are shown in [Table 1][].
 
-The mitochondrial genome contains 54 protein coding (mRNA) genes, 23 transfer RNA (tRNA) genes and 4 ribosomal RNA (rRNA) genes, shown in [Figure 2][]. The coding genes compose 50 kbp (<1%) of the genome, shown in [Figure 3][].
+The mitochondrial genome contains 103 protein coding (mRNA) genes, 46 transfer RNA (tRNA) genes and 8 ribosomal RNA (rRNA) genes, shown in [Figure 2][]. The coding genes compose 73 kbp (~1%) of the genome, shown in [Figure 3][].
 
 The protein-coding genes
-*atp8*, *cox1*, *matR*, *nad7*, *rpl10*, *rps1* and *rps4*
+*atp8*, *cox1*, *matR*, *nad2*, *nad7*, *rpl10*, *rps1*, *rps2* and *rps4*
 each contain one intron, and
-*ccmFn*, *nad4*, *nad5* and *rps3-2*
+*ccmFn*, *nad4*, *nad5* and *rps3-1*
 each contain two introns.
 
 The putative mitochondrial sequences of white spruce and Norway spruce show high sequence similarity, over 98% nucleotide identity, but only 60% of the Norway spruce putative mitochondrial sequences are covered by alignments of the white spruce sequences.
 
-Repeats compose 400 kbp (~7%) of the mitochondrial genome. Simple repeats, the LINE Jockey and the LTR Copia and Gypsy are the most common repeats, shown in [Figure 4][].
+Repeats compose 386 kbp (~7%) of the mitochondrial genome. Simple repeats, the LINE Jockey and the LTR Copia and Gypsy are the most common repeats, shown in [Figure 4][].
 
 <a name="figure-2"></a>
 
@@ -158,7 +158,7 @@ One lane of MiSeq sequencing of whole genome DNA is sufficient to assemble the 1
 
 The white spruce plastid genome shows no structural rearrangements when compared with Norway spruce. The mitochondrial genome in contrast shows much structural rearrangement, though more work is needed to determine what is due to the draft nature of these mitochondrial assemblies and what is true structural rearrangement.
 
-The protein coding gene content of the mitochondrial genome is quite sparse, with 54 protein coding genes in 5.9 Mbp, in comparison to the plastid genome, with 74 protein coding genes in 123 kbp. 7% of the mitochondrial genome is composed of repeats, and <1% is composed of coding genes. A significant portion, over 90%, of the unusually large size of the white spruce mitochondrial genome is yet unexplained.
+The protein coding gene content of the mitochondrial genome is quite sparse, with 103 protein coding genes in 5.9 Mbp, in comparison to the plastid genome, with 74 protein coding genes in 123 kbp. Nearly 7% of the mitochondrial genome is composed of repeats, and roughly 1% is composed of coding genes. A significant portion, over 90%, of the unusually large size of the white spruce mitochondrial genome is yet unexplained.
 
 Acknowledgements
 ================================================================================
