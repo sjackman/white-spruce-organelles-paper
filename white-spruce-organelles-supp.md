@@ -43,23 +43,24 @@ Software      | Version | DOI
 --------------|---------|--------------------------
 ABySS         | 1.3.7   | [10.1101/gr.089532.108][]
 ARAGORN       | 1.2.36  | [10.1093/nar/gkh152][]
-BLAST         | 2.2.29  | [10.1016/S0022-2836(05)80360-2][]
-BWA           | 0.7.8   | [10.1093/bioinformatics/btp324][]
-Barrnap       | 0.4.2   | NA
+BLAST         | 2.2.30  | [10.1016/S0022-2836(05)80360-2][]
+BWA           | 0.7.12  | [10.1093/bioinformatics/btp324][]
+Barrnap       | 0.5     | NA
 DOGMA         | NA      | [10.1093/bioinformatics/bth352][]
 Exonerate     | 2.2.0   | [10.1186/1471-2105-6-31][]
-GenomeTools   | 1.5.3   | [10.1109/TCBB.2013.68][]
-HMMER         | 3.1b1   | [10.1371/journal.pcbi.1002195][]
-MAKER-P       | 2.31.4  | [10.1104/pp.113.230144][]
+GenomeTools   | 1.5.5   | [10.1109/TCBB.2013.68][]
+HMMER         | 3.1b2   | [10.1371/journal.pcbi.1002195][]
+MAKER         | 2.31.8  | [10.1104/pp.113.230144][]
 MUMmer        | 3.23    | [10.1186/gb-2004-5-2-r12][]
+Prodigal      | 2.6.2   | [10.1186/1471-2105-11-119][]
 QUAST         | 2.3     | [10.1093/bioinformatics/btt086][]
 RECON         | 1.0.7   | [10.1101/gr.88502][]
 RMBlast       | 2.2.28  | NA
 RepeatMasker  | 4.0.5   | NA
-RepeatModeler | 1.0.7   | NA
+RepeatModeler | 1.0.8   | NA
 RepeatScout   | 1.0.5   | [10.1093/bioinformatics/bti1018][]
 RNAmmer       | 1.2     | [10.1093/nar/gkm160][]
-SAMtools      | 0.1.19  | [10.1093/bioinformatics/btp352][]
+SAMtools      | 1.2     | [10.1093/bioinformatics/btp352][]
 TRF           | 4.07b   | [10.1093/nar/27.2.573][]
 tRNAscan-SE   | 1.23    | [10.1093/nar/25.5.0955][]
 
@@ -77,6 +78,7 @@ tRNAscan-SE   | 1.23    | [10.1093/nar/25.5.0955][]
 [10.1101/gr.88502]: http://dx.doi.org/10.1101/gr.88502
 [10.1104/pp.113.230144]: http://dx.doi.org/10.1104/pp.113.230144
 [10.1109/TCBB.2013.68]: http://dx.doi.org/10.1109/TCBB.2013.68
+[10.1186/1471-2105-11-119]: http://dx.doi.org/10.1186/1471-2105-11-119
 [10.1186/1471-2105-6-31]: http://dx.doi.org/10.1186/1471-2105-6-31
 [10.1186/gb-2004-5-2-r12]: http://dx.doi.org/10.1186/gb-2004-5-2-r12
 [10.1371/journal.pcbi.1002195]: http://dx.doi.org/10.1371/journal.pcbi.1002195
