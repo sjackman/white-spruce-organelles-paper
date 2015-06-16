@@ -30,12 +30,16 @@ Assembling a single lane of whole genome sequencing data using ABySS [@simpson20
 Methods
 ================================================================================
 
+Genomic DNA was collected from the apical shoot tissues of a single white spruce tree and sequencing libraries were constructed from that DNA as described in @birol2013assembling. Because the original intention of this sequencing project was to assemble the nuclear genome of white spruce, an organelle exclusion method was used to preferentially extract nuclear DNA. Even so sequencing reads from both organellar genomes were present in sufficient depth to assemble both genomes.
+
 The software used in this analysis, their versions and the digital object identifiers (DOI) of their respective publications are listed in supplementary Table S1.
 
 Plastid
 ------------------------------------------------------------
 
-The overlapping paired-end reads were merged using ABySS-mergepairs. These merged reads were assembled using ABySS. Contigs that are putatively derived from the plastid were separated by length and depth of coverage using thresholds chosen by inspection (see supplementary Figure S1). These putative plastid contigs were assembled into scaffolds using ABySS-scaffold. The assembled plastid genome was initially annotated using DOGMA, but DOGMA is an interactive web application, which is not convenient for an automated pipeline. We instead used MAKER [@campbell2014maker] for annotation, which is intended for automated pipelines, and used the Norway spruce complete plastid genome [NC_021456 @nystedt2013norway] for both protein-coding and non-coding gene homology evidence. The parameters of MAKER are show in supplementary Table S2. The inverted repeat was identified using MUMmer [@kurtz2004versatile], shown in supplementary Figure S3.
+The overlapping paired-end reads were merged using ABySS-mergepairs. These merged reads were assembled using ABySS. Contigs that are putatively derived from the plastid were separated by length and depth of coverage using thresholds chosen by inspection (see supplementary Figure S1). These putative plastid contigs were assembled into scaffolds using ABySS-scaffold.
+
+The assembled plastid genome was initially annotated using DOGMA, but DOGMA is an interactive web application, which is not convenient for an automated pipeline. We instead used MAKER [@campbell2014maker] for annotation, which is intended for automated pipelines, and used the Norway spruce complete plastid genome [NC_021456 @nystedt2013norway] for both protein-coding and non-coding gene homology evidence. The parameters of MAKER are show in supplementary Table S2. The inverted repeat was identified using MUMmer [@kurtz2004versatile], shown in supplementary Figure S3.
 
 The assembled plastid genome was aligned to the Norway spruce plastid using BWA-MEM [@li2013aligning]. Coverage and identity of these alignments were calculated using the script `bam-identity` (see supplementary materials). The two genomes were compared using QUAST [@gurevich2013quast] to confirm the presence of the annotated genes of the Norway spruce plastid in the white spruce plastid.
 
