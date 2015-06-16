@@ -44,11 +44,11 @@ inheritance and dispersion results in new assemblages of organellar genomes and
 an increase of genetic diversity after expansion from a refugium (Gerardi et al.
 [2010](#ref-gerardi2010glacial)).
 
-Analysis of cpDNA is useful reconstructing phylogenetic trees of diverse plant
-species (Wu et al. [2007](#ref-wu2007chloroplast)), in determining the origin of
-an expanding population (Aizawa et al. [2012](#ref-aizawa2012phylogeography))
-and determining when distinct lineages of a species resulted from multiple
-colonization events (Jardón-Barbolla et al.
+Analysis of cpDNA is useful in reconstructing phylogenetic trees of diverse
+plant species (Wu et al. [2007](#ref-wu2007chloroplast)), in determining the
+origin of an expanding population (Aizawa et al.
+[2012](#ref-aizawa2012phylogeography)) and in determining when distinct lineages
+of a species resulted from multiple colonization events (Jardón-Barbolla et al.
 [2011](#ref-jardon2011phylogeography)).
 
 The complete plastid genomes of the gymnosperms *Podocarpus lambertii*, *Taxus
@@ -495,8 +495,8 @@ differential cytoplasmic gene flow in transcontinental black spruce. Molecular
 ecology. 19:5265–5280.
 
 Grewe F et al. 2014. Comparative analysis of 11 brassicales mitochondrial
-genomes and the mitochondrial transcriptome of\< i\> brassica oleracea\</i\>.
-Mitochondrion.
+genomes and the mitochondrial transcriptome of&lt; i&gt; brassica
+oleracea&lt;/i&gt;. Mitochondrion.
 
 Guo W et al. 2014. Predominant and substoichiometric isomers of the plastid
 genome coexist within juniperus plants and have shifted multiple times during
