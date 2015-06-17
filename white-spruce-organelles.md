@@ -91,6 +91,7 @@ tRNA genes containing introns   |6               |16
 Identity to Norway spruce       |99.2%           |98.3%
 Coverage of Norway spruce       |99.7%           |59.6%
 
+
 Plastid
 ------------------------------------------------------------
 
@@ -129,11 +130,16 @@ The mitochondrial genome contains 101 protein coding (mRNA) genes, 46 transfer R
 
 A large number of open reading frames are identified: 5702 at least 89 bp, composing 1.3 Mbp, and 1012 at least 300 bp, composing 396 kbp. These open reading frames have no significant sequence similarity to any gene annotated in the 51 species of *Viridiplantae* mitochondria with complete genomes.
 
+A total of 17 introns are found in 13 distinct protein-coding genes.
 The protein-coding genes
 *atp8*, *cox1*, *matR*, *nad2*, *nad7*, *rpl10*, *rps1*, *rps2* and *rps4*
 each contain one intron, and
 *ccmFn*, *nad4*, *nad5* and *rps3-1*
 each contain two introns.
+
+A total of 16 introns are found in 12 distinct species of tRNA. The tRNA genes
+*trnD-AUC*, *trnH-GUG*, *trnL-UAG*, *trnN-AUU*, *trnP-AGG*, *trnR-GCG*, *trnR-UCG*, *trnS-GCU*, *trnS-GGA*, *trnU-UCA*, *trnV-CAC* and *trnV-UAC*
+contain introns.
 
 The putative mitochondrial sequences of white spruce and Norway spruce show high sequence similarity, over 98% nucleotide identity, but only 60% of the Norway spruce putative mitochondrial sequences are covered by alignments of the white spruce sequences.
 
