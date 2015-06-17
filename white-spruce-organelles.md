@@ -126,7 +126,7 @@ Mitochondrion
 
 The mitochondrial genome was assembled into 38 scaffolds (132 contigs) with a scaffold N50 of 369 kbp (contig N50 of 102 kbp). The largest scaffold is 1222 kbp. The assembly metrics are shown in [Table 1][].
 
-The mitochondrial genome contains 101 protein coding (mRNA) genes, 46 transfer RNA (tRNA) genes and 8 ribosomal RNA (rRNA) genes, shown in [Figure 2][]. The coding genes compose 72 kbp (~1%) of the genome, shown in [Figure 3][].
+The mitochondrial genome contains 101 protein coding (mRNA) genes, 46 transfer RNA (tRNA) genes and 8 ribosomal RNA (rRNA) genes, shown in [Figure 2][]. The coding genes compose 72 kbp (1.2%) of the genome, shown in [Figure 3][].
 
 A large number of open reading frames are identified: 5702 at least 89 bp, composing 1.3 Mbp, and 1012 at least 300 bp, composing 396 kbp. These open reading frames have no significant sequence similarity to any gene annotated in the 51 species of *Viridiplantae* mitochondria with complete genomes.
 
@@ -143,7 +143,7 @@ contain introns.
 
 The putative mitochondrial sequences of white spruce and Norway spruce show high sequence similarity, over 98% nucleotide identity, but only 60% of the Norway spruce putative mitochondrial sequences are covered by alignments of the white spruce sequences.
 
-Repeats compose 386 kbp (~7%) of the mitochondrial genome. Simple repeats, the LINE Jockey and the LTR Copia and Gypsy are the most common repeats, shown in [Figure 4][].
+Repeats compose 386 kbp (6.4%) of the mitochondrial genome. Simple repeats and LTR Copia, ERV1 and Gypsy are the most common repeats, shown in [Figure 4][].
 
 <a name="figure-2"></a>
 
