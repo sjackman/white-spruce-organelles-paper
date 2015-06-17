@@ -48,7 +48,7 @@ Mitochondrion
 
 ABySS-konnector was used to fill the gap between the paired-end reads of a single lane of Illumina HiSeq sequencing of a paired-end library. These connected paired-end reads were assembled using ABySS. Putative mitochondrial sequences were separated from the assembly by their length, depth of coverage and GC content using k-means clustering in R (see supplementary Figure S2). These putative mitochondrial contigs were then assembled into scaffolds using ABySS-scaffold with a single lane of Illumina HiSeq sequencing of a mate-pair library.
 
-The mitochondrial genome was annotated using MAKER (parameters shown in supplementary Table S3). The proteins of all green plants (viridiplantae) with complete mitochondrial genome sequences in NCBI GenBank, 51 species, were used for protein homology evidence and aligned using BLAST and Exonerate [@slater2005automated]. The prince sago palm (*Cycas taitungensis*) mitochondrion [NC_010303 @chaw2008mitochondrial] is the closest related species, being the only gymnosperm with a complete mitochondrial genome. Transfer RNA (tRNA) were annotated using ARAGORN [@laslett2004aragorn]. Ribosomal RNA (rRNA) were annotated using RNAmmer [@lagesen2007rnammer]. Repeats were identified using RepeatMasker [@smit1996repeatmasker] and RepeatModeler.
+The mitochondrial genome was annotated using MAKER (parameters shown in supplementary Table S3). The proteins of all green plants (*Viridiplantae*) with complete mitochondrial genome sequences in NCBI GenBank, 51 species, were used for protein homology evidence and aligned using BLAST and Exonerate [@slater2005automated]. The prince sago palm (*Cycas taitungensis*) mitochondrion [NC_010303 @chaw2008mitochondrial] is the closest related species, being the only gymnosperm with a complete mitochondrial genome. Transfer RNA (tRNA) were annotated using ARAGORN [@laslett2004aragorn]. Ribosomal RNA (rRNA) were annotated using RNAmmer [@lagesen2007rnammer]. Repeats were identified using RepeatMasker [@smit1996repeatmasker] and RepeatModeler.
 
 The putative mitochondrial sequences of white spruce were aligned to the putative mitochondrial sequences of the Norway spruce using BWA-MEM. Coverage and identity of these alignments were calculated using the script `bam-identity` (see supplementary materials).
 
@@ -84,7 +84,7 @@ Number of genes without ORFs    |114             |155
 Protein coding genes (mRNA)     |74              |101
 Ribosomal RNA genes (rRNA)      |4               |8
 Transfer RNA genes (tRNA)       |36              |46
-Open reading frames (ORF)       |NA              |5702
+Open reading frames (ORF) $\geq$ 300 bp |NA      |1012
 Coding genes containing introns |8               |13
 Introns in coding genes         |9               |17
 tRNA genes containing introns   |6               |16
@@ -126,6 +126,8 @@ Mitochondrion
 The mitochondrial genome was assembled into 38 scaffolds (132 contigs) with a scaffold N50 of 369 kbp (contig N50 of 102 kbp). The largest scaffold is 1222 kbp. The assembly metrics are shown in [Table 1][].
 
 The mitochondrial genome contains 101 protein coding (mRNA) genes, 46 transfer RNA (tRNA) genes and 8 ribosomal RNA (rRNA) genes, shown in [Figure 2][]. The coding genes compose 72 kbp (~1%) of the genome, shown in [Figure 3][].
+
+A large number of open reading frames are identified: 5702 at least 89 bp, composing 1.3 Mbp, and 1012 at least 300 bp, composing 396 kbp. These open reading frames have no significant sequence similarity to any gene annotated in the 51 species of *Viridiplantae* mitochondria with complete genomes.
 
 The protein-coding genes
 *atp8*, *cox1*, *matR*, *nad2*, *nad7*, *rpl10*, *rps1*, *rps2* and *rps4*
