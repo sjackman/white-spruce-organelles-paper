@@ -141,8 +141,6 @@ A total of 16 introns are found in 12 distinct species of tRNA. The tRNA genes
 *trnD-AUC*, *trnH-GUG*, *trnL-UAG*, *trnN-AUU*, *trnP-AGG*, *trnR-GCG*, *trnR-UCG*, *trnS-GCU*, *trnS-GGA*, *trnU-UCA*, *trnV-CAC* and *trnV-UAC*
 contain introns.
 
-The putative mitochondrial sequences of white spruce and Norway spruce show high sequence similarity, over 98% nucleotide identity, but only 60% of the Norway spruce putative mitochondrial sequences are covered by alignments of the white spruce sequences.
-
 Repeats compose 386 kbp (6.4%) of the mitochondrial genome. Simple repeats and LTR Copia, ERV1 and Gypsy are the most common repeats, shown in [Figure 4][].
 
 <a name="figure-2"></a>
@@ -162,6 +160,8 @@ Repeats compose 386 kbp (6.4%) of the mitochondrial genome. Simple repeats and L
 [Figure 4]: #figure-4
 
 ![Repetitive sequence of the mitochondrial genome.](figure/mt-repeats.png)
+
+The putative mitochondrial sequences of white spruce and Norway spruce show high sequence similarity, over 98% nucleotide identity, but only 60% of the Norway spruce putative mitochondrial sequences are covered by alignments of the white spruce sequences.
 
 Conclusion
 ================================================================================
