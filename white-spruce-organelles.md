@@ -80,11 +80,11 @@ Number of scaffolds             |1 scaffold      |38 scaffolds
 Scaffold N50                    |123 kbp         |369 kbp
 Largest scaffold                |123 kbp         |1222 kbp
 GC content                      |38.8%           |44.7%
-Number of genes                 |114             |157
-Protein coding genes (mRNA)     |74              |103
-Open reading frames (ORF)       |NA              |5702
-Transfer RNA genes (tRNA)       |36              |46
+Number of genes without ORFs    |114             |155
+Protein coding genes (mRNA)     |74              |101
 Ribosomal RNA genes (rRNA)      |4               |8
+Transfer RNA genes (tRNA)       |36              |46
+Open reading frames (ORF)       |NA              |5702
 Coding genes containing introns |8               |13
 Introns in coding genes         |9               |17
 tRNA genes containing introns   |6               |16
@@ -125,7 +125,7 @@ Mitochondrion
 
 The mitochondrial genome was assembled into 38 scaffolds (132 contigs) with a scaffold N50 of 369 kbp (contig N50 of 102 kbp). The largest scaffold is 1222 kbp. The assembly metrics are shown in [Table 1][].
 
-The mitochondrial genome contains 103 protein coding (mRNA) genes, 46 transfer RNA (tRNA) genes and 8 ribosomal RNA (rRNA) genes, shown in [Figure 2][]. The coding genes compose 73 kbp (~1%) of the genome, shown in [Figure 3][].
+The mitochondrial genome contains 101 protein coding (mRNA) genes, 46 transfer RNA (tRNA) genes and 8 ribosomal RNA (rRNA) genes, shown in [Figure 2][]. The coding genes compose 72 kbp (~1%) of the genome, shown in [Figure 3][].
 
 The protein-coding genes
 *atp8*, *cox1*, *matR*, *nad2*, *nad7*, *rpl10*, *rps1*, *rps2* and *rps4*
@@ -162,7 +162,7 @@ One lane of MiSeq sequencing of whole genome DNA is sufficient to assemble the 1
 
 The white spruce plastid genome shows no structural rearrangements when compared with Norway spruce. The mitochondrial genome in contrast shows much structural rearrangement, though more work is needed to determine what is due to the draft nature of these mitochondrial assemblies and what is true structural rearrangement.
 
-The protein coding gene content of the mitochondrial genome is quite sparse, with 103 protein coding genes in 5.9 Mbp, in comparison to the plastid genome, with 74 protein coding genes in 123 kbp. Nearly 7% of the mitochondrial genome is composed of repeats, and roughly 1% is composed of coding genes. A significant portion, over 90%, of the unusually large size of the white spruce mitochondrial genome is yet unexplained.
+The protein coding gene content of the mitochondrial genome is quite sparse, with 101 protein coding genes in 5.9 Mbp, in comparison to the plastid genome, with 74 protein coding genes in 123 kbp. Nearly 7% of the mitochondrial genome is composed of repeats, and roughly 1% is composed of coding genes. A significant portion, over 90%, of the unusually large size of the white spruce mitochondrial genome is yet unexplained.
 
 Acknowledgements
 ================================================================================
