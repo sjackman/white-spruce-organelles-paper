@@ -61,7 +61,7 @@ The assembly and annotation metrics are summarized in [Table 1][].
 
 [Table 1]: #table-1
 
-**Table 1**: Sequencing, assembly and alignment metrics of the white spruce organellar genomes
+**Table 1**: Sequencing, assembly and alignment metrics of the white spruce organellar genomes. The number of distinct genes are shown in parentheses.
 
 Metric                          |Plastid         |Mitochondrion
 ------------------------------- |--------------- |-------------
@@ -81,9 +81,9 @@ Scaffold N50                    |123 kbp         |369 kbp
 Largest scaffold                |123 kbp         |1222 kbp
 GC content                      |38.8%           |44.7%
 Number of genes without ORFs    |114             |155
-Protein coding genes (mRNA)     |74              |101
-Ribosomal RNA genes (rRNA)      |4               |8
-Transfer RNA genes (tRNA)       |36              |46
+Protein coding genes (mRNA)     |74 (72)         |101 (50)
+Ribosomal RNA genes (rRNA)      |4 (4)           |8 (3)
+Transfer RNA genes (tRNA)       |36 (32)         |46 (29)
 Open reading frames (ORF) $\geq$ 300 bp |NA      |1012
 Coding genes containing introns |8               |13
 Introns in coding genes         |9               |17
@@ -126,7 +126,7 @@ Mitochondrion
 
 The mitochondrial genome was assembled into 38 scaffolds (132 contigs) with a scaffold N50 of 369 kbp (contig N50 of 102 kbp). The largest scaffold is 1222 kbp. The assembly metrics are shown in [Table 1][].
 
-The mitochondrial genome contains 101 protein coding (mRNA) genes, 46 transfer RNA (tRNA) genes and 8 ribosomal RNA (rRNA) genes, shown in [Figure 2][]. The coding genes compose 72 kbp (1.2%) of the genome, shown in [Figure 3][].
+The mitochondrial genome contains 101 protein coding (mRNA) genes, 46 transfer RNA (tRNA) genes and 8 ribosomal RNA (rRNA) genes, shown in [Figure 2][]. The coding genes compose 72 kbp (1.2%) of the genome, shown in [Figure 3][]. The 101 protein-coding genes encode 50 distinct genes. The 46 tRNA genes are found in 29 distinct species for 18 amino acids.
 
 A large number of open reading frames are identified: 5702 at least 89 bp, composing 1.3 Mbp, and 1012 at least 300 bp, composing 396 kbp. These open reading frames have no significant sequence similarity to any gene annotated in the 51 species of *Viridiplantae* mitochondria with complete genomes.
 
