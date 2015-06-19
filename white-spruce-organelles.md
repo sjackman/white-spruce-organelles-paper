@@ -55,11 +55,7 @@ The putative mitochondrial sequences of white spruce were aligned to the putativ
 Results
 ================================================================================
 
-The assembly and annotation metrics are summarized in [Table 1][].
-
-<a name="table-1"></a>
-
-[Table 1]: #table-1
+The assembly and annotation metrics are summarized in Table\ 1.
 
 **Table 1**: Sequencing, assembly and alignment metrics of the white spruce organellar genomes. The number of distinct genes are shown in parentheses.
 
@@ -95,7 +91,7 @@ Coverage of Norway spruce       |99.7%           |59.6%
 Plastid
 ------------------------------------------------------------
 
-The plastid genome was assembled into a single circular contig of 123,266 bp. The assembly metrics are shown in [Table 1][]. The plastid genome contains 114 genes: 74 protein coding (mRNA) genes, 36 transfer RNA (tRNA) genes and 4 ribosomal RNA (rRNA) genes, shown in [Figure 1][], which is rendered using OGDRAW [@lohse2007organellargenomedraw] and Circos [@krzywinski2009circos].
+The plastid genome was assembled into a single circular contig of 123,266 bp. The assembly metrics are shown in Table\ 1. The plastid genome contains 114 genes: 74 protein coding (mRNA) genes, 36 transfer RNA (tRNA) genes and 4 ribosomal RNA (rRNA) genes, shown in Figure\ 1, which is rendered using OGDRAW [@lohse2007organellargenomedraw] and Circos [@krzywinski2009circos].
 
 All protein-coding genes are single copy, except *psbI* and *ycf12*, which have two copies each. All tRNA genes are single copy, except *trnH-GUG*, *trnI-CAU*, *trnS-GCU* and *trnT-GGU*, which have two copies each. All rRNA genes are single copy.
 
@@ -115,18 +111,14 @@ Each copy of the inverted repeat (IR) is 445 bp in size, much smaller than most 
 
 All 114 genes of the Norway spruce plastid genome are present in the white spruce plastid genome. The genomes of the white spruce plastid and Norway spruce plastid show perfect gene synteny with no structural rearrangements.
 
-<a name="figure-1"></a>
-
-[Figure 1]: #figure-1
-
 ![The annotated plastid genome, which was annotated using MAKER and plotted using OGDRAW.](figure/plastid-annotation.png)
 
 Mitochondrion
 ------------------------------------------------------------
 
-The mitochondrial genome was assembled into 38 scaffolds (132 contigs) with a scaffold N50 of 369 kbp (contig N50 of 102 kbp). The largest scaffold is 1222 kbp. The assembly metrics are shown in [Table 1][].
+The mitochondrial genome was assembled into 38 scaffolds (132 contigs) with a scaffold N50 of 369 kbp (contig N50 of 102 kbp). The largest scaffold is 1222 kbp. The assembly metrics are shown in Table\ 1.
 
-The mitochondrial genome contains 101 protein coding (mRNA) genes, 46 transfer RNA (tRNA) genes and 8 ribosomal RNA (rRNA) genes, shown in [Figure 2][]. The coding genes compose 72 kbp (1.2%) of the genome, shown in [Figure 3][]. The 101 protein-coding genes encode 50 distinct genes. The 46 tRNA genes are found in 29 distinct species for 18 amino acids.
+The mitochondrial genome contains 101 protein coding (mRNA) genes, 46 transfer RNA (tRNA) genes and 8 ribosomal RNA (rRNA) genes, shown in Figure\ 2. The coding genes compose 72 kbp (1.2%) of the genome, shown in Figure\ 3. The 101 protein-coding genes encode 50 distinct genes. The 46 tRNA genes are found in 29 distinct species for 18 amino acids.
 
 A large number of open reading frames are identified: 5702 at least 90 bp, composing 1.3 Mbp, and 1047 at least 300 bp, composing 407 kbp. These open reading frames have no significant sequence similarity to any gene annotated in the 51 species of *Viridiplantae* mitochondria with complete genomes.
 
@@ -141,23 +133,11 @@ A total of 16 introns are found in 12 distinct species of tRNA. The tRNA genes
 *trnD-AUC*, *trnH-GUG*, *trnL-UAG*, *trnN-AUU*, *trnP-AGG*, *trnR-GCG*, *trnR-UCG*, *trnS-GCU*, *trnS-GGA*, *trnU-UCA*, *trnV-CAC* and *trnV-UAC*
 contain introns.
 
-Repeats compose 386 kbp (6.4%) of the mitochondrial genome. Simple repeats and LTR Copia, ERV1 and Gypsy are the most common repeats, shown in [Figure 4][].
-
-<a name="figure-2"></a>
-
-[Figure 2]: #figure-2
+Repeats compose 386 kbp (6.4%) of the mitochondrial genome. Simple repeats and LTR Copia, ERV1 and Gypsy are the most common repeats, shown in Figure\ 4.
 
 ![The annotated mitochondrial genome, which was annotated using MAKER and plotted using OGDRAW.](figure/mt-annotation.png)
 
-<a name="figure-3"></a>
-
-[Figure 3]: #figure-3
-
 ![The sizes of the mitochondrial genes, grouped by family.](figure/mt-genes.png)
-
-<a name="figure-4"></a>
-
-[Figure 4]: #figure-4
 
 ![Repetitive sequence of the mitochondrial genome.](figure/mt-repeats.png)
 
