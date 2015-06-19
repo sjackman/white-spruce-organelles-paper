@@ -49,11 +49,12 @@ README.md: white-spruce-organelles.md readme.markdown_strict
 
 # Munge the TeX
 %.tex: %.orig.tex
-	sed -e '/\\begin{longtable}/{h;s/.*/\\begin{table}[!b]/;}' \
+	sed -e '/\\begin{longtable}/{h;s/.*/\\begin{table*}[!bt]/;}' \
 		-e '/}\\tabularnewline/{s/\\tabularnewline//;p;g;}' \
 		-e 's/\\begin{longtable}/\\begin{tabular}/' \
 		-e '/\\endfirsthead/,/\\endhead/d' \
-		-e 's/\\end{longtable}/\\end{tabular}\\end{table}/' \
+		-e 's/\\end{longtable}/\\end{tabular}\\end{table*}/' \
+		-e 's/{figure}/{figure*}/' \
 		$< >$@
 
 # Render the manuscript PDF
