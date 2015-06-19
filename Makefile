@@ -49,9 +49,12 @@ README.md: white-spruce-organelles.md readme.markdown_strict
 
 # Munge the TeX
 %.tex: %.orig.tex
-	sed -e 's/\\begin{longtable}/\\begin{table}[!b]\\centering\\begin{tabular}/' \
+	sed -e '/\\begin{longtable}/{h;s/.*/\\begin{table}[!b]/;}' \
+		-e '/}\\tabularnewline/{s/\\tabularnewline//;p;g;}' \
+		-e 's/\\begin{longtable}/\\begin{tabular}/' \
+		-e '/\\endfirsthead/,/\\endhead/d' \
 		-e 's/\\end{longtable}/\\end{tabular}\\end{table}/' \
-		-e 's/\\endhead//' $< >$@
+		$< >$@
 
 # Render the manuscript PDF
 white-spruce-organelles.pdf: %.pdf: %.tex gbe/gbe.cls

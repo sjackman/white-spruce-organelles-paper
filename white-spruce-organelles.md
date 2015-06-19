@@ -57,8 +57,6 @@ Results
 
 The assembly and annotation metrics are summarized in Table\ 1.
 
-**Table 1**: Sequencing, assembly and alignment metrics of the white spruce organellar genomes. The number of distinct genes are shown in parentheses.
-
 Metric                          |Plastid         |Mitochondrion
 ------------------------------- |--------------- |-------------
 Number of lanes                 |1 MiSeq lane    |1 HiSeq lane
@@ -87,6 +85,7 @@ tRNA genes containing introns   |6               |16
 Identity to Norway spruce       |99.2%           |98.3%
 Coverage of Norway spruce       |99.7%           |59.6%
 
+Table: Sequencing, assembly and alignment metrics of the white spruce organellar genomes. The number of distinct genes are shown in parentheses.
 
 Plastid
 ------------------------------------------------------------
