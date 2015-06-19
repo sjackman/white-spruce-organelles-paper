@@ -43,6 +43,8 @@ Software      | Version | DOI
 --------------|---------|--------------------------
 ABySS         | 1.3.7   | [10.1101/gr.089532.108][]
 ARAGORN       | 1.2.36  | [10.1093/nar/gkh152][]
+BEDTools      | 2.24.0  | [10.1093/bioinformatics/btq033][]
+Biopython     | 1.65    | [10.1093/bioinformatics/btp163][]
 BLAST         | 2.2.30  | [10.1016/S0022-2836(05)80360-2][]
 BWA           | 0.7.12  | [10.1093/bioinformatics/btp324][]
 Barrnap       | 0.5     | NA
@@ -52,7 +54,9 @@ GenomeTools   | 1.5.5   | [10.1109/TCBB.2013.68][]
 HMMER         | 3.1b2   | [10.1371/journal.pcbi.1002195][]
 MAKER         | 2.31.8  | [10.1104/pp.113.230144][]
 MUMmer        | 3.23    | [10.1186/gb-2004-5-2-r12][]
+OGDraw        | 1.1.1   | [10.1093/nar/gkt289][]
 Prodigal      | 2.6.2   | [10.1186/1471-2105-11-119][]
+Prokka        | 1.11    | [10.1093/bioinformatics/btu153][]
 QUAST         | 2.3     | [10.1093/bioinformatics/btt086][]
 RECON         | 1.0.7   | [10.1101/gr.88502][]
 RMBlast       | 2.2.28  | NA
@@ -67,13 +71,17 @@ tRNAscan-SE   | 1.23    | [10.1093/nar/25.5.0955][]
 [10.1016/S0022-2836(05)80360-2]: http://dx.doi.org/10.1016/S0022-2836(05)80360-2
 [10.1093/bioinformatics/bth352]: http://dx.doi.org/10.1093/bioinformatics/bth352
 [10.1093/bioinformatics/bti1018]: http://dx.doi.org/10.1093/bioinformatics/bti1018
+[10.1093/bioinformatics/btp163]: http://dx.doi.org/10.1093/bioinformatics/btp163
 [10.1093/bioinformatics/btp324]: http://dx.doi.org/10.1093/bioinformatics/btp324
 [10.1093/bioinformatics/btp352]: http://dx.doi.org/10.1093/bioinformatics/btp352
+[10.1093/bioinformatics/btq033]: http://dx.doi.org/10.1093/bioinformatics/btq033
 [10.1093/bioinformatics/btt086]: http://dx.doi.org/10.1093/bioinformatics/btt086
+[10.1093/bioinformatics/btu153]: http://dx.doi.org/10.1093/bioinformatics/btu153
 [10.1093/nar/25.5.0955]: http://dx.doi.org/10.1093/nar/25.5.0955
 [10.1093/nar/27.2.573]: http://dx.doi.org/10.1093/nar/27.2.573
 [10.1093/nar/gkh152]: htpp://dx.doi.org/10.1093/nar/gkh152
 [10.1093/nar/gkm160]: http://dx.doi.org/10.1093/nar/gkm160
+[10.1093/nar/gkt289]: http://dx.doi.org/10.1093/nar/gkt289
 [10.1101/gr.089532.108]: http://dx.doi.org/10.1101/gr.089532.108
 [10.1101/gr.88502]: http://dx.doi.org/10.1101/gr.88502
 [10.1104/pp.113.230144]: http://dx.doi.org/10.1104/pp.113.230144
