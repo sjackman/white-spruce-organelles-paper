@@ -84,7 +84,7 @@ Number of genes without ORFs    |114             |155
 Protein coding genes (mRNA)     |74 (72)         |101 (50)
 Ribosomal RNA genes (rRNA)      |4 (4)           |8 (3)
 Transfer RNA genes (tRNA)       |36 (32)         |46 (29)
-Open reading frames (ORF) $\geq$ 300 bp |NA      |1012
+Open reading frames (ORF) $\geq$ 300 bp |NA      |1047
 Coding genes containing introns |8               |13
 Introns in coding genes         |9               |17
 tRNA genes containing introns   |6               |16
@@ -128,7 +128,7 @@ The mitochondrial genome was assembled into 38 scaffolds (132 contigs) with a sc
 
 The mitochondrial genome contains 101 protein coding (mRNA) genes, 46 transfer RNA (tRNA) genes and 8 ribosomal RNA (rRNA) genes, shown in [Figure 2][]. The coding genes compose 72 kbp (1.2%) of the genome, shown in [Figure 3][]. The 101 protein-coding genes encode 50 distinct genes. The 46 tRNA genes are found in 29 distinct species for 18 amino acids.
 
-A large number of open reading frames are identified: 5702 at least 89 bp, composing 1.3 Mbp, and 1012 at least 300 bp, composing 396 kbp. These open reading frames have no significant sequence similarity to any gene annotated in the 51 species of *Viridiplantae* mitochondria with complete genomes.
+A large number of open reading frames are identified: 5702 at least 90 bp, composing 1.3 Mbp, and 1047 at least 300 bp, composing 407 kbp. These open reading frames have no significant sequence similarity to any gene annotated in the 51 species of *Viridiplantae* mitochondria with complete genomes.
 
 A total of 17 introns are found in 13 distinct protein-coding genes.
 The protein-coding genes
