@@ -51,7 +51,7 @@ README.md: white-spruce-organelles.md readme.markdown_strict
 %.tex: %.orig.tex
 	sed -e '/\\begin{longtable}/{h;s/.*/\\begin{table*}[!bt]/;}' \
 		-e '/}\\tabularnewline/{s/\\tabularnewline//;p;g;}' \
-		-e 's/\\begin{longtable}/\\begin{tabular}/' \
+		-e 's/\\begin{longtable}/\\centering\\begin{tabular}/' \
 		-e '/\\endfirsthead/,/\\endhead/d' \
 		-e 's/\\end{longtable}/\\end{tabular}\\end{table*}/' \
 		-e 's/{figure}/{figure*}/' \
