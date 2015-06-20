@@ -32,6 +32,8 @@ Methods
 
 Genomic DNA was collected from the apical shoot tissues of a single white spruce tree and sequencing libraries were constructed from that DNA as described in @birol2013assembling. Because the original intention of this sequencing project was to assemble the nuclear genome of white spruce, an organelle exclusion method was used to preferentially extract nuclear DNA. Even so sequencing reads from both organellar genomes were present in sufficient depth to assemble both genomes.
 
+RNA was extracted from eight tissues, megagametophyte, embryo, seedling, young buds, xylem, mature needles, flushing buds and bark, and sequenced with the Illumina HiSeq 2000 as described in @warren2015improved. The RNA-seq data was used to quantify the transcript abundance of the annotated mitochondrial genes using Salmon [@patro2014sailfish].
+
 The software used in this analysis, their versions and the digital object identifiers (DOI) of their respective publications are listed in supplementary Table S1.
 
 Plastid
@@ -142,7 +144,11 @@ Repeats compose 386 kbp (6.4%) of the mitochondrial genome. Simple repeats and L
 
 ![Repetitive sequence of the mitochondrial genome.](figure/mt-repeats.png)
 
+The transcript abundance of the mitochondrial coding genes with known function is shown in Figure\ 5. The two developmental tissues megagametophyte and embryo have the highest overall gene expression and cluster together.
+
 The putative mitochondrial sequences of white spruce and Norway spruce show high sequence similarity, over 98% nucleotide identity, but only 60% of the Norway spruce putative mitochondrial sequences are covered by alignments of the white spruce sequences.
+
+![Heatmap of mitochondrial transcript abundance.](figure/mt-rna-heatmap.png)
 
 Conclusion
 ================================================================================

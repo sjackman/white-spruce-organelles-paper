@@ -64,11 +64,13 @@ RepeatMasker  | 4.0.5   | NA
 RepeatModeler | 1.0.8   | NA
 RepeatScout   | 1.0.5   | [10.1093/bioinformatics/bti1018][]
 RNAmmer       | 1.2     | [10.1093/nar/gkm160][]
+Salmon        | 0.4.2   | [10.1038/nbt.2862][]
 SAMtools      | 1.2     | [10.1093/bioinformatics/btp352][]
 TRF           | 4.07b   | [10.1093/nar/27.2.573][]
 tRNAscan-SE   | 1.23    | [10.1093/nar/25.5.0955][]
 
 [10.1016/S0022-2836(05)80360-2]: http://dx.doi.org/10.1016/S0022-2836(05)80360-2
+[10.1038/nbt.2862]: http://dx.doi.org/10.1038/nbt.2862
 [10.1093/bioinformatics/bth352]: http://dx.doi.org/10.1093/bioinformatics/bth352
 [10.1093/bioinformatics/bti1018]: http://dx.doi.org/10.1093/bioinformatics/bti1018
 [10.1093/bioinformatics/btp163]: http://dx.doi.org/10.1093/bioinformatics/btp163
