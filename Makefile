@@ -4,6 +4,10 @@ all: index.html \
 	white-spruce-organelles-supp.html \
 	white-spruce-organelles-supp.pdf
 
+docx: \
+	white-spruce-organelles.docx \
+	white-spruce-organelles-supp.docx
+
 clean:
 	rm -f \
 		index.html \
@@ -14,7 +18,7 @@ clean:
 		white-spruce-organelles-supp.pdf \
 		white-spruce-organelles-supp.tex
 
-.PHONY: all clean
+.PHONY: all clean docx
 .DELETE_ON_ERROR:
 .SECONDARY:
 
