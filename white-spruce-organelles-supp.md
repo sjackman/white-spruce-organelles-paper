@@ -151,5 +151,38 @@ est_forward=1
 single_exon=1
 ```
 
+Table S4: Mitochondrion scaffolding validation using MPET read alignments
+================================================================================
+
+LINKS Iteration#        Interval (kbp)       resulting scaffolds       starting scaffolds       merges       num gap       avg gap       sd gap       min gap       max gap       num overlap       avg overlap       sd overlap       min overlap       max overlap        #merges with MPET support       % MPET support       AVG #MPET pairs support
+----------------------- -------------------- ------------------------- ------------------------ ------------ ------------- ------------- ------------ ------------- ------------- ----------------- ----------------- ---------------- ----------------- ----------------- -------------------------------- -------------------- ------------------------------
+1                       1.75                 60                        61                       1            1             1165          0            1165          1165          0                 0                 0                                                    1                                100%                 25461
+1                       5.5                  59                        60                       1            1             4814          0            4814          4814          0                 0                 0                                                    1                                100%                 14171
+1                       6                    58                        59                       1            1             2699          0            2699          2699          0                 0                 0                                                    1                                100%                 36701
+2                       0.5                  38                        58                       20           1             34            0            34            34            19                -337.74           117.18           -508              -130              20                               100%                 18692
+
+Listing S1: GATK pipeline
+================================================================================
+
+This analysis used BWA 0.7.5a and samtools 0.1.18.
+
+```sh
+bwa index $ref
+bwa aln -b1 -t12 -f libraryA_1.sai $ref $2
+bwa aln -b2 -t12 -f libraryA_2.sai $ref $2
+bwa sampe -f scrubb.sam $ref libraryA_1.sai libraryA_2.sai $2 $2
+samtools view -hbS scrubb.sam > scrubb.bam
+samtools sort scrubb.bam scrubb.sorted
+samtools index scrubb.sorted.bam
+samtools mpileup -u -f $ref -q 5 scrubb.sorted.bam | /scratch/seqdev/software/samtools/samtools-0.1.18/bcftools/bcftools view -cg - > scrubb.vcf
+cat scrubb.vcf | awk '{ if (($1 ~ /\#/) || (($8 ~ /DP4=0,0/) && ($5 !~ /\./))) print $0 }' > scrubb-summary.vcf
+/gsc/software/linux-x86_64-centos5/java-1.7.0-u13/bin/java -Xmx12g -jar /gsc/software/linux-x86_64-centos5/picard-tools-1.92/CreateSequenceDictionary.jar R=$ref O=$dict
+/gsc/software/linux-x86_64-centos5/java-1.7.0-u13/bin/java -Xmx12g -jar /scratch/seqdev/software/GenomeAnalysisTK.jar \
+  -R $ref \
+  -T FastaAlternateReferenceMaker \
+  -o $new \
+  --variant scrubb-summary.vcf
+```
+
 References
 ================================================================================
