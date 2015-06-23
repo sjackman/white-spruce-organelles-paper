@@ -132,7 +132,7 @@ depth to assemble both genomes.
 
 RNA was extracted from eight tissues, megagametophyte, embryo, seedling, young
 buds, xylem, mature needles, flushing buds and bark, and sequenced with the
-Illumina HiSeq 2000 as described in Warren et al.
+Illumina HiSeq 2000 as described in René L Warren et al.
 ([2015](#ref-warren2015improved)). The RNA-seq data was used to quantify the
 transcript abundance of the annotated mitochondrial genes using Salmon (Patro et
 al. [2014](#ref-patro2014sailfish)).
@@ -149,6 +149,36 @@ merged reads were assembled using ABySS. Contigs that are putatively derived
 from the plastid were separated by length and depth of coverage using thresholds
 chosen by inspection (see supplementary Figure S1). These putative plastid
 contigs were assembled into scaffolds using ABySS-scaffold.
+
+We ran the gap-filling application Sealer (Paulino et al., in review; options
+`-v -j 12 -b 30G -B 300 -F 700` with `-k` from 18 to 108 with step size 6) on
+the ABySS assembly of the plastid genome, closing 5 of the remaining 7 gaps,
+with a resulting assembly consisting of two large (~50 and ~70 kbp) scaftigs.
+Given the small size of the plastid genome (123 kbp), we opted to manually
+finish the assembly using Consed 20.0 (Gordon & Green
+[2013](#ref-gordon2013consed)). Briefly, we loaded the resulting gap-filled
+assembly into Consed and imported Pacific Biosciences (PacBio) (**data
+description NEEDED XX**) 9204 reads 500 bp and larger into the assembly and
+aligned them to the plastid genome using cross\_match (Green
+[1999](#ref-green1999documentation)) from within Consed. For each scaftig end, 6
+PacBio reads were pulled out and assembled using the mini-assembly feature in
+Consed. Cross\_match alignments of the resulting contigs to the plastid assembly
+were used to merge the two scaftigs and confirm that the complete circular
+genome sequence was obtained. In a subsequent step, 7,742 Illumina HiSeq reads
+were imported and aligned to the assembly following the same same procedure as
+above. We used this limited set of 7,742 HiSeq reads to make finishing more
+manageable. These reads were selected on the basis of BWA 0.7.5a (Li
+[2013](#ref-li2013aligning)) alignment to our draft plastid genome, focusing on
+regions that would benefit from read import by restricting our search using
+samtools 0.1.18 to regions with ambiguity and regions covered by PacBio reads
+exclusively. As described for the PacBio data, subset of Illumina reads were
+pulled out, mini-assembled with Phrap and the resulting contigs re-merged to
+correct bases in gaps filled only by PacBio, namely one gap and sequence at
+edges confirming the circular topology. The starting base was chosen using the
+Norway spruce plastid genome sequence (NC\_021456 Nystedt et al.
+[2013](#ref-nystedt2013norway)). Our assembly was further polished using the
+Genome Analysis Toolkit (GATK) 2.8-1-g932cd3a FastaAlternateReferenceMaker
+(McKenna et al. [2010](#ref-mckenna2010genome)).
 
 The assembled plastid genome was initially annotated using DOGMA, but DOGMA is
 an interactive web application, which is not convenient for an automated
@@ -177,9 +207,40 @@ sequences were separated from the assembly by their length, depth of coverage
 and GC content using k-means clustering in R (see supplementary Figure S2).
 These putative mitochondrial contigs were then assembled into scaffolds using
 ABySS-scaffold with a single lane of Illumina HiSeq sequencing of a mate-pair
-library. The assembled scaffolds were aligned to the NCBI nucleotide (nt)
-database using BLAST to check for hits to mitochondrial genomes and to screen
-for contamination.
+library.
+
+The white spruce mitochondrial genome was assembled as described above,
+resulting in 71 scaffolds. We ran the gap-filling application Sealer attempting
+to close the gap between every possible combination of two scaffolds. This
+approach closed 10 gaps and yielded 61 scaffolds, which we used as input to the
+LINKS scaffolder 1.1 (Rene L Warren et al. [2015](#ref-warren2015links))
+(options `-k 15 -t 1 -l 3 -r 0.4`, 19 iterations with `–d` from 500 to 6000 with
+step size 250) in conjunction with long PacBio reads, further decreasing the
+number of scaffolds to 58. White spruce PG29 Konnector pseudoreads were aligned
+to the 58 LINKS scaffolds with BWA 0.7.5a (`bwa mem -a multimap`), and we
+created links between two scaffolds when reads aligned within 1000 bp of the
+edges of any two scaffolds. Alignments were not necessarily split, nor primary.
+In some cases, the primary alignment was buried in a large scaffold, but
+secondary alignments suggested redundant sequences flanking a scaffold pair. We
+modified LINKS to read the resulting SAM alignment file and link scaffolds
+satisfying this criteria (options `LINKS-sam -e 0.9 -a 0.5`), bringing the final
+number of scaffolds to 38. We confirmed the merges using mate-pair reads. The
+white spruce mate-pair libraries used for confirmation are presented in Birol et
+al. ([2013](#ref-birol2013assembling)) and available from DNAnexus (SRP014489
+<http://sra.dnanexus.com/studies/SRP014489>). In brief, mate-pair reads from
+three fragment size libraries (5, 8 and 12 kbp) were aligned to the 38-scaffold
+assembly with BWA-MEM 0.7.10-r789 and the resulting alignments parsed with a
+PERL script. A summary of this validation is presented in supplemental Table S4.
+Automated gap-closing was performed with Sealer 1.0 (options
+`-j 12 -B 1000 -F 700 -P10 -k96 -k80`) using Bloom filters built from the entire
+white spruce PG29 read data set (René L Warren et al.
+[2015](#ref-warren2015improved)) and closed 55 of the 182 total gaps (30.2%). We
+polished the gap-filled assembly using GATK and a single HiSeq white spruce
+sequence lane (**XX NEEDED SRA ID**), as described for the plastid genome.
+
+The assembled scaffolds were aligned to the NCBI nucleotide (nt) database using
+BLAST to check for hits to mitochondrial genomes and to screen for
+contamination.
 
 The mitochondrial genome was annotated using MAKER (parameters shown in
 supplementary Table S3). The proteins of all green plants (*Viridiplantae*) with
@@ -524,6 +585,13 @@ refugia to modern populations: New assemblages of organelle genomes generated by
 differential cytoplasmic gene flow in transcontinental black spruce. Molecular
 ecology. 19:5265–5280.
 
+Gordon D, Green P. 2013. Consed: A graphical editor for next-generation
+sequencing. Bioinformatics. 29:2936–2937.
+[doi: 10.1093/bioinformatics/btt515](http://doi.org/10.1093/bioinformatics/btt515).
+
+Green P. 1999. Documentation for phrap and cross-match. University of
+Washington, Seattle. <http://www.phrap.org/phredphrapconsed.html>.
+
 Grewe F et al. 2014. Comparative analysis of 11 brassicales mitochondrial
 genomes and the mitochondrial transcriptome of&lt; i&gt; brassica
 oleracea&lt;/i&gt;. Mitochondrion.
@@ -592,6 +660,10 @@ transfer rNA genes in genomic sequence. Nucleic acids research. 25:0955–964.
 Luo R et al. 2012. SOAPdenovo2: An empirically improved memory-efficient
 short-read de novo assembler. Gigascience. 1:18.
 
+McKenna A et al. 2010. The genome analysis toolkit: A mapReduce framework for
+analyzing next-generation dNA sequencing data. Genome research. 20:1297–1303.
+[doi: 10.1101/gr.107524.110](http://doi.org/10.1101/gr.107524.110).
+
 Nascimento Vieira L do et al. 2014. An improved protocol for intact chloroplasts
 and cpDNA isolation in conifers. PloS one. 9:e84792.
 
@@ -634,6 +706,10 @@ Warren RL et al. 2015. Improved white spruce (picea glauca) genome assemblies
 and annotation of large gene families of conifer terpenoid and phenolic defense
 metabolism. The Plant Journal.
 [doi: 10.1111/tpj.12886](http://doi.org/10.1111/tpj.12886).
+
+Warren RL, Vandervalk BP, Jones SJ, Birol I. 2015. LINKS: Scaffolding genome
+assemblies with kilobase-long nanopore reads. bioRxiv. 016519.
+[doi: 10.1101/016519](http://doi.org/10.1101/016519).
 
 Whittle C-A, Johnston MO. 2002. Male-driven evolution of mitochondrial and
 chloroplastidial dNA sequences in plants. Molecular biology and evolution.
