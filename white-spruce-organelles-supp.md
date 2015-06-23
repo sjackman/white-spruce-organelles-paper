@@ -52,6 +52,7 @@ DOGMA         | NA      | [10.1093/bioinformatics/bth352][]
 Exonerate     | 2.2.0   | [10.1186/1471-2105-6-31][]
 GenomeTools   | 1.5.5   | [10.1109/TCBB.2013.68][]
 HMMER         | 3.1b2   | [10.1371/journal.pcbi.1002195][]
+LINKS         | 1.1     | [10.1101/016519][]
 MAKER         | 2.31.8  | [10.1104/pp.113.230144][]
 MUMmer        | 3.23    | [10.1186/gb-2004-5-2-r12][]
 OGDraw        | 1.1.1   | [10.1093/nar/gkt289][]
@@ -84,6 +85,7 @@ tRNAscan-SE   | 1.23    | [10.1093/nar/25.5.0955][]
 [10.1093/nar/gkh152]: htpp://dx.doi.org/10.1093/nar/gkh152
 [10.1093/nar/gkm160]: http://dx.doi.org/10.1093/nar/gkm160
 [10.1093/nar/gkt289]: http://dx.doi.org/10.1093/nar/gkt289
+[10.1101/016519]: http://dx.doi.org/10.1101/016519
 [10.1101/gr.089532.108]: http://dx.doi.org/10.1101/gr.089532.108
 [10.1101/gr.88502]: http://dx.doi.org/10.1101/gr.88502
 [10.1104/pp.113.230144]: http://dx.doi.org/10.1104/pp.113.230144
