@@ -58,6 +58,8 @@ The assembled scaffolds were aligned to the NCBI nucleotide (nt) database using 
 
 The mitochondrial genome was annotated using MAKER (parameters shown in supplementary Table S3). The proteins of all green plants (*Viridiplantae*) with complete mitochondrial genome sequences in NCBI GenBank, 51 species, were used for protein homology evidence and aligned using BLAST and Exonerate [@slater2005automated]. The prince sago palm (*Cycas taitungensis*) mitochondrion [NC_010303 @chaw2008mitochondrial] is the closest related species, being the only gymnosperm with a complete mitochondrial genome. Transfer RNA (tRNA) were annotated using ARAGORN [@laslett2004aragorn]. Ribosomal RNA (rRNA) were annotated using RNAmmer [@lagesen2007rnammer]. Repeats were identified using RepeatMasker [@smit1996repeatmasker] and RepeatModeler.
 
+The RNA-seq data was assembled using Trans-ABySS [@robertson2010denovo]. The assembled transcripts were classified as being nuclear, plastid or mitochondrial using BioBloom Tools [@chu2014biobloom]. The mitochondrial transcripts were aligned to the annotated mitochondrial genes using BWA-MEM to identify possible sites of C-to-U RNA editing using samtools and bcftools.
+
 The putative mitochondrial sequences of white spruce were aligned to the putative mitochondrial sequences of the Norway spruce using BWA-MEM. Coverage and identity of these alignments were calculated using the script `bam-identity` (see supplementary materials).
 
 Results
@@ -151,6 +153,8 @@ Repeats compose 386 kbp (6.4%) of the mitochondrial genome. Simple repeats and L
 ![Repetitive sequence of the mitochondrial genome.](figure/mt-repeats.png)
 
 The transcript abundance of the mitochondrial coding genes with known function is shown in Figure\ 5. The two developmental tissues megagametophyte and embryo have the highest overall gene expression and cluster together.
+
+Possible C-to-U RNA editing, positions where the genome sequence shows C but the assembled RNA transcript shows U, is observed in six genes with greater than 0.5 edits per 100 bp, *cox1*, *rps4*, *nad7_4*, *rpl2_2*, *matR* and *rps3-1*, the first two of which have nearly 5 edits per 100 bp.
 
 The putative mitochondrial sequences of white spruce and Norway spruce show high sequence similarity, over 98% nucleotide identity, but only 60% of the Norway spruce putative mitochondrial sequences are covered by alignments of the white spruce sequences.
 
