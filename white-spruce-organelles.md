@@ -32,7 +32,7 @@ Methods
 
 Genomic DNA was collected from the apical shoot tissues of a single white spruce tree and sequencing libraries were constructed from that DNA as described in @birol2013assembling. Because the original intention of this sequencing project was to assemble the nuclear genome of white spruce, an organelle exclusion method was used to preferentially extract nuclear DNA. Even so sequencing reads from both organellar genomes were present in sufficient depth to assemble both genomes.
 
-RNA was extracted from eight tissues, megagametophyte, embryo, seedling, young buds, xylem, mature needles, flushing buds and bark, and sequenced with the Illumina HiSeq 2000 as described in @warren2015improved. The RNA-seq data was used to quantify the transcript abundance of the annotated mitochondrial genes using Salmon [@patro2014sailfish].
+RNA was extracted from eight samples, three developmental stages and five mature tissues: megagametophyte, embryo, seedling, young buds, xylem, mature needles, flushing buds and bark. These samples were sequenced with the Illumina HiSeq 2000 as described in @warren2015improved. The RNA-seq data was used to quantify the transcript abundance of the annotated mitochondrial genes using Salmon [@patro2014sailfish].
 
 The software used in this analysis, their versions and the digital object identifiers (DOI) of their respective publications are listed in supplementary Table S1.
 
@@ -153,6 +153,16 @@ Repeats compose 386 kbp (6.4%) of the mitochondrial genome. Simple repeats and L
 ![Repetitive sequence of the mitochondrial genome.](figure/mt-repeats.png)
 
 The transcript abundance of the mitochondrial coding genes with known function is shown in Figure\ 5. The two developmental tissues megagametophyte and embryo have the highest overall gene expression and cluster together.
+
+Of the 101 coding genes with known function, 60 are expressed in at least one of the mature tissues, 28 are expressed in one of the developing tissues but not in a mature tissue, and 13 are not found to be expressed. Of the 5702 ORFs at least 90 bp, 408 (7%) are expressed in at least one of the mature tissues, 2663 (47%) are expressed in one of the developing tissues but not in a mature tissue, and 2631 (46%) are not found to be expressed. A gene with an abundance of at least ten transcripts per million as quantified by Salmon is considered to be expressed. These results are shown in Table\ 2.
+
+|     | Both| Mature only| Developing only| Neither|  Sum|
+|:----|----:|-----------:|---------------:|-------:|----:|
+|mRNA |   60|           0|              28|      13|  101|
+|ORF  |  393|          15|            2663|    2631| 5702|
+|Sum  |  453|          15|            2691|    2644| 5803|
+
+Table: Number of expressed protein-coding genes and open reading frames tabulated by developmental stage.
 
 Possible C-to-U RNA editing, positions where the genome sequence shows C but the assembled RNA transcript shows U, is observed in six genes with greater than 0.5 edits per 100 bp, *cox1*, *rps4*, *nad7_4*, *rpl2_2*, *matR* and *rps3-1*, the first two of which have nearly 5 edits per 100 bp.
 
