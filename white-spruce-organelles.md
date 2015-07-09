@@ -152,7 +152,7 @@ Repeats compose 386 kbp (6.4%) of the mitochondrial genome. Simple repeats and L
 
 ![Repetitive sequence of the mitochondrial genome.](figure/mt-repeats.png)
 
-The transcript abundance of the mitochondrial coding genes with known function is shown in Figure\ 5. The two developmental tissues megagametophyte and embryo have the highest overall gene expression and cluster together.
+The transcript abundance of the mitochondrial coding genes with known function is shown in Figure\ 5. The transcript abundance of the mitochondrial coding genes including open read frames is shown in Figure\ 6. The two developmental tissues megagametophyte and embryo have the highest expression of coding genes and cluster together.
 
 Of the 101 coding genes with known function, 60 are expressed in at least one of the mature tissues, 28 are expressed in one of the developing tissues but not in a mature tissue, and 13 are not found to be expressed. Of the 5702 ORFs at least 90 bp, 408 (7%) are expressed in at least one of the mature tissues, 2663 (47%) are expressed in one of the developing tissues but not in a mature tissue, and 2631 (46%) are not found to be expressed. A gene with an abundance of at least ten transcripts per million as quantified by Salmon is considered to be expressed. These results are shown in Table\ 2.
 
@@ -168,7 +168,9 @@ Possible C-to-U RNA editing, positions where the genome sequence shows C but the
 
 The putative mitochondrial sequences of white spruce and Norway spruce show high sequence similarity, over 98% nucleotide identity, but only 60% of the Norway spruce putative mitochondrial sequences are covered by alignments of the white spruce sequences.
 
-![Heatmap of mitochondrial transcript abundance.](figure/mt-rna-heatmap.png)
+![Heatmap of transcript abundance of mitochondrial coding genes.](figure/mt-rna-heatmap.png)
+
+![Heatmap of transcript abundance of mitochondrial coding genes including open reading frames.](figure/mt-cds-orf-heatmap.png)
 
 Conclusion
 ================================================================================
