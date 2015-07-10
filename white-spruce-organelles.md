@@ -139,10 +139,10 @@ The protein-coding genes
 each contain one intron, and
 *ccmFn*, *nad4*, *nad5* and *rps3-1*
 each contain two introns.
-
 A total of 16 introns are found in 12 distinct species of tRNA. The tRNA genes
 *trnD-AUC*, *trnH-GUG*, *trnL-UAG*, *trnN-AUU*, *trnP-AGG*, *trnR-GCG*, *trnR-UCG*, *trnS-GCU*, *trnS-GGA*, *trnU-UCA*, *trnV-CAC* and *trnV-UAC*
 contain introns.
+The introns of *nad2*, *nad4*, *nad5*, *nad7*, *rps3-1* and *trnV-UAC* are determined to be group II introns by RNAweasel [@lang2007mitochondrial]
 
 Repeats compose 386 kbp (6.4%) of the mitochondrial genome. Simple repeats and LTR Copia, ERV1 and Gypsy are the most common repeats, shown in Figure\ 4.
 
