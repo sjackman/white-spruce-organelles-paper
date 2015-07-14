@@ -87,11 +87,11 @@ GC content                      |38.8%           |44.7%
 Number of genes without ORFs    |114             |155
 Protein coding genes (mRNA)     |74 (72)         |101 (50)
 Ribosomal RNA genes (rRNA)      |4 (4)           |8 (3)
-Transfer RNA genes (tRNA)       |36 (32)         |46 (29)
+Transfer RNA genes (tRNA)       |36 (32)         |29 (20)
 Open reading frames (ORF) $\geq$ 300 bp |NA      |1047
 Coding genes containing introns |8               |13
 Introns in coding genes         |9               |17
-tRNA genes containing introns   |6               |16
+tRNA genes containing introns   |6               |0
 Identity to Norway spruce       |99.2%           |98.3%
 Coverage of Norway spruce       |99.7%           |59.6%
 
@@ -129,7 +129,9 @@ The mitochondrial genome was assembled into 38 scaffolds (132 contigs) with a sc
 
 The scaffolds were aligned to the NCBI nucleotide (nt) database using BLAST. Of the 38 scaffolds, 26 scaffolds align to mitochondrial genomes, 3 small scaffolds (<10 kbp) align to *Picea glauca* mRNA clones and BAC sequences, 7 small scaffolds (<10 kbp) had no significant hits, and 2 small scaffolds (<5 kbp) align to cloning vectors. These last two scaffolds were removed from the assembly.
 
-The mitochondrial genome contains 101 protein coding (mRNA) genes, 46 transfer RNA (tRNA) genes and 8 ribosomal RNA (rRNA) genes, shown in Figure\ 2. The coding genes compose 72 kbp (1.2%) of the genome, shown in Figure\ 3. The 101 protein-coding genes encode 50 distinct genes. The 46 tRNA genes are found in 29 distinct species for 18 amino acids.
+The mitochondrial genome contains 101 protein coding (mRNA) genes, 29 transfer RNA (tRNA) genes and 8 ribosomal RNA (rRNA) genes, shown in Figure\ 2. The coding genes compose 72 kbp (1.2%) of the genome, shown in Figure\ 3. The 101 protein-coding genes encode 50 distinct genes. The 29 tRNA genes are found in 20 distinct species for 15 amino acids.
+
+All tRNA genes are single copy, except *trnD-GUC* which has 3 copies, *trnM-CAU* which has 7 copies, and *trnY-GUA* which has 2 copies. The rRNA gene *rrn5* has 4 copies, *rrn18* has 3 copies, and *rrn26* has 1 copy.
 
 A large number of open reading frames are identified: 5702 at least 90 bp, composing 1.3 Mbp, and 1047 at least 300 bp, composing 407 kbp. These open reading frames have no significant sequence similarity to any gene annotated in the 51 species of *Viridiplantae* mitochondria with complete genomes.
 
@@ -139,10 +141,7 @@ The protein-coding genes
 each contain one intron, and
 *ccmFn*, *nad4*, *nad5* and *rps3-1*
 each contain two introns.
-A total of 16 introns are found in 12 distinct species of tRNA. The tRNA genes
-*trnD-AUC*, *trnH-GUG*, *trnL-UAG*, *trnN-AUU*, *trnP-AGG*, *trnR-GCG*, *trnR-UCG*, *trnS-GCU*, *trnS-GGA*, *trnU-UCA*, *trnV-CAC* and *trnV-UAC*
-contain introns.
-The introns of *nad2*, *nad4*, *nad5*, *nad7*, *rps3-1* and *trnV-UAC* are determined to be group II introns by RNAweasel [@lang2007mitochondrial]
+The introns of *nad2*, *nad4*, *nad5*, *nad7* and *rps3-1* are determined to be group II introns by RNAweasel [@lang2007mitochondrial]
 
 Repeats compose 386 kbp (6.4%) of the mitochondrial genome. Simple repeats and LTR Copia, ERV1 and Gypsy are the most common repeats, shown in Figure\ 4.
 
