@@ -58,7 +58,7 @@ The assembled scaffolds were aligned to the NCBI nucleotide (nt) database using 
 
 The mitochondrial genome was annotated using MAKER (parameters shown in supplementary Table S3). The proteins of all green plants (*Viridiplantae*) with complete mitochondrial genome sequences in NCBI GenBank, 51 species, were used for protein homology evidence and aligned using BLAST and Exonerate [@slater2005automated]. The prince sago palm (*Cycas taitungensis*) mitochondrion [NC_010303 @chaw2008mitochondrial] is the closest related species, being the only gymnosperm with a complete mitochondrial genome. Transfer RNA (tRNA) were annotated using ARAGORN [@laslett2004aragorn]. Ribosomal RNA (rRNA) were annotated using RNAmmer [@lagesen2007rnammer]. Repeats were identified using RepeatMasker [@smit1996repeatmasker] and RepeatModeler.
 
-The RNA-seq data was assembled using Trans-ABySS [@robertson2010denovo]. The assembled transcripts were classified as being nuclear, plastid or mitochondrial using BioBloom Tools [@chu2014biobloom]. The mitochondrial transcripts were aligned to the annotated mitochondrial genes using BWA-MEM to identify possible sites of C-to-U RNA editing using samtools and bcftools.
+The RNA-seq reads were aligned to the annotated mitochondrial genes using BWA-MEM and variants were called using samtools and bcftools requiring a minimum genotype quality of 50 to identify possible sites of C-to-U RNA editing.
 
 The putative mitochondrial sequences of white spruce were aligned to the putative mitochondrial sequences of the Norway spruce using BWA-MEM. Coverage and identity of these alignments were calculated using the script `bam-identity` (see supplementary materials).
 
@@ -163,7 +163,7 @@ Of the 101 coding genes with known function, 60 are expressed in at least one of
 
 Table: Number of expressed protein-coding genes and open reading frames tabulated by developmental stage.
 
-Possible C-to-U RNA editing, positions where the genome sequence shows C but the assembled RNA transcript shows U, is observed in six genes with greater than 0.5 edits per 100 bp, *cox1*, *rps4*, *nad7_4*, *rpl2_2*, *matR* and *rps3-1*, the first two of which have nearly 5 edits per 100 bp.
+Possible C-to-U RNA editing, positions where the genome sequence shows C but the RNA-seq reads shows T, is observed in 69 of 101 coding genes shown in supplementary Table\ S5, with the most highly edited gene, *nad3*, seeing nearly 9 edits per 100 bp. It can be difficult to distinguish RNA editing events from genomic SNV and miscalled variants caused by misaligned reads. We note however that over 90% (1612 of 1785) of the variants called from the RNA-seq data are C-to-T variants shown in supplementary Table\ S6, which indicates that a large fraction of these variants are due to C-to-U RNA editing. C-to-U RNA editing can create new start and stop codons, but it is not able to destroy existing start and stop codons. Editing of ACG to AUG to create a cryptic start codon is frequently seen in organellar genomes [@neckermann1994role].
 
 The putative mitochondrial sequences of white spruce and Norway spruce show high sequence similarity, over 98% nucleotide identity, but only 60% of the Norway spruce putative mitochondrial sequences are covered by alignments of the white spruce sequences.
 
