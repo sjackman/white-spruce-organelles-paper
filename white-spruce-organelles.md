@@ -89,8 +89,8 @@ Protein coding genes (mRNA)     |74 (72)         |101 (50)
 Ribosomal RNA genes (rRNA)      |4 (4)           |8 (3)
 Transfer RNA genes (tRNA)       |36 (32)         |29 (20)
 Open reading frames (ORF) $\geq$ 300 bp |NA      |1047
-Coding genes containing introns |8               |13
-Introns in coding genes         |9               |17
+Coding genes containing introns |8               |5
+Introns in coding genes         |9               |6
 tRNA genes containing introns   |6               |0
 Identity to Norway spruce       |99.2%           |98.3%
 Coverage of Norway spruce       |99.7%           |59.6%
@@ -135,13 +135,7 @@ All tRNA genes are single copy, except *trnD-GUC* which has 3 copies, *trnM-CAU*
 
 A large number of open reading frames are identified: 5702 at least 90 bp, composing 1.3 Mbp, and 1047 at least 300 bp, composing 407 kbp. These open reading frames have no significant sequence similarity to any gene annotated in the 51 species of *Viridiplantae* mitochondria with complete genomes.
 
-A total of 17 introns are found in 13 distinct protein-coding genes.
-The protein-coding genes
-*atp8*, *cox1*, *matR*, *nad2*, *nad7*, *rpl10*, *rps1*, *rps2* and *rps4*
-each contain one intron, and
-*ccmFn*, *nad4*, *nad5* and *rps3-1*
-each contain two introns.
-The introns of *nad2*, *nad4*, *nad5*, *nad7* and *rps3-1* are determined to be group II introns by RNAweasel [@lang2007mitochondrial]
+A total of 6 introns are found in 5 distinct protein-coding genes. The protein-coding genes *nad2*, *nad5*, *nad7* and *rps3-1* each contain one intron, and *nad4* contains two introns. All introns are determined to be group II introns by RNAweasel [@lang2007mitochondrial]
 
 Repeats compose 386 kbp (6.4%) of the mitochondrial genome. Simple repeats and LTR Copia, ERV1 and Gypsy are the most common repeats, shown in Figure\ 4.
 
