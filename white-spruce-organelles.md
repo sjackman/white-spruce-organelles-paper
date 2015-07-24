@@ -13,7 +13,7 @@ Introduction
 
 Most plant cells contain two types of organelles that harbour their own genomes, mitochondria and plastids. In the *Pinaceae*, mitochondrial genomes are inherited maternally, and plastid genomes are inherited paternally [@whittle2002male].
 
-Complete plastid genomes of the gymnosperms *Podocarpus lambertii* [@do2014complete], *Taxus chinensis* var. *mairei* [@zhang2014complete] and four *Juniperus* species [@guo2014predominant] have recently been published in NCBI Genbank [@benson2014genbank]. These projects used a variety of strategies for isolating cpDNA, using physical separation methods in the lab or computationally separating cpDNA sequences from nuclear sequences, sequencing and assembly. The *P. lambertii* genome assembly isolated the cpDNA using the saline Percoll gradient protocol of @do2014improved, Illumina MiSeq sequencing and the software Newbler to assemble the reads. The *Juniperus bermudiana* genome assembly used long-range PCR to amplify the plastid DNA, a combination of Illumina GAII and Sanger sequencing, and the software Geneious to assemble the reads using *C. japonica* as a reference genome. The other three *Juniperus* genome assemblies used Illumina MiSeq sequencing and the software Velvet [@zerbino2008velvet] to assemble the reads. The *T. chinensis* genome assembly used whole-genome Illumina HiSeq 2000 sequencing, BLAT [@kent2002blat] to isolate the cpDNA reads and SOAPdenovo [@luo2012soapdenovo2] to assemble the isolated cpDNA reads. All of these projects used DOGMA [@wyman2004automatic] to annotate the assembly.
+Complete plastid genomes of the gymnosperms *Podocarpus lambertii* [@do2014complete], *Taxus chinensis* var. *mairei* [@zhang2014complete] and four *Juniperus* species [@guo2014predominant] have recently been published in NCBI Genbank [@benson2014genbank]. These projects used a variety of strategies for isolating cpDNA, using physical separation methods in the lab or computationally separating cpDNA sequences from nuclear sequences, sequencing and assembly, shown in Table\ xx. The *P. lambertii* genome assembly isolated the cpDNA using the saline Percoll gradient protocol of @do2014improved, Illumina MiSeq sequencing and the software Newbler to assemble the reads. The *Juniperus bermudiana* genome assembly used long-range PCR to amplify the plastid DNA, a combination of Illumina GAII and Sanger sequencing, and the software Geneious to assemble the reads using *C. japonica* as a reference genome. The other three *Juniperus* genome assemblies used Illumina MiSeq sequencing and the software Velvet [@zerbino2008velvet] to assemble the reads. The *T. chinensis* genome assembly used whole-genome Illumina HiSeq 2000 sequencing, BLAT [@kent2002blat] to isolate the cpDNA reads and SOAPdenovo [@luo2012soapdenovo2] to assemble the isolated cpDNA reads. All of these projects used DOGMA [@wyman2004automatic] to annotate the assembly.
 
 | Species                | cpDNA Separation        | Sequencing               | Assembler software |
 |------------------------|-------------------------|--------------------------|--------------------|
@@ -22,7 +22,7 @@ Complete plastid genomes of the gymnosperms *Podocarpus lambertii* [@do2014compl
 | Other *Juniperus*      | None                    | Illumina MiSeq           | Velvet             |
 | *Taxus chinensis*      | BLAT *in silico*        | Illumina HiSeq 2000      | SOAPdenovo         |
 
-Table: Methods of cpDNA separation, sequencing and assembly of complete plastid genomes of gymnosperms published in 2014
+Table: Table xx: Methods of cpDNA separation, sequencing and assembly of complete plastid genomes of gymnosperms published in 2014
 
 Only one complete mitochondrial genome of a gymnosperm has been published, *Cycas taitungensis* [@chaw2008mitochondrial], while complete mitochondrial genome sequences of the angiosperms *Brassica maritima* [@grewe2014comparative], *Brassica oleracea* (*ibid.*), *Capsicum annuum* [@jo2014extensive], *Eruca sativa* [@wang2014complete], *Helianthus tuberosus* [@bock2014genome], *Raphanus sativus* [@jeong2014complete], *Rhazya stricta* [@park2014complete] and *Vaccinium macrocarpon* [@fajardo2014american] have been published in NCBI Genbank. Six of these projects gave details of the sample preparation, sequencing, assembly and annotation strategy. Three projects enriched organellar DNA using varying laboratory methods [@keren2009atnmat2; @kim2007isolation; @chen2011substoichiometrically], and the remainder used total genomic DNA. Three projects used Illumina HiSeq 2000 sequencing and Velvet for assembly, and three projects used Roche 454 GS-FLX sequencing and Newbler for assembly. Most projects used an aligner such as BLAST [@altschul1990basic] to isolate sequences with similarity to known mitochondrial sequence, either before or after assembly. Two projects used Mitofy [@alverson2010insights] to annotate the genome, and the remainder used a collection of tools such as BLAST, tRNAscan-SE [@lowe1997trnascan] and ORF Finder to annotate genes. Plant mitochondrial genomes can substantially vary in size, with some of the largest mitochondrial genomes reported for the basal angiosperm *Amborella trichopoda* [3.9 Mbp; @rice2013horizontal] and the two Silene species *S. noctiflora* and *S. conica* [6.7 Mbp and 11.3 Mbp, respectively; @sloan2012rapid].
 
@@ -106,7 +106,7 @@ tRNA genes containing introns   |6               |0
 Identity to Norway spruce       |99.2%           |98.3%
 Coverage of Norway spruce       |99.7%           |59.6%
 
-Table: Sequencing, assembly and annotation metrics of the white spruce organellar genomes. The number of distinct genes are shown in parentheses.
+Table: Table 1: Sequencing, assembly and annotation metrics of the white spruce organellar genomes. The number of distinct genes are shown in parentheses.
 
 All protein-coding genes are single copy, except *psbI* and *ycf12*, which have two copies each. All tRNA genes are single copy, except *trnH-GUG*, *trnI-CAU*, *trnS-GCU* and *trnT-GGU*, which have two copies each. All rRNA genes are single copy.
 
@@ -126,7 +126,7 @@ Each copy of the inverted repeat (IR) is 445 bp in size, much smaller than most 
 
 All 114 genes identified in the Norway spruce plastid genome [@nystedt2013norway] are also present in the white spruce plastid genome. The genomes of the white spruce plastid and Norway spruce plastid show perfect gene synteny with no structural rearrangements.
 
-![The annotated plastid genome, which was annotated using MAKER and plotted using OrganellarGenomeDRAW [@lohse2007organellargenomedraw].](figure/plastid-annotation.png)
+![Figure 1: The annotated plastid genome, which was annotated using MAKER and plotted using OrganellarGenomeDRAW [@lohse2007organellargenomedraw].](figure/plastid-annotation.png)
 
 The white spruce mitochondrial genome
 ------------------------------------------------------------
@@ -143,11 +143,11 @@ A total of 6 introns are found in 5 distinct protein-coding genes. The protein-c
 
 Repeats compose 390 kbp (6.6%) of the mitochondrial genome. Simple repeats and LTR Copia, ERV1 and Gypsy are the most common repeats, shown in Figure\ 4.
 
-![The annotated mitochondrial genome, which was annotated using MAKER and Prokka and plotted using OrganellarGenomeDRAW.](figure/mt-annotation.png)
+![Figure 2: The annotated mitochondrial genome, which was annotated using MAKER and Prokka and plotted using OrganellarGenomeDRAW.](figure/mt-annotation.png)
 
-![The sizes of the mitochondrial genes, grouped by family.](figure/mt-genes.png)
+![Figure 3: The sizes of the mitochondrial genes, grouped by family.](figure/mt-genes.png)
 
-![Repetitive sequence of the mitochondrial genome.](figure/mt-repeats.png)
+![Figure 4: Repetitive sequence of the mitochondrial genome.](figure/mt-repeats.png)
 
 The transcript abundance of the mitochondrial coding genes with known function is shown in Figure\ 5. The transcript abundance of the mitochondrial coding genes including open read frames is shown in Figure\ 6. The two developmental tissues megagametophyte and embryo have the highest abundance of coding genes and cluster together.
 
@@ -159,15 +159,15 @@ Of the 101 coding genes with known function, 60 are expressed in at least one of
 |ORF |  393|          15|            2663|    2631| 5702|
 |Sum |  453|          15|            2691|    2644| 5803|
 
-Table: Number of expressed protein-coding genes and open reading frames tabulated by developmental stage.
+Table: Table 2: Number of expressed protein-coding genes and open reading frames tabulated by developmental stage.
 
 Possible C-to-U RNA editing, positions where the genome sequence shows C but the RNA-seq reads shows T, is observed in 69 of 101 coding genes shown in supplementary Table\ S5, with the most highly edited gene, *nad3*, seeing nearly 9 edits per 100 bp. It can be difficult to distinguish RNA editing events from genomic SNV and miscalled variants caused by misaligned reads. We note however that over 90% (1612 of 1785) of the variants called from the RNA-seq data are C-to-T variants shown in supplementary Table\ S6, which indicates that a large fraction of these variants are due to C-to-U RNA editing. C-to-U RNA editing can create new start and stop codons, but it is not able to destroy existing start and stop codons. Editing of the ACG codon to AUG to create a cryptic start codon is frequently seen in organellar genomes [@neckermann1994role].
 
 The putative mitochondrial sequences of white spruce and Norway spruce show high sequence similarity, over 98% nucleotide identity, but only 60% of the Norway spruce putative mitochondrial sequences are covered by alignments of the white spruce sequences.
 
-![Heatmap of transcript abundance of mitochondrial coding genes.](figure/mt-rna-heatmap.png)
+![Figure 5: Heatmap of transcript abundance of mitochondrial coding genes.](figure/mt-rna-heatmap.png)
 
-![Heatmap of transcript abundance of mitochondrial coding genes including open reading frames.](figure/mt-cds-orf-heatmap.png)
+![Figure 6: Heatmap of transcript abundance of mitochondrial coding genes including open reading frames.](figure/mt-cds-orf-heatmap.png)
 
 Conclusion
 ================================================================================
