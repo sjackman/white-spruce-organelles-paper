@@ -167,7 +167,7 @@ Table: Table 2: Number of expressed protein-coding genes and open reading frames
 
 Possible C-to-U RNA editing, positions where the genome sequence shows C but the RNA-seq reads shows T, is observed in 69 of 101 coding genes shown in supplementary Table\ S5, with the most highly edited gene, *nad3*, seeing nearly 9 edits per 100 bp. It can be difficult to distinguish RNA editing events from genomic SNV and miscalled variants caused by misaligned reads. We note however that over 90% (1612 of 1785) of the variants called from the RNA-seq data are C-to-T variants shown in supplementary Table\ S6, which indicates that a large fraction of these variants are due to C-to-U RNA editing. C-to-U RNA editing can create new start and stop codons, but it is not able to destroy existing start and stop codons. Editing of the ACG codon to AUG to create a cryptic start codon is frequently seen in organellar genomes [@neckermann1994role].
 
-![Figure 5: Heatmap of transcript abundance of mitochondrial coding genes.](figure/mt-rna-heatmap.png)
+![Figure 5: Heatmap of transcript abundance of mitochondrial coding genes.](figure/mt-cds-heatmap.png)
 
 ![Figure 6: Heatmap of transcript abundance of mitochondrial coding genes including open reading frames.](figure/mt-cds-orf-heatmap.png)
 
