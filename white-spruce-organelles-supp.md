@@ -34,6 +34,13 @@ Figure S3: MUMmer alignment of the plastid
 
 **Figure S3**: MUMmer was used to identify the inverted repeat of the plastid
 
+Figure S4: The annotated white spruce mitochondrial genome
+================================================================================
+
+![Figure S4](figure/mt-annotation.png)
+
+Figure S4: The white spruce mitochondrial genome, annotated using MAKER [@campbell2014maker] and Prokka [@seemann2014prokka] and plotted using OrganellarGenomeDRAW [@lohse2007organellargenomedraw].
+
 Table S1: Software
 ================================================================================
 
