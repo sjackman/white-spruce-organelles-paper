@@ -125,14 +125,14 @@ Each copy of the inverted repeat (IR) is 445 bp in size, much smaller than most 
 
 All 114 genes identified in the Norway spruce plastid genome [@nystedt2013norway] are also present in the white spruce plastid genome. The genomes of the white spruce plastid and Norway spruce plastid show perfect gene synteny with no structural rearrangements. Alignment of the white spruce genome to the Norway spruce genome using BWA-MEM [@li2013aligning] shows that 99.7% of the Norway spruce plastid genome is covered by alignments of the white spruce plastid genome, and the sequence identity in aligned regions is 99.2%.
 
-![Figure 1: The annotated plastid genome, which was annotated using MAKER and plotted using OrganellarGenomeDRAW [@lohse2007organellargenomedraw].](figure/plastid-annotation.png)
+![Figure 1: The complete plastid genome of white spruce, annotated using MAKER and plotted using OrganellarGenomeDRAW.[@lohse2007organellargenomedraw].](figure/plastid-annotation.png)
 
 The white spruce mitochondrial genome
 ------------------------------------------------------------
 
 The mitochondrial genome was assembled into 38 scaffolds (132 contigs) with a scaffold N50 of 369 kbp (contig N50 of 102 kbp). The largest scaffold is 1222 kbp (Table 1). The scaffolds were aligned to the NCBI nucleotide (nt) database using BLAST. Of the 38 scaffolds, 26 scaffolds align to mitochondrial genomes, 3 small scaffolds (<10 kbp) align to *Picea glauca* mRNA clones and BAC sequences, 7 small scaffolds (<10 kbp) had no significant hits, and 2 small scaffolds (<5 kbp) align to cloning vectors. These last two scaffolds were removed from the assembly.
 
-The mitochondrial genome contains 101 protein coding (mRNA) genes, 29 transfer RNA (tRNA) genes and 8 ribosomal RNA (rRNA) genes, shown in Figure\ 2. The coding genes compose 72 kbp (1.2%) of the genome, shown in Figure\ 3. The 101 protein-coding genes encode 50 distinct genes. The 29 tRNA genes are found in 20 distinct species for 15 amino acids.
+The mitochondrial genome contains 101 protein coding (mRNA) genes, 29 transfer RNA (tRNA) genes and 8 ribosomal RNA (rRNA) genes. The coding genes compose 72 kbp (1.2%) of the genome, shown in Figure\ 3. The 101 protein-coding genes encode 50 distinct genes. The 29 tRNA genes are found in 20 distinct species for 15 amino acids. The annotation of the largest scaffold is shown in Figure\ 2, and the annotation of all scaffolds is shown in supplementary Figure\ S4.
 
 All tRNA genes are single copy, except *trnD-GUC* which has 3 copies, *trnM-CAU* which has 7 copies, and *trnY-GUA* which has 2 copies. The rRNA gene *rrn5* has 4 copies, *rrn18* has 3 copies, and *rrn26* has 1 copy.
 
@@ -144,11 +144,11 @@ Repeats compose 390 kbp (6.6%) of the mitochondrial genome. Simple repeats and L
 
 All 40 protein coding genes and 3 rRNA genes of the *Cycas taitungensis* mitochondrion are seen in white spruce. Of the 22 tRNA genes of *Cycas taitungensis*, 13 are found in white spruce, and 8 tRNA genes are seen in white spruce that are not seen in *Cycas taitungensis*.
 
-![Figure 2: The annotated mitochondrial genome, which was annotated using MAKER and Prokka and plotted using OrganellarGenomeDRAW.](figure/mt-annotation.png)
+![Figure 2: The largest scaffold of the white spruce mitochondrial genome, annotated using MAKER and Prokka and plotted using OrganellarGenomeDRAW. This linear scaffold has been artificially circularized for this figure.](figure/mt-scaffold-1.png)
 
-![Figure 3: The sizes of the mitochondrial genes, grouped by family.](figure/mt-genes.png)
+![Figure 3: The gene content of the white spruce mitochondrial genome, grouped by gene family. Each box is proportional to the size of the gene. The colour of each gene is unique within its gene family.](figure/mt-genes.png)
 
-![Figure 4: Repetitive sequence of the mitochondrial genome.](figure/mt-repeats.png)
+![Figure 4: The repetitive sequence content of the white spruce mitochondrial genome, annotated using RepeatMasker and RepeatModeler.](figure/mt-repeats.png)
 
 The transcriptome of the white spruce mitochondrial genome
 ------------------------------------------------------------
@@ -167,9 +167,9 @@ Table: Table 2: Number of expressed protein-coding genes and open reading frames
 
 Possible C-to-U RNA editing, positions where the genome sequence shows C but the RNA-seq reads shows T, is observed in 69 of 101 coding genes shown in supplementary Table\ S5, with the most highly edited gene, *nad3*, seeing nearly 9 edits per 100 bp. It can be difficult to distinguish RNA editing events from genomic SNV and miscalled variants caused by misaligned reads. We note however that over 90% (1612 of 1785) of the variants called from the RNA-seq data are C-to-T variants shown in supplementary Table\ S6, which indicates that a large fraction of these variants are due to C-to-U RNA editing. C-to-U RNA editing can create new start and stop codons, but it is not able to destroy existing start and stop codons. Editing of the ACG codon to AUG to create a cryptic start codon is frequently seen in organellar genomes [@neckermann1994role].
 
-![Figure 5: Heatmap of transcript abundance of mitochondrial coding genes.](figure/mt-cds-heatmap.png)
+![Figure 5: A heatmap of the transcript abundance of mitochondrial protein coding genes. Each column is a tissue sample. Each row is a gene. Each cell represents the transcript abundance of one gene in one sample. The colour scale is log~10~(TPM), where TPM is transcripts per million as measured by Salmon.](figure/mt-cds-heatmap.png)
 
-![Figure 6: Heatmap of transcript abundance of mitochondrial coding genes including open reading frames.](figure/mt-cds-orf-heatmap.png)
+![Figure 6: A heatmap of the transcript abundance of mitochondrial protein coding genes, including open reading frames. Each column is a tissue sample. Each row is a gene. Each cell represents the transcript abundance of one gene in one sample. The colour scale is log~10~(TPM), where TPM is transcripts per million as measured by Salmon.](figure/mt-cds-orf-heatmap.png)
 
 Conclusion
 ================================================================================
