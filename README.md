@@ -1,9 +1,9 @@
 # Organellar Genomes of White Spruce (*Picea glauca*): Assembly and Annotation
 
-Shaun D Jackman, Anthony Raymond, Ben Vandervalk, Hamid Mohamadi, Rene Warren,
-Stephen Pleasance, Robin Coope, Macaire MS Yuen, Christopher Keeling, Carol
-Ritland, Jean Bousquet, Alvin Yanchuk, Kermit Ritland, John MacKay, Steven JM
-Jones, Joerg C Bohlmann, Inanc Birol
+Shaun D Jackman, Rene Warren, Ewan Gibb, Ben Vandervalk, Hamid Mohamadi, Justin
+Chu, Anthony Raymond, Stephen Pleasance, Robin Coope, Macaire MS Yuen,
+Christopher Keeling, Carol Ritland, Jean Bousquet, Alvin Yanchuk, Kermit
+Ritland, John MacKay, Steven JM Jones, Joerg C Bohlmann, Inanc Birol
 
 # Abstract
 
@@ -15,162 +15,215 @@ contains hundreds of mitochondria and plastids. One lane of MiSeq data assembles
 the 123 kbp plastid genome in a single contig, and one lane of HiSeq data
 assembles a 5.9 Mbp draft mitochondrial genome. The raw assembly is expected to
 be composed of organellar sequence as well as nuclear repeat elements. The
-organellar sequences are separated from the assembly by classifying the
+organellar sequences are selectively retained in the assembly by classifying the
 sequences using their length, depth of coverage and GC content. The genes and
 repeats of the plastid and mitochondrial genomes are annotated using MAKER.
 
 Introduction
 ============
 
-Plant cells contain two organelles located in the cytoplasm that harbour their
-own genomes, the mitochondrion and the plastid (chloroplast). It can be
-difficult to infer phylogenetic trees from nuclear genes of polyploid species
-"with large genomes and complex gene families, such as gymnosperms" (Yang et al.
-2012). Non-coding regions of plastid DNA (cpDNA) have secondary RNA structures
-with regions that are highly variable in gymnosperm that make it suitable for
-phylogenetic inference (Hao et al. 2010).
+Most plant cells contain two types of organelles that harbour their own genomes,
+mitochondria and plastids. In the *Pinaceae*, mitochondrial genomes are
+inherited maternally, and plastid genomes are inherited paternally (Whittle &
+Johnston 2002).
 
-Mitochondrial genomes are inherited maternally from seeds in *Pinaceae*, and
-plastid genomes are inherited paternally from pollen (Whittle & Johnston 2002).
-These contrasting inheritance schemes can be useful in phylogenetic comparisons
-of species expanding their range. In the case of two previously allopatric
-species now found in sympatry, the mitochondrial DNA (mtDNA) is contributed by
-the resident species, whereas introgression of the plastid genome into the
-expanding species is limited, since pollen is more readily dispersed than seeds
-(Du et al. 2011). Differential gene flow of cpDNA and mtDNA due to different
-methods of inheritance and dispersion results in new assemblages of organellar
-genomes and an increase of genetic diversity after expansion from a refugium
-(Gerardi et al. 2010).
+Complete plastid genomes of the gymnosperms Norway spruce (*Picea abies*)
+(Nystedt et al. 2013), *Podocarpus lambertii* (Nascimento Vieira, Faoro,
+Rogalski, et al. 2014), *Taxus chinensis* var. *mairei* (Zhang et al. 2014) and
+four *Juniperus* species (Guo et al. 2014) have recently been published in NCBI
+Genbank (Benson et al. 2014). These projects used a variety of strategies for
+isolating cpDNA, using physical separation methods in the lab or computationally
+separating cpDNA sequences from nuclear sequences, sequencing and assembly,
+shown in Table xx.
 
-Analysis of cpDNA is useful in reconstructing phylogenetic trees of diverse
-plant species (Wu et al. 2007), in determining the origin of an expanding
-population (Aizawa et al. 2012) and in determining when distinct lineages of a
-species resulted from multiple colonization events (Jardón-Barbolla et al.
-2011).
+The *Picea abies* genome used 454 GS FLX Titanium sequencing and Sanger
+sequencing of PCR amplicons for finishing, BLAST (Altschul et al. 1990) to
+isolate the cpDNA reads, and the software Newbler to assemble the reads. The *P.
+lambertii* genome assembly isolated the cpDNA using the saline Percoll gradient
+protocol of Nascimento Vieira, Faoro, Freitas Fraga, et al. (2014), Illumina
+MiSeq sequencing and the software Newbler to assemble the reads. The *Juniperus
+bermudiana* genome assembly used long-range PCR to amplify the plastid DNA, a
+combination of Illumina GAII and Sanger sequencing, and the software Geneious to
+assemble the reads using *C. japonica* as a reference genome. The other three
+*Juniperus* genome assemblies used Illumina MiSeq sequencing and the software
+Velvet (Zerbino & Birney 2008) to assemble the reads. The *T. chinensis* genome
+assembly used whole-genome Illumina HiSeq 2000 sequencing, BLAT (Kent 2002) to
+isolate the cpDNA reads and SOAPdenovo (Luo et al. 2012) to assemble the
+isolated cpDNA reads. All of these projects used DOGMA (Wyman et al. 2004) to
+annotate the assembly.
 
-The complete plastid genomes of the gymnosperms *Podocarpus lambertii*, *Taxus
-chinensis* var. *mairei* and four *Juniperus* species were submitted to NCBI
-GenBank in 2014 (Nascimento Vieira, Faoro, Rogalski, et al. 2014; Zhang et al.
-2014; Guo et al. 2014). These projects used a variety of strategies for
-isolating cpDNA either in the lab or computationally, sequencing and assembly.
-The *P. lambertii* genome assembly isolated the cpDNA using the protocol of
-Nascimento Vieira, Faoro, Freitas Fraga, et al. (2014), Illumina MiSeq
-sequencing and Newbler to assemble the reads. The *Juniperus bermudiana* genome
-assembly used long-range PCR to amplify the plastid DNA, a combination of
-Illumina GAII and Sanger sequencing, and Geneious to assemble the reads using
-*C. japonica* as a reference genome. The other three *Juniperus* genome
-assemblies used Illumina MiSeq sequencing and Velvet (Zerbino & Birney 2008) to
-assemble the reads. The *T. chinensis* genome assembly used whole-genome
-Illumina HiSeq 2000 sequencing, BLAT (Kent 2002) to isolate the cpDNA reads and
-SOAPdenovo (Luo et al. 2012) to assemble the isolated cpDNA reads. All of these
-projects used DOGMA (Wyman et al. 2004) to annotate the assembly.
+<table>
+<caption>Table xx: Methods of cpDNA separation, sequencing and assembly of complete plastid genomes of gymnosperms published. <sup>a</sup> Finished with PCR and Sanger sequencing</caption>
+<thead>
+<tr class="header">
+<th align="left">Species</th>
+<th align="left">cpDNA Separation</th>
+<th align="left">Sequencing</th>
+<th align="left">Assembler software</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><em>Picea abies</em></td>
+<td align="left">BLAST <em>in silico</em></td>
+<td align="left">454 GS FLX Titanium <sup>a</sup></td>
+<td align="left">Newbler</td>
+</tr>
+<tr class="even">
+<td align="left"><em>Podocarpus lambertii</em></td>
+<td align="left">Saline Percoll gradient</td>
+<td align="left">Illumina MiSeq</td>
+<td align="left">Newbler</td>
+</tr>
+<tr class="odd">
+<td align="left"><em>Juniperus bermudiana</em></td>
+<td align="left">Longer-range PCR</td>
+<td align="left">Illumina GAII <sup>a</sup></td>
+<td align="left">Geneious</td>
+</tr>
+<tr class="even">
+<td align="left">Other <em>Juniperus</em></td>
+<td align="left">Unspecified</td>
+<td align="left">Illumina MiSeq</td>
+<td align="left">Velvet</td>
+</tr>
+<tr class="odd">
+<td align="left"><em>Taxus chinensis</em></td>
+<td align="left">BLAT <em>in silico</em></td>
+<td align="left">Illumina HiSeq 2000</td>
+<td align="left">SOAPdenovo</td>
+</tr>
+</tbody>
+</table>
 
 Only one complete mitochondrial genome of a gymnosperm has been published,
-*Cycas taitungensis* (Chaw et al. 2008). In 2014 the complete mitochondrial
-genomes of the spermatophytes *Brassica maritima*, *Brassica oleracea*,
-*Capsicum annuum*, *Eruca sativa*, *Helianthus tuberosus*, *Raphanus sativus*,
-*Rhazya stricta* and *Vaccinium macrocarpon* were submitted to NCBI Genbank
-(Grewe et al. 2014; Jo et al. 2014; Wang et al. 2014; Bock et al. 2014; Jeong et
-al. 2014; Park et al. 2014; Fajardo et al. 2014). Six of these projects gave
-details of the sample preparation, sequencing, assembly and annotation strategy.
-Three projects enriched organellar DNA using varying laboratory methods (Keren
-et al. 2009; Kim et al. 2007; Chen et al. 2011), and the remainder used total
-genomic DNA. Three projects used Illumina HiSeq 2000 sequencing and Velvet for
-assembly, and three projects used Roche 454 GS-FLX sequencing and Newbler for
-assembly. Most projects used an aligner such as BLAST (Altschul et al. 1990) to
-isolate sequences with similarity to known mitochondrial sequence, either before
-or after assembly. Two projects used Mitofy (Alverson et al. 2010) to annotate
-the genome, and the remainder used a collection of tools such as BLAST,
-tRNAscan-SE (Lowe & Eddy 1997) and ORF Finder to annotate genes.
+*Cycas taitungensis* (Chaw et al. 2008), while complete mitochondrial genome
+sequences of the angiosperms *Brassica maritima* (Grewe et al. 2014), *Brassica
+oleracea* (*ibid.*), *Capsicum annuum* (Jo et al. 2014), *Eruca sativa* (Wang et
+al. 2014), *Helianthus tuberosus* (Bock et al. 2014), *Raphanus sativus* (Jeong
+et al. 2014), *Rhazya stricta* (Park et al. 2014) and *Vaccinium macrocarpon*
+(Fajardo et al. 2014) have been published in NCBI Genbank. Six of these projects
+gave details of the sample preparation, sequencing, assembly and annotation
+strategy. Three projects enriched organellar DNA using varying laboratory
+methods (Keren et al. 2009; Kim et al. 2007; Chen et al. 2011), and the
+remainder used total genomic DNA. Three projects used Illumina HiSeq 2000
+sequencing and Velvet for assembly, and three projects used Roche 454 GS-FLX
+sequencing and Newbler for assembly. Most projects used an aligner such as BLAST
+(Altschul et al. 1990) to isolate sequences with similarity to known
+mitochondrial sequence, either before or after assembly. Two projects used
+Mitofy (Alverson et al. 2010) to annotate the genome, and the remainder used a
+collection of tools such as BLAST, tRNAscan-SE (Lowe & Eddy 1997) and ORF Finder
+to annotate genes. Plant mitochondrial genomes can substantially vary in size,
+with some of the largest mitochondrial genomes reported for the basal angiosperm
+*Amborella trichopoda* (3.9 Mbp; Rice et al. 2013) and the two Silene species
+*S. noctiflora* and *S. conica* (6.7 Mbp and 11.3 Mbp, respectively; Sloan et
+al. 2012).
 
-Three further species are of note for the large size of their mitochondrial
-genomes. The mitochondrial genome of *Amborella trichopoda* is 3.9 Mbp, and
-additionally "it is the single sister species to all other extant angiosperms"
-(Rice et al. 2013). The mitochondrial genomes of *Silene noctiflora* and *Silene
-conica* are 6.7 Mbp and 11.3 Mbp respecitvely (Sloan et al. 2012).
+The SMarTForests project have recently published a set of stepwise improved
+assemblies of the 20 gigabase white spruce (*Picea glauca*) genome (Birol et al.
+2013; Warren, Keeling, et al. 2015), a gymnosperm genome seven times the size of
+the human genome, sequenced using the Illumina HiSeq and MiSeq sequencing
+platforms. The whole genome sequencing data contained reads originating from
+both the nuclear and organellar genomes. Whereas one copy of the diploid nuclear
+genome is found in each cell, hundreds of organelles are present, and thus
+hundreds of copies of the organellar genomes. This abundance results in an
+overrepresentation of the organellar genomes in whole genome sequencing data.
 
-The SMarTForests project published the draft genome sequence of the 20 gigabase
-white spruce (*Picea glauca*) genome (Birol et al. 2013, René L Warren et al.
-(2015)), seven times the size of the human genome, sequenced using the Illumina
-HiSeq and MiSeq sequencing platforms. Whole genome sequencing data contains
-reads originating from both the nuclear and organellar genomes. Whereas one copy
-of the diploid nuclear genome is found in each cell, hundreds of organelles are
-present, and thus hundreds of copies of the organellar genomes. This abundance
-results in an overrepresentation of the organellar genomes in whole genome
-sequencing data.
+Assembling a single lane of white spruce whole genome sequencing data using the
+software ABySS (Simpson et al. 2009) yielded an assembly composed of organellar
+sequences and nuclear repeat elements. The assembled sequences that originate
+from the organellar genomes were separated from those of nuclear origin by
+classifying the sequences using their length, depth of coverage and GC content.
+The plastid genome of white spruce is compared to that of Norway spruce (*Picea
+abies*) (Nystedt et al. 2013), and the mitochondrial genome of white spruce is
+compared to that of prince sago palm (*Cycas taitungensis*) (Chaw et al. 2008).
 
-Assembling a single lane of whole genome sequencing data using ABySS (Simpson et
-al. 2009) yields an assembly composed of organellar sequences and nuclear repeat
-elements. The assembled sequences that originate from the organellar genomes are
-separated from those of nuclear origin by classifying the sequences using their
-length, depth of coverage and GC content. The organellar genomes of white spruce
-are compared to those of Norway spruce (*Picea abies*) (Nystedt et al. 2013).
+Analysis of cpDNA is useful in reconstructing phylogenies of plants (Wu et al.
+2007), in determining the origin of an expanding population (Aizawa et al. 2012)
+and in determining when distinct lineages of a species resulted from multiple
+colonization events (Jardón-Barbolla et al. 2011). These contrasting inheritance
+schemes of plastids and mitochondria can be useful in the characterization of
+species expanding their range. In the case of two previously allopatric species
+now found in sympatry, the mitochondrial DNA (mtDNA) is contributed by the
+resident species, whereas introgression of the plastid genome into the expanding
+species is limited, since pollen is more readily dispersed than seeds (Du et al.
+2011). Differential gene flow of cpDNA and mtDNA due to different methods of
+inheritance and dispersion results in new assemblages of organellar genomes and
+an increase of genetic diversity after expansion from a refugium (Gerardi et al.
+2010).
 
-Methods
-=======
+Material and Methods
+====================
 
-Genomic DNA was collected from the apical shoot tissues of a single white spruce
-tree and sequencing libraries were constructed from that DNA as described in
-Birol et al. (2013). Because the original intention of this sequencing project
-was to assemble the nuclear genome of white spruce, an organelle exclusion
-method was used to preferentially extract nuclear DNA. Even so sequencing reads
-from both organellar genomes were present in sufficient depth to assemble both
+DNA, RNA and software materials
+-------------------------------
+
+Genomic DNA was collected from the apical shoot tissues of a single interior
+white spruce tree, clone PG29, and sequencing libraries constructed as described
+in Birol et al. (2013). Because the original intention of this sequencing
+project was to assemble the nuclear genome, an organelle exclusion method was
+used to preferentially extract nuclear DNA. Sequencing reads from both
+organellar genomes were present in sufficient depth however to assemble their
 genomes.
 
 RNA was extracted from eight samples, three developmental stages and five mature
 tissues: megagametophyte, embryo, seedling, young buds, xylem, mature needles,
-flushing buds and bark. These samples were sequenced with the Illumina HiSeq
-2000 as described in René L Warren et al. (2015). The RNA-seq data was used to
-quantify the transcript abundance of the annotated mitochondrial genes using
-Salmon (Patro et al. 2014).
+flushing buds and bark, described in Warren, Keeling, et al. (2015). These
+samples were sequenced with the Illumina HiSeq 2000 (Warren, Keeling, et al.
+2015). The RNA-seq data was used to quantify the transcript abundance of the
+annotated mitochondrial genes using the software Salmon (Patro et al. 2014).
 
 The software used in this analysis and their versions are listed in
 supplementary Table S1.
 
-Plastid
--------
+Methods used to assemble the plastid genome
+-------------------------------------------
 
-The overlapping paired-end reads were merged using ABySS-mergepairs. These
-merged reads were assembled using ABySS. Contigs that are putatively derived
-from the plastid were separated by length and depth of coverage using thresholds
-chosen by inspection of a scatter plot (see supplementary Figure S1). These
-putative plastid contigs were assembled into scaffolds using ABySS-scaffold.
+Paired-end sequencing usually leaves a gap of unsequenced nucleotides in the
+middle of the DNA fragment. Because 300 bp paired-end reads were sequenced from
+a library of 500 bp DNA fragments, the reads are expected to overlap by 100 bp.
+These overlapping paired-end reads were merged using ABySS-mergepairs, a
+component of the software ABySS (Simpson et al. 2009). These merged reads were
+assembled using ABySS. Contigs that are putatively derived from the plastid were
+separated by length and depth of coverage using thresholds chosen by inspection
+of a scatter plot (see supplementary Figure S1). These putative plastid contigs
+were assembled into scaffolds using ABySS-scaffold.
 
 We ran the gap-filling application Sealer (Paulino et al., in review; options
 `-v -j 12 -b 30G -B 300 -F 700` with `-k` from 18 to 108 with step size 6) on
 the ABySS assembly of the plastid genome, closing 5 of the remaining 7 gaps,
 with a resulting assembly consisting of two large (~50 and ~70 kbp) scaftigs.
-Given the small size of the plastid genome (123 kbp), we opted to manually
-finish the assembly using Consed 20.0 (Gordon & Green 2013). Briefly, we loaded
-the resulting gap-filled assembly into Consed and imported Pacific Biosciences
-(PacBio) (**data description NEEDED XX**) 9204 reads 500 bp and larger into the
-assembly and aligned them to the plastid genome using cross\_match (Green 1999)
-from within Consed. For each scaftig end, 6 PacBio reads were pulled out and
-assembled using the mini-assembly feature in Consed. Cross\_match alignments of
-the resulting contigs to the plastid assembly were used to merge the two
-scaftigs and confirm that the complete circular genome sequence was obtained. In
-a subsequent step, 7,742 Illumina HiSeq reads were imported and aligned to the
-assembly following the same same procedure as above. We used this limited set of
-7,742 HiSeq reads to make finishing more manageable. These reads were selected
-on the basis of BWA 0.7.5a (Li 2013) alignment to our draft plastid genome,
+Given the small size of the plastid genome, we opted to manually finish the
+assembly using the software Consed 20.0 (Gordon & Green 2013). Briefly, we
+loaded the resulting gap-filled assembly into Consed and imported Pacific
+Biosciences (PacBio) (**data description NEEDED XX**) 9204 reads 500 bp and
+larger into the assembly and aligned them to the plastid genome using
+cross\_match (Green 1999) from within Consed. For each scaftig end, 6 PacBio
+reads were pulled out and assembled using the mini-assembly feature in Consed.
+Cross\_match alignments of the resulting contigs to the plastid assembly were
+used to merge the two scaftigs and confirm that the complete circular genome
+sequence was obtained. In a subsequent step, 7,742 Illumina HiSeq reads were
+imported and aligned to the assembly using Consed. These reads were selected
+from the library of 133 million reads used to assemble the mitochondrion on the
+basis of alignment to our draft plastid genome using BWA 0.7.5a (Li 2013),
 focusing on regions that would benefit from read import by restricting our
-search using samtools 0.1.18 to regions with ambiguity and regions covered by
-PacBio reads exclusively. As described for the PacBio data, subset of Illumina
-reads were pulled out, mini-assembled with Phrap and the resulting contigs
-re-merged to correct bases in gaps filled only by PacBio, namely one gap and
-sequence at edges confirming the circular topology. The starting base was chosen
-using the Norway spruce plastid genome sequence (NC\_021456 Nystedt et al.
-2013). Our assembly was further polished using the Genome Analysis Toolkit
-(GATK) 2.8-1-g932cd3a FastaAlternateReferenceMaker (McKenna et al. 2010).
+search to regions with ambiguity and regions covered by PacBio reads
+exclusively. The subset of Illumina reads were selected using samtools 0.1.18,
+mini-assembled with Phrap (Green 1999) and the resulting contigs re-merged to
+correct bases in gaps filled only by PacBio, namely one gap and sequence at
+edges confirming the circular topology. The starting base was chosen using the
+Norway spruce plastid genome sequence (NC\_021456, Nystedt et al. 2013). Our
+assembly was further polished using the Genome Analysis Toolkit (GATK)
+2.8-1-g932cd3a FastaAlternateReferenceMaker (McKenna et al. 2010).
 
-The assembled plastid genome was initially annotated using DOGMA, but DOGMA is
-an interactive web application, which is not convenient for an automated
-pipeline. We instead used MAKER (Campbell et al. 2014) for annotation, which is
-intended for automated pipelines, and used the Norway spruce complete plastid
-genome (NC\_021456 Nystedt et al. 2013) for both protein-coding and non-coding
-gene homology evidence. The parameters of MAKER are show in supplementary Table
-S2. The inverted repeat was identified using MUMmer (Kurtz et al. 2004), shown
-in supplementary Figure S3.
+The assembled plastid genome was initially annotated using DOGMA (Wyman et al.
+2004). Being an interactive web application, it is not convenient for automated
+annotation. The software MAKER (Campbell et al. 2014) is not interactive and is
+designed for automated annotation, and we used it to annotate the white spruce
+plastid using the Norway spruce plastid genome (NC\_021456, Nystedt et al. 2013)
+for both protein-coding and non-coding gene homology evidence. The parameters of
+MAKER are show in supplementary Table S2. The inverted repeat was identified
+using MUMmer (Kurtz et al. 2004), shown in supplementary Figure S3.
 
 The assembled plastid genome was aligned to the Norway spruce plastid using
 BWA-MEM (Li 2013). Coverage and identity of these alignments were calculated
@@ -179,31 +232,28 @@ The two genomes were compared using QUAST (Gurevich et al. 2013) to confirm the
 presence of the annotated genes of the Norway spruce plastid in the white spruce
 plastid.
 
-Mitochondrion
--------------
+Methods used to assemble the mitochondrial genome
+-------------------------------------------------
 
 ABySS-Konnector (Vandervalk et al. 2014) was used to fill the gap between the
 paired-end reads of a single lane of Illumina HiSeq sequencing of a paired-end
 library. These connected paired-end reads were assembled using ABySS. Putative
-mitochondrial sequences were separated from the assembly by their length, depth
-of coverage and GC content using k-means clustering in R (see supplementary
-Figure S2). These putative mitochondrial contigs were then assembled into
-scaffolds using ABySS-scaffold with a single lane of Illumina HiSeq sequencing
-of a mate-pair library.
+mitochondrial sequences were separated from nuclear sequences by their length,
+depth of coverage and GC content using k-means clustering in R (see
+supplementary Figure S2). The putative mitochondrial contigs were then assembled
+into scaffolds using ABySS-scaffold with a single lane of Illumina HiSeq
+sequencing of a mate-pair library.
 
-The white spruce mitochondrial genome was assembled as described above,
-resulting in 71 scaffolds. We ran the gap-filling application Sealer attempting
-to close the gap between every possible combination of two scaffolds. This
-approach closed 10 gaps and yielded 61 scaffolds, which we used as input to the
-LINKS scaffolder 1.1 (Rene L Warren et al. 2015) (options
-`-k 15 -t 1 -l 3 -r 0.4`, 19 iterations with `–d` from 500 to 6000 with step
-size 250) in conjunction with long PacBio reads, further decreasing the number
-of scaffolds to 58. White spruce PG29 Konnector pseudoreads were aligned to the
-58 LINKS scaffolds with BWA 0.7.5a (`bwa mem -a multimap`), and we created links
-between two scaffolds when reads aligned within 1000 bp of the edges of any two
-scaffolds. Alignments were not necessarily split, nor primary. In some cases,
-the primary alignment was buried in a large scaffold, but secondary alignments
-suggested redundant sequences flanking a scaffold pair. We modified LINKS to
+The ABySS assembly of the white spruce mitochondrial genome resulted in 71
+scaffolds. We ran the gap-filling application Sealer attempting to close the
+gaps between every combination of two scaffolds. This approach closed 10 gaps
+and yielded 61 scaffolds, which we used as input to the LINKS scaffolder 1.1
+(Warren, Vandervalk, et al. 2015) (options `-k 15 -t 1 -l 3 -r 0.4`, 19
+iterations with `–d` from 500 to 6000 with step size 250) in conjunction with
+long PacBio reads, further decreasing the number of scaffolds to 58. The
+Konnector pseudoreads were aligned to the 58 LINKS scaffolds with BWA 0.7.5a
+(`bwa mem -a multimap`), and we created links between two scaffolds when reads
+aligned within 1000 bp of the edges of any two scaffolds. We modified LINKS to
 read the resulting SAM alignment file and link scaffolds satisfying this
 criteria (options `LINKS-sam -e 0.9 -a 0.5`), bringing the final number of
 scaffolds to 38. We confirmed the merges using mate-pair reads. The white spruce
@@ -215,8 +265,8 @@ assembly with BWA-MEM 0.7.10-r789 and the resulting alignments parsed with a
 PERL script. A summary of this validation is presented in supplemental Table S4.
 Automated gap-closing was performed with Sealer 1.0 (options
 `-j 12 -B 1000 -F 700 -P10 -k96 -k80`) using Bloom filters built from the entire
-white spruce PG29 read data set (René L Warren et al. 2015) and closed 55 of the
-182 total gaps (30.2%). We polished the gap-filled assembly using GATK and a
+white spruce PG29 read data set (Warren, Keeling, et al. 2015) and closed 55 of
+the 182 total gaps (30.2%). We polished the gap-filled assembly using GATK and a
 single HiSeq white spruce sequence lane (**XX NEEDED SRA ID**), as described for
 the plastid genome.
 
@@ -230,30 +280,32 @@ annotations were merged using BEDTools (Quinlan & Hall 2010) and GenomeTools
 (Gremme et al. 2013), selecting the MAKER annotation when the two tools had
 overlapping annotations. The proteins of all green plants (*Viridiplantae*) with
 complete mitochondrial genome sequences in NCBI GenBank (Benson et al. 2014),
-142 species, were used for protein homology evidence. The prince sago palm
-(*Cycas taitungensis*) mitochondrion (NC\_010303 Chaw et al. 2008) is the
-closest related species, being the only gymnosperm with a complete mitochondrial
-genome. Transfer RNA (tRNA) were annotated using ARAGORN (Laslett & Canback
-2004). Ribosomal RNA (rRNA) were annotated using RNAmmer (Lagesen et al. 2007).
-Prokka uses Prodigal (Hyatt et al. 2010) to annotate open reading frames.
-Repeats were identified using RepeatMasker (Smit et al. 1996) and RepeatModeler.
+142 species, were used for protein homology evidence, the most closely related
+of which is the prince sago palm (*Cycas taitungensis*) (NC\_010303 Chaw et al.
+2008), being the only gymnosperm with a complete mitochondrial genome. Transfer
+RNA (tRNA) were annotated using ARAGORN (Laslett & Canback 2004). Ribosomal RNA
+(rRNA) were annotated using RNAmmer (Lagesen et al. 2007). Prokka uses Prodigal
+(Hyatt et al. 2010) to annotate open reading frames. Repeats were identified
+using RepeatMasker (Smit et al. 1996) and RepeatModeler.
 
 The RNA-seq reads were aligned to the annotated mitochondrial genes using
 BWA-MEM and variants were called using samtools and bcftools requiring a minimum
 genotype quality of 50 to identify possible sites of C-to-U RNA editing.
 
-The putative mitochondrial sequences of white spruce were aligned to the
-putative mitochondrial sequences of the Norway spruce using BWA-MEM. Coverage
-and identity of these alignments were calculated using the script
-`samskrit-identity`.
-
 Results
 =======
 
-The assembly and annotation metrics are summarized in Table 1.
+The white spruce plastid genome
+-------------------------------
+
+The assembly and annotation metrics for the plastid and mitochondrial genomes
+are summarized in Table 1. The plastid genome was assembled into a single
+circular contig of 123,266 bp containing 114 identified genes: 74 protein coding
+(mRNA) genes, 36 transfer RNA (tRNA) genes and 4 ribosomal RNA (rRNA) genes,
+shown in Figure 1.
 
 <table>
-<caption>Sequencing, assembly and annotation metrics of the white spruce organellar genomes. The number of distinct genes are shown in parentheses.</caption>
+<caption>Table 1: Sequencing, assembly and annotation metrics of the white spruce organellar genomes. The number of distinct genes are shown in parentheses.</caption>
 <thead>
 <tr class="header">
 <th align="left">Metric</th>
@@ -377,27 +429,8 @@ The assembly and annotation metrics are summarized in Table 1.
 <td align="left">6</td>
 <td align="left">0</td>
 </tr>
-<tr class="even">
-<td align="left">Identity to Norway spruce</td>
-<td align="left">99.2%</td>
-<td align="left">98.3%</td>
-</tr>
-<tr class="odd">
-<td align="left">Coverage of Norway spruce</td>
-<td align="left">99.7%</td>
-<td align="left">59.6%</td>
-</tr>
 </tbody>
 </table>
-
-Plastid
--------
-
-The plastid genome was assembled into a single circular contig of 123,266 bp.
-The assembly metrics are shown in Table 1. The plastid genome contains 114
-genes: 74 protein coding (mRNA) genes, 36 transfer RNA (tRNA) genes and 4
-ribosomal RNA (rRNA) genes, shown in Figure 1, which is rendered using
-OrganellarGenomeDRAW (Lohse et al. 2007).
 
 All protein-coding genes are single copy, except *psbI* and *ycf12*, which have
 two copies each. All tRNA genes are single copy, except *trnH-GUG*, *trnI-CAU*,
@@ -426,32 +459,36 @@ plants, but typical of *Pinaceae* (Lin et al. 2010). Unlike most inverted
 repeats, which are typically identical, the two copies differ by a single base.
 The IR contains a single gene, the tRNA *trnI-CAU*.
 
-All 114 genes of the Norway spruce plastid genome are present in the white
-spruce plastid genome. The genomes of the white spruce plastid and Norway spruce
-plastid show perfect gene synteny with no structural rearrangements.
+All 114 genes identified in the Norway spruce plastid genome (Nystedt et al.
+2013) are also present in the white spruce plastid genome. The genomes of the
+white spruce plastid and Norway spruce plastid show perfect gene synteny with no
+structural rearrangements. Alignment of the white spruce genome to the Norway
+spruce genome using BWA-MEM (Li 2013) shows that 99.7% of the Norway spruce
+plastid genome is covered by alignments of the white spruce plastid genome, and
+the sequence identity in aligned regions is 99.2%.
 
-![The annotated plastid genome, which was annotated using MAKER and plotted
-using OrganellarGenomeDRAW.](figure/plastid-annotation.png)
+![Figure 1: The complete plastid genome of white spruce, annotated using MAKER
+and plotted using OrganellarGenomeDRAW (Lohse et al.
+2007).](figure/plastid-annotation.png)
 
-Mitochondrion
--------------
+The white spruce mitochondrial genome
+-------------------------------------
 
 The mitochondrial genome was assembled into 38 scaffolds (132 contigs) with a
 scaffold N50 of 369 kbp (contig N50 of 102 kbp). The largest scaffold is 1222
-kbp. The assembly metrics are shown in Table 1.
-
-The scaffolds were aligned to the NCBI nucleotide (nt) database using BLAST. Of
-the 38 scaffolds, 26 scaffolds align to mitochondrial genomes, 3 small scaffolds
-(&lt;10 kbp) align to *Picea glauca* mRNA clones and BAC sequences, 7 small
-scaffolds (&lt;10 kbp) had no significant hits, and 2 small scaffolds (&lt;5
-kbp) align to cloning vectors. These last two scaffolds were removed from the
-assembly.
+kbp (Table 1). The scaffolds were aligned to the NCBI nucleotide (nt) database
+using BLAST. Of the 38 scaffolds, 26 scaffolds align to mitochondrial genomes, 3
+small scaffolds (&lt;10 kbp) align to *Picea glauca* mRNA clones and BAC
+sequences, 7 small scaffolds (&lt;10 kbp) had no significant hits, and 2 small
+scaffolds (&lt;5 kbp) align to cloning vectors. These last two scaffolds were
+removed from the assembly.
 
 The mitochondrial genome contains 101 protein coding (mRNA) genes, 29 transfer
-RNA (tRNA) genes and 8 ribosomal RNA (rRNA) genes, shown in Figure 2. The coding
-genes compose 72 kbp (1.2%) of the genome, shown in Figure 3. The 101
-protein-coding genes encode 50 distinct genes. The 29 tRNA genes are found in 20
-distinct species for 15 amino acids.
+RNA (tRNA) genes and 8 ribosomal RNA (rRNA) genes. The coding genes compose 72
+kbp (1.2%) of the genome, shown in Figure 3. The 101 protein-coding genes encode
+50 distinct genes. The 29 tRNA genes are found in 20 distinct species for 15
+amino acids. The annotation of the largest scaffold is shown in Figure 2, and
+the annotation of all scaffolds is shown in supplementary Figure S4.
 
 All tRNA genes are single copy, except *trnD-GUC* which has 3 copies, *trnM-CAU*
 which has 7 copies, and *trnY-GUA* which has 2 copies. The rRNA gene *rrn5* has
@@ -471,12 +508,25 @@ II introns by RNAweasel (Lang et al. 2007).
 Repeats compose 390 kbp (6.6%) of the mitochondrial genome. Simple repeats and
 LTR Copia, ERV1 and Gypsy are the most common repeats, shown in Figure 4.
 
-![The annotated mitochondrial genome, which was annotated using MAKER and
-plotted using OrganellarGenomeDRAW.](figure/mt-annotation.png)
+All 40 protein coding genes and 3 rRNA genes of the *Cycas taitungensis*
+mitochondrion are seen in white spruce. Of the 22 tRNA genes of *Cycas
+taitungensis*, 13 are found in white spruce, and 8 tRNA genes are seen in white
+spruce that are not seen in *Cycas taitungensis*.
 
-![The sizes of the mitochondrial genes, grouped by family.](figure/mt-genes.png)
+![Figure 2: The largest scaffold of the white spruce mitochondrial genome,
+annotated using MAKER and Prokka and plotted using OrganellarGenomeDRAW. This
+linear scaffold has been artificially circularized for this
+figure.](figure/mt-scaffold-1.png)
 
-![Repetitive sequence of the mitochondrial genome.](figure/mt-repeats.png)
+![Figure 3: The gene content of the white spruce mitochondrial genome, grouped
+by gene family. Each box is proportional to the size of the gene. The colour of
+each gene is unique within its gene family.](figure/mt-genes.png)
+
+![Figure 4: The repetitive sequence content of the white spruce mitochondrial
+genome, annotated using RepeatMasker and RepeatModeler.](figure/mt-repeats.png)
+
+The transcriptome of the white spruce mitochondrial genome
+----------------------------------------------------------
 
 The transcript abundance of the mitochondrial coding genes with known function
 is shown in Figure 5. The transcript abundance of the mitochondrial coding genes
@@ -494,7 +544,7 @@ ten transcripts per million as quantified by Salmon is considered to be
 expressed. These results are shown in Table 2.
 
 <table>
-<caption>Number of expressed protein-coding genes and open reading frames tabulated by developmental stage.</caption>
+<caption>Table 2: Number of expressed protein-coding genes and open reading frames tabulated by developmental stage.</caption>
 <thead>
 <tr class="header">
 <th align="left"></th>
@@ -545,16 +595,17 @@ create new start and stop codons, but it is not able to destroy existing start
 and stop codons. Editing of the ACG codon to AUG to create a cryptic start codon
 is frequently seen in organellar genomes (Neckermann et al. 1994).
 
-The putative mitochondrial sequences of white spruce and Norway spruce show high
-sequence similarity, over 98% nucleotide identity, but only 60% of the Norway
-spruce putative mitochondrial sequences are covered by alignments of the white
-spruce sequences.
+![Figure 5: A heatmap of the transcript abundance of mitochondrial protein
+coding genes. Each column is a tissue sample. Each row is a gene. Each cell
+represents the transcript abundance of one gene in one sample. The colour scale
+is log<sub>10</sub>(TPM), where TPM is transcripts per million as measured by
+Salmon.](figure/mt-cds-heatmap.png)
 
-![Heatmap of transcript abundance of mitochondrial coding
-genes.](figure/mt-rna-heatmap.png)
-
-![Heatmap of transcript abundance of mitochondrial coding genes including open
-reading frames.](figure/mt-cds-orf-heatmap.png)
+![Figure 6: A heatmap of the transcript abundance of mitochondrial protein
+coding genes, including open reading frames. Each column is a tissue sample.
+Each row is a gene. Each cell represents the transcript abundance of one gene in
+one sample. The colour scale is log<sub>10</sub>(TPM), where TPM is transcripts
+per million as measured by Salmon.](figure/mt-cds-orf-heatmap.png)
 
 Conclusion
 ==========
@@ -569,10 +620,9 @@ mitochondrial sequences are separated using a k-means classifier based on their
 length, depth of coverage and GC content of the sequences.
 
 The white spruce plastid genome shows no structural rearrangements when compared
-with Norway spruce. The mitochondrial genome in contrast shows much structural
-rearrangement, though more work is needed to determine what is due to the draft
-nature of these mitochondrial assemblies and what is true structural
-rearrangement.
+with Norway spruce. All protein coding and rRNA genes of the prince sago palm
+(*Cycas taitungensis*) mitochondrion are present in the white spruce
+mitochondrion.
 
 The protein coding gene content of the mitochondrial genome is quite sparse,
 with 101 protein coding genes in 5.9 Mbp, in comparison to the plastid genome,
@@ -661,10 +711,6 @@ cupressophyte evolution. Genome biology and evolution. 6:580–590.
 
 Gurevich A, Saveliev V, Vyahhi N, Tesler G. 2013. QUAST: Quality assessment tool
 for genome assemblies. Bioinformatics. 29:1072–1075.
-
-Hao D, Chen S, Xiao P. 2010. Sequence characteristics and divergent evolution of
-the chloroplastpsbA-trnH noncoding region in gymnosperms. Journal of applied
-genetics. 51:259–273.
 
 Hildebrand M, Hallick RB, Passavant CW, Bourque DP. 1988. Trans-splicing in
 chloroplasts: The rps 12 loci of nicotiana tabacum. Proceedings of the National
@@ -800,10 +846,6 @@ evolution. 24:1366–1379.
 
 Wyman SK, Jansen RK, Boore JL. 2004. Automatic annotation of organellar genomes
 with dOGMA. Bioinformatics. 20:3252–3255.
-
-Yang Z-Y, Ran J-H, Wang X-Q. 2012. Three genome-based phylogeny of cupressaceae
-s.l.: Further evidence for the evolution of gymnosperms and southern hemisphere
-biogeography. Molecular phylogenetics and evolution. 64:452–470.
 
 Zerbino DR, Birney E. 2008. Velvet: Algorithms for de novo short read assembly
 using de bruijn graphs. Genome research. 18:821–829.
