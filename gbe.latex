@@ -1,5 +1,8 @@
 \documentclass{gbe}
 
+% For \textsubscript
+\usepackage{fixltx2e}
+
 % For Shaded and Highlighting
 $if(highlighting-macros)$
 $highlighting-macros$
