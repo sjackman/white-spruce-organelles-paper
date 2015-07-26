@@ -67,11 +67,11 @@ white-spruce-organelles.pdf: %.pdf: %.tex gbe/gbe.cls
 
 # Render the supplementary material HTML
 white-spruce-organelles-supp.html: %.html: %.md
-	pandoc -s --filter=pandoc-citeproc -o $@ $<
+	pandoc -s --toc --filter=pandoc-citeproc -o $@ $<
 
 # Render the supplementary material TeX
 white-spruce-organelles-supp.tex: %.tex: %.md
-	pandoc -s --filter=pandoc-citeproc -o $@ $<
+	pandoc -s --toc --filter=pandoc-citeproc -o $@ $<
 
 # Render the supplementary material PDF
 white-spruce-organelles-supp.pdf: %.pdf: %.tex
