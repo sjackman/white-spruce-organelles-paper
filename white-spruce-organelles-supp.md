@@ -8,8 +8,6 @@ csl: gbe.csl
 Figure S1: Classify plastid sequences
 ================================================================================
 
-[Figure S1]: #figure-s1-classify-plastid-sequences
-
 ![Figure S1](figure/plastid-classify.png)
 
 **Figure S1**: Six plastid sequences were separated by length and
@@ -18,8 +16,6 @@ depth of coverage using thresholds chosen by inspection
 Figure S2: Classify mitochondrial sequences
 ================================================================================
 
-[Figure S2]: #figure-s2-classify-mitochondrial-sequences
-
 ![Figure S2](figure/mt-classify.png)
 
 **Figure S2**: Mitochondrial sequences were separated by length, depth
@@ -27,8 +23,6 @@ of coverage and GC content using k-means clustering in R
 
 Figure S3: MUMmer alignment of the plastid
 ================================================================================
-
-[Figure S3]: #figure-s3-mummer-alignment-of-the-plastid
 
 ![Figure S3](figure/plastid-mummer.png)
 
@@ -43,8 +37,6 @@ Figure S4: The white spruce mitochondrial genome, annotated using MAKER [@campbe
 
 Table S1: Software
 ================================================================================
-
-[Table S1]: #table-s1-software
 
 Software      | Version | DOI
 --------------|---------|--------------------------
@@ -116,8 +108,6 @@ Identifier    | Citation               | Name
 Table S2: Plastid MAKER parameters
 ================================================================================
 
-[Table S2]: #table-s2-plastid-maker-parameters
-
 ```bash
 #-----Genome (these are always required)
 genome=pg29-plastid.fa #genome sequence (fasta file or fasta embeded in GFF3 file)
@@ -145,8 +135,6 @@ single_length=50 #min length required for single exon ESTs if 'single_exon is en
 
 Table S3: Mitochondrion MAKER parameters
 ================================================================================
-
-[Table S3]: #table-s3-mitochondrion-maker-parameters
 
 ```bash
 genome=pg29mt-scaffolds.fa
