@@ -125,7 +125,7 @@ Each copy of the inverted repeat (IR) is 445 bp in size, much smaller than most 
 
 All 114 genes identified in the Norway spruce plastid genome [@nystedt2013norway] are also present in the white spruce plastid genome. The genomes of the white spruce plastid and Norway spruce plastid show perfect gene synteny with no structural rearrangements. Alignment of the white spruce genome to the Norway spruce genome using BWA-MEM [@li2013aligning] shows that 99.7% of the Norway spruce plastid genome is covered by alignments of the white spruce plastid genome, and the sequence identity in aligned regions is 99.2%.
 
-![Figure 1: The complete plastid genome of white spruce, annotated using MAKER and plotted using OrganellarGenomeDRAW.[@lohse2007organellargenomedraw].](figure/plastid-annotation.png)
+![Figure 1: The complete plastid genome of white spruce, annotated using MAKER and plotted using OrganellarGenomeDRAW [@lohse2007organellargenomedraw].](figure/plastid-annotation.png)
 
 The white spruce mitochondrial genome
 ------------------------------------------------------------
