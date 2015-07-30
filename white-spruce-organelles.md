@@ -138,7 +138,7 @@ All tRNA genes are single copy, except *trnD-GUC* which has 3 copies, *trnM-CAU*
 
 A large number of open reading frames are identified: 5702 at least 90 bp, composing 1.3 Mbp, and 1047 at least 300 bp, composing 407 kbp. These open reading frames do not have sufficient sequence similarity to the genes of the *Viridiplantae* mitochondria used for protein homology evidence to be annotated by either MAKER or Prokka.
 
-A total of 6 introns are found in 5 distinct protein-coding genes. The protein-coding genes *nad2*, *nad5*, *nad7* and *rps3-1* each contain one intron, and *nad4* contains two introns. All introns are determined to be group II introns by RNAweasel [@lang2007mitochondrial].
+A total of 6 introns are found in 5 distinct protein-coding genes. The protein-coding genes *nad2*, *nad5*, *nad7* and *rps3* each contain one intron, and *nad4* contains two introns. All introns are determined to be group II introns by RNAweasel [@lang2007mitochondrial].
 
 Repeats compose 390 kbp (6.6%) of the mitochondrial genome. Simple repeats and LTR Copia, ERV1 and Gypsy are the most common repeats, shown in Figure\ 4.
 
