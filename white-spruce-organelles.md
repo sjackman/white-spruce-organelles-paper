@@ -102,7 +102,7 @@ Ribosomal RNA genes (rRNA)      |4 (4)           |8 (3)
 Transfer RNA genes (tRNA)       |36 (32)         |29 (20)
 Open reading frames (ORF) $\geq$ 300 bp |NA      |1047
 Coding genes containing introns |8               |5
-Introns in coding genes         |9               |6
+Introns in coding genes         |9               |7
 tRNA genes containing introns   |6               |0
 
 Table: Table 1: Sequencing, assembly and annotation metrics of the white spruce organellar genomes. The number of distinct genes are shown in parentheses.
@@ -138,7 +138,7 @@ All tRNA genes are single copy, except *trnD-GUC* which has 3 copies, *trnM-CAU*
 
 A large number of open reading frames are identified: 5702 at least 90 bp, composing 1.3 Mbp, and 1047 at least 300 bp, composing 407 kbp. These open reading frames do not have sufficient sequence similarity to the genes of the *Viridiplantae* mitochondria used for protein homology evidence to be annotated by either MAKER or Prokka.
 
-A total of 6 introns are found in 5 distinct protein-coding genes. The protein-coding genes *nad2*, *nad5*, *nad7* and *rps3* each contain one intron, and *nad4* contains two introns. All introns are determined to be group II introns by RNAweasel [@lang2007mitochondrial].
+A total of 7 introns are found in 5 distinct protein-coding genes. The protein-coding genes *nad2*, *nad5*, and *nad7* each contain one intron, and *nad4* and *rps3* each contain two introns. All introns are determined to be group II introns by RNAweasel [@lang2007mitochondrial].
 
 Repeats compose 390 kbp (6.6%) of the mitochondrial genome. Simple repeats and LTR Copia, ERV1 and Gypsy are the most common repeats, shown in Figure\ 4.
 
