@@ -25,13 +25,12 @@ clean:
 # Dependencies
 
 white-spruce-organelles.pdf: \
-	figure/mt-annotation.png \
-	figure/mt-classify.png \
+	figure/plastid-annotation.png \
+	figure/mt-gene-order.png \
 	figure/mt-genes.png \
 	figure/mt-repeats.png \
-	figure/plastid-annotation.png \
-	figure/plastid-classify.png \
-	figure/plastid-mummer.png
+	figure/mt-cds-heatmap.png \
+	figure/mt-cds-orf-heatmap.png
 
 # Rules
 

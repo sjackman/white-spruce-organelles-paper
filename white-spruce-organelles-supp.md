@@ -35,6 +35,13 @@ Figure S4: The annotated white spruce mitochondrial genome
 
 Figure S4: The white spruce mitochondrial genome, annotated using MAKER [@campbell2014maker] and Prokka [@seemann2014prokka] and plotted using OrganellarGenomeDRAW [@lohse2007organellargenomedraw].
 
+Figure S5: The largest mitochondrial scaffold
+================================================================================
+
+![Figure S5](figure/mt-scaffold-1.png)
+
+Figure S5: The largest scaffold of the white spruce mitochondrial genome, annotated using MAKER and Prokka and plotted using OrganellarGenomeDRAW. This linear scaffold has been artificially circularized for this figure.
+
 Table S1: Software
 ================================================================================
 

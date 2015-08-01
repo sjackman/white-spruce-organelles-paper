@@ -132,7 +132,7 @@ The white spruce mitochondrial genome
 
 The mitochondrial genome was assembled into 38 scaffolds (132 contigs) with a scaffold N50 of 369 kbp (contig N50 of 102 kbp). The largest scaffold is 1222 kbp (Table 1). The scaffolds were aligned to the NCBI nucleotide (nt) database using BLAST. Of the 38 scaffolds, 26 scaffolds align to mitochondrial genomes, 3 small scaffolds (<10 kbp) align to *Picea glauca* mRNA clones and BAC sequences, 7 small scaffolds (<10 kbp) had no significant hits, and 2 small scaffolds (<5 kbp) align to cloning vectors. These last two scaffolds were removed from the assembly.
 
-The mitochondrial genome contains 101 protein coding (mRNA) genes, 29 transfer RNA (tRNA) genes and 8 ribosomal RNA (rRNA) genes. The coding genes compose 74 kbp (1.2%) of the genome, shown in Figure\ 3. The 101 protein-coding genes encode 50 distinct genes. The 29 tRNA genes are found in 20 distinct species for 15 amino acids. The annotation of the largest scaffold is shown in Figure\ 2, and the annotation of all scaffolds is shown in supplementary Figure\ S4.
+The mitochondrial genome contains 101 protein coding (mRNA) genes, 29 transfer RNA (tRNA) genes and 8 ribosomal RNA (rRNA) genes. The 101 protein-coding genes (50 distinct genes) compose 74 kbp (1.2%) of the genome. The 29 tRNA genes are found in 20 distinct species for 15 amino acids. The relative order of the genes on the scaffolds and gene size is shown in Figure\ 2. The size of each gene family is shown in Figure\ 3. The precise position of each gene on its scaffold is shown in supplementary Figure\ S4.
 
 All tRNA genes are single copy, except *trnD-GUC* which has 3 copies, *trnM-CAU* which has 7 copies, and *trnY-GUA* which has 2 copies. The rRNA gene *rrn5* has 4 copies, *rrn18* has 3 copies, and *rrn26* has 1 copy.
 
@@ -144,7 +144,7 @@ Repeats compose 390 kbp (6.6%) of the mitochondrial genome. Simple repeats and L
 
 All 40 protein coding genes and 3 rRNA genes of the *Cycas taitungensis* mitochondrion are seen in white spruce. Of the 22 tRNA genes of *Cycas taitungensis*, 13 are found in white spruce, and 8 tRNA genes are seen in white spruce that are not seen in *Cycas taitungensis*.
 
-![Figure 2: The largest scaffold of the white spruce mitochondrial genome, annotated using MAKER and Prokka and plotted using OrganellarGenomeDRAW. This linear scaffold has been artificially circularized for this figure.](figure/mt-scaffold-1.png)
+![Figure 2: The relative order of the genes on the scaffolds, and the size of each gene. Each box is proportional to the size of the gene, except that genes smaller than 200 bp are shown as 200 bp. Only scaffolds that have genes are shown.](figure/mt-gene-order.png)
 
 ![Figure 3: The gene content of the white spruce mitochondrial genome, grouped by gene family. Each box is proportional to the size of the gene. The colour of each gene is unique within its gene family.](figure/mt-genes.png)
 
