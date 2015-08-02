@@ -106,9 +106,13 @@ Table S1b: Data
 
 Identifier    | Citation               | Name
 --------------|------------------------|--------------------
+[SRR525215][] | @birol2013assembling   | White spruce Illumina MiSeq paired end sequencing
+[SRR525196][] | @birol2013assembling   | White spruce Illumina HiSeq 2000 paired end sequencing
 [NC_010303][] | @chaw2008mitochondrial | Cycas taitungensis mitochondrion, complete genome
 [NC_021456][] | @nystedt2013norway     | Picea abies chloroplast complete genome
 
+[SRR525215]: http://www.ebi.ac.uk/ena/data/view/SRR525215
+[SRR525196]: http://www.ebi.ac.uk/ena/data/view/SRR525196
 [NC_010303]: http://www.ncbi.nlm.nih.gov/nuccore/NC_010303
 [NC_021456]: http://www.ncbi.nlm.nih.gov/nuccore/NC_021456
 
