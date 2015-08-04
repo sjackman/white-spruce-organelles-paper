@@ -100,7 +100,7 @@ Number of genes without ORFs    |114 (108)       |143 (74)
 Protein coding genes (mRNA)     |74 (72)         |106 (51)
 Ribosomal RNA genes (rRNA)      |4 (4)           |8 (3)
 Transfer RNA genes (tRNA)       |36 (32)         |29 (20)
-Open reading frames (ORF) $\geq$ 300 bp |NA      |1047
+Open reading frames (ORF) $\geq$ 300 bp |NA      |1065
 Coding genes containing introns |8               |5
 Introns in coding genes         |9               |7
 tRNA genes containing introns   |6               |0
@@ -136,7 +136,7 @@ The mitochondrial genome contains 106 protein coding (mRNA) genes, 29 transfer R
 
 All tRNA genes are single copy, except *trnD-GUC* which has 3 copies, *trnM-CAU* which has 7 copies, and *trnY-GUA* which has 2 copies. The rRNA gene *rrn5* has 4 copies, *rrn18* has 3 copies, and *rrn26* has 1 copy.
 
-A large number of open reading frames are identified: 5702 at least 90 bp, composing 1.3 Mbp, and 1047 at least 300 bp, composing 407 kbp. These open reading frames do not have sufficient sequence similarity to the genes of the *Viridiplantae* mitochondria used for protein homology evidence to be annotated by either MAKER or Prokka.
+A large number of open reading frames are identified: 6265 at least 90 bp, composing 1.4 Mbp, and 1065 at least 300 bp, composing 413 kbp. These open reading frames do not have sufficient sequence similarity to the genes of the *Viridiplantae* mitochondria used for protein homology evidence to be annotated by either MAKER or Prokka.
 
 A total of 7 introns are found in 5 distinct protein-coding genes. The protein-coding genes *nad2*, *nad5*, and *nad7* each contain one intron, and *nad4* and *rps3* each contain two introns. All introns are determined to be group II introns by RNAweasel [@lang2007mitochondrial].
 
@@ -155,13 +155,13 @@ The transcriptome of the white spruce mitochondrial genome
 
 The transcript abundance of the mitochondrial coding genes with known function is shown in Figure\ 5. The transcript abundance of the mitochondrial coding genes including open read frames is shown in Figure\ 6. The two developmental tissues megagametophyte and embryo have the highest abundance of coding genes and cluster together.
 
-Of the 106 coding genes with known function, 60 are expressed in at least one of the mature tissues, 28 are expressed in one of the developing tissues but not in a mature tissue, and 13 are not found to be expressed. Of the 5702 ORFs at least 90 bp, 408 (7%) are expressed in at least one of the mature tissues, 2663 (47%) are expressed in one of the developing tissues but not in a mature tissue, and 2631 (46%) are not found to be expressed. A gene with an abundance of at least ten transcripts per million as quantified by Salmon is considered to be expressed. These results are shown in Table\ 2.
+Of the 106 coding genes with known function, 60 are expressed in at least one of the mature tissues, 29 are expressed in one of the developing tissues but not in a mature tissue, and 17 are not found to be expressed. Of the 6265 ORFs at least 90 bp, 427 (7%) are expressed in at least one of the mature tissues, 2809 (45%) are expressed in one of the developing tissues but not in a mature tissue, and 3029 (48%) are not found to be expressed. A gene with an abundance of at least ten transcripts per million as quantified by Salmon is considered to be expressed. These results are shown in Table\ 2.
 
 |    | Both| Mature only| Developing only| Neither|  Sum|
 |:---|----:|-----------:|---------------:|-------:|----:|
-|CDS |   60|           0|              28|      13|  101|
-|ORF |  393|          15|            2663|    2631| 5702|
-|Sum |  453|          15|            2691|    2644| 5803|
+|CDS |   60|           0|              29|      17|  106|
+|ORF |  411|          16|            2809|    3029| 6265|
+|Sum |  471|          16|            2838|    3046| 6371|
 
 Table: Table 2: Number of expressed protein-coding genes and open reading frames tabulated by developmental stage.
 
