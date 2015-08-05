@@ -3,6 +3,7 @@ title: 'Supplementary Material of Organellar Genomes of White Spruce (*Picea gla
 author: Shaun D Jackman
 bibliography: white-spruce-organelles.bib
 csl: gbe.csl
+header-includes: '\usepackage{float}'
 ---
 
 Figure S1: Classify plastid sequences

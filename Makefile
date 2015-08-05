@@ -69,8 +69,12 @@ white-spruce-organelles-supp.html: %.html: %.md
 	pandoc -s --toc --filter=pandoc-citeproc -o $@ $<
 
 # Render the supplementary material TeX
-white-spruce-organelles-supp.tex: %.tex: %.md
+white-spruce-organelles-supp.orig.tex: %.orig.tex: %.md
 	pandoc -s --toc --filter=pandoc-citeproc -o $@ $<
+
+# Munge the TeX
+white-spruce-organelles-supp.tex: %.tex: %.orig.tex
+	sed 's/htbp/H/' $< >$@
 
 # Render the supplementary material PDF
 white-spruce-organelles-supp.pdf: %.pdf: %.tex
