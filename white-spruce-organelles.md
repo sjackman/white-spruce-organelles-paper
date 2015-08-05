@@ -144,9 +144,9 @@ Repeats compose 390 kbp (6.6%) of the mitochondrial genome. Simple repeats and L
 
 All 40 protein coding genes and 3 rRNA genes of the *Cycas taitungensis* mitochondrion are seen in white spruce. Of the 22 tRNA genes of *Cycas taitungensis*, 13 are found in white spruce, and 8 tRNA genes are seen in white spruce that are not seen in *Cycas taitungensis*.
 
-![Figure 2: The relative order of the genes on the scaffolds, and the size of each gene. Each box is proportional to the size of the gene, except that genes smaller than 200 bp are shown as 200 bp. Only scaffolds that have genes are shown.](figure/mt-gene-order.png)
+![Figure 2: The relative order of the genes on the scaffolds, and the size of each gene. Each box is proportional to the size of the gene including introns, except that genes smaller than 200 bp are shown as 200 bp. Only scaffolds that have genes are shown.](figure/mt-gene-order.png)
 
-![Figure 3: The gene content of the white spruce mitochondrial genome, grouped by gene family. Each box is proportional to the size of the gene. The colour of each gene is unique within its gene family.](figure/mt-genes.png)
+![Figure 3: The gene content of the white spruce mitochondrial genome, grouped by gene family. Each box is proportional to the size of the gene including introns. The colour of each gene is unique within its gene family.](figure/mt-genes.png)
 
 ![Figure 4: The repetitive sequence content of the white spruce mitochondrial genome, annotated using RepeatMasker and RepeatModeler.](figure/mt-repeats.png)
 
