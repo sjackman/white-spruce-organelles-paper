@@ -45,7 +45,7 @@ Genomic DNA was collected from the apical shoot tissues of a single interior whi
 
 RNA was extracted from eight samples, three developmental stages and five mature tissues: megagametophyte, embryo, seedling, young buds, xylem, mature needles, flushing buds and bark, described in @warren2015improved. These samples were sequenced with the Illumina HiSeq 2000 [@warren2015improved]. The RNA-seq data was used to quantify the transcript abundance of the annotated mitochondrial genes using the software Salmon [@patro2014sailfish].
 
-The software used in this analysis and their versions are listed in supplementary Table\ S1.
+The software used in this analysis and their versions are listed in supplementary Table\ S1. All software tools were installed using Homebrew (<http://brew.sh>).
 
 Methods used to assemble the plastid genome
 ------------------------------------------------------------
@@ -56,7 +56,7 @@ We ran the gap-filling application Sealer (Paulino et al., in review; options `-
 
 The assembled plastid genome was initially annotated using DOGMA [@wyman2004automatic]. Being an interactive web application, it is not convenient for automated annotation. The software MAKER [@campbell2014maker] is not interactive and is designed for automated annotation, and we used it to annotate the white spruce plastid using the Norway spruce plastid genome [NC_021456, @nystedt2013norway] for both protein-coding and non-coding gene homology evidence. The parameters of MAKER are show in supplementary Table\ S2. The inverted repeat was identified using MUMmer [@kurtz2004versatile], shown in supplementary Figure\ S3.
 
-The assembled plastid genome was aligned to the Norway spruce plastid using BWA-MEM [@li2013aligning]. Coverage and identity of these alignments were calculated using the script `samskrit-identity` (<https://github.com/sjackman/samskrit>). The two genomes were compared using QUAST [@gurevich2013quast] to confirm the presence of the annotated genes of the Norway spruce plastid in the white spruce plastid.
+The assembled plastid genome was aligned to the Norway spruce plastid using BWA-MEM [@li2013aligning]. The two genomes were compared using QUAST [@gurevich2013quast] to confirm the presence of the annotated genes of the Norway spruce plastid in the white spruce plastid.
 
 Methods used to assemble the mitochondrial genome
 ------------------------------------------------------------
@@ -123,7 +123,7 @@ The gene *rps12* of a plastid genome is typically trans-spliced [@hildebrand1988
 
 Each copy of the inverted repeat (IR) is 445 bp in size, much smaller than most plants, but typical of *Pinaceae* [@lin2010comparative]. Unlike most inverted repeats, which are typically identical, the two copies differ by a single base. The IR contains a single gene, the tRNA *trnI-CAU*.
 
-All 114 genes identified in the Norway spruce plastid genome [@nystedt2013norway] are also present in the white spruce plastid genome. The genomes of the white spruce plastid and Norway spruce plastid show perfect gene synteny with no structural rearrangements. Alignment of the white spruce genome to the Norway spruce genome using BWA-MEM [@li2013aligning] shows that 99.7% of the Norway spruce plastid genome is covered by alignments of the white spruce plastid genome, and the sequence identity in aligned regions is 99.2%.
+All 114 genes of the Norway spruce plastid genome [@nystedt2013norway] are present in the white spruce plastid genome in perfect synteny. Alignment of the white spruce genome to the Norway spruce genome using BWA-MEM [@li2013aligning] reveal no large-scale structural rearrangements. Alignments of the white spruce plastid genome cover 99.7% of the Norway spruce plastid genome, and the sequence identity in aligned regions is 99.2%.
 
 ![Figure 1: The complete plastid genome of white spruce, annotated using MAKER and plotted using OrganellarGenomeDRAW [@lohse2007organellargenomedraw].](figure/plastid-annotation.png)
 
@@ -142,7 +142,7 @@ A total of 7 introns are found in 5 distinct protein-coding genes. The protein-c
 
 Repeats compose 390 kbp (6.6%) of the mitochondrial genome. Simple repeats and LTR Copia, ERV1 and Gypsy are the most common repeats, shown in Figure\ 4.
 
-All 40 protein coding genes and 3 rRNA genes of the *Cycas taitungensis* mitochondrion are seen in white spruce. Of the 22 tRNA genes of *Cycas taitungensis*, 13 are found in white spruce, and 8 tRNA genes are seen in white spruce that are not seen in *Cycas taitungensis*.
+All 39 protein coding genes and 3 rRNA genes of the *Cycas taitungensis* mitochondrion are seen in white spruce. Of the 22 tRNA genes of *Cycas taitungensis*, 13 are found in white spruce, and 8 tRNA genes are seen in white spruce that are not seen in *Cycas taitungensis*.
 
 ![Figure 2: The relative order of the genes on the scaffolds, and the size of each gene. Each box is proportional to the size of the gene including introns, except that genes smaller than 200 bp are shown as 200 bp. Only scaffolds that have genes are shown.](figure/mt-gene-order.png)
 
