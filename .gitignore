@@ -1,7 +1,9 @@
 *.aux
+*.docx
 *.html
 *.log
 *.out
 *.pdf
+*.toc
 *.tex
 gbe_tex_template.zip
