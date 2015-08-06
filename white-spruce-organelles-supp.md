@@ -102,21 +102,6 @@ tRNAscan-SE   | 1.23    | [10.1093/nar/25.5.0955][]
 [10.1186/gb-2004-5-2-r12]: http://dx.doi.org/10.1186/gb-2004-5-2-r12
 [10.1371/journal.pcbi.1002195]: http://dx.doi.org/10.1371/journal.pcbi.1002195
 
-Table S1b: Data
-================================================================================
-
-Identifier    | Citation               | Name
---------------|------------------------|--------------------
-[SRR525215][] | @birol2013assembling   | White spruce Illumina MiSeq paired end sequencing
-[SRR525196][] | @birol2013assembling   | White spruce Illumina HiSeq 2000 paired end sequencing
-[NC_010303][] | @chaw2008mitochondrial | Cycas taitungensis mitochondrion, complete genome
-[NC_021456][] | @nystedt2013norway     | Picea abies chloroplast complete genome
-
-[SRR525215]: http://www.ebi.ac.uk/ena/data/view/SRR525215
-[SRR525196]: http://www.ebi.ac.uk/ena/data/view/SRR525196
-[NC_010303]: http://www.ncbi.nlm.nih.gov/nuccore/NC_010303
-[NC_021456]: http://www.ncbi.nlm.nih.gov/nuccore/NC_021456
-
 Table S2: Plastid MAKER parameters
 ================================================================================
 
