@@ -90,9 +90,9 @@ Number of assembled reads       |21 thousand     |377 thousand
 Proportion of organellar reads  |1/140 or 0.7%   |1/350 or 0.3%
 Depth of coverage               |80x             |30x
 Assembled genome size           |123,266 bp      |5.94 Mbp
-Number of contigs               |1 contig        |132 contigs
+Number of contigs               |1 contig        |130 contigs
 Contig N50                      |123 kbp         |102 kbp
-Number of scaffolds             |1 scaffold      |38 scaffolds
+Number of scaffolds             |1 scaffold      |36 scaffolds
 Scaffold N50                    |123 kbp         |369 kbp
 Largest scaffold                |123 kbp         |1222 kbp
 GC content                      |38.8%           |44.7%
