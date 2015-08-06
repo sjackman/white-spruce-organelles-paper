@@ -58,6 +58,7 @@ README.md: white-spruce-organelles.md readme.markdown_strict
 		-e '/\\endfirsthead/,/\\endhead/d' \
 		-e 's/\\end{longtable}/\\end{tabular}\\end{table*}/' \
 		-e 's/{figure}/{figure*}/' \
+		-e 's/\\caption{.*: /\\caption{/' \
 		$< >$@
 
 # Render the manuscript PDF
