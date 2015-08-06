@@ -144,7 +144,7 @@ Repeats compose 390 kbp (6.6%) of the mitochondrial genome. Simple repeats and L
 
 All 39 protein coding genes and 3 rRNA genes of the *Cycas taitungensis* mitochondrion are seen in white spruce. Of the 22 tRNA genes of *Cycas taitungensis*, 13 are found in white spruce, and 8 tRNA genes are seen in white spruce that are not seen in *Cycas taitungensis*.
 
-![Figure 2: The relative order of the genes on the scaffolds, and the size of each gene. Each box is proportional to the size of the gene including introns, except that genes smaller than 200 bp are shown as 200 bp. Only scaffolds that have genes are shown.](figure/mt-gene-order.png)
+![Figure 2: The relative order of the genes on the scaffolds, and the size of each gene. Each box is proportional to the size of the gene including introns, except that genes smaller than 200 bp are shown as 200 bp. The space between genes is not to scale. An asterisk indicates that the gene name is truncated. Only scaffolds that have annotated genes are shown.](figure/mt-gene-order.png)
 
 ![Figure 3: The gene content of the white spruce mitochondrial genome, grouped by gene family. Each box is proportional to the size of the gene including introns. The colour of each gene is unique within its gene family.](figure/mt-genes.png)
 
@@ -183,9 +183,7 @@ The protein coding gene content of the mitochondrial genome is quite sparse, wit
 Acknowledgements
 ================================================================================
 
-Shaun Jackman would like to thank his supervisors Inanc Birol and Joerg Bohlmann for their guidance in the preparation of this manuscript, and Carson Holt for being exceedingly responsive and helpful in tweaking MAKER.
-
-This work was supported by Genome Canada, Genome British Columbia and Genome Quebec as part of the SMarTForests Project (www.smartforests.ca). We thank Carson Holt for help with the MAKER analysis.
+This work was supported by Genome Canada, Genome British Columbia and Genome Quebec as part of the SMarTForests Project (www.smartforests.ca). We thank Carson Holt for his help with the MAKER analysis and Martin Krzywinski for his help with Figure\ 2.
 
 References
 ================================================================================
