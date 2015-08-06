@@ -1,9 +1,8 @@
 # Organellar Genomes of White Spruce (*Picea glauca*): Assembly and Annotation
 
 Shaun D Jackman, Rene Warren, Ewan Gibb, Ben Vandervalk, Hamid Mohamadi, Justin
-Chu, Anthony Raymond, Stephen Pleasance, Robin Coope, Macaire MS Yuen,
-Christopher Keeling, Carol Ritland, Jean Bousquet, Alvin Yanchuk, Kermit
-Ritland, John MacKay, Steven JM Jones, Joerg C Bohlmann, Inanc Birol
+Chu, Anthony Raymond, Stephen Pleasance, Robin Coope, Mark R Wildung, Carol
+Ritland, Steven JM Jones, Joerg C Bohlmann, Inanc Birol
 
 # Abstract
 
@@ -12,12 +11,14 @@ glauca*) are assembled from whole genome Illumina sequencing data using ABySS.
 Whole genome sequencing data contains reads from both the nuclear and organellar
 genomes. Reads of the organellar genomes are abundant, because each cell
 contains hundreds of mitochondria and plastids. One lane of MiSeq data assembles
-the 123 kbp plastid genome in a single contig, and one lane of HiSeq data
-assembles a 5.9 Mbp draft mitochondrial genome. The raw assembly is expected to
-be composed of organellar sequence as well as nuclear repeat elements. The
-organellar sequences are selectively retained in the assembly by classifying the
-sequences using their length, depth of coverage and GC content. The genes and
-repeats of the plastid and mitochondrial genomes are annotated using MAKER.
+the 123 kbp plastid genome, and one lane of HiSeq data assembles the 5.9 Mbp
+draft mitochondrial genome. The coding genes, ribosomal RNA and transfer RNA of
+both genomes are annotated. The transcript abundance of the mitochondrial genes
+is quantified in three developmental tissues and five mature tissues. C-to-U RNA
+editing is observed in the majority of mitochondrial genes and modifies ACG
+codons to create cryptic AUG start codons in four genes. NCBI GenBank contains a
+single mitochondrial genome of a gymnosperm, and this work contributes the first
+coniferous mitochondrial genome.
 
 Introduction
 ============
@@ -34,7 +35,7 @@ four *Juniperus* species (Guo et al. 2014) have recently been published in NCBI
 Genbank (Benson et al. 2014). These projects used a variety of strategies for
 isolating cpDNA, using physical separation methods in the lab or computationally
 separating cpDNA sequences from nuclear sequences, sequencing and assembly,
-shown in Table xx.
+shown in Table 1.
 
 The *Picea abies* genome used 454 GS FLX Titanium sequencing and Sanger
 sequencing of PCR amplicons for finishing, BLAST (Altschul et al. 1990) to
@@ -53,7 +54,7 @@ isolated cpDNA reads. All of these projects used DOGMA (Wyman et al. 2004) to
 annotate the assembly.
 
 <table>
-<caption>Table xx: Methods of cpDNA separation, sequencing and assembly of complete plastid genomes of gymnosperms published. <sup>a</sup> Finished with PCR and Sanger sequencing</caption>
+<caption>Table 1: Methods of cpDNA separation, sequencing and assembly of complete plastid genomes of gymnosperms published. <sup>a</sup> Finished with PCR and Sanger sequencing</caption>
 <thead>
 <tr class="header">
 <th align="left">Species</th>
@@ -119,7 +120,7 @@ with some of the largest mitochondrial genomes reported for the basal angiosperm
 *S. noctiflora* and *S. conica* (6.7 Mbp and 11.3 Mbp, respectively; Sloan et
 al. 2012).
 
-The SMarTForests project have recently published a set of stepwise improved
+The SMarTForests project has recently published a set of stepwise improved
 assemblies of the 20 gigabase white spruce (*Picea glauca*) genome (Birol et al.
 2013; Warren, Keeling, et al. 2015), a gymnosperm genome seven times the size of
 the human genome, sequenced using the Illumina HiSeq and MiSeq sequencing
@@ -174,30 +175,33 @@ samples were sequenced with the Illumina HiSeq 2000 (Warren, Keeling, et al.
 annotated mitochondrial genes using the software Salmon (Patro et al. 2014).
 
 The software used in this analysis and their versions are listed in
-supplementary Table S1.
+supplementary Table S1. All software tools were installed using Homebrew
+(<http://brew.sh>).
 
 Methods used to assemble the plastid genome
 -------------------------------------------
 
-Paired-end sequencing usually leaves a gap of unsequenced nucleotides in the
-middle of the DNA fragment. Because 300 bp paired-end reads were sequenced from
-a library of 500 bp DNA fragments, the reads are expected to overlap by 100 bp.
-These overlapping paired-end reads were merged using ABySS-mergepairs, a
-component of the software ABySS (Simpson et al. 2009). These merged reads were
-assembled using ABySS. Contigs that are putatively derived from the plastid were
-separated by length and depth of coverage using thresholds chosen by inspection
-of a scatter plot (see supplementary Figure S1). These putative plastid contigs
-were assembled into scaffolds using ABySS-scaffold.
+A single lane of Illumina MiSeq paired-end sequencing (SRR525215) was used to
+assemble the plastid genome. Paired-end sequencing usually leaves a gap of
+unsequenced nucleotides in the middle of the DNA fragment. Because 300 bp
+paired-end reads were sequenced from a library of 500 bp DNA fragments, the
+reads are expected to overlap by 100 bp. These overlapping paired-end reads were
+merged using ABySS-mergepairs, a component of the software ABySS (Simpson et al.
+2009). These merged reads were assembled using ABySS. Contigs that are
+putatively derived from the plastid were separated by length and depth of
+coverage using thresholds chosen by inspection of a scatter plot (see
+supplementary Figure S1). These putative plastid contigs were assembled into
+scaffolds using ABySS-scaffold.
 
 We ran the gap-filling application Sealer (Paulino et al., in review; options
 `-v -j 12 -b 30G -B 300 -F 700` with `-k` from 18 to 108 with step size 6) on
 the ABySS assembly of the plastid genome, closing 5 of the remaining 7 gaps,
 with a resulting assembly consisting of two large (~50 and ~70 kbp) scaftigs.
 Given the small size of the plastid genome, we opted to manually finish the
-assembly using the software Consed 20.0 (Gordon & Green 2013). Briefly, we
-loaded the resulting gap-filled assembly into Consed and imported Pacific
-Biosciences (PacBio) (**data description NEEDED XX**) 9204 reads 500 bp and
-larger into the assembly and aligned them to the plastid genome using
+assembly using the software Consed 20.0 (Gordon & Green 2013). We loaded the
+resulting gap-filled assembly into Consed and imported Pacific Biosciences
+(PacBio) sequencing data (SRR2148116 and SRR2148117), 9204 reads 500 bp and
+larger, into the assembly and aligned them to the plastid genome using
 cross\_match (Green 1999) from within Consed. For each scaftig end, 6 PacBio
 reads were pulled out and assembled using the mini-assembly feature in Consed.
 Cross\_match alignments of the resulting contigs to the plastid assembly were
@@ -222,25 +226,23 @@ annotation. The software MAKER (Campbell et al. 2014) is not interactive and is
 designed for automated annotation, and we used it to annotate the white spruce
 plastid using the Norway spruce plastid genome (NC\_021456, Nystedt et al. 2013)
 for both protein-coding and non-coding gene homology evidence. The parameters of
-MAKER are show in supplementary Table S2. The inverted repeat was identified
-using MUMmer (Kurtz et al. 2004), shown in supplementary Figure S3.
+MAKER are show in supplementary Table S2. The inverted repeat was identified
+using MUMmer (Kurtz et al. 2004), shown in supplementary Figure S3.
 
 The assembled plastid genome was aligned to the Norway spruce plastid using
-BWA-MEM (Li 2013). Coverage and identity of these alignments were calculated
-using the script `samskrit-identity` (<https://github.com/sjackman/samskrit>).
-The two genomes were compared using QUAST (Gurevich et al. 2013) to confirm the
-presence of the annotated genes of the Norway spruce plastid in the white spruce
-plastid.
+BWA-MEM (Li 2013). The two genomes were compared using QUAST (Gurevich et al.
+2013) to confirm the presence of the annotated genes of the Norway spruce
+plastid in the white spruce plastid.
 
 Methods used to assemble the mitochondrial genome
 -------------------------------------------------
 
 ABySS-Konnector (Vandervalk et al. 2014) was used to fill the gap between the
-paired-end reads of a single lane of Illumina HiSeq sequencing of a paired-end
-library. These connected paired-end reads were assembled using ABySS. Putative
-mitochondrial sequences were separated from nuclear sequences by their length,
-depth of coverage and GC content using k-means clustering in R (see
-supplementary Figure S2). The putative mitochondrial contigs were then assembled
+paired-end reads of a single lane of Illumina HiSeq 2000 paired end-sequencing
+(SRR525196). These connected paired-end reads were assembled using ABySS.
+Putative mitochondrial sequences were separated from nuclear sequences by their
+length, depth of coverage and GC content using k-means clustering in R (see
+supplementary Figure S2). The putative mitochondrial contigs were then assembled
 into scaffolds using ABySS-scaffold with a single lane of Illumina HiSeq
 sequencing of a mate-pair library.
 
@@ -249,7 +251,7 @@ scaffolds. We ran the gap-filling application Sealer attempting to close the
 gaps between every combination of two scaffolds. This approach closed 10 gaps
 and yielded 61 scaffolds, which we used as input to the LINKS scaffolder 1.1
 (Warren, Vandervalk, et al. 2015) (options `-k 15 -t 1 -l 3 -r 0.4`, 19
-iterations with `–d` from 500 to 6000 with step size 250) in conjunction with
+iterations with `-d` from 500 to 6000 with step size 250) in conjunction with
 long PacBio reads, further decreasing the number of scaffolds to 58. The
 Konnector pseudoreads were aligned to the 58 LINKS scaffolds with BWA 0.7.5a
 (`bwa mem -a multimap`), and we created links between two scaffolds when reads
@@ -266,16 +268,15 @@ PERL script. A summary of this validation is presented in supplemental Table S4
 Automated gap-closing was performed with Sealer 1.0 (options
 `-j 12 -B 1000 -F 700 -P10 -k96 -k80`) using Bloom filters built from the entire
 white spruce PG29 read data set (Warren, Keeling, et al. 2015) and closed 55 of
-the 182 total gaps (30.2%). We polished the gap-filled assembly using GATK and a
-single HiSeq white spruce sequence lane (**XX NEEDED SRA ID**), as described for
-the plastid genome.
+the 182 total gaps (30.2%). We polished the gap-filled assembly using GATK, as
+described for the plastid genome.
 
 The assembled scaffolds were aligned to the NCBI nucleotide (nt) database using
 BLAST to check for hits to mitochondrial genomes and to screen for
 contamination.
 
 The mitochondrial genome was annotated using MAKER (parameters shown in
-supplementary Table S3) and Prokka (Seemann 2014), and the two sets of
+supplementary Table S3) and Prokka (Seemann 2014), and the two sets of
 annotations were merged using BEDTools (Quinlan & Hall 2010) and GenomeTools
 (Gremme et al. 2013), selecting the MAKER annotation when the two tools had
 overlapping annotations. The proteins of all green plants (*Viridiplantae*) with
@@ -299,13 +300,13 @@ The white spruce plastid genome
 -------------------------------
 
 The assembly and annotation metrics for the plastid and mitochondrial genomes
-are summarized in Table 1. The plastid genome was assembled into a single
+are summarized in Table 2. The plastid genome was assembled into a single
 circular contig of 123,266 bp containing 114 identified genes: 74 protein coding
 (mRNA) genes, 36 transfer RNA (tRNA) genes and 4 ribosomal RNA (rRNA) genes,
 shown in Figure 1.
 
 <table>
-<caption>Table 1: Sequencing, assembly and annotation metrics of the white spruce organellar genomes. The number of distinct genes are shown in parentheses.</caption>
+<caption>Table 2: Sequencing, assembly and annotation metrics of the white spruce organellar genomes. The number of distinct genes are shown in parentheses.</caption>
 <thead>
 <tr class="header">
 <th align="left">Metric</th>
@@ -321,7 +322,7 @@ shown in Figure 1.
 </tr>
 <tr class="even">
 <td align="left">Number of read pairs</td>
-<td align="left">4.7 million</td>
+<td align="left">4.9 million</td>
 <td align="left">133 million</td>
 </tr>
 <tr class="odd">
@@ -362,7 +363,7 @@ shown in Figure 1.
 <tr class="even">
 <td align="left">Number of contigs</td>
 <td align="left">1 contig</td>
-<td align="left">132 contigs</td>
+<td align="left">130 contigs</td>
 </tr>
 <tr class="odd">
 <td align="left">Contig N50</td>
@@ -372,7 +373,7 @@ shown in Figure 1.
 <tr class="even">
 <td align="left">Number of scaffolds</td>
 <td align="left">1 scaffold</td>
-<td align="left">38 scaffolds</td>
+<td align="left">36 scaffolds</td>
 </tr>
 <tr class="odd">
 <td align="left">Scaffold N50</td>
@@ -391,13 +392,13 @@ shown in Figure 1.
 </tr>
 <tr class="even">
 <td align="left">Number of genes without ORFs</td>
-<td align="left">114</td>
-<td align="left">155</td>
+<td align="left">114 (108)</td>
+<td align="left">143 (74)</td>
 </tr>
 <tr class="odd">
 <td align="left">Protein coding genes (mRNA)</td>
 <td align="left">74 (72)</td>
-<td align="left">101 (50)</td>
+<td align="left">106 (51)</td>
 </tr>
 <tr class="even">
 <td align="left">Ribosomal RNA genes (rRNA)</td>
@@ -412,7 +413,7 @@ shown in Figure 1.
 <tr class="even">
 <td align="left">Open reading frames (ORF) <span class="math inline"> ≥ </span> 300 bp</td>
 <td align="left">NA</td>
-<td align="left">1047</td>
+<td align="left">1065</td>
 </tr>
 <tr class="odd">
 <td align="left">Coding genes containing introns</td>
@@ -422,7 +423,7 @@ shown in Figure 1.
 <tr class="even">
 <td align="left">Introns in coding genes</td>
 <td align="left">9</td>
-<td align="left">6</td>
+<td align="left">7</td>
 </tr>
 <tr class="odd">
 <td align="left">tRNA genes containing introns</td>
@@ -459,13 +460,12 @@ plants, but typical of *Pinaceae* (Lin et al. 2010). Unlike most inverted
 repeats, which are typically identical, the two copies differ by a single base.
 The IR contains a single gene, the tRNA *trnI-CAU*.
 
-All 114 genes identified in the Norway spruce plastid genome (Nystedt et al.
-2013) are also present in the white spruce plastid genome. The genomes of the
-white spruce plastid and Norway spruce plastid show perfect gene synteny with no
-structural rearrangements. Alignment of the white spruce genome to the Norway
-spruce genome using BWA-MEM (Li 2013) shows that 99.7% of the Norway spruce
-plastid genome is covered by alignments of the white spruce plastid genome, and
-the sequence identity in aligned regions is 99.2%.
+All 114 genes of the Norway spruce plastid genome (Nystedt et al. 2013) are
+present in the white spruce plastid genome in perfect synteny. Alignment of the
+white spruce genome to the Norway spruce genome using BWA-MEM (Li 2013) reveal
+no large-scale structural rearrangements. Alignments of the white spruce plastid
+genome cover 99.7% of the Norway spruce plastid genome, and the sequence
+identity in aligned regions is 99.2%.
 
 ![Figure 1: The complete plastid genome of white spruce, annotated using MAKER
 and plotted using OrganellarGenomeDRAW (Lohse et al.
@@ -476,51 +476,54 @@ The white spruce mitochondrial genome
 
 The mitochondrial genome was assembled into 38 scaffolds (132 contigs) with a
 scaffold N50 of 369 kbp (contig N50 of 102 kbp). The largest scaffold is 1222
-kbp (Table 1). The scaffolds were aligned to the NCBI nucleotide (nt) database
+kbp (Table 2). The scaffolds were aligned to the NCBI nucleotide (nt) database
 using BLAST. Of the 38 scaffolds, 26 scaffolds align to mitochondrial genomes, 3
 small scaffolds (&lt;10 kbp) align to *Picea glauca* mRNA clones and BAC
 sequences, 7 small scaffolds (&lt;10 kbp) had no significant hits, and 2 small
 scaffolds (&lt;5 kbp) align to cloning vectors. These last two scaffolds were
 removed from the assembly.
 
-The mitochondrial genome contains 101 protein coding (mRNA) genes, 29 transfer
-RNA (tRNA) genes and 8 ribosomal RNA (rRNA) genes. The coding genes compose 72
-kbp (1.2%) of the genome, shown in Figure 3. The 101 protein-coding genes encode
-50 distinct genes. The 29 tRNA genes are found in 20 distinct species for 15
-amino acids. The annotation of the largest scaffold is shown in Figure 2, and
-the annotation of all scaffolds is shown in supplementary Figure S4.
+The mitochondrial genome contains 106 protein coding (mRNA) genes, 29 transfer
+RNA (tRNA) genes and 8 ribosomal RNA (rRNA) genes. The 106 protein-coding genes
+(51 distinct genes) compose 75 kbp (1.3%) of the genome. The 29 tRNA genes are
+found in 20 distinct species for 15 amino acids. The relative order of the genes
+on the scaffolds and gene size is shown in Figure 2. The size of each gene
+family is shown in Figure 3. The precise position of each gene on its scaffold
+is shown in supplementary Figure S4.
 
 All tRNA genes are single copy, except *trnD-GUC* which has 3 copies, *trnM-CAU*
 which has 7 copies, and *trnY-GUA* which has 2 copies. The rRNA gene *rrn5* has
 4 copies, *rrn18* has 3 copies, and *rrn26* has 1 copy.
 
-A large number of open reading frames are identified: 5702 at least 90 bp,
-composing 1.3 Mbp, and 1047 at least 300 bp, composing 407 kbp. These open
+A large number of open reading frames are identified: 6265 of at least 90 bp,
+composing 1.4 Mbp, and 1065 of at least 300 bp, composing 413 kbp. These open
 reading frames do not have sufficient sequence similarity to the genes of the
 *Viridiplantae* mitochondria used for protein homology evidence to be annotated
 by either MAKER or Prokka.
 
-A total of 6 introns are found in 5 distinct protein-coding genes. The
-protein-coding genes *nad2*, *nad5*, *nad7* and *rps3-1* each contain one
-intron, and *nad4* contains two introns. All introns are determined to be group
-II introns by RNAweasel (Lang et al. 2007).
+A total of 7 introns are found in 5 distinct protein-coding genes. The
+protein-coding genes *nad2*, *nad5*, and *nad7* each contain one intron, and
+*nad4* and *rps3* each contain two introns. All introns are determined to be
+group II introns by RNAweasel (Lang et al. 2007).
 
 Repeats compose 390 kbp (6.6%) of the mitochondrial genome. Simple repeats and
 LTR Copia, ERV1 and Gypsy are the most common repeats, shown in Figure 4.
 
-All 40 protein coding genes and 3 rRNA genes of the *Cycas taitungensis*
+All 39 protein coding genes and 3 rRNA genes of the *Cycas taitungensis*
 mitochondrion are seen in white spruce. Of the 22 tRNA genes of *Cycas
 taitungensis*, 13 are found in white spruce, and 8 tRNA genes are seen in white
 spruce that are not seen in *Cycas taitungensis*.
 
-![Figure 2: The largest scaffold of the white spruce mitochondrial genome,
-annotated using MAKER and Prokka and plotted using OrganellarGenomeDRAW. This
-linear scaffold has been artificially circularized for this
-figure.](figure/mt-scaffold-1.png)
+![Figure 2: The relative order of the genes on the scaffolds, and the size of
+each gene. Each box is proportional to the size of the gene including introns,
+except that genes smaller than 200 bp are shown as 200 bp. The space between
+genes is not to scale. An asterisk indicates that the gene name is truncated.
+Only scaffolds that have annotated genes are shown.](figure/mt-gene-order.png)
 
 ![Figure 3: The gene content of the white spruce mitochondrial genome, grouped
-by gene family. Each box is proportional to the size of the gene. The colour of
-each gene is unique within its gene family.](figure/mt-genes.png)
+by gene family. Each box is proportional to the size of the gene including
+introns. The colour of each gene is unique within its gene
+family.](figure/mt-genes.png)
 
 ![Figure 4: The repetitive sequence content of the white spruce mitochondrial
 genome, annotated using RepeatMasker and RepeatModeler.](figure/mt-repeats.png)
@@ -530,21 +533,21 @@ The transcriptome of the white spruce mitochondrial genome
 
 The transcript abundance of the mitochondrial coding genes with known function
 is shown in Figure 5. The transcript abundance of the mitochondrial coding genes
-including open read frames is shown in Figure 6. The two developmental tissues
-megagametophyte and embryo have the highest abundance of coding genes and
-cluster together.
+including open read frames is shown in Figure 6. Of the samples analyzed, the
+transcriptomes of megagametophyte and embryo have the highest abundance of
+coding mitochondrial genes and cluster together.
 
-Of the 101 coding genes with known function, 60 are expressed in at least one of
-the mature tissues, 28 are expressed in one of the developing tissues but not in
-a mature tissue, and 13 are not found to be expressed. Of the 5702 ORFs at least
-90 bp, 408 (7%) are expressed in at least one of the mature tissues, 2663 (47%)
+Of the 106 coding genes with known function, 60 are expressed in at least one of
+the mature tissues, 29 are expressed in one of the developing tissues but not in
+a mature tissue, and 17 are not found to be expressed. Of the 6265 ORFs at least
+90 bp, 427 (7%) are expressed in at least one of the mature tissues, 2809 (45%)
 are expressed in one of the developing tissues but not in a mature tissue, and
-2631 (46%) are not found to be expressed. A gene with an abundance of at least
+3029 (48%) are not found to be expressed. A gene with an abundance of at least
 ten transcripts per million as quantified by Salmon is considered to be
-expressed. These results are shown in Table 2.
+expressed. These results are shown in Table 3.
 
 <table>
-<caption>Table 2: Number of expressed protein-coding genes and open reading frames tabulated by developmental stage.</caption>
+<caption>Table 3: Number of expressed protein-coding genes and open reading frames tabulated by developmental stage.</caption>
 <thead>
 <tr class="header">
 <th align="left"></th>
@@ -560,40 +563,42 @@ expressed. These results are shown in Table 2.
 <td align="left">CDS</td>
 <td align="right">60</td>
 <td align="right">0</td>
-<td align="right">28</td>
-<td align="right">13</td>
-<td align="right">101</td>
+<td align="right">29</td>
+<td align="right">17</td>
+<td align="right">106</td>
 </tr>
 <tr class="even">
 <td align="left">ORF</td>
-<td align="right">393</td>
-<td align="right">15</td>
-<td align="right">2663</td>
-<td align="right">2631</td>
-<td align="right">5702</td>
+<td align="right">411</td>
+<td align="right">16</td>
+<td align="right">2809</td>
+<td align="right">3029</td>
+<td align="right">6265</td>
 </tr>
 <tr class="odd">
 <td align="left">Sum</td>
-<td align="right">453</td>
-<td align="right">15</td>
-<td align="right">2691</td>
-<td align="right">2644</td>
-<td align="right">5803</td>
+<td align="right">471</td>
+<td align="right">16</td>
+<td align="right">2838</td>
+<td align="right">3046</td>
+<td align="right">6371</td>
 </tr>
 </tbody>
 </table>
 
 Possible C-to-U RNA editing, positions where the genome sequence shows C but the
-RNA-seq reads shows T, is observed in 69 of 101 coding genes shown in
-supplementary Table S5, with the most highly edited gene, *nad3*, seeing nearly
-9 edits per 100 bp. It can be difficult to distinguish RNA editing events from
-genomic SNV and miscalled variants caused by misaligned reads. We note however
-that over 90% (1612 of 1785) of the variants called from the RNA-seq data are
-C-to-T variants shown in supplementary Table S6, which indicates that a large
-fraction of these variants are due to C-to-U RNA editing. C-to-U RNA editing can
-create new start and stop codons, but it is not able to destroy existing start
-and stop codons. Editing of the ACG codon to AUG to create a cryptic start codon
-is frequently seen in organellar genomes (Neckermann et al. 1994).
+RNA-seq reads shows T, is observed in 68 of 106 coding genes shown in
+supplementary Table S5, with the most highly edited gene, *nad3*, seeing 9 edits
+per 100 bp. It can be difficult to distinguish RNA editing events from genomic
+SNV and miscalled variants caused by misaligned reads. We note however that 91%
+(1601 of 1751) of the variants called from the RNA-seq data are C-to-T variants
+shown in supplementary Table S6, which indicates that a large fraction of these
+variants are due to C-to-U RNA editing. C-to-U RNA editing can create new start
+and stop codons, but it is not able to destroy existing start and stop codons.
+Editing of the ACG codon to AUG to create a cryptic start codon is frequently
+seen in organellar genomes (Neckermann et al. 1994). Four genes have cryptic ACG
+start codons and corroborating C-to-U RNA editing evidence in the RNA-seq data:
+*mttB*, *nad1*, *rps3* and *rps4*.
 
 ![Figure 5: A heatmap of the transcript abundance of mitochondrial protein
 coding genes. Each column is a tissue sample. Each row is a gene. Each cell
@@ -611,21 +616,20 @@ Conclusion
 ==========
 
 One lane of MiSeq sequencing of whole genome DNA is sufficient to assemble the
-123 kbp complete plastid genome, and one lane of HiSeq sequencing of whole
-genome DNA is sufficient to assemble a draft 5.9 Mbp mitochondrial genome of
-white spruce. Scaffold contiguity is improved with additional mate-pair library
-sequencing. The resulting assembly of whole genome sequencing data is composed
-of organellar sequences as well as high-copy-number nuclear repeat elements. The
-mitochondrial sequences are separated using a k-means classifier based on their
-length, depth of coverage and GC content of the sequences.
+123 kbp plastid genome, and one lane of HiSeq sequencing of whole genome DNA is
+sufficient to assemble the 5.9 Mbp mitochondrial genome of white spruce.
+Additional Illumina and PacBio sequencing is used to improved scaffold
+contiguity and to close scaffold gaps, after which the plastid genome is
+assembled in a single contig and the largest mitochondrial scaffold is 1.2 Mbp.
 
 The white spruce plastid genome shows no structural rearrangements when compared
-with Norway spruce. All protein coding and rRNA genes of the prince sago palm
+with Norway spruce, and all genes of the Norway spruce (*Picea abies*) plastid
+are present in the white spruce plastid. All genes of the prince sago palm
 (*Cycas taitungensis*) mitochondrion are present in the white spruce
 mitochondrion.
 
 The protein coding gene content of the mitochondrial genome is quite sparse,
-with 101 protein coding genes in 5.9 Mbp, in comparison to the plastid genome,
+with 106 protein coding genes in 5.9 Mbp, in comparison to the plastid genome,
 with 74 protein coding genes in 123 kbp. Nearly 7% of the mitochondrial genome
 is composed of repeats, and roughly 1% is composed of coding genes. A
 significant portion, over 90%, of the unusually large size of the white spruce
@@ -634,9 +638,10 @@ mitochondrial genome is yet unexplained.
 Acknowledgements
 ================
 
-Shaun Jackman would like to thank his supervisors Inanc Birol and Joerg Bohlmann
-for their guidance in the preparation of this manuscript, and Carson Holt for
-being exceedingly responsive and helpful in tweaking MAKER.
+This work was supported by Genome Canada, Genome British Columbia and Genome
+Quebec as part of the SMarTForests Project (www.smartforests.ca). We thank
+Carson Holt for his help with the MAKER analysis and Martin Krzywinski for his
+help with Figure 2.
 
 References
 ==========
