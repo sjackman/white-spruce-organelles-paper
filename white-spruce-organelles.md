@@ -174,9 +174,9 @@ Possible C-to-U RNA editing, positions where the genome sequence shows C but the
 Conclusion
 ================================================================================
 
-One lane of MiSeq sequencing of whole genome DNA is sufficient to assemble the 123 kbp complete plastid genome, and one lane of HiSeq sequencing of whole genome DNA is sufficient to assemble a draft 5.9 Mbp mitochondrial genome of white spruce. Scaffold contiguity is improved with additional mate-pair library sequencing. The resulting assembly of whole genome sequencing data is composed of organellar sequences as well as high-copy-number nuclear repeat elements. The mitochondrial sequences are separated using a k-means classifier based on their length, depth of coverage and GC content of the sequences.
+One lane of MiSeq sequencing of whole genome DNA is sufficient to assemble the 123 kbp plastid genome, and one lane of HiSeq sequencing of whole genome DNA is sufficient to assemble the 5.9 Mbp mitochondrial genome of white spruce. Additional Illumina and PacBio sequencing is used to improved scaffold contiguity and to close scaffold gaps, after which the plastid genome is assembled in a single contig and the largest mitochondrial scaffold is 1.2 Mbp.
 
-The white spruce plastid genome shows no structural rearrangements when compared with Norway spruce. All protein coding and rRNA genes of the prince sago palm (*Cycas taitungensis*) mitochondrion are present in the white spruce mitochondrion.
+The white spruce plastid genome shows no structural rearrangements when compared with Norway spruce, and all genes of the Norway spruce (*Picea abies*) plastid are present in the white spruce plastid. All genes of the prince sago palm (*Cycas taitungensis*) mitochondrion are present in the white spruce mitochondrion.
 
 The protein coding gene content of the mitochondrial genome is quite sparse, with 106 protein coding genes in 5.9 Mbp, in comparison to the plastid genome, with 74 protein coding genes in 123 kbp. Nearly 7% of the mitochondrial genome is composed of repeats, and roughly 1% is composed of coding genes. A significant portion, over 90%, of the unusually large size of the white spruce mitochondrial genome is yet unexplained.
 
